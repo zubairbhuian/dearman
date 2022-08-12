@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --header-height: 3.5rem;
+  --primary-color: #b30e0e;
+  --secondary-color: #193a80;
+  --title-color: #3e4657;
+  --text-color:var(--background-color);
+  --description-color: #676b74;
+  --meta-color: #817e7e;
+  --desable-color: #dbdbdb;
+  --background-color: #193a7f;
+  --border-color: #e8e8e8;
+  --white-color: #ffffff;
+  --body-color:rgb(240, 238, 238);
+  --body-font: "Poppins", sans-serif;
+  --heading-font: "Anton", sans-serif;
+  --regular: 400;
+  --medium: 500;
+  --bold: 600;
+  --normal-font-size: 1.125rem;
+  --small-font-size: 1rem;
+  --smaller-font-size: 0.875rem;
+  --z-10: 10;
+  --z-100: 100;
+  --z-999: 999;
+}
+@media screen and (max-width: 992px) {
+  :root {
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.775rem;
+  }
+}
+
+*::selection {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--white-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+
+body {
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  color: var(--text-color);
+  background-color: var(--body-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  border: none !important;
+  outline: none !important;
+}
+
+.btn {
+  font-weight: var(--bold);
+  color: var(--white-color);
+  padding: 16px 12px;
+  background: var(--primary-color);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+}
+
+button {
+  border: none;
+  background-color: var(--white-color);
+}
+
+.custrom-badge {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  position: absolute;
+  top: 6px;
+  right: -24px;
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 8px;
+}
+.custrom-badge span {
+  font-weight: 500;
+}
+
+.circuler-avater {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--meta-color);
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circuler-avater span {
+  font-size: var(--smaller-font-size);
+}
+
+.side-navbar .header {
+  padding-top: 20px;
+  display: flex;
+}
+.side-navbar .header .open-icon {
+  width: 100px;
+  padding-left: 20px;
+  padding-top: 6px;
+}
+.side-navbar .header .open-icon svg {
+  fill: var(--text-color);
+}
+.side-navbar .header h2 {
+  color: var(--text-color);
+}
+.side-navbar ul {
+  padding: 0;
+}
+.side-navbar ul li {
+  list-style: none;
+  margin-top: 3px;
+  position: relative;
+}
+.side-navbar ul li a {
+  padding-left: 15px;
+  display: inline-block;
+}
+.side-navbar ul li ::before {
+  position: absolute;
+  content: "";
+  background-color: red;
+  width: 0px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  transition: 0.3s;
+}
+.side-navbar ul li :hover::before {
+  width: 10px;
+}
+.side-navbar ul li.active::before {
+  position: absolute;
+  content: "";
+  background-color: red;
+  width: 10px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  transition: 0.3s;
+}
+
+.navbar {
+  background: var(--white-color) !important;
+}
+
+/*# sourceMappingURL=style.css.map */
