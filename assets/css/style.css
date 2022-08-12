@@ -11122,24 +11122,24 @@ textarea.form-control-lg {
 }
 :root {
   --header-height: 3.5rem;
-  --primary-color: #b30e0e;
-  --secondary-color: #193a80;
+  --primary-color: #042c47;
+  --secondary-color: #1b5deb;
   --title-color: #3e4657;
-  --text-color:var(--background-color);
+  --text-color: var(--background-color);
   --description-color: #676b74;
   --meta-color: #817e7e;
   --desable-color: #dbdbdb;
   --background-color: #193a7f;
   --border-color: #e8e8e8;
   --white-color: #ffffff;
-  --body-color:rgb(240, 238, 238);
+  --body-color: rgb(240, 238, 238);
   --body-font: "Poppins", sans-serif;
   --heading-font: "Anton", sans-serif;
   --regular: 400;
   --medium: 500;
   --bold: 600;
-  --normal-font-size: 1.125rem;
-  --small-font-size: 1rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.9rem;
   --smaller-font-size: 0.875rem;
   --z-10: 10;
   --z-100: 100;
@@ -11180,6 +11180,10 @@ body {
 
 a {
   text-decoration: none;
+  color: var(--text-color);
+}
+a :hover {
+  text-decoration: underline;
 }
 
 input {
@@ -11188,25 +11192,29 @@ input {
 }
 
 .btn {
-  font-weight: var(--bold);
+  font-weight: var(--medium);
   color: var(--white-color);
   padding: 16px 12px;
   background: var(--primary-color);
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: none;
   outline: none;
+  font-size: var(--smaller-font-size);
 }
 
 button {
   border: none;
   background-color: var(--white-color);
+  font-weight: var(--regular);
+  color: var(--white-color);
+  padding: 16px 12px;
+  background: var(--primary-color);
+  border: none;
+  outline: none;
+  font-size: var(--smaller-font-size);
 }
 
 .custrom-badge {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color: var(--white-color);
   position: absolute;
   top: 6px;
@@ -11223,17 +11231,18 @@ button {
 }
 
 .circuler-avater {
-  width: 40px;
-  height: 40px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
-  background-color: var(--meta-color);
+  background-color: #d5a2ff;
   margin-right: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 15px;
 }
 .circuler-avater span {
-  font-size: var(--smaller-font-size);
+  font-size: var(--primary-color);
 }
 
 .side-navbar .header {
@@ -11251,44 +11260,101 @@ button {
 .side-navbar .header h2, .side-navbar .header .h2 {
   color: var(--text-color);
 }
-.side-navbar ul {
+.side-navbar .side-nav-ul {
   padding: 0;
 }
-.side-navbar ul li {
+.side-navbar .side-nav-ul li {
   list-style: none;
   margin-top: 3px;
-  position: relative;
+  padding-top: 5px;
+  padding-right: 5px;
 }
-.side-navbar ul li a {
-  padding-left: 15px;
-  display: inline-block;
+.side-navbar .side-nav-ul li .side-nav-link {
+  padding-left: 13px;
+  transition: 0.6s;
 }
-.side-navbar ul li ::before {
-  position: absolute;
-  content: "";
-  background-color: red;
-  width: 0px;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  transition: 0.3s;
+.side-navbar .side-nav-ul :hover .side-nav-link {
+  letter-spacing: 3px;
 }
-.side-navbar ul li :hover::before {
-  width: 10px;
-}
-.side-navbar ul li.active::before {
-  position: absolute;
-  content: "";
-  background-color: red;
-  width: 10px;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  transition: 0.3s;
+.side-navbar .side-nav-ul :hover {
+  background: rgba(27, 93, 235, 0.2117647059);
 }
 
 .navbar {
-  background: var(--white-color) !important;
+  background: var(--primary-color) !important;
+}
+.navbar .nav-item a.nav-link {
+  color: var(--desable-color) !important;
+  font-size: var(--smaller-font-size);
+}
+.navbar a.nav-link.active {
+  color: var(--white-color) !important;
+}
+.navbar .nav-group a {
+  color: var(--text-color);
+}
+.navbar .nav-group a:hover {
+  color: #1b5deb;
+  text-decoration: underline;
+}
+.navbar .nav-group button {
+  background-color: transparent;
+}
+.navbar .nav-group .navbar-sub-menu {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .nav-group .navbar-sub-menu span {
+  color: var(--text-color) !important;
+}
+.navbar .nav-group .navbar-sub-menu svg {
+  fill: var(--text-color);
+}
+
+.navbar-brand {
+  position: relative;
+}
+.navbar-brand img {
+  width: 80px;
+}
+.navbar-brand span {
+  position: absolute;
+  top: 18px;
+  color: var(--white-color);
+  left: 86px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.navbar-sub-menu-item {
+  display: none;
+  transition: 0.3s;
+}
+.navbar-sub-menu-item .nav-item a.nav-link {
+  color: var(--text-color) !important;
+}
+.navbar-sub-menu-item .nav-item a.nav-link :hover {
+  color: #1b5deb;
+  text-decoration: underline;
+}
+
+.sub-menu-main:hover .navbar-sub-menu-item {
+  display: block;
+  transition: 0.3s;
+}
+
+.main-body {
+  display: flex;
+}
+.main-body .side-appbar {
+  width: 200px;
+  background: red;
+}
+.main-body .body-content {
+  flex-grow: 1;
+  background-color: green;
+  width: 200px;
+  padding: 40px 220px 20px 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
