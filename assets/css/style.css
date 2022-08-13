@@ -2347,17 +2347,17 @@ textarea.form-control-lg {
   width: 100%;
   padding: 0.375rem 2.25rem 0.375rem 0.75rem;
   -moz-padding-start: calc(0.75rem - 3px);
-  font-size: 1rem;
+  font-size: 0.87ram;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #042c47;
   background-color: #fff;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   background-size: 16px 12px;
   border: 1px solid #ced4da;
-  border-radius: 0.25rem;
+  border-radius: 0;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   appearance: none;
 }
@@ -2380,7 +2380,7 @@ textarea.form-control-lg {
 }
 .form-select:-moz-focusring {
   color: transparent;
-  text-shadow: 0 0 0 #212529;
+  text-shadow: 0 0 0 #042c47;
 }
 
 .form-select-sm {
@@ -11139,18 +11139,18 @@ textarea.form-control-lg {
   --regular: 400;
   --medium: 500;
   --bold: 600;
-  --normal-font-size: 1rem;
-  --small-font-size: 0.9rem;
-  --smaller-font-size: 0.875rem;
+  --normal-font-size: .83rem;
+  --small-font-size: 0.833rem;
+  --smaller-font-size: 0.773rem;
   --z-10: 10;
   --z-100: 100;
   --z-999: 999;
 }
 @media screen and (max-width: 992px) {
   :root {
-    --normal-font-size: 1rem;
-    --small-font-size: 0.875rem;
-    --smaller-font-size: 0.775rem;
+    --normal-font-size: .876rem;
+    --small-font-size: 0.7rem;
+    --smaller-font-size: 0.734rem;
   }
 }
 
@@ -11216,6 +11216,34 @@ button {
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h5 {
   color: var(--text-color);
+}
+
+.fw-3 {
+  font-weight: 300;
+}
+
+.fw-4 {
+  font-weight: 400;
+}
+
+.fw-5 {
+  font-weight: 500;
+}
+
+.fw-6 {
+  font-weight: 600;
+}
+
+.fw-7 {
+  font-weight: 700;
+}
+
+.fw-8 {
+  font-weight: 800;
+}
+
+.me-6 {
+  margin-right: 6rem;
 }
 
 .custrom-badge {
@@ -11562,7 +11590,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h5 {
 }
 @media (max-width: 575.98px) {
   .modal-body {
-    padding: 0.5rem;
+    padding: 3rem;
   }
 }
 
@@ -11585,6 +11613,43 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h5 {
 }
 .profile-card .text-content {
   margin-left: 20px;
+}
+
+.flint-modal-tab-btn {
+  margin-top: 30px;
+}
+.flint-modal-tab-btn .nav-link {
+  font-size: var(--normal-font-size);
+  font-weight: 400;
+  margin-left: 5px;
+  background: transparent;
+  color: var(--text-color);
+  border-bottom: 2px solid transparent;
+}
+.flint-modal-tab-btn .nav-link:hover {
+  background-color: var(--secondary-light-color);
+}
+.flint-modal-tab-btn .nav-link.active {
+  border-bottom: 2px solid var(--secondary-color);
+  font-weight: 600;
+}
+
+.flint-modal-tab-content p {
+  margin-bottom: 0.5rem;
+}
+.flint-modal-tab-content .h6 {
+  font-weight: 600;
+}
+.flint-modal-tab-content .nav-link {
+  padding-top: 0;
+  padding-left: 0;
+}
+.flint-modal-tab-content .nav-link:hover {
+  text-decoration: underline;
+}
+
+.business-tab-aria {
+  width: 400px;
 }
 
 /*# sourceMappingURL=style.css.map */
