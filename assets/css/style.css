@@ -11133,7 +11133,7 @@ textarea.form-control-lg {
   --background-color: #193a7f;
   --border-color: #e8e8e8;
   --white-color: #ffffff;
-  --body-color: rgb(240, 238, 238);
+  --body-color: rgb(255, 255, 255);
   --body-font: "Poppins", sans-serif;
   --heading-font: "Anton", sans-serif;
   --regular: 400;
@@ -11173,6 +11173,7 @@ textarea.form-control-lg {
 }
 
 body {
+  height: 100vh;
   font-size: var(--normal-font-size);
   font-family: var(--body-font);
   color: var(--text-color);
@@ -11439,6 +11440,7 @@ h5 {
 }
 
 .main-body {
+  height: 90vh;
   display: flex;
 }
 .main-body .side-appbar {
@@ -11453,7 +11455,6 @@ h5 {
 .main-body .body-content {
   flex-grow: 1;
   width: 200px;
-  height: 2000px;
   padding: 40px 220px 20px 20px;
 }
 @media (max-width: 991.98px) {
@@ -11474,6 +11475,12 @@ h5 {
   .del-sec {
     display: block;
   }
+}
+
+.form-select:focus {
+  border-color: var(--secondary-color);
+  outline: 0;
+  box-shadow: none !important;
 }
 
 .form-control:focus {
