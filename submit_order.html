@@ -176,11 +176,11 @@
                 <!-- submit order start here -->
                 <div class="submit-order-main">
                     <!-- header part -->
-                    <div class="submit-order-header d-md-flex">
-                        <h1>Submit Orders</h1>
+                    <div class="submit-order-header d-md-flex pb-lg-5">
+                        <h2 class="fw-6">Submit Orders</h2>
                         <!--+++++++++++++++++ tab  button+++++++++++++++-->
                         <ul class="nav flint-modal-tab-btn mt-0 ms-md-5">
-                            <li class="nav-item">
+                            <li class="nav-item ">
                                 <a class="nav-link active" data-bs-toggle="pill" href="#submit-order-tab">Submit
                                     order</a>
                             </li>
@@ -197,31 +197,29 @@
                         <!-- tab one -->
 
                         <!-- !++++++++++++++++++++++++++ tab one +++++++++++++++++++++++++-->
-                        <div class="tab-pane container active ms-0 mt-4 " id="submit-order-tab">
+                        <div class="tab-pane container active  mt-5 " id="submit-order-tab">
                             <div class="d-md-flex">
                                 <div class="header-text">
                                     <h1>Position Holder:</h1>
                                 </div>
                                 <select class="form-select form-select-lg mb-3  without-border-icon"
                                     aria-label=".form-select-lg example">
-                                    <option selected>Open </option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <option selected>Dearman Systems</option>
+                                    <option value="1">Dearman Systems</option>
                                 </select>
                             </div>
                             <!-- Small select -->
-                            <div class="d-sm-flex">
+                            <div class="d-md-flex">
                                 <div class="me-5">
                                     <div class="d-flex">
                                         <p class="ms-fontsize-p">Terminal -</p>
                                         <select
                                             class="form-select form-select-ms mb-3  without-border-icon ms-fontsize "
                                             aria-label=".form-select-lg example">
-                                            <option selected>Open </option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
+                                            <option selected>Bluewing One </option>
+                                            <option value="1">Bluewing Royal</option>
+
+
                                         </select>
 
                                     </div>
@@ -232,10 +230,9 @@
                                         <select
                                             class="form-select form-select-ms mb-3  without-border-icon ms-fontsize "
                                             aria-label=".form-select-lg example">
-                                            <option selected>Open this select</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
+                                            <option selected>Dearman Systems</option>
+
+
                                         </select>
 
                                     </div>
@@ -253,14 +250,15 @@
                                                 <path
                                                     d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
                                             </svg>Rack Loading</a>
-                                        <a href="#" class="btn ">Weigh-Scale Shipment</a>
-                                        <a href="#" class="btn ">Truck Receipt</a>
+                                        <a href="scheduling-guide.html" class="btn ">Weigh-Scale Shipment</a>
+                                        <a href="scheduling-guide.html" class="btn ">Truck Receipt</a>
                                     </div>
                                 </div>
                                 <!-- input -->
                                 <div class="submit-order-group-input">
                                     <form action="#">
-                                        <input class="date-picker pb-1" type="date">
+                                        <input class="date-picker pb-1" type="text" placeholder="Dec 15"
+                                            onfocus="(this.type='date')" onblur="(this.type='text')">
                                     </form>
                                 </div>
 
@@ -275,7 +273,7 @@
                             <!-- product info -->
                             <div class="row product-info-sec mt-5">
                                 <div class="col-xl-4 col-xxl-2 col-lg-6 col-sm-12">
-                                    <h6 class="pro-info-level">O.P.Number</h6>
+                                    <h6 class="pro-info-level ms-3">START TIME</h6>
                                     <select class="form-select form-select-lg   without-border-icon "
                                         aria-label=".form-select-lg example">
                                         <option selected>04.15 AM</option>
@@ -291,7 +289,7 @@
                                 </div>
                                 <!-- 2 -->
                                 <div class=" col-xl-4 col-xxl-2 col-lg-6 col-sm-12 ">
-                                    <h6 class="pro-info-level ">O.P.Number</h6>
+                                    <h6 class="pro-info-level ms-3">EXPIRES</h6>
                                     <select class="form-select form-select-lg without-border-icon "
                                         aria-label=".form-select-lg example">
                                         <option selected>04.15 AM</option>
@@ -306,7 +304,7 @@
                                 </div>
                                 <!-- 3 -->
                                 <div class="col-xl-4 col-xxl-2 col-lg-6 col-sm-12 ">
-                                    <h6 class="pro-info-level">O.P.Number</h6>
+                                    <h6 class="pro-info-level"><b>Product*</b></h6>
                                     <select class="form-select form-select-lg " aria-label=".form-select-lg example">
                                         <option selected>Open this select menu</option>
                                         <option value="1">One</option>
@@ -316,7 +314,7 @@
                                 </div>
                                 <!-- 4 -->
                                 <div class="col-xl-4 col-xxl-2 col-lg-6 col-sm-12 ">
-                                    <h6 class="pro-info-level">O.P.Number</h6>
+                                    <h6 class="pro-info-level"><b>Carrier*</b></h6>
                                     <select class="form-select form-select-lg " aria-label=".form-select-lg example">
                                         <option selected>Open this select menu</option>
                                         <option value="1">One</option>
@@ -326,7 +324,7 @@
                                 </div>
                                 <!-- 5 -->
                                 <div class="col-xl-4 col-xxl-2 col-lg-6 col-sm-12 ">
-                                    <h6 class="pro-info-level">O.P.Number</h6>
+                                    <h6 class="pro-info-level"><b>Destination*</b></h6>
                                     <select class="form-select form-select-lg " aria-label=".form-select-lg example">
                                         <option selected>Open this select menu</option>
                                         <option value="1">One</option>
@@ -336,7 +334,7 @@
                                 </div>
                                 <!-- 6 -->
                                 <div class="col-xl-4 col-xxl-2 col-lg-6 col-sm-12 ">
-                                    <h6 class="pro-info-level">O.P.Number</h6>
+                                    <h6 class="pro-info-level"><b>O.P.Number</b></h6>
                                     <input type="text">
                                 </div>
                             </div>
@@ -344,7 +342,8 @@
                                 <!-- !Add advanced details Modal-->
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#add-advannce-detail-modal"
                                     data-bs-whatever="@mdo">Add advanced details</a>
-                                <button class="btn">Add trailers</button>
+                                <button class="btn" data-bs-toggle="modal" data-bs-target="#add-trailer-info"
+                                    data-bs-whatever="@mdo">Add trailers</button>
                             </div>
                         </div>
                         <!-- !++++++++++++++++++++++++++ tab tow +++++++++++++++++++++++++-->
@@ -368,7 +367,7 @@
 
                                     </ul>
                                 </div>
-                                <div class="upload-order-tab-right mt-5">
+                                <div class="upload-order-tab-right upload-order-tab-right-w  mt-5">
                                     <h2>Upload your populated scheduling template.</h2>
                                     <p>Remember, the template must include all required fields and references must
                                         appear exactly as they do in the system for a successful submission.</p>
@@ -383,7 +382,7 @@
                                                     d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383zm.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z" />
                                             </svg>
                                             Download Scheduling Template</button>
-                                        <button class="btn">Upload Orders</button>
+                                        <a href="review-order.html" class="btn">Upload Orders</a>
                                     </div>
                                 </div>
                             </div>
@@ -403,7 +402,7 @@
                 <!-- add advannce detail modal -->
                 <div class="modal fade add-advannce-detail-modal" id="add-advannce-detail-modal" tabindex="-1"
                     aria-labelledby="flint-modalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-xl  modal-dialog-centered">
+                    <div class="modal-dialog modal-xl  modal-dialog-centered modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h2 class="modal-title" id="exampleModalLabel">Add advanced order details</h2>
@@ -411,107 +410,462 @@
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body pt-1 ps-4">
-                                <h5>
+                                <h5 class="mb-4">
                                     <form action="#">
-                                        <input class="mb-1" type="date">
+                                        <input class="date-picker pb-1" type="text" placeholder="Thursday, December 16"
+                                            onfocus="(this.type='date')" onblur="(this.type='text')">
                                     </form>
                                 </h5>
-                                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
+                                <div class="d-xxl-flex">
+                                    <div class="custrom-col-two d-flex">
+                                        <div class="mb-3 pe-5">
+                                            <h6 class="ms-2">START TIME</h6>
+                                            <select class="form-select form-select-lg   without-border-icon ms-fontsize"
+                                                aria-label=".form-select-lg example">
+                                                <option selected>04.15 AM</option>
+                                                <option value="1">04.15 AM</option>
+                                                <option value="2">04.15 AM</option>
+                                                <option value="3">04.15 AM</option>
+                                                <option value="4">04.15 AM</option>
+                                                <option value="5">04.15 AM</option>
+                                                <option value="6">04.15 AM</option>
+                                                <option value="7">04.15 AM</option>
 
-                                    <div class="col mb-3">
-                                        <select class="form-select form-select-lg   without-border-icon ms-fontsize"
-                                            aria-label=".form-select-lg example">
-                                            <option selected>04.15 AM</option>
-                                            <option value="1">04.15 AM</option>
-                                            <option value="2">04.15 AM</option>
-                                            <option value="3">04.15 AM</option>
-                                            <option value="4">04.15 AM</option>
-                                            <option value="5">04.15 AM</option>
-                                            <option value="6">04.15 AM</option>
-                                            <option value="7">04.15 AM</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <h6 class="ms-2">EXPIRES</h6>
+                                            <select class="form-select form-select-lg   without-border-icon ms-fontsize"
+                                                aria-label=".form-select-lg example">
+                                                <option selected>04.15 AM</option>
+                                                <option value="1">04.15 AM</option>
+                                                <option value="2">04.15 AM</option>
+                                                <option value="3">04.15 AM</option>
+                                                <option value="4">04.15 AM</option>
+                                                <option value="5">04.15 AM</option>
+                                                <option value="6">04.15 AM</option>
+                                                <option value="7">04.15 AM</option>
 
-                                        </select>
+                                            </select>
+                                        </div>
                                     </div>
-                                    <div class="col mb-3">
-                                        <select class="form-select form-select-lg   without-border-icon ms-fontsize"
-                                            aria-label=".form-select-lg example">
-                                            <option selected>04.15 AM</option>
-                                            <option value="1">04.15 AM</option>
-                                            <option value="2">04.15 AM</option>
-                                            <option value="3">04.15 AM</option>
-                                            <option value="4">04.15 AM</option>
-                                            <option value="5">04.15 AM</option>
-                                            <option value="6">04.15 AM</option>
-                                            <option value="7">04.15 AM</option>
+                                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-6">
 
-                                        </select>
-                                    </div>
-                                    <div class="col mb-3">
-                                        <h6>Position Holder</h6>
-                                        <p class="mb-1">Dearman Systems</p>
-                                        <a class="nav-link" href="#">Edit</a>
-                                    </div>
-                                    <div class="col mb-3">
-                                        <h6>Terminal</h6>
-                                        <p class="mb-1">Bluewing One</p>
-                                        <a class="nav-link" href="#">Edit</a>
-                                    </div>
-                                    <div class="col mb-3">
-                                        <h6>Supplier</h6>
-                                        <p class="mb-1">Dearman Systems </p>
-                                        <a class="nav-link" href="#">Edit</a>
-                                    </div>
-                                    <div class="col mb-3">
-                                        <h6>Product</h6>
-                                        <p class="mb-1">DULSD</p>
-                                        <a class="nav-link" href="#">Edit</a>
-                                    </div>
-                                    <div class="col mb-3">
-                                        <h6>Carrier</h6>
-                                        <p class="mb-1">Dearman Systems</p>
-                                        <a class="nav-link" href="#">Edit</a>
-                                    </div>
-                                    <div class="col mb-3 ">
-                                        <h6>Destination</h6>
-                                        <p class="mb-1">Houston, TX</p>
-                                        <a class="nav-link" href="#">Edit</a>
-                                    </div>
 
+                                        <div class="col  mb-3">
+                                            <h6>Company Code</h6>
+                                            <p class="mb-1">Dearman Systems</p>
+                                            <a class="nav-link" href="#">Edit</a>
+                                        </div>
+                                        <div class="col   mb-3">
+                                            <h6>Terminal</h6>
+                                            <p class="mb-1">Bluewing One</p>
+                                            <a class="nav-link" href="#">Edit</a>
+                                        </div>
+                                        <div class="col  mb-3">
+                                            <h6>Supplier</h6>
+                                            <p class="mb-1">Dearman Systems </p>
+                                            <a class="nav-link" href="#">Edit</a>
+                                        </div>
+                                        <div class="col mb-3">
+                                            <h6>Product</h6>
+                                            <p class="mb-1">DULSD</p>
+                                            <a class="nav-link" href="#">Edit</a>
+                                        </div>
+                                        <div class="col mb-3">
+                                            <h6>Carrier</h6>
+                                            <p class="mb-1">Dearman Systems</p>
+                                            <a class="nav-link" href="#">Edit</a>
+                                        </div>
+                                        <div class="col mb-3 ">
+                                            <h6>Destination</h6>
+                                            <p class="mb-1">Houston, TX</p>
+                                            <a class="nav-link" href="#">Edit</a>
+                                        </div>
+
+                                    </div>
                                 </div>
+
+
                                 <hr class="my-5">
-                                <div class="row add-advannce-detail-modal-form row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
+                                <div
+                                    class="row add-advannce-detail-modal-form row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
                                     <div class="col mb-3">
-                                        <h6 class="pro-info-level">O.P.Number</h6><input class="form-con" type="text">
+                                        <h6 class="pro-info-level">Company Code</h6><input class="form-con" type="text">
                                     </div>
                                     <div class="col mb-3">
-                                        <h6 class="pro-info-level">O.P.Number</h6><input class="form-con" type="text">
+                                        <h6 class="pro-info-level">Carrier Code</h6><input class="form-con" type="text">
                                     </div>
                                     <div class="col mb-3">
-                                        <h6 class="pro-info-level">O.P.Number</h6><input class="form-con" type="text">
+                                        <h6 class="pro-info-level">SPLC</h6><input class="form-con" type="text">
                                     </div>
                                     <div class="col mb-3">
-                                        <h6 class="pro-info-level">O.P.Number</h6><input class="form-con" type="text">
+                                        <h6 class="pro-info-level">Product Code</h6><input class="form-con" type="text">
                                     </div>
                                     <div class="col mb-3">
-                                        <h6 class="pro-info-level">O.P.Number</h6><input class="form-con" type="text">
+                                        <h6 class="pro-info-level">Lot #</h6><input class="form-con" type="text">
                                     </div>
                                     <div class="col mb-3">
-                                        <h6 class="pro-info-level">O.P.Number</h6><input class="form-con" type="text">
+                                        <h6 class="pro-info-level">3rd Party BOL</h6><input class="form-con" type="text">
                                     </div>
                                     <div class="col mb-3">
-                                        <h6 class="pro-info-level">O.P.Number</h6><input class="form-con" type="text">
+                                        <h6 class="pro-info-level">In Care Of</h6><input class="form-con" type="text">
                                     </div>
+                                    
 
                                 </div>
                                 <div class="add-advannce-detail-btns mt-2">
-                                    <a href="#" class="btn">Back</a>
-                                    <button class="btn">Add Trailers</button>
+                                    <a href="#" class="btn" data-bs-dismiss="modal" aria-label="Close">Back</a>
+                                    <button class="btn" data-bs-toggle="modal" data-bs-target="#add-trailer-info"
+                                        data-bs-whatever="@mdo" data-bs-dismiss="modal" aria-label="Close">Add
+                                        Trailers</button>
                                 </div>
 
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- !++++++++++ Add trailer info +++++++++++ -->
+                <div class="modal fade add-advannce-detail-modal" id="add-trailer-info" tabindex="-1"
+                    aria-labelledby="flint-modalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl  modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title" id="exampleModalLabel">Add advanced order details</h2>
+                                <button type="button" class="btn-close me-3" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body pt-1 ps-4">
+                                <h5 class="mb-4">
+                                    <form action="#">
+                                        <input class="date-picker pb-1" type="text" placeholder="Thursday, December 16"
+                                            onfocus="(this.type='date')" onblur="(this.type='text')">
+                                    </form>
+                                </h5>
+                                <div class="d-xxl-flex">
+                                    <div class="custrom-col-two d-flex">
+                                        <div class="mb-3 pe-5">
+                                            <h6 class="ms-2">START TIME</h6>
+                                            <select class="form-select form-select-lg   without-border-icon ms-fontsize"
+                                                aria-label=".form-select-lg example">
+                                                <option selected>04.15 AM</option>
+                                                <option value="1">04.15 AM</option>
+                                                <option value="2">04.15 AM</option>
+                                                <option value="3">04.15 AM</option>
+                                                <option value="4">04.15 AM</option>
+                                                <option value="5">04.15 AM</option>
+                                                <option value="6">04.15 AM</option>
+                                                <option value="7">04.15 AM</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <h6 class="ms-2">EXPIRES</h6>
+                                            <select class="form-select form-select-lg   without-border-icon ms-fontsize"
+                                                aria-label=".form-select-lg example">
+                                                <option selected>04.15 AM</option>
+                                                <option value="1">04.15 AM</option>
+                                                <option value="2">04.15 AM</option>
+                                                <option value="3">04.15 AM</option>
+                                                <option value="4">04.15 AM</option>
+                                                <option value="5">04.15 AM</option>
+                                                <option value="6">04.15 AM</option>
+                                                <option value="7">04.15 AM</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-6">
+
+
+                                        <div class="col  mb-3">
+                                            <h6>Position Holder</h6>
+                                            <p class="mb-1">Dearman Systems</p>
+                                            <a class="nav-link" href="#">Edit</a>
+                                        </div>
+                                        <div class="col   mb-3">
+                                            <h6>Terminal</h6>
+                                            <p class="mb-1">Bluewing One</p>
+                                            <a class="nav-link" href="#">Edit</a>
+                                        </div>
+                                        <div class="col  mb-3">
+                                            <h6>Supplier</h6>
+                                            <p class="mb-1">Dearman Systems </p>
+                                            <a class="nav-link" href="#">Edit</a>
+                                        </div>
+                                        <div class="col mb-3">
+                                            <h6>Product</h6>
+                                            <p class="mb-1">DULSD</p>
+                                            <a class="nav-link" href="#">Edit</a>
+                                        </div>
+                                        <div class="col mb-3">
+                                            <h6>Carrier</h6>
+                                            <p class="mb-1">Dearman Systems</p>
+                                            <a class="nav-link" href="#">Edit</a>
+                                        </div>
+                                        <div class="col mb-3 ">
+                                            <h6>Destination</h6>
+                                            <p class="mb-1">Houston, TX</p>
+                                            <a class="nav-link" href="#">Edit</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="accordion accordion-flush" id="accordionsubmit-order">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne" aria-expanded="true"
+                                                aria-controls="collapseOne">
+                                                Expand advanced details
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse "
+                                            aria-labelledby="headingOne" data-bs-parent="#accordionsubmit-order">
+                                            <div class="accordion-body">
+                                              <h1>Here is demo text</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    
+                                    <!-- table -->
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered mt-3">
+                                            <thead>
+                                                <tr>
+                                                    <th>Trailer*</th>
+                                                    <th>TrailerLicenselate</th>
+                                                    <th>Truck</th>
+                                                    <th>TruckLicensePlate</th>
+                                                    <th>Amount(USG)*</th>
+                                                    <th>P.O.Number</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>John</td>
+                                                    <td>Doe</td>
+                                                    <td>john@example.com</td>
+                                                    <td>John</td>
+                                                    <td>Doe</td>
+                                                    <td>john@example.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Mary</td>
+                                                    <td>Moe</td>
+                                                    <td>mary@example.com</td>
+                                                    <td>Mary</td>
+                                                    <td>Moe</td>
+                                                    <td>mary@example.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>July</td>
+                                                    <td>Dooley</td>
+                                                    <td>july@example.com</td>
+                                                    <td>July</td>
+                                                    <td>Dooley</td>
+                                                    <td>july@example.com</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                    <div class="add-advannce-detail-btns mt-5">
+                                        <a href="#" class="btn" data-bs-dismiss="modal" aria-label="Close">Back</a>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#oder-summary-modal"
+                                            data-bs-whatever="@mdo">Submit</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- !++++++++++ Order Summary +++++++++++ -->
+                    <div class="modal fade add-advannce-detail-modal" id="oder-summary-modal" tabindex="-1"
+                        aria-labelledby="oder-summary-modallLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl  modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title" id="exampleModalLabel">Order Summary</h2>
+                                    <button type="button" class="btn-close me-3" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body sumary-modal-body ps-4">
+                                    <div class="d-xl-flex justify-content-between summary-track-btn">
+                                        <h2>Order submitted for approval.</h2>
+                                        <div class="mt-xl-0 mt-2 mb-2"><a href="#" class="btn">Track Order</a></div>
+                                    </div>
+                                    <p>Your order has been submitted for position holder approval!</p>
+                                    <!-- table -->
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Firstname</th>
+                                                    <th>Lastname</th>
+                                                    <th>Email</th>
+                                                    <th>Firstname</th>
+                                                    <th>Lastname</th>
+                                                    <th>Email</th>
+                                                    <th>Email</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>John</td>
+                                                    <td>Doe</td>
+                                                    <td>john@example.com</td>
+                                                    <td>John</td>
+                                                    <td>Doe</td>
+                                                    <td>john@example.com</td>
+                                                    <td>john@example.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Mary</td>
+                                                    <td>Moe</td>
+                                                    <td>mary@example.com</td>
+                                                    <td>mary@example.com</td>
+                                                    <td>mary@example.com</td>
+                                                    <td>mary@example.com</td>
+                                                    <td>mary@example.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>July</td>
+                                                    <td>Dooley</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>July</td>
+                                                    <td>Dooley</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>July</td>
+                                                    <td>Dooley</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>July</td>
+                                                    <td>Dooley</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>July</td>
+                                                    <td>Dooley</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>July</td>
+                                                    <td>Dooley</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>July</td>
+                                                    <td>Dooley</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>July</td>
+                                                    <td>Dooley</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>July</td>
+                                                    <td>Dooley</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>July</td>
+                                                    <td>Dooley</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>July</td>
+                                                    <td>Dooley</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>July</td>
+                                                    <td>Dooley</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>July</td>
+                                                    <td>Dooley</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>July</td>
+                                                    <td>Dooley</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                    <td>july@example.com</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
     </main>
 
     <!-- script -->
