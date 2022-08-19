@@ -12328,6 +12328,23 @@ h5 {
   padding: 15px;
   padding-bottom: 100px;
 }
+.userFormMain .offcanvas-end {
+  background-color: #fffcf9;
+}
+.userFormMain .offcanvas-body {
+  overflow-x: hidden;
+}
+@media (min-width: 1200px) {
+  .userFormMain .offcanvas-body {
+    padding-right: 150px;
+  }
+}
+@media (max-width: 991.98px) {
+  .userFormMain .offcanvas-body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 
 .user-form {
   flex-grow: 1;
@@ -12457,10 +12474,20 @@ h5 {
 
 .table-with {
   max-width: 350px;
+  background: var(--white-color);
+  padding: 20px;
 }
 
 .color-red {
   color: red;
+}
+
+.form-label {
+  font-weight: 500;
+}
+
+.f-16 {
+  font-size: var(--normal-font-size);
 }
 
 .overvew-tab-left {
