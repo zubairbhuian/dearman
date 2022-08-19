@@ -32,13 +32,9 @@
             </div>
             <div class="mt-5"></div>
             <div class="text-align-end">
-              <button class="secound-btn " data-bs-toggle="offcanvas" href="#success-supplier-added" role="button"
+              <button class="secound-btn " data-bs-toggle="offcanvas" href="#sa-offcanvas" role="button"
                 aria-controls="success-supplier-added">
-                Confirm <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                  class="bi bi-arrow-right-short ms-2" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd"
-                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
-                </svg>
+                Confirm 
               </button>
             </div>
         </div>
@@ -47,10 +43,90 @@
 
 <!----------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------
-===================================================          offcanvas One          =======================================
+===================================================          offcanvasSuccAcc          =======================================
 ----------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------->
+<!-- !Add Supplier Name -->
+<div class="offcanvas offcanvas-end offcanvasSuccAcc" tabindex="-1" id="sa-offcanvas"
+    aria-labelledby="offcanvasSuccAccLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasSuccAccLabel"></h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body pb-5">
+    <!-- body -->
+    <div class="row row-cols-1 row-cols-lg-4">
+      <div class="col user-roade-map">
+        <div class="upload-order-tab-left">
+          <ul class="timeline">
+            <li class="timeline-item active mb-6 ">
+              <h5>Name</h5>
+            </li>
 
+            <li class="timeline-item  mb-6">
+              <h5>Address</h5>
+              </p>
+            </li>
+
+            <li class="timeline-item mb-6">
+              <h5>Optional Settings</h5>
+
+            </li>
+
+            <li class="timeline-item mb-6">
+              <h5>Finish</h5>
+
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <!-- Right Colum -->
+      <div class="col user-form">
+        <!--  !Area -->
+        <div class="user-form-area">
+          <h4>Add Supplier Name</h4>
+          <p class="py-4">To get started, enter the suppliers name and assign a reference code.</p>
+          <!-- content -->
+          <form action="#">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Supplier Name *</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Supplier Reference *</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+            </div>
+            <ul class="nav nav-pills mt-5">
+              <li class="nav-item">
+                <a data-bs-toggle="pill" href="#sa-offcanvas2" class="secound-btn">
+                  Confirm
+                </a>
+              </li>
+            </ul>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </div>
+<!-- ! -->
+<div class="offcanvas offcanvas-end offcanvasSuccAcc" tabindex="-1" id=""
+    aria-labelledby="offcanvasSuccAccLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasSuccAccLabel"></h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body pb-5">
+    <!-- body -->
+    </div>
+  </div>
+
+
+
+  <!-- ? -->
   <div class="offcanvas offcanvas-end offcanvasSuccAcc" tabindex="-1" id="offcanvasSuccAcc"
     aria-labelledby="offcanvasSuccAccLabel">
     <div class="offcanvas-header">
@@ -62,61 +138,7 @@
       <div class="tab-content">
         <!-- ?one -->
         <div class="tab-pane container active" id="sa-offcanvas">
-          <div class="row row-cols-1 row-cols-lg-4">
-            <div class="col user-roade-map">
-              <div class="upload-order-tab-left">
-                <ul class="timeline">
-                  <li class="timeline-item active mb-6 ">
-                    <h5>Name</h5>
-                  </li>
 
-                  <li class="timeline-item  mb-6">
-                    <h5>Address</h5>
-                    </p>
-                  </li>
-
-                  <li class="timeline-item mb-6">
-                    <h5>Optional Settings</h5>
-
-                  </li>
-
-                  <li class="timeline-item mb-6">
-                    <h5>Finish</h5>
-
-                  </li>
-
-                </ul>
-              </div>
-            </div>
-            <!-- Right Colum -->
-            <div class="col user-form">
-              <!--  !Area -->
-              <div class="user-form-area">
-                <h1>Add Supplier Name</h1>
-                <p class="py-4">To get started, enter the suppliers name and assign a reference code.</p>
-                <!-- content -->
-                <form action="#">
-                  <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Supplier Name *</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Supplier Reference *</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-                  </div>
-                  <ul class="nav nav-pills mt-5">
-                    <li class="nav-item">
-                      <a data-bs-toggle="pill" href="#sa-offcanvas2" class="secound-btn">
-                        Confirm
-                      </a>
-                    </li>
-                  </ul>
-                </form>
-
-              </div>
-            </div>
-
-          </div>
         </div>
         <!-- ?2 -->
         <div class="tab-pane container " id="sa-offcanvas2">
