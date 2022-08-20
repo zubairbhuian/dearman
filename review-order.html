@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>trailers</title>
+</head>
+
+<body>
+    <main>
+        <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ======================+++++++++++++ Top Navigation +++++++++++++++=============================
+   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+            <div class="container-fluid">
+                <a class="side-appbar-icon " type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-text-paragraph" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </a>
+                <a class="navbar-brand" href="index.html">
+                    <img src="/assets/images/logo.png" alt=""><span>LYNX Console</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav  me-auto ms-auto ">
+                        <li class="nav-item pe-5">
+                            <a class="nav-link active" aria-current="page" href="index.html">Insights</a>
+                        </li>
+                        <li class="nav-item pe-5">
+                            <a class="nav-link" href="submit_order.html">Submit Orders</a>
+                        </li>
+                        <li class="nav-item position-relative ">
+                            <a class="nav-link " href="#">Order Management</a>
+                            <div class="custrom-badge">2 <span>New</span> </div>
+                            </span>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav me-6">
+                        <li class="nav-item hide-lg">
+                            <div class="circuler-avater">
+                                <span>FH</span>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <!--  -->
+                                <!-- <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li> -->
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+        </nav>
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ======================+++++++++++++  Mobail Side Menu  +++++++++++++++==========================   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <div class="offcanvas offcanvas-side-appbar offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
+            tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="offcanvas-header">
+
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="side-appbar">
+                    <div class="navbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="terminals.html">Terminals</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="suppliers.html">Suppliers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="customers.html">Customers</a>
+                            </li>
+                            <!-- Sub Menu -->
+                            <li class="nav-item dropdown side-dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Carriers
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="drivers.html">Drivers</a></li>
+                                    <li><a class="dropdown-item" href="entities.html">Entities </a></li>
+                                    <li><a class="dropdown-item" href="trailers.html">Trailers</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="products.html">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="destinations.html">Destinations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="contacts.html">Contacts</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ======================+++++++++++++  Main Body  +++++++++++++++==========================   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        <div class="main-body">
+            <!-- side appbar -->
+            <div class="side-appbar">
+                <div class="navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="terminals.html">Terminals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="suppliers.html">Suppliers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">Customers</a>
+                        </li>
+                        <!--!+++++++++++++++ Sub Menu +++++++++++++++++++++-->
+                        <li class="nav-item dropdown side-dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Carriers
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="drivers.html">Drivers</a></li>
+                                <li><a class="dropdown-item" href="entities.html">Entities </a></li>
+                                <li><a class="dropdown-item" href="trailers.html">Trailers </a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="products.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="destinations.html">Destinations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="contacts.html">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- !++++++++++++++  body contant ++++++++++++++++++++++++-->
+            <div class="body-content">
+                <!-- submit order start here -->
+                <div class="submit-order-main">
+                    <!-- header part -->
+                    <div class="submit-order-header d-md-flex">
+                        <h1>Submit Orders</h1>
+                        <!--+++++++++++++++++ tab  button+++++++++++++++-->
+                        <ul class="nav flint-modal-tab-btn mt-0 ms-md-5">
+                            <li class="nav-item">
+                                <a class="nav-link " href="submit_order.html">Submit
+                                    order</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="#">Upload order
+                                    in-bulk(csb)</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="upload-order-tab ms-0">
+                        <div class="d-xl-flex">
+                            <div class="upload-order-tab-left">
+                                <ul class="timeline">
+                                    <li class="timeline-item  mb-6 ">
+                                        <h5>Upload Scheduling Template</h5>
+                                    </li>
+
+                                    <li class="timeline-item active mb-6">
+                                        <h5>Upload Scheduling Template</h5>
+                                        </p>
+                                    </li>
+
+                                    <li class="timeline-item mb-6">
+                                        <h5>Order Summary</h5>
+
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="upload-order-tab-right mt-5 full-width">
+                                <h2>Review your order and submit.</h2>
+                                <p>Remember, the template must include all required fields and references must appear
+                                    exactly as they do in the system for a successful submission.</p>
+                                <div class="review-order-page-table table-responsive">
+
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <div class="form-check table-check">
+                                                        <input type="checkbox" class="form-check-input">
+                                                        <label class="form-check-label">Termital</label>
+                                                      </div>
+                                                </th>                                              
+                                                <th>Carrier</th>
+                                                <th>Trailer</th>
+                                                <th>Product</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input type="checkbox" class="form-check-input">
+                                                        <label class="form-check-label">Option 3</label>
+                                                      </div>
+                                                </td>
+                                                <td>Doe</td>
+                                                <td>john@example.com</td>
+                                                <td>john@example.com</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="upload-order-tab-group-btn mt-4">
+                                    <button class="btn me-3">
+                                        Choose a Defferet File</button>
+                                    <a href="order-summary.html" class="btn">Submit Order</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

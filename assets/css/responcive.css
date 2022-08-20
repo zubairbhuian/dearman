@@ -1,0 +1,16 @@
+@media screen and (max-width: 991px){
+    .side-navbar{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 576px){
+    .container{
+        width: 100%;
+    }
+
+    /* .LYNX-overview #overview .wrapper .big-chart .box  .tabile-list .list li{
+        width: 100% !important;
+    } */
+}

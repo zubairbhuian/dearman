@@ -21,19 +21,3 @@ $(document).ready(function(){
           $('#trailer-data').slideToggle(500);
       });
   });
-
-// zb
-  function hideBtnFunction() {
-    var x = document.querySelector('.track-order-tk-con');
-    var y = document.querySelector('.track-order-tk-con-ontab');
-    x.style.display = "none";
-    y.style.display = "block";
-
-  }
-  function hideBtnFunction2() {
-    var x = document.querySelector('.track-order-tk-con2');
-    var y = document.querySelector('.track-order-tk-con-ontab2');
-    x.style.display = "none";
-    y.style.display = "block";
-
-  }
