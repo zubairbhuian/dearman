@@ -12324,6 +12324,103 @@ h5 {
   opacity: 0.9;
 }
 
+.group-select {
+  display: flex;
+  max-width: 550px;
+}
+.group-select .form-select {
+  font-weight: 600;
+}
+@media (max-width: 575.98px) {
+  .group-select {
+    display: block;
+  }
+}
+
+.color-blue {
+  color: var(--secondary-color);
+}
+
+.zb-custrom-checkbox .toggle {
+  position: relative;
+}
+.zb-custrom-checkbox .toggle * {
+  --main-timing: .5s;
+  box-sizing: border-box;
+  transition: color var(--main-timing), background var(--main-timing), transform var(--main-timing);
+}
+.zb-custrom-checkbox .toggle .box {
+  display: inline-block;
+  background: #817e7e;
+  height: 10px;
+  width: 50px;
+  border-radius: 10px;
+  margin-top: 4px;
+}
+.zb-custrom-checkbox .toggle .switch {
+  position: absolute;
+  top: -2px;
+  left: 0px;
+  display: inline-block;
+  background: white;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.zb-custrom-checkbox .toggle .off, .zb-custrom-checkbox .toggle .on {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: red;
+  background: green;
+}
+.zb-custrom-checkbox .toggle input[type=checkbox] {
+  display: none;
+  margin-top: 10px;
+}
+.zb-custrom-checkbox .toggle input[type=checkbox]:checked ~ .on, .zb-custrom-checkbox .toggle input[type=checkbox]:not(:checked) ~ .off {
+  display: none;
+}
+.zb-custrom-checkbox .toggle input[type=checkbox]:checked ~ .switch {
+  transform: translateX(28px);
+  background: var(--secondary-color);
+}
+
+.custrom-check-box {
+  background: var(--secondary-light-color) !important;
+}
+
+.elect-tanks {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.elect-tanks .hdd-network {
+  width: 30px;
+}
+
+.offcanvasdownload-populer-image3 img {
+  width: 100%;
+}
+
+.offcan-uploading-img {
+  overflow-x: hidden;
+  width: 400px;
+}
+.offcan-uploading-img img {
+  width: 100%;
+}
+
+.offcan-uploading-img {
+  overflow: hidden;
+  max-width: 380px;
+}
+
+.offcan-uploading-img2 {
+  overflow-x: hidden;
+  max-width: 300px;
+}
+
 .userFormMain {
   padding: 15px;
   padding-bottom: 100px;

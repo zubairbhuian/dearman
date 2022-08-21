@@ -37,3 +37,9 @@ $(document).ready(function(){
     y.style.display = "block";
 
   }
+
+  // checkbox
+  function custromCheckFunction() {
+    var element = document.getElementById("custrom-check-box");
+    element.classList.toggle("custrom-check-box");
+  }

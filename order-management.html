@@ -186,16 +186,71 @@
                             </li>
                         </ul>
                     </div>
-
-
                     <!--++++++++++++ Tab panes ++++++++++++++++++++-->
                     <div class="tab-content flint-modal-tab-content">
                         <!-- tab one -->
-
                         <!-- !++++++++++++++++++++++++++ tab one +++++++++++++++++++++++++-->
-                        <div class="tab-pane container active  mt-5 " id="submit-order-tab">
+                        <div class="tab-pane container active  mt-5 ms-0 ps-0" id="submit-order-tab">
+                            <!-- Group select -->
+                            <div class="group-select">
+                                <!-- 1 -->
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Terminals</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                                  <!-- 2 -->
+                                <select class="form-select mx-sm-3 my-3 my-sm-0 " aria-label="Default select example">
+                                    <option selected>Customers</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                                  <!-- 3 -->
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Products</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                             <!-- hr -->
+                        <hr class="my-4">
+                        <!-- select tanks  -->
+                        
+                       <div class="elect-tanks-main">
+                        <div class="elect-tanks">
+                            <img class="hdd-network me-1" src="assets/images/icons/hdd-network.png" alt="">
+                            <h6 class="mb-0 me-1">Select tanks smarte</h6>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle me-4" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                            </svg>
+                            <h6 class="color-blue mb-0 me-1">Auto-tank selection</h6>
+                            <div class="zb-custrom-checkbox">
+                                <label class="toggle">
+                                    <span class="box" id="custrom-check-box"></span>
+                                    <input type='checkbox' onclick="custromCheckFunction()">
+                                    <span class="switch"></span>
+                                  </label> 
+                            </div>
+                        </div>
+                        <div class="elect-tanks-right">
+                         
+                        </div>
+
+                       </div>
+
+
+
+
+
+
+
 
                         </div>
+                       
                         <!-- !++++++++++++++++++++++++++ tab tow +++++++++++++++++++++++++-->
                         <div class="tab-pane container fade upload-order-tab ms-0" id="upload-order-tab">
 
