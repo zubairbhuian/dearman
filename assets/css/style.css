@@ -12399,6 +12399,28 @@ h5 {
   width: 30px;
 }
 
+.offcanvasdownload-populer-image3 img {
+  width: 100%;
+}
+
+.offcan-uploading-img {
+  overflow-x: hidden;
+  width: 400px;
+}
+.offcan-uploading-img img {
+  width: 100%;
+}
+
+.offcan-uploading-img {
+  overflow: hidden;
+  max-width: 380px;
+}
+
+.offcan-uploading-img2 {
+  overflow-x: hidden;
+  max-width: 300px;
+}
+
 .userFormMain {
   padding: 15px;
   padding-bottom: 100px;
