@@ -1,13 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Document</title>
 </head>
+
 <body>
-    <h2>je</h2>
+  <div class="d-flex demo-container">
+    <button class="btn" data-bs-toggle="modal" data-bs-target="#status-mod-order">Open Modal</button>
+  </div>
+
+
+  <!------------------------------------------------------------
+    ========================= Modal  Order status==================
+    -------------------------------------------------------------->
+  <!-- Modal demo-->
+  <div class="modal fade" id="status-mod-order" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-none">
+        <div class="modal-body status-mod-header-area">
+          <div class="status-mod-header">
+            <div class="text-align-end">
+              <button type="button" class="" data-bs-dismiss="modal" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                </svg>
+              </button>
+            </div>
+            <div class="row ps-3">
+              <div class="col-lg-9">
+                <h3 class="color-white">Luxemborg 564</h3>
+              </div>
+              <div class="col-lg-3">
+                <h3 class="color-white">CLOSED</h3>
+              </div>
+              <div class="col-lg-9">
+                <p class="color-white">Order 87999</p>
+              </div>
+              <div class="col-lg-3"><a href="#" class="color-white h-underline">BOL 1078962</a></div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <!-- !TAB button -->
+                <ul class="nav nav-pills" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="mod-link-id" data-bs-toggle="pill" href="#status-mod-order-tab">Order
+                      Status</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="mod-link-id2" data-bs-toggle="pill" href="#tatus-mod-upload-tab">Update
+                      Order</a>
+                  </li>
+                </ul>
+              </div>
+              <!--  -->
+              <div class="col pe-5 status-mod-right">
+                <input class="status-mod-input me-3" type="date" value="2020-06-01">
+                <button class="status-mod-btn">Update Order</button>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <!-- !Tab panes -->
+          <div class="tab-content">
+            <!-- ?tab 1 -->
+            <div id="status-mod-order-tab" class="container tab-pane status-mod-order-tab active"><br>
+              <h3>HOME</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+            </div>
+            <!-- ?tab 2 -->
+            <div id="tatus-mod-upload-tab" class="container tab-pane fade tatus-mod-upload-tab">
+              <!--  ! 2nd Nav pills Button-->
+              <ul class="nav nav-pills mt-5 ms-5" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-bs-toggle="pill" href="#osm-general">General</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="pill" href="#osm-carrier">Carrier</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="pill" href="#osm-more">more</a>
+                </li>
+              </ul>
+
+              <!-- !Tab panes -->
+              <div class="tab-content">
+                <!--tab 1 -->
+                <div id="osm-general" class="container tab-pane active p-5"><br>
+                  <div class="upload-tab-form-controller">
+                    <form action="#">
+                      <div class="row">
+                        <div class="col-md-6 mb-3 pe-4 ps-4">
+                          <label for="exampleFormControlInput1" class="form-label">Terminal *</label>
+                          <select class="form-select h5" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6 mb-3 pe-4 ps-4">
+                          <label for="exampleFormControlInput1" class="form-label">Destination *</label>
+                          <select class="form-select h5" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6 mb-3 pe-4 ps-4">
+                          <label for="exampleFormControlInput1" class="form-label">Supplier *</label>
+                          <select class="form-select h5" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6 mb-3 pe-4 ps-4">
+                          <label for="exampleFormControlInput1" class="form-label">Customer *</label>
+                          <select class="form-select h5" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6 mb-3 pe-4 ps-4">
+                         
+                          <select class="form-select h5" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6 mb-3 pe-4 ps-4">
+                   
+                          <select class="form-select h5" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6 mb-3 pe-4 ps-4">
+                   
+                          <select class="form-select h5" aria-label="Default select example">
+                            <label for="exampleFormControlInput1" class="form-label"></label>
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6 mb-3 ">
+                          <label for="exampleFormControlInput1" class="form-label">Amount (USG)</label>
+                          <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <!--tab 2 -->
+                <div id="osm-carrier" class="container tab-pane fade"><br>
+                  <h3>Menu 1</h3>
+                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                </div>
+                <!-- tab 3 -->
+                <div id="osm-more" class="container tab-pane fade"><br>
+                  <h3>Menu 2</h3>
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam rem aperiam.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <!-- Modal demo-->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- script -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>
