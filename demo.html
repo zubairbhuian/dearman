@@ -1,13 +1,620 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Document</title>
 </head>
+
 <body>
-    <h2>je</h2>
+  <div class="d-flex demo-container">
+    <button class="btn" data-bs-toggle="modal" data-bs-target="#status-mod-order">Open Modal</button>
+  </div>
+
+
+  <!------------------------------------------------------------
+    ========================= Modal  Order status==================
+    -------------------------------------------------------------->
+  <!-- Modal demo-->
+  <div class="modal fade" id="status-mod-order" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-none">
+        <div class="modal-body status-mod-header-area mb-5">
+          <div class="status-mod-header">
+            <div class="text-align-end">
+              <button type="button" class="" data-bs-dismiss="modal" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                </svg>
+              </button>
+            </div>
+            <div class="row ps-3">
+              <div class="col-lg-9">
+                <h3 class="color-white">Luxemborg 564</h3>
+              </div>
+              <div class="col-lg-3">
+                <h3 class="color-white">CLOSED</h3>
+              </div>
+              <div class="col-lg-9">
+                <p class="color-white">Order 87999</p>
+              </div>
+              <div class="col-lg-3"><a data-bs-toggle="modal" data-bs-toggle="modal"  data-bs-dismiss="modal"  href="#status-mod-closed-obl" class="color-white h-underline">BOL 1078962</a></div>
+            </div>
+            <div class="row status-mod-main-tab">
+              <div class=" col-lg-6 colum-left">
+                <!-- !TAB button -->
+                <ul class="nav nav-pills" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="mod-link-id" data-bs-toggle="pill" href="#status-mod-order-tab">Order
+                      Status</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="mod-link-id2" data-bs-toggle="pill" href="#tatus-mod-upload-tab">Update
+                      Order</a>
+                  </li>
+                </ul>
+              </div>
+              <!--  -->
+              <div class="col-lg-6 colum-right pe-5 status-mod-right">
+                <input class="status-mod-input me-3" type="date" value="2020-06-01">
+                <button class="status-mod-btn">Update Order</button>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <!-- !Tab panes -->
+          <div class="tab-content">
+            <!-- ?tab 1 -->
+            <div id="status-mod-order-tab" class="container tab-pane status-mod-order-tab active"><br>
+              <h3>HOME</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+            </div>
+            <!-- ?tab 2 -->
+            <div id="tatus-mod-upload-tab" class="container tab-pane fade tatus-mod-upload-tab">
+              <!--  ! 2nd Nav pills Button-->
+              <ul class="nav nav-pills mt-5 ms-5" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-bs-toggle="pill" href="#osm-general">General</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="pill" href="#osm-carrier">Carrier</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="pill" href="#osm-more">more</a>
+                </li>
+              </ul>
+
+              <!-- !Tab panes -->
+              <div class="tab-content">
+                <!--tab 1 -->
+                <div id="osm-general" class="container tab-pane active p-5"><br>
+                  <div class="upload-tab-form-controller">
+                    <form action="#">
+                      <div class="row">
+                        <div class="col-md-6 mb-4 px-sm-5">
+                          <label for="exampleFormControlInput1" class="form-label">Terminal *</label>
+                          <select class="form-select h4" aria-label="Default select example">
+                            <option selected>Bluewing one</option>
+                            <option value="1">One</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6 mb-4 px-sm-5">
+                          <label for="exampleFormControlInput1" class="form-label">Destination *</label>
+                          <select class="form-select h4" aria-label="Default select example">
+                            <option selected>Bluewing one</option>
+                            <option value="1">One</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6 mb-4 px-sm-5">
+                          <label for="exampleFormControlInput1" class="form-label">Supplier *</label>
+                          <select class="form-select h4" aria-label="Default select example">
+                            <option selected>Dreaman Systems</option>
+                            <option value="1">One</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6 mb-4 px-sm-5">
+                          <label for="exampleFormControlInput1" class="form-label">Customer *</label>
+                          <select class="form-select h4" aria-label="Default select example">
+                            <option selected>Dreaman Systems</option>
+                            <option value="1">One</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6 mb-4 px-sm-5">
+                          <label for="exampleFormControlInput1" class="form-label">Order Type *</label>
+                          <select class="form-select h4" aria-label="Default select example">
+                            <option selected>Ranck Loading</option>
+                            <option value="1">One</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6 mb-4 px-sm-5 pt-custrom">
+
+                          <select class="form-select h4" aria-label="Default select example">
+                            <option selected>tank 12</option>
+                            <option value="1">One</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6 mb-4 px-sm-5 pt-custrom">
+                          <select class="form-select h4" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6 mb-4 px-sm-5">
+                          <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                          <input type="number" class="form-control "  value="10,000"
+                            placeholder="">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <!--tab 2 -->
+                <div id="osm-carrier" class="container tab-pane fade"><br>
+                  <div class="upload-tab-form-controller font-m">
+                    <form action="#">
+                      <div class="row">
+                        <div class="col-md-6 mb-4 px-sm-5">
+                          <label for="exampleFormControlInput1" class="form-label">Carrier *</label>
+                          <select class="form-select h4" aria-label="Default select example">
+                            <option selected>Dreaman Systems</option>
+                            <option value="1">One</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6 mb-4 px-sm-5">
+                          <label for="exampleFormControlInput1" class="form-label">Carrier Code *</label>
+                          <input type="text" class="form-control " >
+                        </div>
+                        <div class="col-md-6 mb-4 px-sm-5">
+                          <label for="exampleFormControlInput1" class="form-label">Truck</label>
+                          <input type="text" class="form-control " >
+                        </div>
+
+                        <div class="col-md-6 mb-4 px-sm-5">
+                          <label for="exampleFormControlInput1" class="form-label">Truck License Plate</label>
+                          <input type="text" class="form-control " >
+                        </div>
+                        <div class="col-md-6 mb-4 px-sm-5">
+                          <label for="exampleFormControlInput1" class="form-label">Trailer *</label>
+                          <input type="number" class="form-control "   value="564">
+                        </div>
+                        <div class="col-md-6 mb-4 px-sm-5">
+                          <label for="exampleFormControlInput1" class="form-label">Trailer License Plate</label>
+                          <input type="text" class="form-control " >
+                        </div>
+                        <div class="col-md-6 mb-4 px-sm-5">
+                          <label for="exampleFormControlInput1" class="form-label">Seals</label>
+                          <input type="text" class="form-control " >
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <!-- tab 3 -->
+                <div id="osm-more" class="container tab-pane fade"><br>
+                  <div class="upload-tab-form-controller font-m">
+                    <form action="#">
+                      <div class="row">
+                        <div class="col-md-6 mb-4 px-sm-5">
+                          <label for="exampleFormControlInput1" class="form-label">Company Code</label>
+                          <input type="text" class="form-control " >
+                        </div>
+                        <div class="col-md-6 mb-4 px-sm-5">
+                          <label for="exampleFormControlInput1" class="form-label">SPLC</label>
+                          <input type="text" class="form-control ">
+                        </div>
+
+                        <div class="col-md-6 mb-4 px-sm-5">
+                          <label for="exampleFormControlInput1" class="form-label">Product Code</label>
+                          <input type="text" class="form-control ">
+                        </div>
+                        <div class="col-md-6 mb-4 px-sm-5">
+                          <label for="exampleFormControlInput1" class="form-label">Lot #</label>
+                          <input type="text" class="form-control " >
+                        </div>
+                        <div class="col-md-6 mb-4 px-sm-5">
+                          <label for="exampleFormControlInput1" class="form-label">3rd Party BOL</label>
+                          <input type="text" class="form-control "  value="10,000"
+                            placeholder="">
+                        </div>
+                        <div class="col-md-6 mb-4 px-sm-5">
+                          <label for="exampleFormControlInput1" class="form-label">In Care Of</label>
+                          <input type="text" class="form-control "  value="10,000"
+                            placeholder="">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <!-- Modal closed obl-->
+  <div class="modal fade" id="status-mod-closed-obl" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-none">
+        <div class="modal-body status-mod-header-area">
+          <div class="status-mod-header">
+            <div class="text-align-end">
+              <button type="button" class="" data-bs-dismiss="modal" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                </svg>
+              </button>
+            </div>
+            <div class="row ps-3">
+              <div class="col-lg-9">
+                <h3 class="color-white">Luxemborg 564</h3>
+              </div>
+              <div class="col-lg-3">
+                <h3 class="color-white">CLOSED</h3>
+              </div>
+              <div class="col-lg-9">
+                <p class="color-white">Order 87999</p>
+              </div>
+              <div class="col-lg-3"><a href="#" class="color-white h-underline">BOL 1078962</a></div>
+            </div>
+            <div class="row status-mod-main-tab">
+              <div class=" col-lg-6 colum-left">
+                <!-- !TAB button -->
+                <ul class="nav nav-pills" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link " id="mod-link-id" data-bs-toggle="modal"  data-bs-dismiss="modal" href="#status-mod-order">Order
+                      Status</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" id="mod-link-id2" href="#">Update
+                      Order</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- !================Body================ -->
+          <div class="status-mod-closed-obl-body">
+            <div class="row">
+              <div class="col-md-8">
+                <h4>BOL summary</h4>
+                <p>Customer: Customer name goes here</p>
+                <p>Destination: Destination name goes here</p>
+                <p>BOL date: BOL date timestamp from TAS goes here</p>
+                <p>Order type: Order type goes here</p>
+              </div>
+              <div class="col-md-4 text-align-end">
+                <p class="h6">BOL: 1078962</p>
+                <a class="h-underline color-blue" href="#">Download PDF</a>
+              </div>
+            </div>
+            <!-- table -->
+            <h4 class="mt-4">Product details</h4>
+            <div class="table-responsive">
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td><b>Product</b></td>
+                    <td><b>Temperature (F)</b></td>
+                    <td><b>Gravity API</b></td>
+                    <td><b>VCF</b></td>
+                    <td><b>Gross (USG)</b></td>
+                    <td><b>Net (USG)</b></td>
+                    <td><b>Tank</b></td>
+                  </tr>
+                  <tr>
+                    <td>Product BOL name here</td>
+                    <td>Truck from BOL here</td>
+                    <td>Gravity from BOL here</td>
+                    <td>VCF from BOL here</td>
+                    <td>Gross USG from BOL here</td>
+                    <td>Net USG from BOL here</td>
+                    <td>Tank from BOL here</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- table 2-->
+            <h4 class="mt-4">Product details</h4>
+            <div class="table-responsive">
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td><b>Carrier</b></td>
+                    <td><b>Truck</b></td>
+                    <td><b>License</b></td>
+                    <td><b>Trailer</b></td>
+                    <td><b>License</b></td>
+                    <td><b>Driver</b></td>
+                    <td><b>Seals</b></td>
+                  </tr>
+                  <tr>
+                    <td>Carrier from BOL here</td>
+                    <td>Truck from BOL here</td>
+                    <td>Trailer license plate from BOL here</td>
+                    <td>Trailer from BOL here</td>
+                    <td>Trailer license plate from BOL here</td>
+                    <td>Driver from BOL here</td>
+                    <td>Seals from BOL here</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+
+            <!-- Link -->
+            <h4 class="mt-4 mb-3">BOL support</h4>
+            <p class="mb-0"><a class="h-underline color-blue " data-bs-toggle="modal"  data-bs-dismiss="modal" href="#status-mod-entity">Update entity related information</a></p>
+            <p class="mb-0"><a class="h-underline color-blue" data-bs-toggle="modal"  data-bs-dismiss="modal" href="#status-mod-truck">Update truck or trailer number</a></p>
+            <p class="mb-0"><a class="h-underline color-blue" data-bs-toggle="modal"  data-bs-dismiss="modal" href="#status-mod-specifications">Update product name or specifications</a></p>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <!-- !Modal Update entity related information-->
+  <div class="modal fade" id="status-mod-entity" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body mx-sm-5 p-ms-1">
+          <h2>Update BOL entity info</h2>
+          <p class="py-3"> <span class="h6">NOTE: All BOL</span> updates are subject to terminal operator review and
+            approval. Update suggestions submitted here will be forwarded to the terminal operator for review.</p>
+          <h5 class="sm-low-opasity">BOL number</h5>
+          <p class="sm-low-opasity">1078962</p>
+          <!-- row -->
+          <div class="row mb-5 pb-5 mt-5">
+            <div class="col-md-6">
+              <div class="mb-4">
+                <label for="exampleFormControlInput1" class="form-label h4 fw-4">Terminal *</label>
+                <select class="form-select h3" aria-label="Default select example">
+                  <option selected>Bluewing One</option>
+                  <option value="1">Bluewing Royal</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-4">
+                <label for="exampleFormControlInput1" class="form-label h4 fw-4">Position Holder *</label>
+                <select class="form-select h3" aria-label="Default select example">
+                  <option selected>Flint Hills Resources</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-4">
+                <label for="exampleFormControlInput1" class="form-label h4 fw-4">Supplier *</label>
+                <select class="form-select h3" aria-label="Default select example">
+                  <option selected>Flint Hills Resources</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-4">
+                <label for="exampleFormControlInput1" class="form-label h4 fw-4">Customer *</label>
+                <select class="form-select h3" aria-label="Default select example">
+                  <option selected>Dearman Systems</option>
+                  <option value="1">IFC Fuels</option>
+                  <option value="1">Luxemborg</option>
+                  <option value="1">PetroNational</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-4">
+                <label for="exampleFormControlInput1" class="form-label h4 fw-4">Carrier *</label>
+                <select class="form-select h3" aria-label="Default select example">
+                  <option selected>Luxemborg</option>
+                  <option value="1">Trareysa</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-4">
+                <label for="exampleFormControlInput1" class="form-label h4 fw-4">Destination *</label>
+                <select class="form-select h3" aria-label="Default select example">
+                  <option selected>Mexico</option>
+                </select>
+              </div>
+            </div>
+          </div>
+           <!-- !Button -->
+           <ul class="nav nav-pills mt-5">
+
+            <li class="nav-item">
+              <a data-bs-toggle="modal" data-bs-dismiss="modal"  href="#status-mod-request-sent" class="secound-btn radious me-2">
+                Request update
+              </a>
+            </li>
+            <li class="nav-item">
+              <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#status-mod-closed-obl" class="secound-btn radious mt-5  low-opasity">
+                Cancel
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- !Modal Update truck or trailer number-->
+  <div class="modal fade" id="status-mod-truck" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body mx-sm-5 p-ms-3">
+          <h2>Update BOL entity info</h2>
+          <p class="py-3"> <span class="h6">NOTE: All BOL</span> updates are subject to terminal operator review and
+            approval. Update suggestions submitted here will be forwarded to the terminal operator for review.</p>
+          <h5 class="sm-low-opasity">BOL number</h5>
+          <p class="sm-low-opasity">1078962</p>
+          <!-- row -->
+          <div class="row mb-5 pb-5 mt-5">
+            <div class="col-md-12">
+              <div class="mb-4">
+                <label for="exampleFormControlInput1" class="form-label h4 fw-4">Truck number *</label>
+                <input type="number" class="form-control big-font h3" 
+                placeholder="">
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="mb-4">
+                <label for="exampleFormControlInput1" class="form-label h4 fw-4">Trailer number *</label>
+                <input type="number" class="form-control big-font h3"  value="526"
+                placeholder="">
+              </div>
+            </div>
+          </div>
+             <!-- !Button -->
+             <ul class="nav nav-pills mt-5">
+
+              <li class="nav-item">
+                <a data-bs-toggle="modal" data-bs-dismiss="modal"  href="#status-mod-request-sent" class="secound-btn radious me-2">
+                  Request update
+                </a>
+              </li>
+              <li class="nav-item">
+                <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#status-mod-closed-obl" class="secound-btn radious mt-5  low-opasity">
+                  Cancel
+                </a>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- !Modal Update product name or specifications-->
+  <div class="modal fade" id="status-mod-specifications" data-bs-backdrop="static" data-bs-keyboard="false"
+    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body mx-sm-5 p-ms-3">
+          <h2>Update BOL entity info</h2>
+          <p class="py-3"> <span class="h6">NOTE: All BOL</span> updates are subject to terminal operator review and
+            approval. Update suggestions submitted here will be forwarded to the terminal operator for review.</p>
+          <h5 class="sm-low-opasity">BOL number</h5>
+          <p class="sm-low-opasity">1078962</p>
+          <!-- row -->
+          <div class="row mb-5 pb-5 mt-5">
+            <div class="col-md-12">
+              <div class="mb-4">
+                <label for="exampleFormControlInput1" class="form-label h4 fw-4">Product name *</label>
+                <select class="form-select h3" aria-label="Default select example">
+                  <option selected>Regular Gasoline</option>
+                  <option value="1">ULSD</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="mb-4">
+                <label for="exampleFormControlInput1" class="form-label h4 fw-4">Gravity API *</label>
+                <input type="number" class="form-control big-font h3"  value="64.39"
+                placeholder="">
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="mb-4">
+                <label for="exampleFormControlInput1" class="form-label h4 fw-4">Pounds per gallon (PPG) *</label>
+                <input type="number" class="form-control big-font h3"  value="6.042358"
+                placeholder="">
+              </div>
+            </div>
+          </div>
+          <!-- !Button -->
+          <ul class="nav nav-pills mt-5">
+
+            <li class="nav-item">
+              <a data-bs-toggle="modal" data-bs-dismiss="modal"  href="#status-mod-request-sent" class="secound-btn radious me-2">
+                Request update
+              </a>
+            </li>
+            <li class="nav-item">
+              <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#status-mod-closed-obl" class="secound-btn radious mt-5  low-opasity">
+                Cancel
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ! **Modal** Update BOL request sent!-->
+  <div class="modal fade" id="status-mod-request-sent" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body m-sm-3 p-sm-5 status-mod-request-body">
+          <h2>Update BOL request sent!</h2>
+          <div class="status-mod-request-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor"
+              class="bi bi-check2-circle" viewBox="0 0 16 16">
+              <path
+                d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z" />
+              <path
+                d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
+            </svg>
+          </div>
+          <p class="mb-5">Your request to update <b>BOL 1078962</b> has been submitted to the terminal operator for
+            approval. You will be notified of the terminal's approval decision.</p>
+
+          <!-- !Button -->
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a data-bs-toggle="offcanvas" data-bs-dismiss="modal" href="#" class="secound-btn radious mt-5 me-2 low-opasity">
+                Back
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- script -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>

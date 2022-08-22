@@ -15,13 +15,17 @@
 // });
 
 
-$(document).ready(function(){
+
+try{
+  $(document).ready(function(){
     $('#trailer-dropdown-icon').click(function(){
           $('#trailer-dropdown-icon').toggleClass('click');
           $('#trailer-data').slideToggle(500);
       });
   });
-
+}catch(e){
+console.log('err');
+}
 // zb
   function hideBtnFunction() {
     var x = document.querySelector('.track-order-tk-con');
@@ -43,3 +47,21 @@ $(document).ready(function(){
     var element = document.getElementById("custrom-check-box");
     element.classList.toggle("custrom-check-box");
   }
+
+  // mod-link-id
+
+try{
+  var modLinkId=document.querySelector("#mod-link-id");
+  var modLinkId2=document.querySelector("#mod-link-id2");
+  var statusModRight=document.querySelector(".status-mod-right");
+  modLinkId.addEventListener("click",(e)=>{
+    console.log('dsfsfs');
+    statusModRight.style.display = "none";
+  })
+  modLinkId2.addEventListener("click",(e)=>{
+    console.log('dsfsfs');
+    statusModRight.style.display="block"
+  })
+}catch(e){
+  console.log('err');
+}

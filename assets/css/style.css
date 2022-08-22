@@ -2184,7 +2184,7 @@ progress {
   font-weight: 400;
   line-height: 1.5;
   color: #042c47;
-  background-color: #353235;
+  background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
   appearance: none;
@@ -12419,6 +12419,221 @@ h5 {
 .offcan-uploading-img2 {
   overflow-x: hidden;
   max-width: 300px;
+}
+
+.demo-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.border-none.modal-content {
+  border: none;
+}
+
+.status-mod-header-area.modal-body {
+  padding: 0px;
+}
+.status-mod-header-area .status-mod-header {
+  padding: 15px 15px 0 0px;
+  background: #042c47;
+  color: var(--white-color) !important;
+}
+@media (max-width: 991.98px) {
+  .status-mod-header-area .status-mod-header {
+    padding: 0;
+  }
+}
+.status-mod-header-area .nav-pills .nav-link.active,
+.status-mod-header-area .nav-pills .show > .nav-link {
+  color: var(--text-color);
+  background-color: var(--white-color);
+}
+.status-mod-header-area .nav-pills .nav-item {
+  text-align: center;
+}
+@media (max-width: 991.98px) {
+  .status-mod-header-area .nav-pills .nav-item {
+    flex-grow: 1;
+  }
+}
+.status-mod-header-area .nav-pills .nav-link {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  font-weight: 600;
+  color: var(--white-color);
+  padding: 10px 30px;
+}
+
+.color-white {
+  color: var(--white-color) !important;
+}
+
+.status-mod-btn {
+  padding: 7px 16px 7px 16px;
+  border: 2px solid purple;
+  border-radius: 5px;
+  color: purple;
+  background-color: var(--white-color);
+  transition: 0.6s;
+}
+.status-mod-btn:hover {
+  border: 2px solid var(--white-color);
+}
+
+.status-mod-input {
+  border: 1px solid var(--white-color) !important;
+  background-color: transparent;
+  padding: 5px 12px 5px 12px;
+}
+
+input.status-mod-input {
+  color: var(--white-color) !important;
+}
+
+input[type=date].status-mod-input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 2px;
+  opacity: 1;
+  filter: invert(0.8);
+}
+
+.status-mod-right {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.status-mod-right {
+  display: none;
+}
+
+.tatus-mod-upload-tab .nav-pills {
+  width: 318px;
+  border-bottom: 1px solid var(--text-color);
+}
+@media (max-width: 575.98px) {
+  .tatus-mod-upload-tab .nav-pills {
+    margin: 12px 15px !important;
+  }
+}
+.tatus-mod-upload-tab .nav-pills .nav-link {
+  color: var(--text-color);
+  opacity: 0.6;
+  transition: 0.6s;
+}
+@media (max-width: 575.98px) {
+  .tatus-mod-upload-tab .nav-pills .nav-link {
+    font-size: 10px !important;
+  }
+}
+.tatus-mod-upload-tab .nav-pills .nav-link:hover {
+  opacity: 1;
+}
+.tatus-mod-upload-tab .nav-pills .nav-link.active {
+  opacity: 1;
+  position: relative;
+}
+.tatus-mod-upload-tab .nav-pills .nav-link.active::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: var(--secondary-color);
+  bottom: -1px;
+  left: 0;
+}
+
+.upload-tab-form-controller .level-class {
+  height: 30px;
+  width: 100%;
+}
+.upload-tab-form-controller .pt-custrom {
+  margin-top: 28px;
+}
+.upload-tab-form-controller .form-control,
+.upload-tab-form-controller .form-select {
+  border: none;
+  border-bottom: 1px solid var(--text-color) !important;
+  border-radius: 0;
+  font-size: 21px !important;
+  margin-bottom: 0 !important;
+}
+.upload-tab-form-controller .form-control:hover,
+.upload-tab-form-controller .form-select:hover {
+  background: var(--secondary-light-color);
+}
+@media (max-width: 991.98px) {
+  .upload-tab-form-controller .form-control,
+.upload-tab-form-controller .form-select {
+    font-size: 15px !important;
+  }
+}
+.upload-tab-form-controller .form-control:hover,
+.upload-tab-form-controller .form-select:hover {
+  border-bottom: 2px solid var(--text-color) !important;
+}
+
+.upload-tab-form-controller.font-m .form-control,
+.upload-tab-form-controller.font-m .form-select {
+  font-size: 15px !important;
+  font-weight: 300;
+}
+
+@media (max-width: 991.98px) {
+  .status-mod-main-tab .colum-left {
+    order: 1;
+  }
+  .status-mod-main-tab .colum-right {
+    text-align: end;
+    order: 0;
+    margin: 20px;
+  }
+}
+
+.status-mod-closed-obl-body {
+  padding: 45px 30px;
+}
+
+.status-mod-request-icon {
+  padding: 30px;
+}
+.status-mod-request-icon svg {
+  fill: var(--secondary-color);
+}
+
+.secound-btn.low-opasity {
+  background: var(--secondary-light-color);
+  opacity: 0.8;
+  color: var(--text-color) !important;
+}
+.secound-btn.low-opasity:hover {
+  opacity: 1;
+}
+
+.secound-btn.radious {
+  border-radius: 5px;
+}
+
+.status-mod-request-body {
+  text-align: center;
+}
+.status-mod-request-body .nav-pills {
+  margin-top: 120px;
+}
+
+#status-mod-specifications .form-control.big-font,
+#status-mod-truck .form-control.big-font {
+  border: 1px solid var(--desable-color) !important;
+  padding: 8px 12px;
+  font-size: 18px;
+}
+
+.sm-low-opasity {
+  opacity: 0.4;
 }
 
 .userFormMain {
