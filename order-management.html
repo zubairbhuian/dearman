@@ -190,7 +190,7 @@
                     <div class="tab-content flint-modal-tab-content">
                         <!-- tab one -->
                         <!-- !++++++++++++++++++++++++++ tab one +++++++++++++++++++++++++-->
-                        <div class="tab-pane container active  mt-5 ms-0 ps-0" id="submit-order-tab">
+                        <div class="tab-pane active  mt-3 ms-0 ps-0" id="submit-order-tab">
                             <!-- Group select -->
                             <div class="group-select">
                                 <!-- 1 -->
@@ -220,14 +220,18 @@
                         <!-- select tanks  -->
                         
                        <div class="elect-tanks-main">
+                        <!-- left -->
                         <div class="elect-tanks">
-                            <img class="hdd-network me-1" src="assets/images/icons/hdd-network.png" alt="">
+                           <div class="elect-tanks-left">
+                            <img class="hdd-network me-1 " src="assets/images/icons/hdd-network.png" alt="">
                             <h6 class="mb-0 me-1">Select tanks smarte</h6>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle me-4" viewBox="0 0 16 16">
                                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                                 <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
                             </svg>
-                            <h6 class="color-blue mb-0 me-1">Auto-tank selection</h6>
+                           </div>
+                            <div class="elect-tanks-right">
+                                <h6 class="color-blue mb-0 me-1">Auto-tank selection</h6>
                             <div class="zb-custrom-checkbox">
                                 <label class="toggle">
                                     <span class="box" id="custrom-check-box"></span>
@@ -235,9 +239,16 @@
                                     <span class="switch"></span>
                                   </label> 
                             </div>
+                            </div>
                         </div>
-                        <div class="elect-tanks-right">
-                         
+                        <!-- right -->
+                        <div class="elect-tanks-icon">
+                          <div class="icon-box-one">
+                            <button class="icon-box-btn"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-calendar-week" viewBox="0 0 16 16">
+                                <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                              </svg> Date grid </button>
+                          </div>
                         </div>
 
                        </div>
@@ -252,7 +263,60 @@
                         </div>
                        
                         <!-- !++++++++++++++++++++++++++ tab tow +++++++++++++++++++++++++-->
-                        <div class="tab-pane container fade upload-order-tab ms-0" id="upload-order-tab">
+                        <div class="tab-pane fade upload-order-tab ms-0" id="upload-order-tab">
+                         <div class="upload-search">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                              </svg>
+                              <input type="text">
+                         </div>  
+
+                        <!-- select tanks  -->
+                        <hr class="mt-4">
+                       <div class="elect-tanks-main">
+                        <!-- left -->
+                        <div class="elect-tanks">
+                           <div class="elect-tanks-left">
+                            <img class="hdd-network me-1 " src="assets/images/icons/hdd-network.png" alt="">
+                            <h6 class="mb-0 me-1">Select tanks smarte</h6>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle me-4" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                            </svg>
+                           </div>
+                            <div class="elect-tanks-right">
+                                <h6 class="color-blue mb-0 me-1">Auto-tank selection</h6>
+                            <div class="zb-custrom-checkbox">
+                                <label class="toggle">
+                                    <span class="box" id="custrom-check-box"></span>
+                                    <input type='checkbox' onclick="custromCheckFunction()">
+                                    <span class="switch"></span>
+                                  </label> 
+                            </div>
+                            </div>
+                        </div>
+                        <!-- right -->
+                        <div class="elect-tanks-icon">
+                          <div class="icon-box-one">
+                            <button class="icon-box-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-droplet-fill" viewBox="0 0 16 16">
+                                <path d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6ZM6.646 4.646l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448c.82-1.641 1.717-2.753 2.093-3.13Z"/>
+                              </svg> Add an allocation </button>
+                          </div>
+                          <div class="icon-box-one">
+                            <button class="icon-box-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                                <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z"/>
+                              </svg> Schedule future prices </button>
+                          </div>
+                        </div>
+
+                       </div> 
+                       <hr>
+                       
+                       
+
+
+
+
 
                         </div>
 
