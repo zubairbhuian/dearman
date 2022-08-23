@@ -12713,6 +12713,51 @@ input[type=date].status-mod-input::-webkit-calendar-picker-indicator {
   border: 1px solid var(--meta-color);
 }
 
+.submit-order-card {
+  max-width: 500px;
+}
+.submit-order-card .card-hreader {
+  padding: 15px;
+}
+.submit-order-card .card-hreader a {
+  text-decoration: underline;
+  transition: 0.6s;
+}
+.submit-order-card .card-hreader a:hover {
+  color: var(--secondary-color) !important;
+}
+.submit-order-card .card-hreader .card-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #c6c6c6;
+}
+.submit-order-card .card-hreader .card-input input {
+  width: 100%;
+  background: transparent;
+}
+.submit-order-card .card-hreader .card-input input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.submit-order-card .card-body {
+  border: 1px solid #c6c6c6;
+  padding: 15px 25px;
+}
+.submit-order-card .card-body a {
+  color: var(--secondary-color);
+  transition: 0.6s;
+}
+.submit-order-card .card-body a:hover {
+  text-decoration: underline;
+}
+
+.bg-primary {
+  background: var(--primary-color) !important;
+  color: var(--white-color) !important;
+}
+.bg-primary input, .bg-primary a, .bg-primary p, .bg-primary h1, .bg-primary .h1, .bg-primary h2, .bg-primary .h2, .bg-primary h3, .bg-primary .h3, .bg-primary h4, .bg-primary .h4, .bg-primary h5, .bg-primary .h5, .bg-primary h6, .bg-primary .h6 {
+  color: var(--white-color);
+}
+
 .userFormMain {
   padding: 15px;
   padding-bottom: 100px;
