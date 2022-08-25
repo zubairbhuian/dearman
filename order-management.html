@@ -270,23 +270,25 @@
                                         d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z" />
                                 </svg>
                             </p>
-                            <!-- Card 1-->
-                            <div class="submit-order-card">
+                            <div class="row row-cols-1 row-cols-xl-2 row-cols-xxl-3">
+                                <!-- ?Card 1-->
+                                <div class="col mb-5">
+                            <div class=" submit-order-card">
                                 <div class="card-hreader bg-primary">
-                                    <div class="row">
-                                        <div class="col-6 mb-4">
+                                    <div class="row row-cols-1 row-cols-sm-2">
+                                        <div class="col mb-sm-4">
                                             <h5>PetroNational</h5>
                                         </div>
-                                        <div class="col-6 mb-4 text-align-end">
+                                        <div class="col mb-4 text-sm-end">
                                             <a   href="#"> Detailed View</a>
                                         </div>
-                                        <div class="col-6 ">
+                                        <div class="col">
                                             <h5>Start Date</h5>
                                             <div class="card-input">
                                                 <input type="date" value="Tue 1/4">
                                             </div>
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col">
                                             <h5>End Date</h5>
                                             <div class="card-input">
                                                 <input type="date" value="Tue 1/4">
@@ -295,61 +297,225 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-6 mb-4">
+                                    <div class="row row-cols-1 row-cols-sm-2 ">
+                                        <div class="col mb-4">
                                             <h6><b>Terminal</b></h6>
                                             <p>Bluewing One
                                             </p>
                                         </div>
-                                        <div class="col-6 mb-4">
+                                        <div class="col mb-4">
                                             <h6><b>Order Type</b></h6>
                                             <p>Truck Shipment
                                             </p>
                                         </div>
-                                        <div class="col-6 mb-4">
+                                        <div class="col mb-4">
                                             <h6><b>Product</b></h6>
                                             <p>ULSD
                                             </p>
                                         </div>
-                                        <div class="col-6 mb-4">
+                                        <div class="col mb-4">
                                             <h6><b>Trailers</b></h6>
                                             <p>10
                                             </p>
                                         </div>
                                         <!-- link -->
-                                        <div class="col-6 mb-4">
+                                        <div class="col mb-4">
                                             <h6><b>Order Amount</b></h6>
                                             <p>2,500 BBLS</p>
-                                            <a href="#">Edit Amount</a>
+                                            <a data-bs-toggle="offcanvas"  href="#om-edit-amount">Edit Amount</a>
                                         </div>
-                                        <div class="col-6 mb-4">
+                                        <div class="col mb-4">
                                             <h6><b>Allocated Volume</b></h6>
-                                            <p>Bluewing One</p>
-                                            <a href="#">EManage Allocations</a>
+                                            <p>0 BBLS</p>
+                                            <a data-bs-toggle="offcanvas"  href="#om-allocations-Basics">Manage Allocations</a>
                                         </div>
-                                        <div class="col-6 mb-4">
+                                        <div class="col mb-4">
                                             <h6><b>Order Value</b></h6>
                                             <p>$245,700.00</p>
-                                            <a href="#">Manage Pricing</a>
+                                            <a data-bs-toggle="offcanvas"  href="#om-order-value">Manage Pricing</a>
                                         </div>
-                                        <div class="col-6 mb-4">
+                                        <div class="col mb-4">
                                             <h6><b>Available Credit</b></h6>
                                             <p>$150,000</p>
-                                            <a href="#">Manage Available Credit</a>
+                                            <a data-bs-toggle="offcanvas"  href="#om-edit-amount">Manage Available Credit</a>
                                         </div>
                                     </div>
+                                    <!-- !Button -->
+                                    <ul class="nav nav-pills mt-3 mb-3">
+
+                                        <li class="nav-item">
+                                        <a data-bs-toggle="modal" data-bs-dismiss="modal"  href="#om-mod-approved" class="secound-btn radious me-2">
+                                            Approved
+                                        </a>
+                                        </li>
+                                        <li class="nav-item">
+                                        <a data-bs-toggle="modal" href="#om-mod-dicline" class="secound-btn radious mt-5 bg-2n-color">
+                                            Decline
+                                        </a>
+                                        </li>
+                                    </ul>
                                 </div>
+                                
+                            </div>
+                                </div>
+                                <!-- ?Card 2-->
+                                <div class="col mb-5 ">
+                                <div class="submit-order-card">
+                                    <div class="card-hreader bg-primary">
+                                        <div class="row row-cols-1 row-cols-sm-2">
+                                            <div class="col mb-sm-4">
+                                                <h5>Oil Company</h5>
+                                            </div>
+                                            <div class="col mb-4 text-md-end">
+                                                <a   href="#"> Detailed View</a>
+                                            </div>
+                                            <div class="col ">
+                                                <h5>Start Date</h5>
+                                                <div class="card-input">
+                                                    <input type="date" value="Tue 1/4">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <h5>End Date</h5>
+                                                <div class="card-input">
+                                                    <input type="date" value="Tue 1/4">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row row-cols-1 row-cols-sm-2">
+                                            <div class="col mb-4">
+                                                <h6><b>Terminal</b></h6>
+                                                <p>Bluewing One
+                                                </p>
+                                            </div>
+                                            <div class="col mb-4">
+                                                <h6><b>Order Type</b></h6>
+                                                <p>Truck Shipment
+                                                </p>
+                                            </div>
+                                            <div class="col mb-4">
+                                                <h6><b>Product</b> <span class="bg-danger font-smaller"> Multi-Product Order</span></h6>
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected>Regular Gasoline</option>
+                                                    <option value="1">ULDS</option>                      
+                                                  </select>
+                                            </div>
+                                            <div class="col mb-4">
+                                                <h6><b>Trailers</b></h6>
+                                                <p>25
+                                                </p>
+                                            </div>
+                                            <!-- link -->
+                                            <div class="col mb-4">
+                                                <h6><b>Order Amount</b></h6>
+                                                <p>6250 BBLS</p>
+                                                <a data-bs-toggle="offcanvas"  href="#">Edit Amount</a>
+                                            </div>
+                                            <div class="col mb-4">
+                                                <h6><b>Allocated Volume</b></h6>
+                                                <p>50,000 BBLS</p>
+                                                <a  data-bs-toggle="offcanvas" href="#">EManage Allocations</a>
+                                            </div>
+                                            <div class="col mb-4">
+                                                <h6><b>Order Value</b></h6>
+                                                <p>$585,375.00</p>
+                                                <a  data-bs-toggle="offcanvas" href="#">Manage Pricing</a>
+                                            </div>
+                                            <div class="col mb-4">
+                                                <h6><b>Available Credit</b></h6>
+                                                <p>$500,000</p>
+                                                <a data-bs-toggle="offcanvas"  href="#om-card2-basics">Manage Available Credit</a>
+                                            </div>
+                                        </div>
+                                        <!-- !Button -->
+                                        <ul class="nav nav-pills mt-3 mb-3">
+    
+                                            <li class="nav-item">
+                                            <a data-bs-toggle="modal" data-bs-dismiss="modal"  href="#status-mod-request-sent" class="secound-btn radious me-2">
+                                                Approved
+                                            </a>
+                                            </li>
+                                            <li class="nav-item">
+                                            <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#om-mod-dicline" class="secound-btn radious mt-5 bg-2n-color">
+                                                Decline
+                                            </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!-- ?Card 3-->
+                            <div class="col mb-5">
+                            <div class=" submit-order-card with-out-bg">
+                                <div class="card-hreader ">
+                                    <div class="row row-cols-1 row-cols-sm-2">
+                                        <div class="col mb-sm-4">
+                                            <h5 class="color-green">PetroNational</h5>
+                                        </div>
+                                        <div class="col mb-4 text-sm-end">
+                                            <a   href="#"> Detailed View</a>
+                                        </div>
+                                    </div>
+                                    <h4>HiSpeed Oil</h4>
+                                </div>
+                                <div class="card-body mt-4">
+                                    <div class="row row-cols-1 row-cols-sm-2">
+                                        <div class="col mb-4">
+                                            <h6><b>Start Date</b></h6>
+                                            <p>Tue, Jan 04, 2022
+                                            </p>
+                                        </div>
+                                        <div class="col mb-4">
+                                            <h6><b>End Date</b></h6>
+                                            <p>Wed, Jan 05, 2022
+                                            </p>
+                                        </div>
+                                        <div class="col mb-4">
+                                            <h6><b>Terminal</b></h6>
+                                            <p>Bluewing One
+                                            </p>
+                                        </div>
+                                        <div class="col mb-4">
+                                            <h6><b>Truck Shipment</b></h6>
+                                            <p>10
+                                            </p>
+                                        </div>
+                                        <!-- link -->
+                                        <div class="col mb-4">
+                                            <h6><b>Product</b></h6>
+                                            <p>Regular Gasoline, ULSD</p>
+                                           
+                                        </div>
+                                        <div class="col mb-4">
+                                            <h6><b>Trailers</b></h6>
+                                            <p>16</p>
+                                        </div>
+                                        <div class="col mb-4">
+                                            <h6><b>Order Amount</b></h6>
+                                            <p>3,508 BBLS</p>      
+                                        </div>
+
+                                    </div>
+                                    <!-- !Button -->
+                                    <ul class="nav nav-pills mt-3 mb-3">
+                                        <li class="nav-item">
+                                        <a data-bs-toggle="modal" data-bs-dismiss="modal"  href="#status-mod-request-sent" class="secound-btn radious me-2 bg-green">
+                                            Request update
+                                        </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
                             </div>
 
 
 
 
-
-
-
-
-
-
+                        </div>
+                            </div>
                         </div>
 
                         <!-- !++++++++++++++++++++++++++ tab tow +++++++++++++++++++++++++-->
@@ -421,8 +587,6 @@
 
 
                         </div>
-
-
                         <!-- padding -->
                         <div class="pb-100"></div>
                         <!-- submit order start here -->
@@ -432,7 +596,891 @@
             </div>
         </div>
     </main>
+    <!------------------------------------------------------------------------------
+     +++++++++++++++++++++++++++++++  Ofcanvas  1st Card +++++++++++++++++++++++++++
+    -------------------------------------------------------------------------------->
+    <!-- !------------------------------------ ------------------------------> 
+    <!-- ?==================Edit Amount=====================-->
+    <div class="offcanvas offcanvas-end om-offcanvas-small-area" tabindex="-1" id="om-edit-amount" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel"></h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body px-sm-5">
+        <h3>PetroNational</h3>
+        <p class="h5 fw-4">ULSD</p>
+        <div class="om-edit-amount-form mt-4">
+            <form action="#">
+                <input type="text" value="25,000 BBLS">
+                <button class="secound-btn radious"data-bs-target="#upload-order-tab">Update Amount</button>
+            </form>
+        </div>
+      </div>
+    </div>
+    <!-- ?==================Order Value =======================-->
+    <div class="offcanvas offcanvas-end om-order-value om-offcanvas-small-area" tabindex="-1" id="om-order-value" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h5 id="offcanvasRightLabel"></h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body px-sm-5">
+          <div class="row ">
+            <div class="col-6">
+                <select class="form-select fw-6  mb-3" aria-label=".form-select-lg example">
+                    <option selected>PetroNational</option>
+                    <option value="1">IFC Fuels</option>
+                    <option value="2">Luxemborg</option>
+                  </select>
+            </div>
+            <div class="col-6"><input class="" type="date" value="12/13/2022"></div>
+            <div class="col-4 mt-4">
+                <select class="form-select fw-6  mb-3 mt-4" aria-label=".form-select-lg example">
+                    <option selected>ULSD</option>
+                    <option value="1">Regular Gasoline</option>
+                  </select>
+            </div>
+            <div class="col-8 mt-4 om-order-2nd-form">
+           
+                <label for="exampleFormControlInput1" class="form-label">Price ($/USG)</label><br>
+                <input class="ulds-form" type="number" value="12/13/2022">
+           
+            </div>
+          </div>
+           <!-- !Button -->
+           <ul class="nav nav-pills mt-5">
+            <li class="nav-item">
+              <a data-bs-toggle="offcanvas" href="#sa-offcanvas" class="secound-btn mt-5 me-2 bg-tra">
+                Set Expiration
+              </a>
+            </li>
+            <li class="nav-item">
+              <a data-bs-toggle="offcanvas" href="#sa-offcanvas3" class="secound-btn">
+                Update Price
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+    <!-- ?==================== Manage Allocations ====================-->
+<!-- !Basics -->
+<div class="offcanvas offcanvas-end offcanvasSuccAcc" tabindex="-1" id="om-allocations-Basics"
+    aria-labelledby="offcanvasSuccAccLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasSuccAccLabel"></h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body pb-5">
+    <!-- body -->
+    <div class="row row-cols-1 row-cols-xl-3">
+      <div class="col user-roade-map">
+        <div class="upload-order-tab-left">
+          <ul class="timeline">
+            <li class="timeline-item active  mb-6 ">
+              <h6>Basics</h6>
+            </li>
+            <li class="timeline-item   mb-6">
+              <h6>Rollover</h6>
+              </p>
+            </li>
+            <li class="timeline-item mb-6">
+              <h6>Finish</h6>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Right Colum -->
+      <div class="col user-form">
+        <!--  !Area -->
+        <div class="user-form-area">
+            <div class="user-form-area-big">
+                <h3 >Add an allocation for</h3>
+                <select class="form-select me-2 form-select-lg h3 fw-5 " aria-label="Default select example">
+                    <option selected>PetroNational</option>
+                    <option value="1">IFC Fuels</option>
+                    <option value="2">Luxemborg</option>
+                  </select>
+            </div>
+           
 
+          <p class="py-4">Please populate the details of the allocation.</p>
+          <!-- content -->
+          <form action="#">
+            <div class="row row-cols-1 row-cols-sm-2">
+                <div class="col mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Terminal *</label>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected></option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="col mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Product *</label>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected></option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="col mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Allocation Amount *</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                </div>
+                <div class="col mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Allocation Mode *</label>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Open this select menu</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Start Date<span>*</span></label>
+                    <input  class="form-control textbox-n" placeholder="Choose date"   type="text" onfocus="(this.type='date')" id="date">
+                  </div>
+                  <div class="col mb-3">
+                    <label for="exampleFormControlInput1" class="form-label"></label>
+                    <select class="form-select mt-1" aria-label="Default select example">
+                        <option selected>00:00</option>
+                        <option value="1">12:00 AM</option>
+                        <option value="2">12:15 AM</option>
+                        <option value="3">12:30 AM</option>
+                        <option value="4">12:45 AM</option>
+                        <option value="5">1:00 AM</option>
+                        <option value="6">1:15 AM</option>
+                        <option value="7">1:30 AM</option>
+                        <option value="8">1:45 AM</option>
+                        <option value="9">2:00 AM</option>
+                        <option value="10">2:15 AM</option>
+                        <option value="11">2:30 AM</option>
+                        <option value="12">2:45 AM</option>
+                        <option value="13">3:00 AM</option>
+                        <option value="14">3:15 AM</option>
+                        <option value="15">3:30 AM</option>
+                        <option value="16">3:45 AM</option>
+                        <option value="17">4:00 AM</option>
+                        <option value="18">4:15 AM</option>
+                        <option value="19">4:30 AM</option>
+                        <option value="20">4:45 AM</option>
+                        <option value="21">5:00 AM</option>
+                        <option value="22">5:15 AM</option>
+                        <option value="23">5:30 AM</option>
+                        <option value="24">5:45 AM</option>
+                        <option value="25">6:00 AM</option>
+                        <option value="26">6:15 AM</option>
+                        <option value="27">6:30 AM</option>
+                        <option value="28">6:45 AM</option>
+                        <option value="29">7:00 AM</option>
+                        <option value="30">7:15 AM</option>
+                        <option value="31">7:30 AM</option>
+                        <option value="32">7:45 AM</option>
+                        <option value="33">8:00 AM</option>
+                        <option value="34">8:15 AM</option>
+                        <option value="35">8:30 AM</option>
+                        <option value="36">8:45 AM</option>
+                        <option value="37">9:00 AM</option>
+                        <option value="38">9:15 AM</option>
+                        <option value="39">9:30 AM</option>
+                        <option value="40">9:45 AM</option>
+                        <option value="41">10:00 AM</option>
+                        <option value="42">10:15 AM</option>
+                        <option value="43">10:30 AM</option>
+                        <option value="44">10:45 AM</option>
+                        <option value="45">11:00 AM</option>
+                        <option value="46">11:15 AM</option>
+                        <option value="47">11:30 AM</option>
+                        <option value="48">11:45 AM</option>
+                    </select>
+                </div>
+                <div class="col mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">End Date *</label>
+                    <input class="form-control textbox-n" placeholder="Choose date"   type="text" onfocus="(this.type='date')" id="date" >
+                </div>
+                <div class="col mb-3">
+                    <label for="exampleFormControlInput1" class="form-label"></label>
+                    <select class="form-select mt-2" aria-label="Default select example" >
+                      <option selected>00:00</option>
+                      <option value="1">12:00 AM</option>
+                      <option value="2">12:15 AM</option>
+                      <option value="3">12:30 AM</option>
+                      <option value="4">12:45 AM</option>
+                      <option value="5">1:00 AM</option>
+                      <option value="6">1:15 AM</option>
+                      <option value="7">1:30 AM</option>
+                      <option value="8">1:45 AM</option>
+                      <option value="9">2:00 AM</option>
+                      <option value="10">2:15 AM</option>
+                      <option value="11">2:30 AM</option>
+                      <option value="12">2:45 AM</option>
+                      <option value="13">3:00 AM</option>
+                      <option value="14">3:15 AM</option>
+                      <option value="15">3:30 AM</option>
+                      <option value="16">3:45 AM</option>
+                      <option value="17">4:00 AM</option>
+                      <option value="18">4:15 AM</option>
+                      <option value="19">4:30 AM</option>
+                      <option value="20">4:45 AM</option>
+                      <option value="21">5:00 AM</option>
+                      <option value="22">5:15 AM</option>
+                      <option value="23">5:30 AM</option>
+                      <option value="24">5:45 AM</option>
+                      <option value="25">6:00 AM</option>
+                      <option value="26">6:15 AM</option>
+                      <option value="27">6:30 AM</option>
+                      <option value="28">6:45 AM</option>
+                      <option value="29">7:00 AM</option>
+                      <option value="30">7:15 AM</option>
+                      <option value="31">7:30 AM</option>
+                      <option value="32">7:45 AM</option>
+                      <option value="33">8:00 AM</option>
+                      <option value="34">8:15 AM</option>
+                      <option value="35">8:30 AM</option>
+                      <option value="36">8:45 AM</option>
+                      <option value="37">9:00 AM</option>
+                      <option value="38">9:15 AM</option>
+                      <option value="39">9:30 AM</option>
+                      <option value="40">9:45 AM</option>
+                      <option value="41">10:00 AM</option>
+                      <option value="42">10:15 AM</option>
+                      <option value="43">10:30 AM</option>
+                      <option value="44">10:45 AM</option>
+                      <option value="45">11:00 AM</option>
+                      <option value="46">11:15 AM</option>
+                      <option value="47">11:30 AM</option>
+                      <option value="48">11:45 AM</option>   
+                    </select>
+                </div>
+            </div>
+            <!-- !Button -->
+            <ul class="nav nav-pills mt-5">
+              <li class="nav-item">
+                <a data-bs-toggle="offcanvas" href="#om-allocations-rollover" class="secound-btn">
+                  Next
+                </a>
+              </li>
+            </ul>
+          </form>
+
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <!-- !Rollover -->
+<div class="offcanvas offcanvas-end offcanvasSuccAcc" tabindex="-1" id="om-allocations-rollover"
+aria-labelledby="offcanvasSuccAccLabel">
+<div class="offcanvas-header">
+  <h5 class="offcanvas-title" id="offcanvasSuccAccLabel"></h5>
+  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+</div>
+<div class="offcanvas-body pb-5">
+<!-- body -->
+<div class="row row-cols-1 row-cols-xl-3">
+  <div class="col user-roade-map">
+    <div class="upload-order-tab-left">
+      <ul class="timeline">
+        <li class="timeline-item   mb-6 ">
+          <h6>Basics</h6>
+        </li>
+        <li class="timeline-item  active mb-6">
+          <h6>Rollover</h6>
+          </p>
+        </li>
+        <li class="timeline-item mb-6">
+          <h6>Finish</h6>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Right Colum -->
+  <div class="col user-form">
+    <!--  !Area -->
+    <div class="user-form-area">
+        <h3 >Rollover</h3>
+      <p class="py-4">Please populate the details of the allocation.</p>
+      <!-- content -->
+      <form action="#">
+        <div class="row row-cols-1 row-cols-sm-2">
+            <div class="col mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Rollover Type</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Minutes</option>
+                  <option value="1">Hours</option>
+                  <option value="2">Days</option>
+                  <option value="3">Weeks</option>
+                  <option value="3">Quarters</option>
+                  <option value="3">Years</option>
+                  <option value="3">Day-of-year</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Interval</label>
+                <input type="text"  class="form-control ">
+              </div>
+
+            <div class="col mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Rollover Date </label>
+                <input class="form-control textbox-n" placeholder="Choose date"   type="text" onfocus="(this.type='date')" id="date" >
+            </div>
+            <div class="col mb-3">
+                <label for="exampleFormControlInput1" class="form-label"></label>
+                <select class="form-select mt-2" aria-label="Default select example" >
+                  <option selected>00:00</option>
+                  <option value="1">12:00 AM</option>
+                  <option value="2">12:15 AM</option>
+                  <option value="3">12:30 AM</option>
+                  <option value="4">12:45 AM</option>
+                  <option value="5">1:00 AM</option>
+                  <option value="6">1:15 AM</option>
+                  <option value="7">1:30 AM</option>
+                  <option value="8">1:45 AM</option>
+                  <option value="9">2:00 AM</option>
+                  <option value="10">2:15 AM</option>
+                  <option value="11">2:30 AM</option>
+                  <option value="12">2:45 AM</option>
+                  <option value="13">3:00 AM</option>
+                  <option value="14">3:15 AM</option>
+                  <option value="15">3:30 AM</option>
+                  <option value="16">3:45 AM</option>
+                  <option value="17">4:00 AM</option>
+                  <option value="18">4:15 AM</option>
+                  <option value="19">4:30 AM</option>
+                  <option value="20">4:45 AM</option>
+                  <option value="21">5:00 AM</option>
+                  <option value="22">5:15 AM</option>
+                  <option value="23">5:30 AM</option>
+                  <option value="24">5:45 AM</option>
+                  <option value="25">6:00 AM</option>
+                  <option value="26">6:15 AM</option>
+                  <option value="27">6:30 AM</option>
+                  <option value="28">6:45 AM</option>
+                  <option value="29">7:00 AM</option>
+                  <option value="30">7:15 AM</option>
+                  <option value="31">7:30 AM</option>
+                  <option value="32">7:45 AM</option>
+                  <option value="33">8:00 AM</option>
+                  <option value="34">8:15 AM</option>
+                  <option value="35">8:30 AM</option>
+                  <option value="36">8:45 AM</option>
+                  <option value="37">9:00 AM</option>
+                  <option value="38">9:15 AM</option>
+                  <option value="39">9:30 AM</option>
+                  <option value="40">9:45 AM</option>
+                  <option value="41">10:00 AM</option>
+                  <option value="42">10:15 AM</option>
+                  <option value="43">10:30 AM</option>
+                  <option value="44">10:45 AM</option>
+                  <option value="45">11:00 AM</option>
+                  <option value="46">11:15 AM</option>
+                  <option value="47">11:30 AM</option>
+                  <option value="48">11:45 AM</option>   
+                </select>
+            </div>
+        </div>
+        <!-- !Button -->
+        <ul class="nav nav-pills mt-5">
+            <li class="nav-item">
+                <a data-bs-toggle="offcanvas" href="#om-allocations-Basics" class="secound-btn mt-5 me-2 bg-tra">
+                  Back
+                </a>
+              </li>
+          <li class="nav-item">
+            <a data-bs-toggle="offcanvas" href="#om-allocations-finish" class="secound-btn">
+              Next
+            </a>
+          </li>
+        </ul>
+      </form>
+
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!-- !Finish -->
+<div class="offcanvas offcanvas-end offcanvasSuccAcc" tabindex="-1" id="om-allocations-finish"
+aria-labelledby="offcanvasSuccAccLabel">
+<div class="offcanvas-header">
+  <h5 class="offcanvas-title" id="offcanvasSuccAccLabel"></h5>
+  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+</div>
+<div class="offcanvas-body pb-5">
+<!-- body -->
+<div class="row row-cols-1 row-cols-xl-3">
+  <div class="col user-roade-map">
+    <div class="upload-order-tab-left">
+      <ul class="timeline">
+        <li class="timeline-item   mb-6 ">
+          <h6>Basics</h6>
+        </li>
+        <li class="timeline-item   mb-6">
+          <h6>Rollover</h6>
+          </p>
+        </li>
+        <li class="timeline-item active mb-6">
+          <h6>Finish</h6>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Right Colum -->
+  <div class="col user-form">
+    <!--  !Area -->
+    <div class="user-form-area">
+        <h2>Review and Finish</h2>
+        <p>Review all of the info before you finish creating the allocation.</p>
+        <!-- content -->
+        <div class="row row-cols-1 row-cols-sm-2 mt-5 mb-3">
+          <!-- sub- colum -->
+          <div class="col mb-3">
+            <h6><b>Customer Name</b></h6>
+            <p>PetroNational</p>
+            <a class="nav-link h-underline" href="customers.html">Edit</a>
+          </div>
+          <div class="col mb-3">
+            <h6><b>Terminal</b></h6>
+            <p>Bluewing One</p>
+            <a class="nav-link h-underline" href="customers.html">Edit </a>
+          </div>
+          <div class="col mb-3">
+            <h6><b>Product</b></h6>
+            <p>ULSD</p>
+            <a class="nav-link h-underline" href="customers.html">Edit </a>
+          </div>
+          <div class="col mb-3">
+            <h6><b>Allocation Amount</b></h6>
+            <p>50,000</p>
+            <a class="nav-link h-underline" href="customers.html">Edit </a>
+          </div>
+          <div class="col mb-3">
+            <h6><b>Allocation Mode</b></h6>
+            <p>Gross Volume</p>
+            <a class="nav-link h-underline" href="customers.html">Edit </a>
+          </div>
+          <div class="col mb-3">
+            <h6><b></b></h6>
+            <p></p>
+            <a class="nav-link h-underline" href="customers.html"></a>
+          </div>
+          <div class="col mb-3">
+            <h6><b>Start Date</b></h6>
+            <p>12/10/21</p>
+            <a class="nav-link h-underline disabled" href="customers.html">Cannot Edit </a>
+          </div>
+          <div class="col mb-3">
+            <h6><b>Start Time</b></h6>
+            <p>12:00</p>
+            <a class="nav-link h-underline" href="customers.html">Edit </a>
+          </div>
+          <div class="col mb-3">
+            <h6><b>End Date</b></h6>
+            <p>1/10/22</p>
+            <a class="nav-link h-underline" href="customers.html">Edit </a>
+          </div>
+          <div class="col mb-3">
+            <h6><b>End Time</b></h6>
+            <p>12:00</p>
+            <a class="nav-link h-underline" href="customers.html">Edit </a>
+          </div>
+          <div class="col mb-3">
+            <h6><b>Rollover Type</b></h6>
+            <p>Day(s)</p>
+            <a class="nav-link h-underline" href="customers.html">Edit </a>
+          </div>
+          <div class="col mb-3">
+            <h6><b>Interval</b></h6>
+            <p>30</p>
+            <a class="nav-link h-underline" href="customers.html">Edit </a>
+          </div>
+          <div class="col mb-3">
+            <h6><b>Rollover Date</b></h6>
+            <p>12/10/21</p>
+            <a class="nav-link h-underline" href="customers.html">Edit </a>
+          </div>
+          <div class="col mb-3">
+            <h6><b>Rollover Time</b></h6>
+            <p>12:00</p>
+            <a class="nav-link h-underline" href="customers.html">Edit </a>
+          </div>
+        </div>
+        <!-- !Button -->
+        <ul class="nav nav-pills mt-5">
+          <li class="nav-item">
+            <a data-bs-toggle="offcanvas" href="#om-allocations-rollover" class="secound-btn mt-5 me-2 bg-tra">
+              back
+            </a>
+          </li>
+          <li class="nav-item">
+            <a data-bs-toggle="offcanvas" href="#Success-customer-added" class="secound-btn">
+              Finish
+            </a>
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>
+</div>
+</div> 
+<!------------------------------------------------------------------------------
++++++++++++++++++++++++++++++++  Ofcanvas  2nd Card +++++++++++++++++++++++++++
+--------------------------------------------------------------------------------> 
+ <!-- ?==================== Available Credit ====================-->
+<!-- !Basics -->
+<div class="offcanvas offcanvas-end offcanvasSuccAcc" tabindex="-1" id="om-card2-basics"
+    aria-labelledby="offcanvasSuccAccLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasSuccAccLabel"></h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body pb-5">
+    <!-- body -->
+    <div class="row row-cols-1 row-cols-xl-3">
+      <div class="col user-roade-map">
+        <div class="upload-order-tab-left">
+          <ul class="timeline">
+            <li class="timeline-item active  mb-6 ">
+              <h6>Basics</h6>
+            </li>
+            <li class="timeline-item mb-6">
+              <h6>Finish</h6>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Right Colum -->
+      <div class="col user-form">
+        <!--  !Area -->
+        <div class="user-form-area">
+            <div class="user-form-area-big">
+                <h3 >Setup Credit for</h3>
+                <select class="form-select me-2 form-select-lg h3 fw-5 " aria-label="Default select example">
+                    <option selected>Luxemborg</option>
+                    <option value="1">IFC Fuels</option>
+                    <option value="2">PetroNational</option>
+                  </select>
+            </div>
+           
+
+          <p class="py-4">To get started, fill out each field. Once a customer's credit is setup the system with automatically adjust Credit Balance and Available Credit. Lynx uses USD for all currency-related fields.</p>
+          <!-- content -->
+          <form action="#">
+            
+            <div class="row row-cols-1 row-cols-sm-2">
+              <div class="col mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Credit Limit *</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+                <div class="col mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Product</label>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected></option>
+                      <option value="1">item1</option>
+                      <option value="2">item2</option>
+                      <option value="3">item3</option>
+                    </select>
+                </div>
+                <div class="col mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Credit Balance</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" value="$0">
+                </div>
+                <div class="col mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Available Credit</label>
+                  <input type="text" class="form-control" id="exampleFormControlInput1" value="$0">
+              </div>
+              <div class="col mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Credit Pending</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" value="$0">
+            </div>
+            <div class="col mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Credit Outstanding</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" value="$0">
+          </div>
+                
+            </div>
+            <!-- !Button -->
+            <ul class="nav nav-pills mt-5">
+              <li class="nav-item">
+                <a data-bs-toggle="offcanvas" href="#om-card2-finish" class="secound-btn">
+                  Next
+                </a>
+              </li>
+            </ul>
+          </form>
+
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+<!-- !Finish -->
+<div class="offcanvas offcanvas-end offcanvasSuccAcc" tabindex="-1" id="om-card2-finish"
+aria-labelledby="offcanvasSuccAccLabel">
+<div class="offcanvas-header">
+  <h5 class="offcanvas-title" id="offcanvasSuccAccLabel"></h5>
+  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+</div>
+<div class="offcanvas-body pb-5">
+<!-- body -->
+<div class="row row-cols-1 row-cols-xl-3">
+  <div class="col user-roade-map">
+    <div class="upload-order-tab-left">
+      <ul class="timeline">
+        <li class="timeline-item   mb-6 ">
+          <h6>Basics</h6>
+        </li>
+        <li class="timeline-item active mb-6">
+          <h6>Finish</h6>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Right Colum -->
+  <div class="col user-form">
+    <!--  !Area -->
+    <div class="user-form-area">
+        <h2>Review and Finish</h2>
+        <p>To get started, fill out each field. Once a customer's credit is setup the system with automatically adjust Credit Balance and Available Credit. Lynx uses USD for all currency-related fields.</p>
+        <!-- content -->
+        <div class="row row-cols-1 row-cols-sm-2 mt-5 mb-3">
+          <!-- sub- colum -->
+          <div class="col mb-3">
+            <h6><b>Customer Name</b></h6>
+            <p>Luxemborg</p>
+            <a class="nav-link h-underline" href="customers.html">Edit</a>
+          </div>
+          <div class="col mb-3">
+            <h6><b>Credit Limit</b></h6>
+            <p>$100,000.00</p>
+            <a class="nav-link h-underline" href="customers.html">Edit </a>
+          </div>
+          <div class="col mb-3">
+            <h6><b>Product</b></h6>
+            <p>Not product specific.</p>
+            <a class="nav-link h-underline" href="customers.html">Edit </a>
+          </div>
+          <div class="col mb-3">
+            <h6><b>Credit Balance</b></h6>
+            <p>$0</p>
+            <a class="nav-link h-underline" href="customers.html">Edit </a>
+          </div>
+          <div class="col mb-3">
+            <h6><b>Available Credit</b></h6>
+            <p>$100,000</p>
+            <a class="nav-link h-underline" href="customers.html">Edit </a>
+          </div>
+          <div class="col mb-3">
+            <h6><b>Credit Pending</b></h6>
+            <p>$0</p>
+            <a class="nav-link h-underline" href="customers.html"></a>
+          </div>
+          <div class="col mb-3">
+            <h6><b>Credit Outstanding</b></h6>
+            <p>$0</p>
+            <a class="nav-link h-underline disabled" href="customers.html">Cannot Edit </a>
+          </div>
+        </div>
+        <!-- !Button -->
+        <ul class="nav nav-pills mt-5">
+          <li class="nav-item">
+            <a data-bs-toggle="offcanvas" href="#om-card2-basics" class="secound-btn mt-5 me-2 bg-tra">
+              back
+            </a>
+          </li>
+          <li class="nav-item">
+            <a data-bs-toggle="offcanvas" href="#" class="secound-btn">
+              Finish
+            </a>
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>
+</div>
+</div> 
+  <!-- ?demo -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="om-edit-amount" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      ...
+    </div>
+  </div>
+
+
+
+    <!------------------------------------------------------------------------------
+     +++++++++++++++++++++++++++++++  Modal 1st Card  +++++++++++++++++++++++++++
+    -------------------------------------------------------------------------------->
+<!-- ?Modal Decline-->
+<div class="modal fade" id="om-mod-dicline" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h5>Are you sure you want to decline this order?</h5>
+        <p class="py-3">Once a set of pending orders is declined they cannot be recovered. 
+        </p>
+        <ul class="nav nav-pills mt-5">
+          <li class="nav-item">
+            <a data-bs-toggle="modal" data-bs-dismiss="modal"  href="#" class="secound-btn radious me-2">
+              Decline
+            </a>
+          </li>
+          <li class="nav-item">
+            <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#" class="secound-btn radious mt-5  low-opasity">
+              Cancel
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ?Modal approved-->
+<div class="modal fade" id="om-mod-approved" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h3>Customer submission approved</h3>
+        <div class="py-3 om-modapproved-text h4 fw-3">
+          <span>Assign Tanks</span>
+          <span> PetroNational</span>
+          <span>Tue, Jan 04, 2022 - Wed Jan 05, 2022</span>
+        </div>
+        <!--accordion  -->
+        <div class="accordion accordion-flush" id="accordion-approved">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              <div>
+                <h4>ULSD</h4>
+                <span >25,00 BBLS <span>10 Trailers</span></span>
+              </div>
+              <span class="text-end flex-grow-1 me-3 color-blue">View all orders</span>
+
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordion-approved">
+              <div class="accordion-body p-0">
+                <!--accordion  content-->
+                <div class="approved-content-area">
+                  <!-- item -->
+                  <div class="approved-content-item">
+                    <table class="table table-borderless">
+                      <thead>
+                        <tr>                      
+                          <th></th>                     
+                          <th>Terminal</th>
+                          <th>Order Number</th>
+                          <th>Trailer</th>
+                          <th>Product</th>
+                          <th>Amount</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Bluewing One</td>
+                          <td>87999</td>
+                          <td>Luxemborg</td>
+                          <td>ULSD</td>
+                          <td>8,000 USG</td>
+                          <td><select class="form-select" aria-label="Default select example">
+                            <option selected>Tank 10</option>
+                          </select></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- item -->
+                  <div class="approved-content-item">
+                    <table class="table table-borderless">
+                      <thead>
+                        <tr>                      
+                          <th></th>                     
+                          <th>Terminal</th>
+                          <th>Order Number</th>
+                          <th>Trailer</th>
+                          <th>Product</th>
+                          <th>Amount</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Bluewing One</td>
+                          <td>87999</td>
+                          <td>Luxemborg</td>
+                          <td>ULSD</td>
+                          <td>8,000 USG</td>
+                          <td><select class="form-select" aria-label="Default select example">
+                            <option selected>Tank 10</option>
+                          </select></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- mod-dicline box -->
+        <div class="mod-dicline-box mt-3 p-3">
+          <div class="row">
+            <div class="col">
+              <h6>Tank</h6>
+              <p>10
+              </p>
+          </div>
+          <div class="col">
+            <h6>Current Inventory</h6>
+            <p>4,399 BBLS</p>
+          </div>
+          <div class="col">
+            <h6>Amount</h6>
+            <input type="text" value="25,00 BBLS">
+          </div>
+          <div class="col">
+            <h6>Trailers</h6>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>1</option>
+              <option value="1">2</option>
+              <option value="2">3</option>
+              <option value="3">5</option>
+              <option value="3">6</option>
+              <option value="3">7</option>
+              <option value="3">8</option>
+              <option value="3">9</option>
+              <option value="3">10</option>
+            </select>
+          </div>
+          <div class="col approved-btn-group">
+            <button class="secound-btn ">Asssign Tank</button>
+          </div>
+        </div>
+        </div>
+        <ul class="nav nav-pills mt-5 approved-btn-bottom">
+          <li class="nav-item">
+            <a data-bs-toggle="modal" data-bs-dismiss="modal"  href="#" class="secound-btn radious me-2 ">
+              Decline
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!------------------------------------------------------------------------------
++++++++++++++++++++++++++++++++  Modal  2nd Card +++++++++++++++++++++++++++
+-------------------------------------------------------------------------------->
     <!-- script -->
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>

@@ -11139,7 +11139,7 @@ textarea.form-control-lg {
   --regular: 400;
   --medium: 500;
   --bold: 600;
-  --normal-font-size: .976rem;
+  --normal-font-size: 0.976rem;
   --small-font-size: 0.833rem;
   --smaller-font-size: 0.773rem;
   --z-10: 10;
@@ -12568,7 +12568,7 @@ input[type=date].status-mod-input::-webkit-calendar-picker-indicator {
   position: relative;
 }
 .zb-custrom-checkbox .toggle * {
-  --main-timing: .5s;
+  --main-timing: 0.5s;
   box-sizing: border-box;
   transition: color var(--main-timing), background var(--main-timing), transform var(--main-timing);
 }
@@ -12591,7 +12591,8 @@ input[type=date].status-mod-input::-webkit-calendar-picker-indicator {
   border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-.zb-custrom-checkbox .toggle .off, .zb-custrom-checkbox .toggle .on {
+.zb-custrom-checkbox .toggle .off,
+.zb-custrom-checkbox .toggle .on {
   text-transform: uppercase;
   font-weight: 700;
   color: red;
@@ -12716,6 +12717,12 @@ input[type=date].status-mod-input::-webkit-calendar-picker-indicator {
 .submit-order-card {
   max-width: 500px;
 }
+.submit-order-card.with-out-bg {
+  border: 1px solid #c6c6c6;
+}
+.submit-order-card.with-out-bg .card-body {
+  border: none;
+}
 .submit-order-card .card-hreader {
   padding: 15px;
 }
@@ -12742,6 +12749,21 @@ input[type=date].status-mod-input::-webkit-calendar-picker-indicator {
   border: 1px solid #c6c6c6;
   padding: 15px 25px;
 }
+.submit-order-card .card-body .form-select {
+  border: none;
+  padding: 0;
+  max-width: 150px;
+}
+.submit-order-card .card-body .secound-btn {
+  color: var(--white-color);
+}
+.submit-order-card .card-body .secound-btn:hover {
+  text-decoration: none;
+}
+.submit-order-card .card-body .secound-btn.bg-2n-color {
+  background: var(--secondary-light-color);
+  color: var(--primary-color);
+}
 .submit-order-card .card-body a {
   color: var(--secondary-color);
   transition: 0.6s;
@@ -12754,8 +12776,179 @@ input[type=date].status-mod-input::-webkit-calendar-picker-indicator {
   background: var(--primary-color) !important;
   color: var(--white-color) !important;
 }
-.bg-primary input, .bg-primary a, .bg-primary p, .bg-primary h1, .bg-primary .h1, .bg-primary h2, .bg-primary .h2, .bg-primary h3, .bg-primary .h3, .bg-primary h4, .bg-primary .h4, .bg-primary h5, .bg-primary .h5, .bg-primary h6, .bg-primary .h6 {
+.bg-primary input,
+.bg-primary a,
+.bg-primary p,
+.bg-primary h1,
+.bg-primary .h1,
+.bg-primary h2,
+.bg-primary .h2,
+.bg-primary h3,
+.bg-primary .h3,
+.bg-primary h4,
+.bg-primary .h4,
+.bg-primary h5,
+.bg-primary .h5,
+.bg-primary h6,
+.bg-primary .h6 {
   color: var(--white-color);
+}
+
+.bg-red {
+  background: red !important;
+  color: var(--white-color) !important;
+}
+
+.font-smaller {
+  font-size: 10px;
+}
+
+.bg-danger {
+  color: var(--white-color);
+}
+
+.bg-green {
+  background-color: #00ab79;
+  transition: 0.6s;
+}
+
+.color-green {
+  color: #00ab79;
+}
+
+.secound-btn.bg-green:hover {
+  background-color: #008c46;
+}
+
+.om-edit-amount-form input {
+  border: 1px solid var(--text-color) !important;
+  padding: 8px 10px;
+  margin-right: 10px;
+  color: var(--description-color);
+}
+.om-edit-amount-form input:hover {
+  background: rgba(64, 168, 109, 0.0901960784);
+}
+
+.om-order-value .form-label {
+  margin-bottom: 4px;
+}
+.om-order-value input[type=date] {
+  padding: 7px 12px;
+}
+.om-order-value .ulds-form {
+  border: 1px solid var(--desable-color) !important;
+  padding: 5px 10px;
+}
+@media (max-width: 991.98px) {
+  .om-order-value .ulds-form {
+    margin-top: 5px;
+  }
+}
+
+.om-offcanvas-small-area {
+  width: 500px !important;
+}
+
+.om-order-2nd-form input {
+  width: 100%;
+  border: 1px solid var(--text-color) !important;
+}
+
+#om-card2-finish .form-select,
+#om-card2-finish .form-control,
+#om-card2-basics .form-select,
+#om-card2-basics .form-control,
+#om-allocations-finish .form-select,
+#om-allocations-finish .form-control,
+#om-allocations-rollover .form-select,
+#om-allocations-rollover .form-control,
+#om-allocations-Basics .form-select,
+#om-allocations-Basics .form-control {
+  border: 1px solid var(--text-color) !important;
+}
+
+#om-card2-basics .user-form-area-big,
+#om-allocations-Basics .user-form-area-big {
+  display: flex;
+}
+#om-card2-basics .user-form-area-big .form-select,
+#om-allocations-Basics .user-form-area-big .form-select {
+  width: 200px;
+  border: none !important;
+  border-bottom: 1px solid var(--text-color) !important;
+  border-radius: 0 !important;
+  padding-top: 0;
+}
+
+.om-modapproved-text span:nth-child(2),
+.om-modapproved-text span:nth-child(1) {
+  margin-right: 15px;
+  position: relative;
+}
+.om-modapproved-text span:nth-child(2)::after,
+.om-modapproved-text span:nth-child(1)::after {
+  position: absolute;
+  content: "";
+  width: 7px;
+  height: 7px;
+  top: 10px;
+  right: -13px;
+  background: var(--text-color);
+  border-radius: 50%;
+}
+
+#accordion-approved .accordion-button {
+  border-radius: 5px;
+  background: var(--white-color);
+  border: 1px solid #c6c6c6;
+  border-bottom: 3px solid var(--secondary-color);
+}
+#accordion-approved .accordion-button:focus {
+  outline: none;
+}
+
+.mod-dicline-box {
+  border: 1px solid #c6c6c6;
+  border-radius: 5px;
+}
+.mod-dicline-box .form-select,
+.mod-dicline-box input {
+  border: 1px solid #c6c6c6 !important;
+  padding: 4px 9px;
+}
+.mod-dicline-box .approved-btn-group button {
+  margin-top: 24px;
+  padding: 6px 12px;
+}
+
+.approved-btn-bottom {
+  float: right;
+}
+
+.approved-content-area {
+  border: 1px solid #c6c6c6 !important;
+  border-radius: 3px;
+}
+@media (max-width: 1199.98px) {
+  .approved-content-area {
+    overflow: scroll;
+  }
+}
+.approved-content-area .approved-content-item {
+  border-bottom: 1px solid #c6c6c6 !important;
+  display: flex;
+  min-width: 800px;
+}
+.approved-content-area .approved-content-item:last-child {
+  border-bottom: none !important;
+}
+.approved-content-area .approved-content-item .form-select {
+  padding: 4px 5px !important;
+  background-color: var(--secondary-light-color);
+  color: var(--text-color);
+  border: none;
+  margin-top: -10px;
 }
 
 .userFormMain {
@@ -12812,7 +13005,7 @@ input[type=date].status-mod-input::-webkit-calendar-picker-indicator {
 .secound-btn {
   background-color: var(--secondary-color);
   padding: 10px 19px;
-  opacity: 0.9;
+  opacity: 0.8;
   transition: 0.6s;
   color: var(--white-color);
   font-weight: 500;
