@@ -13013,7 +13013,6 @@ input[type=date].status-mod-input::-webkit-calendar-picker-indicator {
   transition: all 0.6s;
 }
 .custrom-accordion:hover {
-  background-color: var(--secondary-light-color);
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 .custrom-accordion.active {
