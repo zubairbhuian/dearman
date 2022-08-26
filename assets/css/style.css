@@ -11886,7 +11886,7 @@ input[type=date].status-mod-input::-webkit-calendar-picker-indicator {
 }
 @media (max-width: 575.98px) {
   .modal-body {
-    padding: 3rem;
+    padding: 15px;
   }
 }
 
@@ -12898,14 +12898,19 @@ input[type=date].status-mod-input::-webkit-calendar-picker-indicator {
   border-radius: 50%;
 }
 
+#accordion-assignment .accordion-button,
+#accordion-scheduled .accordion-button,
 #accordion-approved .accordion-button {
   border-radius: 5px;
   background: var(--white-color);
   border: 1px solid #c6c6c6;
   border-bottom: 3px solid var(--secondary-color);
 }
+#accordion-assignment .accordion-button:focus,
+#accordion-scheduled .accordion-button:focus,
 #accordion-approved .accordion-button:focus {
   outline: none;
+  box-shadow: none;
 }
 
 .mod-dicline-box {
@@ -12920,6 +12925,7 @@ input[type=date].status-mod-input::-webkit-calendar-picker-indicator {
 .mod-dicline-box .approved-btn-group button {
   margin-top: 24px;
   padding: 6px 12px;
+  width: 130px;
 }
 
 .approved-btn-bottom {
@@ -12949,6 +12955,75 @@ input[type=date].status-mod-input::-webkit-calendar-picker-indicator {
   color: var(--text-color);
   border: none;
   margin-top: -10px;
+}
+
+.mod-scheduled-text {
+  margin-top: -11px;
+  margin-left: 40px;
+}
+
+.scheduled-header {
+  color: #008c46;
+}
+.scheduled-header h4, .scheduled-header .h4 {
+  color: #008c46;
+}
+
+.accordion-scheduled-row {
+  width: 100% !important;
+}
+
+.accordion-scheduled-view-all {
+  width: 200px;
+}
+
+.mod-assignment-card {
+  padding: 25px;
+  margin-top: 10px;
+}
+.mod-assignment-card .custrom-text {
+  display: flex;
+  color: #008c46;
+}
+.mod-assignment-card .custrom-text span {
+  margin-right: 10px;
+}
+.mod-assignment-card .custrom-text h5, .mod-assignment-card .custrom-text .h5 {
+  color: #008c46;
+}
+
+.mod-dicline-boxs {
+  border: 1px solid #c6c6c6;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+.mod-dicline-boxs .mod-dicline-box {
+  border: none;
+  border-bottom: 1px solid #c6c6c6;
+  border-radius: 0;
+}
+.mod-dicline-boxs .mod-dicline-box:last-child {
+  border-bottom: none;
+}
+
+.custrom-accordion {
+  border-radius: 4px;
+  border: 1px solid #c6c6c6;
+  padding: 20px 15px;
+}
+.custrom-accordion.active {
+  border-bottom: 3px solid var(--secondary-color);
+}
+
+.tanks-details-btn button {
+  border: 1px solid #c6c6c6;
+  padding: 15px 30px;
+  background-color: transparent;
+  border-radius: 5px;
+  color: var(--text-color);
+}
+.tanks-details-btn button:hover {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
 .userFormMain {
