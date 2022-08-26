@@ -13010,9 +13010,17 @@ input[type=date].status-mod-input::-webkit-calendar-picker-indicator {
   border-radius: 4px;
   border: 1px solid #c6c6c6;
   padding: 20px 15px;
+  transition: all 0.6s;
+}
+.custrom-accordion:hover {
+  background-color: var(--secondary-light-color);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 .custrom-accordion.active {
   border-bottom: 3px solid var(--secondary-color);
+}
+.custrom-accordion.active:hover {
+  box-shadow: none;
 }
 
 .tanks-details-btn button {
