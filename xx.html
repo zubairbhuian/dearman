@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>trailers</title>
+</head>
+
+<body>
+  <main>
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ======================+++++++++++++ Top Navigation +++++++++++++++=============================
+   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+      <div class="container-fluid">
+        <a class="side-appbar-icon " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+            class="bi bi-text-paragraph" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z" />
+          </svg>
+        </a>
+        <a class="navbar-brand" href="index.html">
+          <img src="/assets/images/logo.png" alt=""><span>LYNX Console</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav  me-auto ms-auto ">
+            <li class="nav-item pe-5">
+              <a class="nav-link active" aria-current="page" href="index.html">Insights</a>
+            </li>
+            <li class="nav-item pe-5">
+              <a class="nav-link" href="#">Submit Orders</a>
+            </li>
+            <li class="nav-item position-relative ">
+              <a class="nav-link " href="#">Order Management</a>
+              <div class="custrom-badge">2 <span>New</span> </div>
+              </span>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav me-6">
+            <li class="nav-item hide-lg">
+              <div class="circuler-avater">
+                <span>FH</span>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <!--  -->
+                <!-- <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li> -->
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+
+    </nav>
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ======================+++++++++++++  Mobail Side Menu  +++++++++++++++==========================   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <div class="offcanvas offcanvas-side-appbar offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
+      tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+      <div class="offcanvas-header">
+
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="side-appbar">
+          <div class="navbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="terminals.html">Terminals</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="suppliers.html">Suppliers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="customers.html">Customers</a>
+              </li>
+              <!-- Sub Menu -->
+              <li class="nav-item dropdown side-dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Carriers
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="drivers.html">Drivers</a></li>
+                  <li><a class="dropdown-item" href="entities.html">Entities </a></li>
+                  <li><a class="dropdown-item" href="trailers.html">Trailers</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="products.html">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="destinations.html">Destinations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="contacts.html">Contacts</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ======================+++++++++++++  Main Body  +++++++++++++++==========================   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <div class="main-body">
+      <!-- side appbar -->
+      <div class="side-appbar">
+        <div class="navbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="terminals.html">Terminals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="suppliers.html">Suppliers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.html">Customers</a>
+            </li>
+            <!--!+++++++++++++++ Sub Menu +++++++++++++++++++++-->
+            <li class="nav-item dropdown side-dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Carriers
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="drivers.html">Drivers</a></li>
+                <li><a class="dropdown-item" href="entities.html">Entities </a></li>
+                <li><a class="dropdown-item" href="trailers.html">Trailers </a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="destinations.html">Destinations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="contacts.html">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- !++++++++++++++  body contant ++++++++++++++++++++++++-->
+      <div class="body-content">
+      <div class="row">
+        <div class="col-6">
+          <div class="pricing-card-main">
+            <div class="header">
+              <h4>PetroNational</h4>
+            </div>
+            <div class="pricing-main-body">
+              <h6>Order Approval</h6>
+              <p class="mb-0">Auto-approval for orders submitted within the <br>Customer's remaining credit.</p>
+              <a href="#">Manage Order Approval</a>
+              <div class="fz-custrom-dropdown-main">
+                 <!-- item -->
+                 <h6 class="mb-3">Credit</h6>
+                 <table class="table table-borderless">
+                  <thead>
+                    <tr>
+                      <td></td>
+                      <td>Terminal</td>
+                      <td>Order Number</td>
+                      <td>Trailer</td>
+                      <td>Product</td>
+                      <td>Amount</td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Bluewing One</td>
+                      <td>87999</td>
+                      <td>Luxemborg</td>
+                      <td>ULSD</td>
+                      <td>8,000 USG</td>
+                      <td class="p-0">
+                          <div class="form-check position-relative btn-secondary-ex">
+                              <button class="btn-secondary  ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                  <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                </svg>
+                              </button>
+                              <div class="custrom-dropdown-mz">
+                                <ul>
+                                  <li><a href="#">hello</a></li>
+                                  <li><a href="#">hello2</a></li>
+                                 
+                                </ul>
+                              </div>
+                            </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="table table-borderless">
+                  <thead>
+                    <tr>
+                      <td></td>
+                      <td>Terminal</td>
+                      <td>Order Number</td>
+                      <td>Trailer</td>
+                      <td>Product</td>
+                      <td>Amount</td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Bluewing One</td>
+                      <td>87999</td>
+                      <td>Luxemborg</td>
+                      <td>ULSD</td>
+                      <td>8,000 USG</td>
+                      <td class="p-0">
+                          <div class="form-check position-relative btn-secondary-ex">
+                              <button class="btn-secondary  ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                  <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                </svg>
+                              </button>
+                              <div class="custrom-dropdown-mz">
+                                <ul>
+                                  <li><a href="#">hello</a></li>
+                                  <li><a href="#">hello2</a></li>                             
+                                </ul>
+                              </div>
+                            </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 bg-red">demo</div>
+      </div>
+      </div>
+
+    </div>
+    <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ======================+++++++++++++  Modal  +++++++++++++++==========================   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <!-- Modal -->
+    <div class="modal fade" id="flint-modal" tabindex="-1" aria-labelledby="flint-modalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg  modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!--card  -->
+            <div class="profile-card">
+              <div class="pp-content">
+                <h3>HF</h3>
+              </div>
+              <div class="text-content">
+                <h3>Flint Hills Resources</h3>
+                <div class="del-sec-left">
+                  <button class="btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                    Delete a Terminal</button>
+                </div>
+              </div>
+            </div>
+            <!--+++++++++++++++++ tab  button+++++++++++++++-->
+            <ul class="nav flint-modal-tab-btn">
+              <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="pill" href="#name-tab">Name & address</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#business-tab">Business info</a>
+              </li>
+            </ul>
+            <!--++++++++++++ Tab panes ++++++++++++++++++++-->
+            <div class="tab-content flint-modal-tab-content">
+              <!-- tab one -->
+              <div class="tab-pane container active" id="name-tab">
+                <!-- frist row -->
+                <div class="row mt-5">
+                  <div class="col-md-6">
+                    <h6 class="h6">Supplier name</h6>
+                    <p>Flint Hills Resources</p>
+                    <a class="nav-link" href="#">Manage customer name</a>
+                  </div>
+                  <div class="col-md-6">
+                    <h6 class="h6">Supplier name</h6>
+                    <p>Flint Hills Resources</p>
+                    <a class="nav-link" href="#">Manage customer name</a>
+                  </div>
+                </div>
+                <!-- secound row -->
+                <div class="row mt-5">
+                  <div class="col-md-6">
+                    <h6 class="h6">Supplier name</h6>
+                    <p>Flint Hills Resources</p>
+                    <a class="nav-link" href="#">Manage customer name</a>
+                  </div>
+                </div>
+              </div>
+              <!-- tab tow -->
+              <div class="tab-pane container fade mt-5" id="business-tab">
+                <h6 class="fw-6">Class of Business</h6>
+                <div class="business-tab-aria">
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- script -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
