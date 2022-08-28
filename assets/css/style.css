@@ -13010,9 +13010,16 @@ input[type=date].status-mod-input::-webkit-calendar-picker-indicator {
   border-radius: 4px;
   border: 1px solid #c6c6c6;
   padding: 20px 15px;
+  transition: all 0.6s;
+}
+.custrom-accordion:hover {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 .custrom-accordion.active {
   border-bottom: 3px solid var(--secondary-color);
+}
+.custrom-accordion.active:hover {
+  box-shadow: none;
 }
 
 .tanks-details-btn button {
@@ -13024,6 +13031,69 @@ input[type=date].status-mod-input::-webkit-calendar-picker-indicator {
 }
 .tanks-details-btn button:hover {
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.fz-custrom-dropdown-main {
+  overflow-x: scroll;
+}
+.fz-custrom-dropdown-main .table-borderless {
+  min-width: 900px;
+}
+
+.pricing-card-main {
+  height: 300px;
+}
+.pricing-card-main .table {
+  margin-bottom: 60px;
+}
+
+.custrom-dropdown-mz {
+  position: absolute;
+  z-index: 1;
+  top: 34px;
+  right: 43px;
+  background: var(--border-color);
+  display: none;
+}
+
+.custrom-dropdown-mz ul {
+  padding: 0;
+  width: 120px;
+  list-style: none;
+  margin: 0;
+}
+
+.custrom-dropdown-mz ul li a {
+  display: inline-block;
+  padding: 3px 15px;
+  width: 100%;
+}
+
+.custrom-dropdown-mz ul li a:hover {
+  background-color: var(--secondary-light-color);
+}
+
+.btn-secondary-ex .btn-secondary {
+  padding: 7px 14px;
+  /* background-color: var(--white-color); */
+  color: var(--text-color);
+  background-color: var(--secondary-light-color);
+}
+.btn-secondary-ex .btn-secondary:focus {
+  box-shadow: none;
+}
+
+.btn-secondary-ex .btn-secondary:hover {
+  /* background-color: var(--secondary-light-color); */
+}
+
+.btn-secondary-ex:hover .custrom-dropdown-mz {
+  display: block;
+}
+
+button:focus,
+.btn:focus {
+  box-shadow: none;
 }
 
 .userFormMain {
