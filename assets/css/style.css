@@ -13408,4 +13408,81 @@ main {
   }
 }
 
+.pp-header-area {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.secound-btn.border-radious {
+  border-radius: 4px;
+  padding: 7px 23px;
+}
+
+.link {
+  color: var(--secondary-color);
+  transition: all 0.6s;
+}
+.link:hover {
+  text-decoration: underline;
+  color: #0e3995;
+}
+
+.purchase-services-body {
+  max-width: 1200px;
+}
+
+.secound-btn:disabled {
+  opacity: 0.3;
+}
+
+.btn-purple {
+  padding: 3px 12px;
+  background: #a671be;
+  color: var(--text-color);
+}
+
+.pp-header-text {
+  max-width: 640px;
+}
+
+.item.header {
+  background-color: var(--border-color);
+  transition: all 0.4s;
+}
+
+.products-licenses-body .hover-able b {
+  color: var(--description-color);
+}
+
+.Security-info-table.hover-able .item:hover {
+  background-color: var(--border-color);
+}
+
+.lynx-img {
+  width: 55px;
+}
+
+.dearman-product-progress {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dearman-product-progress .progress {
+  width: 100%;
+  height: 7px;
+}
+
+.bg-purple {
+  background: #8b2ac7;
+}
+
+.products-licenses-body .hover-able .security-info-area .item {
+  text-decoration: none !important;
+}
+.products-licenses-body .hover-able .security-info-area .item b:hover,
+.products-licenses-body .hover-able .security-info-area .item span:hover,
+.products-licenses-body .hover-able .security-info-area .item div:hover {
+  text-decoration: none !important;
+}
+
 /*# sourceMappingURL=style.css.map */
