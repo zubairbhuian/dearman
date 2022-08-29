@@ -173,159 +173,168 @@
       <!-- !++++++++++++++  body contant ++++++++++++++++++++++++-->
       <div class="body-content">
         <div class="pp-header-area pt-3 pb-4">
-            <h2>Payment methods</h2>
+          <h2>Payment methods</h2>
         </div>
-        <button class="secound-btn bg-tra" data-bs-toggle="offcanvas" data-bs-target="#offcan-payment-methods-form"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+        <button class="secound-btn bg-tra" data-bs-toggle="offcanvas" data-bs-target="#offcan-payment-methods-form"><svg
+            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus"
+            viewBox="0 0 16 16">
+            <path
+              d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
           </svg> Add payment method</button>
-                <!-- table -->
-                <div class="Security-info-table payment-history-table payment-methods-tabel ps-business-sec-table">
-                    <div class="security-info-area">
-                        <!-- header-->
-                        <div class="row item header">
-                            <div class="col">
-                                Name
-                            </div>
-                            <div class="col">
-                                Expiration Date
-                            </div>
-                            <div class="col">Status</div>
-                            <div class="col">Type</div>
-                        </div>
-                        <!-- item -->
-                        <div class="row item">
-                            <div class="col">
-                                <img class="visa-logo" src="assets/images/icons/visa-logo.png" alt="">
-                                <a data-bs-toggle="offcanvas"  href="#offcan-payment-methods-visa">4/2023</a>
-                            </div>
-                            <div class="col">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                              </svg>Active
-                            </div>
-                            <div class="col">
-                                Invoice
-                            </div>
-                            <div class="col">Credit card</div>
-                        </div>
+        <!-- table -->
+        <div class="Security-info-table payment-history-table payment-methods-tabel ps-business-sec-table">
+          <div class="security-info-area">
+            <!-- header-->
+            <div class="row item header">
+              <div class="col">
+                Name
+              </div>
+              <div class="col">
+                Expiration Date
+              </div>
+              <div class="col">Status</div>
+              <div class="col">Type</div>
+            </div>
+            <!-- item -->
+            <div class="row item">
+              <div class="col">
+                <img class="visa-logo" src="assets/images/icons/visa-logo.png" alt="">
+                <a data-bs-toggle="offcanvas" href="#offcan-payment-methods-visa">4/2023</a>
+              </div>
+              <div class="col">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                  class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>Active
+              </div>
+              <div class="col">
+                Invoice
+              </div>
+              <div class="col">Credit card</div>
+            </div>
 
-                    </div>
-                </div>
+          </div>
+        </div>
       </div>
 
     </div>
   </main>
-<!--------------------------------------------------------------------------------
+  <!--------------------------------------------------------------------------------
 ===============================    Offcanvace  ===================================
 --------------------------------------------------------------------------------->
-<!-- ?Form -->
-<div class="offcanvas offcanvas-end offcan-payment-methods-area" tabindex="-1" id="offcan-payment-methods-form" aria-labelledby="offcanvasRightLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <h3 class="mb-5">Add a payment method</h3>
-    <form action="#">
+  <!-- ?Form -->
+  <div class="offcanvas offcanvas-end offcan-payment-methods-area" tabindex="-1" id="offcan-payment-methods-form"
+    aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <h3 class="mb-5">Add a payment method</h3>
+      <form action="#">
         <div class="row row-cols-1 ">
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Card number *</label>
-                <input type="text" class="form-control ">
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Security code *</label>
-                <input type="text" class="form-control ">
-              </div>
-              <div class="col-6 mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Expiration month *</label>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected></option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                  <option value="11">11</option>
-                  <option value="12">12</option>
-                </select>
-              </div>
-              <div class="col-6 mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Expiration year *</label>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected></option>
-                  <option value="1">21</option>
-                  <option value="2">22</option>
-                  <option value="3">23</option>
-                  <option value="4">24</option>
-                  <option value="5">25</option>
-                  <option value="6">26</option>
-                  <option value="7">27</option>
-                  <option value="8">28</option>
-                  <option value="9">29</option>
-                  <option value="10">30</option>
-                  <option value="11">31</option>
-                  <option value="12">31</option>
-                </select>
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Name on card *</label>
-                <input type="text" class="form-control ">
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Address line 1 *</label>
-                <input type="text" class="form-control ">
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Address line 2 (Optional) *</label>
-                <input type="text" class="form-control ">
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">City *</label>
-                <input type="text" class="form-control ">
-            </div>
-                <div class="col mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">State *</label>
-                    <select class="form-select" aria-label="Default select example">
-                      <option selected></option>
-                      <option value="1">Alabama</option>
-                      <option value="2">Alaska</option>
-                      <option value="3">Arizona</option>
-                      <option value="4">Arkansas</option>
-                      <option value="5">California</option>
-                      <option value="6">Colorado</option>
-                    </select>
-                  </div>
-              
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Zip *</label>
-                <input type="text" class="form-control ">
-              </div>
-
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Card number *</label>
+            <input type="text" class="form-control ">
           </div>
-         <!-- !Button -->
-         <ul class="nav nav-pills mt-5">
-            <li class="nav-item">
-              <a data-bs-toggle="offcanvas" data-bs-dismiss="offcanvas" href="#om-allocations-Basics" class="secound-btn mt-5 me-2 a">
-               Save
-              </a>
-            </li>
-            <li class="nav-item">
-              <a data-bs-toggle="offcanvas" data-bs-dismiss="offcanvas"  href="#om-allocations-finish" class="secound-btn bg-tra">
-                Cencel
-              </a>
-            </li>
-          </ul>
-    </form>
-  </div>
-</div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Security code *</label>
+            <input type="text" class="form-control ">
+          </div>
+          <div class="col-6 mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Expiration month *</label>
+            <select class="form-select" aria-label="Default select example">
+              <option selected></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+          <div class="col-6 mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Expiration year *</label>
+            <select class="form-select" aria-label="Default select example">
+              <option selected></option>
+              <option value="1">21</option>
+              <option value="2">22</option>
+              <option value="3">23</option>
+              <option value="4">24</option>
+              <option value="5">25</option>
+              <option value="6">26</option>
+              <option value="7">27</option>
+              <option value="8">28</option>
+              <option value="9">29</option>
+              <option value="10">30</option>
+              <option value="11">31</option>
+              <option value="12">31</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Name on card *</label>
+            <input type="text" class="form-control ">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Address line 1 *</label>
+            <input type="text" class="form-control ">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Address line 2 (Optional) *</label>
+            <input type="text" class="form-control ">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">City *</label>
+            <input type="text" class="form-control ">
+          </div>
+          <div class="col mb-3">
+            <label for="exampleFormControlInput1" class="form-label">State *</label>
+            <select class="form-select" aria-label="Default select example">
+              <option selected></option>
+              <option value="1">Alabama</option>
+              <option value="2">Alaska</option>
+              <option value="3">Arizona</option>
+              <option value="4">Arkansas</option>
+              <option value="5">California</option>
+              <option value="6">Colorado</option>
+            </select>
+          </div>
 
-<!-- ?Visa -->
-<div class="offcanvas offcanvas-end offcan-payment-methods-area" tabindex="-1" id="offcan-payment-methods-visa" aria-labelledby="offcanvasRightLabel">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Zip *</label>
+            <input type="text" class="form-control ">
+          </div>
+
+        </div>
+        <!-- !Button -->
+        <ul class="nav nav-pills mt-5">
+          <li class="nav-item">
+            <a data-bs-toggle="offcanvas" data-bs-dismiss="offcanvas" href="#om-allocations-Basics"
+              class="secound-btn mt-5 me-2">
+              Save
+            </a>
+          </li>
+          <li class="nav-item">
+            <a data-bs-toggle="offcanvas" data-bs-dismiss="offcanvas" href="#om-allocations-finish"
+              class="secound-btn bg-tra">
+              Cencel
+            </a>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+
+  <!-- ?Visa -->
+  <div class="offcanvas offcanvas-end offcan-payment-methods-area" tabindex="-1" id="offcan-payment-methods-visa"
+    aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -334,29 +343,29 @@
       <h3 class="mb-5">Visa ****0909</h3>
       <div class="row row-cols-1 row-cols-md-2">
         <div class="col mb-4">
-            <h5>Name on card</h5>
-            <p>Joe Black</p>
+          <h5>Name on card</h5>
+          <p>Joe Black</p>
         </div>
         <div class="col mb-4">
-            <h5>Expiration date</h5>
-            <p>4/2023</p>
+          <h5>Expiration date</h5>
+          <p>4/2023</p>
         </div>
         <div class="col mb-4">
-            <h5>Billing address</h5>
-            <p>1000 Main St. <br>Suite 8028 <br>Houston, tx 77056 <br>US</p>
-            <div><a class="link h-underline" href="#">Edit</a></div>
-            <div><a class="link h-underline" href="#">Delete</a></div>
+          <h5>Billing address</h5>
+          <p>1000 Main St. <br>Suite 8028 <br>Houston, tx 77056 <br>US</p>
+          <div><a class="link h-underline" href="#">Edit</a></div>
+          <div><a class="link h-underline" href="#">Delete</a></div>
         </div>
         <div class="col mb-4">
-            <h5>Expiration date</h5>
-            <p>0.00</p>
+          <h5>Expiration date</h5>
+          <p>0.00</p>
         </div>
         <div class="col-12 mb-4">
-            <h5>Items paid by Visa ****0909</h5>
-            <p>LYNX Truck - Position Holder<br>Carrier Insights<br>Error Insights </p>
-            <div><a class="link h-underline" href="#">Replace payment method for all items</a></div>
+          <h5>Items paid by Visa ****0909</h5>
+          <p>LYNX Truck - Position Holder<br>Carrier Insights<br>Error Insights </p>
+          <div><a class="link h-underline" href="#">Replace payment method for all items</a></div>
         </div>
-         
+
       </div>
     </div>
   </div>
