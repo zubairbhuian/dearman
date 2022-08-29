@@ -13139,10 +13139,6 @@ button:focus,
   margin-bottom: 0.5rem;
 }
 
-.h-underline:hover {
-  text-decoration: underline !important;
-}
-
 .successful-account-area {
   margin: 100px auto;
 }
@@ -13483,6 +13479,41 @@ main {
 .products-licenses-body .hover-able .security-info-area .item span:hover,
 .products-licenses-body .hover-able .security-info-area .item div:hover {
   text-decoration: none !important;
+}
+
+.payment-history-table a {
+  color: var(--text-color) !important;
+}
+
+.payment-methods-tabel .visa-logo {
+  width: 50px;
+  margin-right: 10px;
+}
+.payment-methods-tabel .bi-check-circle-fill {
+  fill: rgb(26, 111, 26);
+  margin-right: 6px !important;
+}
+
+.offcan-payment-methods-area {
+  width: 700px;
+}
+@media (min-width: 992px) {
+  .offcan-payment-methods-area .offcanvas-body {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+.offcan-payment-methods-area .form-select,
+.offcan-payment-methods-area .form-control {
+  border: 1px solid var(--text-color) !important;
+  border-radius: 0;
+}
+
+.h-underline {
+  text-decoration: none !important;
+}
+.h-underline:hover {
+  text-decoration: underline !important;
 }
 
 /*# sourceMappingURL=style.css.map */
