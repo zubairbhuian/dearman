@@ -13150,6 +13150,7 @@ button:focus,
   transition: 0.6s;
   color: var(--white-color);
   font-weight: 500;
+  cursor: pointer;
 }
 .secound-btn:hover {
   opacity: 1;
@@ -13554,6 +13555,59 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.lylx-page-right {
+  color: var(--white-color);
+}
+.lylx-page-right .secound-btn {
+  background: var(--white-color) !important;
+  color: var(--text-color);
+  opacity: 1;
+}
+.lylx-page-right .secound-btn:hover {
+  opacity: 0.7 !important;
+}
+
+.lylx-for-free-page .lylx-bottom {
+  margin-top: 100px;
+  overflow-x: scroll;
+}
+@media (max-width: 991.98px) {
+  .lylx-for-free-page .lylx-bottom {
+    margin-top: 50px;
+  }
+}
+.lylx-for-free-page .lylx-bottom .table {
+  min-width: 1000px;
+}
+@media (max-width: 575.98px) {
+  .lylx-for-free-page .navbar img {
+    display: none;
+  }
+}
+.lylx-for-free-page .rack-order-status-tab .nav-item {
+  width: 100%;
+}
+.lylx-for-free-page .main-body {
+  padding-top: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: block;
+}
+.lylx-for-free-page .main-body .header {
+  max-width: 990px;
+  margin-bottom: 40px;
+}
+.lylx-for-free-page .main-body .lylx-track-order {
+  max-width: 800px;
+}
+
+.cus-cir {
+  width: 15px;
+  height: 15px;
+  background: rgb(26, 111, 26);
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */
