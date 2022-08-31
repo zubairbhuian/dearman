@@ -224,12 +224,14 @@
                   <div class="elect-tanks-left">
                     <img class="hdd-network me-1 " src="assets/images/icons/hdd-network.png" alt="">
                     <h6 class="mb-0 me-1">Select tanks smarte</h6>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    <span  data-bs-toggle="popover"  data-bs-content='Active pending orders are pending orders with a desired start date of the current date or future dates. Pending orders with start dates of past dates are expired. Expired pending orders will display with a "Declined" status in order status.' >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                       class="bi bi-exclamation-circle me-4" viewBox="0 0 16 16">
                       <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                       <path
                         d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z" />
                     </svg>
+                    </span>
                   </div>
                   <div class="elect-tanks-right">
                     <h6 class="color-blue mb-0 me-1">Auto-tank selection</h6>
@@ -258,12 +260,13 @@
               <!-- 2nd part -->
               <h4 class="mt-4">Active pending orders</h4>
               <p class="mb-4">Only active pending orders are displayed
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                <span type="button"  data-bs-toggle="popover"  data-bs-content='Active pending orders are pending orders with a desired start date of the current date or future dates. Pending orders with start dates of past dates are expired. Expired pending orders will display with a "Declined" status in order status.' ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                   class="bi bi-exclamation-circle me-4" viewBox="0 0 16 16">
                   <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                   <path
                     d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z" />
-                </svg>
+                </svg></span>
+          
               </p>
               <div class="row row-cols-1 row-cols-xl-2 row-cols-xxl-3">
                 <!-- ?Card 1-->
@@ -1563,8 +1566,13 @@
                 <h6>10 trailers <b>.</b> Tank 10</h6>
               </div>
               <div class="col text-end">
+<<<<<<< HEAD
                 <button class="secound-btn me-2 bg-tra" data-bs-toggle="modal" data-bs-target="#om-mod-approved" data-bs-dismiss="modal">Undo</button>
                 <button class="secound-btn " data-bs-toggle="modal" data-bs-target="#om-mod-scheduled" data-bs-dismiss="modal">Confirm</button>
+=======
+                <button class="secound-btn me-2 bg-tra" data-bs-toggle="modal">Undo</button>
+                <button class="secound-btn " data-bs-toggle="modal">Confirm</button>
+>>>>>>> mahfuz4.0
               </div>
             </div>
           </div>
@@ -2102,10 +2110,18 @@
                 <p class="mb-0">2,727 BBLS <span class="ms-4">12 Trailers</span></p>
               </div>
               <div class="col text-end">
+<<<<<<< HEAD
                 <button class="secound-btn bg-tra" data-bs-toggle="modal" data-bs-dismiss="modal"
                 data-bs-target="#om-mod-assign-tanks">Hide order <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
                 </svg></button>
+=======
+                <button class="secound-btn bg-tra">View all order <svg xmlns="http://www.w3.org/2000/svg" width="13"
+                    height="13" fill="currentColor" class="bi bi-chevron-down ms-1" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                  </svg></button>
+>>>>>>> mahfuz4.0
               </div>
             </div>
           </div>
@@ -2230,7 +2246,11 @@
           </div>
           <ul class="nav nav-pills mt-5 approved-btn-bottom">
             <li class="nav-item">
+<<<<<<< HEAD
               <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#om-mod-assign-tanks" class="secound-btn radious me-2 ">
+=======
+              <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#" class="secound-btn radious me-2 ">
+>>>>>>> mahfuz4.0
                 Assign Tanks
               </a>
             </li>
@@ -2241,6 +2261,8 @@
   </div>
   <!-- script -->
   <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

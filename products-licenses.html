@@ -11,11 +11,11 @@
 
 <body>
     <main>
-        <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     ======================+++++++++++++ Top Navigation +++++++++++++++=============================
-   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-light">
             <div class="container-fluid">
                 <a class="side-appbar-icon " type="button" data-bs-toggle="offcanvas"
@@ -38,7 +38,7 @@
                             <a class="nav-link active" aria-current="page" href="index.html">Insights</a>
                         </li>
                         <li class="nav-item pe-5">
-                            <a class="nav-link" href="submit_order.html">Submit Orders</a>
+                            <a class="nav-link" href="#">Submit Orders</a>
                         </li>
                         <li class="nav-item position-relative ">
                             <a class="nav-link " href="#">Order Management</a>
@@ -173,89 +173,122 @@
             </div>
             <!-- !++++++++++++++  body contant ++++++++++++++++++++++++-->
             <div class="body-content">
-                <!-- submit order start here -->
-                <div class="submit-order-main">
-                    <!-- header part -->
-                    <div class="submit-order-header d-md-flex">
-                        <h1>Submit Orders</h1>
-                        <!--+++++++++++++++++ tab  button+++++++++++++++-->
-                        <ul class="nav flint-modal-tab-btn mt-0 ms-md-5">
-                            <li class="nav-item">
-                                <a class="nav-link " href="submit_order.html">Submit
-                                    order</a>
-                            </li>
-                            <li class="nav-item ">
-                                <a class="nav-link active" href="#">Upload order
-                                    in-bulk(csb)</a>
-                            </li>
-                        </ul>
+                <div class="pp-header-area pt-3 pb-4">
+                    <h2>Your products and licenses</h2>
+                    <div class="pp-header-text">
+                        <p>These are products owned by your organization that were bought from Dearman. Select a product to manage product and billing setting or assign licenses.</p>
                     </div>
-                    <div class="upload-order-tab ms-0">
-                        <div class="d-xl-flex">
-                            <div class="upload-order-tab-left">
-                                <ul class="timeline">
-                                    <li class="timeline-item  mb-6 ">
-                                        <h5>Upload Scheduling Template</h5>
-                                    </li>
-
-                                    <li class="timeline-item active mb-6">
-                                        <h5>Upload Scheduling Template</h5>
-                                        </p>
-                                    </li>
-
-                                    <li class="timeline-item mb-6">
-                                        <h5>Order Summary</h5>
-
-                                    </li>
-
-                                </ul>
-                            </div>
-                            <div class="upload-order-tab-right mt-5 full-width">
-                                <h2>Review your order and submit.</h2>
-                                <p>Remember, the template must include all required fields and references must appear
-                                    exactly as they do in the system for a successful submission.</p>
-                                <div class="review-order-page-table table-responsive">
-
-                                    <table class="table table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th>
-                                                    <div class="form-check table-check">
-                                                        <input type="checkbox" class="form-check-input">
-                                                        <label class="form-check-label">Termital</label>
-                                                      </div>
-                                                </th>                                              
-                                                <th>Carrier</th>
-                                                <th>Trailer</th>
-                                                <th>Product</th>
-
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input">
-                                                        <label class="form-check-label">Option 3</label>
-                                                      </div>
-                                                </td>
-                                                <td>Doe</td>
-                                                <td>john@example.com</td>
-                                                <td>john@example.com</td>
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
+                </div>
+                <div class="products-licenses-body mt-4">
+                    <h5 class="mb-2">Dearman products (4)</h5>
+                    <!-- table -->
+                    <div class="Security-info-table hover-able">
+                        <div class="security-info-area">
+                            <!-- header-->
+                            <div class="row item header">
+                                <div class="col">
+                                    Product name
                                 </div>
-                                <div class="upload-order-tab-group-btn mt-4">
-                                    <button class="btn me-3">
-                                        Choose a Defferet File</button>
-                                    <a href="order-summary.html" class="btn">Submit Order</a>
+                                <div class="col">
+                                    Available licenses
                                 </div>
+                                <div class="col">Assigned licenses</div>
+                                <div class="col">Account type</div>
                             </div>
+                            <!-- item -->
+                            <a href="#"><div class="row item">
+                                <div class="col">
+                                    <img class="lynx-img" src="assets/images/icons/lynx.png" alt="lynx">
+                                    <b>Order Status</b>
+                                </div>
+                                <div class="col">0</div>
+                                <div class="col">
+                                    <div class="d-flex">
+                                        <div class="dearman-product-progress">
+                                            <div class="progress">
+                                                <div class="progress-bar w-100" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <span class="ms-3">1/1</span>
+                                    </div>
+                                </div>
+                                <div class="col">Position Holder</div>
+                            </div></a>
+                            <!-- item -->
+                            <a href="#">
+                                <div class="row item">
+                                    <div class="col">
+                                        <img class="lynx-img" src="assets/images/icons/lynx.png" alt="lynx">
+                                        <b>Order Status (for other entities)</b>
+                                    </div>
+                                    <div class="col">99</div>
+                                    <div class="col">
+                                        <div class="d-flex">
+                                            <div class="dearman-product-progress">
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-purple w-100" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            
+                                            <span class="ms-3">1/100</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">Connecting parties</div>
+                                </div>
+                            </a>
+                            <!-- item -->
+                          <a href="#">
+                            <div class="row item">
+                                <div class="col">
+                                    <img class="lynx-img" src="assets/images/icons/lynx.png" alt="lynx">
+                                    <b>Carrier Insights</b>
+                                </div>
+                                <div class="col">0</div>
+                                <div class="col">
+                                    <div class="d-flex">
+                                        <div class="dearman-product-progress">
+                                            <div class="progress">
+                                                <div class="progress-bar w-100 " role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <span class="ms-3">1/1</span>
+                                    </div>
+                                </div>
+                                <div class="col">Position Holder</div>
+                            </div>
+                          </a>
+                            <!-- item -->
+                            <a href="#">
+                                <div class="row item">
+                                    <div class="col">
+                                        <img class="lynx-img" src="assets/images/icons/lynx.png" alt="lynx">
+                                        <b>Order Status</b>
+                                    </div>
+                                    <div class="col">0</div>
+                                    <div class="col">
+                                        <div class="d-flex">
+                                            <div class="dearman-product-progress">
+                                                <div class="progress">
+                                                    <div class="progress-bar w-100" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            
+                                            <span class="ms-3">1/1</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">Error Insights</div>
+                                </div>
+                            </a>
+
+
                         </div>
                     </div>
                 </div>
+            </div>
+
+        </div>
     </main>
 
     <!-- script -->
