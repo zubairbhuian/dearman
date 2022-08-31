@@ -13610,4 +13610,14 @@ main {
   border-radius: 50%;
 }
 
+.xxxx {
+  background-color: red;
+  position: relative;
+  height: 30px;
+}
+
+.yyyy {
+  position: absolute;
+}
+
 /*# sourceMappingURL=style.css.map */
