@@ -65,3 +65,12 @@ try{
 }catch(e){
   console.log('err');
 }
+
+
+try{
+  document.querySelectorAll('[data-bs-toggle="popover"]')
+  .forEach(popover => {
+    new bootstrap.Popover(popover)
+  })
+
+}catch(e){}
