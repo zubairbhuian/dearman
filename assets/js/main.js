@@ -26,13 +26,13 @@ try{
 }catch(e){
 console.log('err');
 }
+
 // zb
   function hideBtnFunction() {
     var x = document.querySelector('.track-order-tk-con');
     var y = document.querySelector('.track-order-tk-con-ontab');
     x.style.display = "none";
     y.style.display = "block";
-
   }
   function hideBtnFunction2() {
     var x = document.querySelector('.track-order-tk-con2');
