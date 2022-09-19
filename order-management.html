@@ -9,12 +9,15 @@
   <title>Order Management</title>
 </head>
 
+<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+
 <body>
   <main>
-    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ======================+++++++++++++ Top Navigation +++++++++++++++=============================
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+
+    <!--======================Top Navigation============================-->
+    <!--======================Top Navigation============================-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light header">
       <div class="container-fluid">
         <a class="side-appbar-icon " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
           aria-controls="offcanvasScrolling">
@@ -25,7 +28,7 @@
           </svg>
         </a>
         <a class="navbar-brand" href="index.html">
-          <img src="/assets/images/logo.png" alt=""><span>LYNX Console</span></a>
+          <img src="assets/images/logo.png" alt=""><span>LYNX Console</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
           aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -33,13 +36,16 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav  me-auto ms-auto ">
             <li class="nav-item pe-5">
-              <a class="nav-link active" aria-current="page" href="index.html">Insights</a>
+              <a class="nav-link" aria-current="page" href="index.html">Insights</a>
             </li>
             <li class="nav-item pe-5">
-              <a class="nav-link" href="#">Submit Orders</a>
+              <a class="nav-link" href="submit_order.html">Submit Orders</a>
+            </li>
+            <li class="nav-item pe-5">
+              <a class="nav-link" href="order_status.html">Order Status</a>
             </li>
             <li class="nav-item position-relative ">
-              <a class="nav-link " href="#">Order Management</a>
+              <a class="nav-link active" href="order-management.html">Order Management</a>
               <div class="custrom-badge">2 <span>New</span> </div>
               </span>
             </li>
@@ -52,34 +58,46 @@
               </div>
             </li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Dropdown
+            <li class="nav-item dropdown navbarDropdown-btn position-relative" style="cursor: pointer;">
+              <a class="nav-link dropdown-toggle" onclick="showNavRight()">
+                Flint Hill
               </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <!--  -->
-                <!-- <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li> -->
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
+              <!-- ?cus-nav-right-side -->
+              <div class="cus-nav-right-side">
+                <div class="side-appbar d-block">
+                  <div class="navbar">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="profile_setting.html">Profile Settings</a>
+                      </li>
+                      <!--!+++++++++++++++ Sub Menu +++++++++++++++++++++-->
+                      <li class="nav-item dropdown side-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Billing
+                        </a>
+                        <ul class="dropdown-menu  cus-nav-right-dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="purchase-services.html">Purchase services</a></li>
+                          <li><a class="dropdown-item" href="products-licenses.html">Your products and licenses</a></li>
+                          <li><a class="dropdown-item" href="payment-history.html">Payment history</a></li>
+                          <li><a class="dropdown-item" href="payment-methods.html">Payment methods</a></li>
+                          <li><a class="dropdown-item" href="billing-notifications.html">Billing notificatin</a></li>
+
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="login-pass.html">Log out</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </li>
+
           </ul>
 
     </nav>
-    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-======================+++++++++++++  Mobail Side Menu  +++++++++++++++==========================   
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <!--==========================Mobail Side Menu==========================-->
     <div class="offcanvas offcanvas-side-appbar offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
       tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
       <div class="offcanvas-header">
@@ -108,7 +126,7 @@
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li><a class="dropdown-item" href="drivers.html">Drivers</a></li>
                   <li><a class="dropdown-item" href="entities.html">Entities </a></li>
-                  <li><a class="dropdown-item" href="trailers.html">Trailers</a></li>
+                  <li><a class="dropdown-item" href="trailers.html">Trailers </a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -125,22 +143,22 @@
         </div>
       </div>
     </div>
-    <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-   =====================+++++++++++++  Main Body  +++++++++++++++==========================   
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <div class="main-body order-management-main">
+
+
+    <!--==========================Main Body Side Menu==========================-->
+    <div class="main-body">
       <!-- side appbar -->
       <div class="side-appbar">
         <div class="navbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="terminals.html">Terminals</a>
+              <a class="nav-link" aria-current="page" href="terminals.html">Terminals</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="suppliers.html">Suppliers</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contacts.html">Customers</a>
+              <a class="nav-link" href="customers.html">Customers</a>
             </li>
             <!--!+++++++++++++++ Sub Menu +++++++++++++++++++++-->
             <li class="nav-item dropdown side-dropdown">
@@ -166,434 +184,1461 @@
           </ul>
         </div>
       </div>
+
+
+
+
+
+
       <!-- !++++++++++++++  body contant ++++++++++++++++++++++++-->
       <div class="body-content">
-        <!-- submit order start here -->
         <div class="submit-order-main">
           <!-- header part -->
           <div class="submit-order-header d-md-flex pb-lg-5">
             <h2 class="fw-6">Order Management</h2>
-            <!--+++++++++++++++++ tab  button+++++++++++++++-->
             <ul class="nav flint-modal-tab-btn mt-0 ms-md-5">
               <li class="nav-item ">
-                <a class="nav-link active" data-bs-toggle="pill" href="#submit-order-tab">Pending
+                <a class="nav-link active" href="order-management.html">Pending
                   Orders</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="pill" href="#upload-order-tab">Pricing, Credit &
+                <a class="nav-link" href="pricing_credit.html">Pricing, Credit &
                   Allocations</a>
               </li>
             </ul>
           </div>
           <!--++++++++++++ Tab panes ++++++++++++++++++++-->
-          <div class="tab-content flint-modal-tab-content">
-            <!-- tab one -->
-            <!-- !++++++++++++++++++++++++++ tab one +++++++++++++++++++++++++-->
-            <div class="tab-pane active  mt-3 ms-0 ps-0" id="submit-order-tab">
-              <!-- Group select -->
-              <div class="group-select">
-                <!-- 1 -->
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Terminals</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-                <!-- 2 -->
-                <select class="form-select mx-sm-3 my-3 my-sm-0 " aria-label="Default select example">
-                  <option selected>Customers</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-                <!-- 3 -->
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Products</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-              </div>
-              <!-- hr -->
-              <hr class="my-4">
-              <!-- select tanks  -->
+          <!-- <div class="tab-content"> -->
+          <!-- tab one -->
+          <!-- !++++++++++++++++++++++++++ tab one +++++++++++++++++++++++++-->
+          <div class="tab-pane mt-3 ms-0 ps-0" id="submit-order-tab">
+            <!-- Group select -->
+            <div class="group-select">
+              <!-- 1 -->
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Terminals</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+              <!-- 2 -->
+              <select class="form-select mx-sm-3 my-3 my-sm-0 " aria-label="Default select example">
+                <option selected>Customers</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+              <!-- 3 -->
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Products</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <!-- hr -->
+            <hr class="my-4">
+            <!-- select tanks  -->
 
-              <div class="elect-tanks-main">
-                <!-- left -->
-                <div class="elect-tanks">
-                  <div class="elect-tanks-left">
-                    <img class="hdd-network me-1 " src="assets/images/icons/hdd-network.png" alt="">
-                    <h6 class="mb-0 me-1">Select tanks smarte</h6>
-                    <span  data-bs-toggle="popover"  data-bs-content='Active pending orders are pending orders with a desired start date of the current date or future dates. Pending orders with start dates of past dates are expired. Expired pending orders will display with a "Declined" status in order status.' >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                      class="bi bi-exclamation-circle me-4" viewBox="0 0 16 16">
-                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+            <div class="elect-tanks-main">
+              <!-- left -->
+              <div class="elect-tanks">
+                <div class="elect-tanks-left">
+                  <img class="hdd-network me-1 " src="assets/images/sg/Untitleddesign.webp" alt="">
+                  <h6 class="mb-0 me-1">Select tanks smarte</h6>
+                  <span type="button"  data-bs-toggle="popover"  data-bs-content='Active pending orders are pending orders with a desired start date of the current date or future dates. Pending orders with start dates of past dates are expired. Expired pending orders will display with a "Declined" status in order status.'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-exclamation-circle me-4" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                    <path
+                      d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z" />
+                  </svg></span>
+                </div>
+                <div class="elect-tanks-right">
+                  <h6 class="color-blue mb-0 me-1">Auto-tank selection</h6>
+                  <div class="zb-custrom-checkbox">
+                    <label class="toggle">
+                      <span class="box" id="custrom-check-box"></span>
+                      <input type='checkbox' onclick="custromCheckFunction()">
+                      <span class="switch"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <!-- right -->
+              <div class="elect-tanks-icon">
+                <div class="icon-box-one">
+                  <button class="icon-box-btn"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                      fill="currentColor" class="bi bi-calendar-week" viewBox="0 0 16 16">
                       <path
-                        d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z" />
-                    </svg>
-                    </span>
-                  </div>
-                  <div class="elect-tanks-right">
-                    <h6 class="color-blue mb-0 me-1">Auto-tank selection</h6>
-                    <div class="zb-custrom-checkbox">
-                      <label class="toggle">
-                        <span class="box" id="custrom-check-box"></span>
-                        <input type='checkbox' onclick="custromCheckFunction()">
-                        <span class="switch"></span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <!-- right -->
-                <div class="elect-tanks-icon">
-                  <div class="icon-box-one">
-                    <button class="icon-box-btn"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                        fill="currentColor" class="bi bi-calendar-week" viewBox="0 0 16 16">
-                        <path
-                          d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z" />
-                        <path
-                          d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
-                      </svg> Date grid </button>
-                  </div>
-                </div>
-              </div>
-              <!-- 2nd part -->
-              <h4 class="mt-4">Active pending orders</h4>
-              <p class="mb-4">Only active pending orders are displayed
-                <span type="button"  data-bs-toggle="popover"  data-bs-content='Active pending orders are pending orders with a desired start date of the current date or future dates. Pending orders with start dates of past dates are expired. Expired pending orders will display with a "Declined" status in order status.'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-exclamation-circle me-4" viewBox="0 0 16 16">
-                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                  <path
-                    d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z" />
-                </svg></span>
-          
-              </p>
-              <div class="row row-cols-1 row-cols-xl-2 row-cols-xxl-3">
-                <!-- ?Card 1-->
-                <div class="col mb-5">
-                  <div class=" submit-order-card">
-                    <div class="card-hreader bg-primary">
-                      <div class="row row-cols-1 row-cols-sm-2">
-                        <div class="col mb-sm-4">
-                          <h5>PetroNational</h5>
-                        </div>
-                        <div class="col mb-4 text-sm-end">
-                          <a href="#"> Detailed View</a>
-                        </div>
-                        <div class="col">
-                          <h5>Start Date</h5>
-                          <div class="card-input">
-                            <input type="date" value="Tue 1/4">
-                          </div>
-                        </div>
-                        <div class="col">
-                          <h5>End Date</h5>
-                          <div class="card-input">
-                            <input type="date" value="Tue 1/4">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <div class="row row-cols-1 row-cols-sm-2 ">
-                        <div class="col mb-4">
-                          <h6><b>Terminal</b></h6>
-                          <p>Bluewing One
-                          </p>
-                        </div>
-                        <div class="col mb-4">
-                          <h6><b>Order Type</b></h6>
-                          <p>Truck Shipment
-                          </p>
-                        </div>
-                        <div class="col mb-4">
-                          <h6><b>Product</b></h6>
-                          <p>ULSD
-                          </p>
-                        </div>
-                        <div class="col mb-4">
-                          <h6><b>Trailers</b></h6>
-                          <p>10
-                          </p>
-                        </div>
-                        <!-- link -->
-                        <div class="col mb-4">
-                          <h6><b>Order Amount</b></h6>
-                          <p>2,500 BBLS</p>
-                          <a data-bs-toggle="offcanvas" href="#om-edit-amount">Edit Amount</a>
-                        </div>
-                        <div class="col mb-4">
-                          <h6><b>Allocated Volume</b></h6>
-                          <p>0 BBLS</p>
-                          <a data-bs-toggle="offcanvas" href="#om-allocations-Basics">Manage Allocations</a>
-                        </div>
-                        <div class="col mb-4">
-                          <h6><b>Order Value</b></h6>
-                          <p>$245,700.00</p>
-                          <a data-bs-toggle="offcanvas" href="#om-order-value">Manage Pricing</a>
-                        </div>
-                        <div class="col mb-4">
-                          <h6><b>Available Credit</b></h6>
-                          <p>$150,000</p>
-                          <a data-bs-toggle="offcanvas" href="#om-edit-amount">Manage Available Credit</a>
-                        </div>
-                      </div>
-                      <!-- !Button -->
-                      <ul class="nav nav-pills mt-3 mb-3">
-
-                        <li class="nav-item">
-                          <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#om-mod-dicline"
-                            class="secound-btn radious me-2">
-                            Approved
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a data-bs-toggle="modal" href="#om-mod-dicline" class="secound-btn radious mt-5 bg-2n-color">
-                            Decline
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-
-                  </div>
-                </div>
-                <!-- ?Card 2-->
-                <div class="col mb-5 ">
-                  <div class="submit-order-card">
-                    <div class="card-hreader bg-primary">
-                      <div class="row row-cols-1 row-cols-sm-2">
-                        <div class="col mb-sm-4">
-                          <h5>Oil Company</h5>
-                        </div>
-                        <div class="col mb-4 text-md-end">
-                          <a href="#"> Detailed View</a>
-                        </div>
-                        <div class="col ">
-                          <h5>Start Date</h5>
-                          <div class="card-input">
-                            <input type="date" value="Tue 1/4">
-                          </div>
-                        </div>
-                        <div class="col">
-                          <h5>End Date</h5>
-                          <div class="card-input">
-                            <input type="date" value="Tue 1/4">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <div class="row row-cols-1 row-cols-sm-2">
-                        <div class="col mb-4">
-                          <h6><b>Terminal</b></h6>
-                          <p>Bluewing One
-                          </p>
-                        </div>
-                        <div class="col mb-4">
-                          <h6><b>Order Type</b></h6>
-                          <p>Truck Shipment
-                          </p>
-                        </div>
-                        <div class="col mb-4">
-                          <h6><b>Product</b> <span class="bg-danger font-smaller"> Multi-Product Order</span></h6>
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected>Regular Gasoline</option>
-                            <option value="1">ULDS</option>
-                          </select>
-                        </div>
-                        <div class="col mb-4">
-                          <h6><b>Trailers</b></h6>
-                          <p>25
-                          </p>
-                        </div>
-                        <!-- link -->
-                        <div class="col mb-4">
-                          <h6><b>Order Amount</b></h6>
-                          <p>6250 BBLS</p>
-                          <a data-bs-toggle="offcanvas" href="#">Edit Amount</a>
-                        </div>
-                        <div class="col mb-4">
-                          <h6><b>Allocated Volume</b></h6>
-                          <p>50,000 BBLS</p>
-                          <a data-bs-toggle="offcanvas" href="#">EManage Allocations</a>
-                        </div>
-                        <div class="col mb-4">
-                          <h6><b>Order Value</b></h6>
-                          <p>$585,375.00</p>
-                          <a data-bs-toggle="offcanvas" href="#">Manage Pricing</a>
-                        </div>
-                        <div class="col mb-4">
-                          <h6><b>Available Credit</b></h6>
-                          <p>$500,000</p>
-                          <a data-bs-toggle="offcanvas" href="#om-card2-basics">Manage Available Credit</a>
-                        </div>
-                      </div>
-                      <!-- !Button -->
-                      <ul class="nav nav-pills mt-3 mb-3">
-
-                        <li class="nav-item">
-                          <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#status-mod-request-sent"
-                            class="secound-btn radious me-2">
-                            Approved
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#om-mod-dicline"
-                            class="secound-btn radious mt-5 bg-2n-color">
-                            Decline
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-
-                  </div>
-                </div>
-                <!-- ?Card 3-->
-                <div class="col mb-5">
-                  <div class=" submit-order-card with-out-bg">
-                    <div class="card-hreader ">
-                      <div class="row row-cols-1 row-cols-sm-2">
-                        <div class="col mb-sm-4">
-                          <h5 class="color-green">PetroNational</h5>
-                        </div>
-                        <div class="col mb-4 text-sm-end">
-                          <a href="#"> Detailed View</a>
-                        </div>
-                      </div>
-                      <h4>HiSpeed Oil</h4>
-                    </div>
-                    <div class="card-body mt-4">
-                      <div class="row row-cols-1 row-cols-sm-2">
-                        <div class="col mb-4">
-                          <h6><b>Start Date</b></h6>
-                          <p>Tue, Jan 04, 2022
-                          </p>
-                        </div>
-                        <div class="col mb-4">
-                          <h6><b>End Date</b></h6>
-                          <p>Wed, Jan 05, 2022
-                          </p>
-                        </div>
-                        <div class="col mb-4">
-                          <h6><b>Terminal</b></h6>
-                          <p>Bluewing One
-                          </p>
-                        </div>
-                        <div class="col mb-4">
-                          <h6><b>Truck Shipment</b></h6>
-                          <p>10
-                          </p>
-                        </div>
-                        <!-- link -->
-                        <div class="col mb-4">
-                          <h6><b>Product</b></h6>
-                          <p>Regular Gasoline, ULSD</p>
-
-                        </div>
-                        <div class="col mb-4">
-                          <h6><b>Trailers</b></h6>
-                          <p>16</p>
-                        </div>
-                        <div class="col mb-4">
-                          <h6><b>Order Amount</b></h6>
-                          <p>3,508 BBLS</p>
-                        </div>
-
-                      </div>
-                      <!-- !Button -->
-                      <ul class="nav nav-pills mt-3 mb-3">
-                        <li class="nav-item">
-                          <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#om-mod-assign-tanks"
-                            class="secound-btn radious me-2 bg-green">
-                            Request update
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-
-                  </div>
-
-
-
-
+                        d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z" />
+                      <path
+                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                    </svg> Date grid </button>
                 </div>
               </div>
             </div>
-
-            <!-- !++++++++++++++++++++++++++ tab tow +++++++++++++++++++++++++-->
-            <div class="tab-pane fade upload-order-tab ms-0" id="upload-order-tab">
-              <div class="upload-search">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
-                  viewBox="0 0 16 16">
-                  <path
-                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                </svg>
-                <input type="text">
-              </div>
-
-              <!-- select tanks  -->
-              <hr class="mt-4">
-              <div class="elect-tanks-main">
-                <!-- left -->
-                <div class="elect-tanks">
-                  <div class="elect-tanks-left">
-                    <img class="hdd-network me-1 " src="assets/images/icons/hdd-network.png" alt="">
-                    <h6 class="mb-0 me-1">Select tanks smarte</h6>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                      class="bi bi-exclamation-circle me-4" viewBox="0 0 16 16">
-                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                      <path
-                        d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z" />
-                    </svg>
-                  </div>
-                  <div class="elect-tanks-right">
-                    <h6 class="color-blue mb-0 me-1">Auto-tank selection</h6>
-                    <div class="zb-custrom-checkbox">
-                      <label class="toggle">
-                        <span class="box" id="custrom-check-box"></span>
-                        <input type='checkbox' onclick="custromCheckFunction()">
-                        <span class="switch"></span>
-                      </label>
+            <!-- 2nd part -->
+            <h4 class="mt-4">Active pending orders</h4>
+            <p class="mb-4" style="font-size: 12px">Only active pending orders are displayed
+              <span type="button"  data-bs-toggle="popover"  data-bs-content='Active pending orders are pending orders with a desired start date of the current date or future dates. Pending orders with start dates of past dates are expired. Expired pending orders will display with a "Declined" status in order status.'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-exclamation-circle me-4" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                <path
+                  d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z" />
+              </svg></span>
+            </p>
+            <div class="row row-cols-1 row-cols-xl-2 row-cols-xxl-3">
+              <!-- ?Card 1-->
+              <div class="col mb-5">
+                <div class=" submit-order-card">
+                  <div class="card-hreader bg-primary">
+                    <div class="row row-cols-1 row-cols-sm-2">
+                      <div class="col mb-sm-4">
+                        <h5>PetroNational</h5>
+                      </div>
+                      <div class="col mb-4 text-sm-end">
+                        <a data-bs-toggle="modal" data-bs-target="#PetroNationalDetailed"> Detailed View</a>
+                      </div>
+                      <div class="col">
+                        <h5>Start Date</h5>
+                        <div class="card-input">
+                          <input type="date" value="Tue 1/4">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <h5>End Date</h5>
+                        <div class="card-input">
+                          <input type="date" value="Tue 1/4">
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <!-- right -->
-                <div class="elect-tanks-icon">
-                  <div class="icon-box-one">
-                    <button class="icon-box-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                        fill="currentColor" class="bi bi-droplet-fill" viewBox="0 0 16 16">
-                        <path
-                          d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6ZM6.646 4.646l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448c.82-1.641 1.717-2.753 2.093-3.13Z" />
-                      </svg> Add an allocation </button>
+                  <div class="card-body">
+                    <div class="row row-cols-1 row-cols-sm-2 ">
+                      <div class="col mb-4">
+                        <h6><b>Terminal</b></h6>
+                        <p>Bluewing One
+                        </p>
+                      </div>
+                      <div class="col mb-4">
+                        <h6><b>Order Type</b></h6>
+                        <p>Truck Shipment
+                        </p>
+                      </div>
+                      <div class="col mb-4">
+                        <h6><b>Product</b></h6>
+                        <p>ULSD
+                        </p>
+                      </div>
+                      <div class="col mb-4">
+                        <h6><b>Trailers</b></h6>
+                        <p>10
+                        </p>
+                      </div>
+                      <!-- link -->
+                      <div class="col mb-4">
+                        <h6><b>Order Amount</b></h6>
+                        <p>2,500 BBLS</p>
+                        <a data-bs-toggle="offcanvas" href="#om-edit-amount">Edit Amount</a>
+                      </div>
+                      <div class="col mb-4">
+                        <h6><b>Allocated Volume</b></h6>
+                        <p>0 BBLS</p>
+                        <a data-bs-toggle="offcanvas" href="#om-allocations-Basics">Manage Allocations</a>
+                      </div>
+                      <div class="col mb-4">
+                        <h6><b>Order Value</b></h6>
+                        <p>$245,700.00</p>
+                        <a data-bs-toggle="offcanvas" href="#om-order-value">Manage Pricing</a>
+                      </div>
+                      <div class="col mb-4">
+                        <h6><b>Available Credit</b></h6>
+                        <p>$150,000</p>
+                        <a data-bs-toggle="offcanvas" href="#om-card2-basics">Manage Available Credit</a>
+                      </div>
+                    </div>
+                    <!-- !Button -->
+                    <ul class="nav nav-pills mt-3 mb-3">
+
+                      <li class="nav-item">
+                        <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#om-mod-approved"
+                          class="secound-btn radious me-2">
+                          Approved
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a data-bs-toggle="modal" href="#om-mod-dicline" class="secound-btn radious mt-5 bg-2n-color">
+                          Decline
+                        </a>
+                      </li>
+                    </ul>
                   </div>
-                  <div class="icon-box-one">
-                    <button class="icon-box-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                        fill="currentColor" class="bi bi-currency-dollar" viewBox="0 0 16 16">
-                        <path
-                          d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
-                      </svg> Schedule future prices </button>
-                  </div>
+
                 </div>
+              </div>
+              <!-- ?Card 2-->
+              <div class="col mb-5 ">
+                <div class="submit-order-card">
+                  <div class="card-hreader bg-primary">
+                    <div class="row row-cols-1 row-cols-sm-2">
+                      <div class="col mb-sm-4">
+                        <h5>Oil Company</h5>
+                      </div>
+                      <div class="col mb-4 text-md-end">
+                        <a data-bs-toggle="modal" data-bs-target="#PetroNationalDetailed"> Detailed View</a>
+                      </div>
+                      <div class="col ">
+                        <h5>Start Date</h5>
+                        <div class="card-input">
+                          <input type="date" value="Tue 1/4">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <h5>End Date</h5>
+                        <div class="card-input">
+                          <input type="date" value="Tue 1/4">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row row-cols-1 row-cols-sm-2">
+                      <div class="col mb-4">
+                        <h6><b>Terminal</b></h6>
+                        <p>Bluewing One
+                        </p>
+                      </div>
+                      <div class="col mb-4">
+                        <h6><b>Order Type</b></h6>
+                        <p>Truck Shipment
+                        </p>
+                      </div>
+                      <div class="col mb-4">
+                        <h6><b>Product</b> <span class="bg-danger font-smaller"> Multi-Product Order</span></h6>
+                        <select class="form-select" aria-label="Default select example">
+                          <option selected>Regular Gasoline</option>
+                          <option value="1">ULDS</option>
+                        </select>
+                      </div>
+                      <div class="col mb-4">
+                        <h6><b>Trailers</b></h6>
+                        <p>25
+                        </p>
+                      </div>
+                      <!-- link -->
+                      <div class="col mb-4">
+                        <h6><b>Order Amount</b></h6>
+                        <p>6250 BBLS</p>
+                        <a data-bs-toggle="offcanvas" href="#">Edit Amount</a>
+                      </div>
+                      <div class="col mb-4">
+                        <h6><b>Allocated Volume</b></h6>
+                        <p>50,000 BBLS</p>
+                        <a data-bs-toggle="offcanvas" href="#om-allocations-Basics">Manage Allocations</a>
+                      </div>
+                      <div class="col mb-4">
+                        <h6><b>Order Value</b></h6>
+                        <p>$585,375.00</p>
+                        <a data-bs-toggle="offcanvas" href="#om-order-value">Manage Pricing</a>
+                      </div>
+                      <div class="col mb-4">
+                        <h6><b>Available Credit</b></h6>
+                        <p>$500,000</p>
+                        <a data-bs-toggle="offcanvas" href="#om-card2-basics">Manage Available Credit</a>
+                      </div>
+                    </div>
+                    <!-- !Button -->
+                    <ul class="nav nav-pills mt-3 mb-3">
+
+                      <li class="nav-item">
+                        <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#om-mod-approved"
+                          class="secound-btn radious me-2">
+                          Approved
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#om-mod-dicline"
+                          class="secound-btn radious mt-5 bg-2n-color">
+                          Decline
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+              <!-- ?Card 3-->
+              <div class="col mb-5">
+                <div class=" submit-order-card with-out-bg">
+                  <div class="card-hreader ">
+                    <div class="row row-cols-1 row-cols-sm-2">
+                      <div class="col mb-sm-4">
+                        <h5 class="color-green">PetroNational</h5>
+                      </div>
+                      <div class="col mb-4 text-sm-end">
+                        <a data-bs-toggle="offcanvas" data-bs-target="#offcanvas-Assign-Task"> Detailed View</a>
+                      </div>
+                    </div>
+                    <h4>HiSpeed Oil</h4>
+                  </div>
+                  <div class="card-body mt-4">
+                    <div class="row row-cols-1 row-cols-sm-2">
+                      <div class="col mb-4">
+                        <h6><b>Start Date</b></h6>
+                        <p>Tue, Jan 04, 2022
+                        </p>
+                      </div>
+                      <div class="col mb-4">
+                        <h6><b>End Date</b></h6>
+                        <p>Wed, Jan 05, 2022
+                        </p>
+                      </div>
+                      <div class="col mb-4">
+                        <h6><b>Terminal</b></h6>
+                        <p>Bluewing One
+                        </p>
+                      </div>
+                      <div class="col mb-4">
+                        <h6><b>Truck Shipment</b></h6>
+                        <p>10
+                        </p>
+                      </div>
+                      <!-- link -->
+                      <div class="col mb-4">
+                        <h6><b>Product</b></h6>
+                        <p>Regular Gasoline, ULSD</p>
+
+                      </div>
+                      <div class="col mb-4">
+                        <h6><b>Trailers</b></h6>
+                        <p>16</p>
+                      </div>
+                      <div class="col mb-4">
+                        <h6><b>Order Amount</b></h6>
+                        <p>3,508 BBLS</p>
+                      </div>
+
+                    </div>
+                    <!-- !Button -->
+                    <ul class="nav nav-pills mt-3 mb-3">
+                      <li class="nav-item">
+                        <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#om-mod-assign-tanks"
+                          class="secound-btn radious me-2 bg-green">
+                          Assign Tanks
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+
+
+
 
               </div>
-              <hr>
-
-
-
-
-
-
-
             </div>
-            <!-- padding -->
-            <div class="pb-100"></div>
-            <!-- submit order start here -->
           </div>
 
+          <!-- !++++++++++++++++++++++++++ tab tow +++++++++++++++++++++++++-->
+          <div class="tab-pane fade upload-order-tab ms-0" id="upload-order-tab">
+            <div class="upload-search">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+                viewBox="0 0 16 16">
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+              </svg>
+              <input type="text">
+            </div>
+
+            <!-- select tanks  -->
+            <hr class="mt-4">
+            <div class="elect-tanks-main">
+              <!-- left -->
+              <div class="elect-tanks">
+                <div class="elect-tanks-left">
+                  <img class="hdd-network me-1 " src="assets/images/icons/hdd-network.png" alt="">
+                  <h6 class="mb-0 me-1">Select tanks smarte</h6>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-exclamation-circle me-4" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                    <path
+                      d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z" />
+                  </svg>
+                </div>
+                <div class="elect-tanks-right">
+                  <h6 class="color-blue mb-0 me-1">Auto-tank selection</h6>
+                  <div class="zb-custrom-checkbox">
+                    <label class="toggle">
+                      <span class="box" id="custrom-check-box"></span>
+                      <input type='checkbox' onclick="custromCheckFunction()">
+                      <span class="switch"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <!-- right -->
+              <div class="elect-tanks-icon">
+                <div class="icon-box-one">
+                  <button class="icon-box-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                      fill="currentColor" class="bi bi-droplet-fill" viewBox="0 0 16 16">
+                      <path
+                        d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6ZM6.646 4.646l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448c.82-1.641 1.717-2.753 2.093-3.13Z" />
+                    </svg> Add an allocation </button>
+                </div>
+                <div class="icon-box-one">
+                  <button class="icon-box-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                      fill="currentColor" class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                      <path
+                        d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z" />
+                    </svg> Schedule future prices </button>
+                </div>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <!-- padding -->
+          <div class="pb-100"></div>
+          <!-- submit order start here -->
+          <!-- </div> -->
+        </div>
+      </div>
+
+  </main>
+
+
+
+  <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ======================+++++++++++++  Modal  +++++++++++++++==========================   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+  <!-- Petro National Detailed Popup  -->
+  <div class="modal fade PetroNationalDetailed" id="PetroNationalDetailed" tabindex="-1"
+    aria-labelledby="flint-modalLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="container">
+            <div class="modal-header" style="padding: 0;margin-bottom: 30px;">
+              <h2 class="modal-title" id="staticBackdropLabel"></h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="order-status Petro-detailed">
+
+              <div class="row">
+                <div class="detailed-input-items">
+                  <!-- <div class="col-lg-12 col-md-12"> -->
+                  <div class="os-select">
+                    <select class="form-select form-select-lg " aria-label=".form-select-lg example">
+                      <option selected>Rack Loading</option>
+                      <option value="1">Weigh-Scale Shipment</option>
+                    </select>
+                  </div>
+                  <div class="os-select">
+                    <select class="form-select form-select-lg " aria-label=".form-select-lg example">
+                      <option selected>Bluewing One</option>
+                      <option value="2">Bluewing Royal</option>
+                    </select>
+                  </div>
+                  <div class="os-select">
+                    <select class="form-select form-select-lg " aria-label=".form-select-lg example">
+                      <option selected>ULSD</option>
+                      <option value="2">Regular Gasoline</option>
+                    </select>
+                  </div>
+                  <div class="os-select">
+                    <input class="form-select-lg " type="text" placeholder="1905 BBLS">
+                  </div>
+                  <div class="os-select">
+                    <input class="form-select-lg " type="text" placeholder="Tue, Jan 04" onfocus="(this.type='date')"
+                      onblur="(this.type='text')">
+                  </div>
+                  <div class="os-select">
+                    <input class="form-select-lg " type="text" placeholder="Tue, Jan 06" onfocus="(this.type='date')"
+                      onblur="(this.type='text')">
+                  </div>
+                  <!-- </div> -->
+                </div>
+              </div>
+
+              <h2>Pending order PetroNational Tue, Jan 04, 2022 - Wed Jan 05, 2022</h2>
+
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="filter-insights">
+                    <div class="dropdown-container">
+                      <div class="filter">
+                        <div class="filter-header">
+                          <div class="header-item-group">
+                            <div class="item">
+                              <h5>Truck Shipment</h5>
+                              <p>10 Trailers</p>
+                            </div>
+                            <div class="item">
+                              <h5>Product</h5>
+                              <p>ULSD</p>
+                            </div>
+                            <div class="item">
+                              <h5>Amount</h5>
+                              <p>1,905 BBLS</p>
+                            </div>
+                            <div class="item">
+                              <h5>Order Value</h5>
+                              <p>$245,700</p>
+                            </div>
+                          </div>
+                          <div class="btn-group">
+                            <div class="cta">
+                              <a href="#om-mod-assign-tanks-mm" class="btn btn-dc" data-bs-toggle="offcanvas"
+                                data-bs-dismiss="modal">Decline</a>
+                              <a href="#om-mod-approved" class="btn" data-bs-toggle="modal"
+                                data-bs-dismiss="modal">Approved</a>
+                            </div>
+                            <a data-bs-toggle="offcanvas" href="#offcanvas-PetroNational" role="button"
+                              aria-controls="offcanvasExample" data-bs-dismiss="modal">
+                              <i for="openDropdown" class="dropdown dn" id="petro-dropdown-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                  class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                  <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg>
+                              </i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- !++++++++++++++Check Section +++++++++++++++++++++++++++-->
+              <div class="check-sec title-check mt-4 orderd-etails">
+
+                <div class="status">
+                  <div class="status-item-group">
+                    <div class="item">
+                      <h5>1</h5>
+                    </div>
+                    <div class="item">
+                      <p>Terminal</p> <br> <span>Bluewing One</span>
+                    </div>
+                    <div class="item">
+                      <p>Order Number</p> <br> <span>12345</span>
+                    </div>
+                    <div class="item">
+                      <p>Carrier</p> <br> <span>Trareysa</span>
+                    </div>
+                    <div class="item">
+                      <p>Trailer</p> <br> <span>746</span>
+                    </div>
+                    <div class="item">
+                      <p>Product</p> <br> <span>ULSD</span>
+                    </div>
+                    <div class="item">
+                      <p>Amount</p> <br> <span>8,000 USG</span>
+                    </div>
+                    <div class="item">
+                      <a href="" class="btn petro-remove-btn">Remove</a>
+                    </div>
+                    <div class="form-check">
+                      <a href="" class="petro-three-dot">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                          <path
+                            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="status-item-group">
+                    <div class="item">
+                      <h5>2</h5>
+                    </div>
+                    <div class="item">
+                      <p>Terminal</p> <br> <span>Bluewing One</span>
+                    </div>
+                    <div class="item">
+                      <p>Order Number</p> <br> <span>12345</span>
+                    </div>
+                    <div class="item">
+                      <p>Carrier</p> <br> <span>Trareysa</span>
+                    </div>
+                    <div class="item">
+                      <p>Trailer</p> <br> <span>746</span>
+                    </div>
+                    <div class="item">
+                      <p>Product</p> <br> <span>ULSD</span>
+                    </div>
+                    <div class="item">
+                      <p>Amount</p> <br> <span>8,000 USG</span>
+                    </div>
+                    <div class="item">
+                      <a href="" class="btn petro-remove-btn">Remove</a>
+                    </div>
+                    <div class="form-check">
+                      <a href="" class="petro-three-dot">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                          <path
+                            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="status-item-group">
+                    <div class="item">
+                      <h5>3</h5>
+                    </div>
+                    <div class="item">
+                      <p>Terminal</p> <br> <span>Bluewing One</span>
+                    </div>
+                    <div class="item">
+                      <p>Order Number</p> <br> <span>12345</span>
+                    </div>
+                    <div class="item">
+                      <p>Carrier</p> <br> <span>Trareysa</span>
+                    </div>
+                    <div class="item">
+                      <p>Trailer</p> <br> <span>746</span>
+                    </div>
+                    <div class="item">
+                      <p>Product</p> <br> <span>ULSD</span>
+                    </div>
+                    <div class="item">
+                      <p>Amount</p> <br> <span>8,000 USG</span>
+                    </div>
+                    <div class="item">
+                      <a href="" class="btn petro-remove-btn">Remove</a>
+                    </div>
+                    <div class="form-check">
+                      <a href="" class="petro-three-dot">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                          <path
+                            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="status-item-group">
+                    <div class="item">
+                      <h5>4</h5>
+                    </div>
+                    <div class="item">
+                      <p>Terminal</p> <br> <span>Bluewing One</span>
+                    </div>
+                    <div class="item">
+                      <p>Order Number</p> <br> <span>12345</span>
+                    </div>
+                    <div class="item">
+                      <p>Carrier</p> <br> <span>Trareysa</span>
+                    </div>
+                    <div class="item">
+                      <p>Trailer</p> <br> <span>746</span>
+                    </div>
+                    <div class="item">
+                      <p>Product</p> <br> <span>ULSD</span>
+                    </div>
+                    <div class="item">
+                      <p>Amount</p> <br> <span>8,000 USG</span>
+                    </div>
+                    <div class="item">
+                      <a href="" class="btn petro-remove-btn">Remove</a>
+                    </div>
+                    <div class="form-check">
+                      <a href="" class="petro-three-dot">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                          <path
+                            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="status-item-group">
+                    <div class="item">
+                      <h5>5</h5>
+                    </div>
+                    <div class="item">
+                      <p>Terminal</p> <br> <span>Bluewing One</span>
+                    </div>
+                    <div class="item">
+                      <p>Order Number</p> <br> <span>12345</span>
+                    </div>
+                    <div class="item">
+                      <p>Carrier</p> <br> <span>Trareysa</span>
+                    </div>
+                    <div class="item">
+                      <p>Trailer</p> <br> <span>746</span>
+                    </div>
+                    <div class="item">
+                      <p>Product</p> <br> <span>ULSD</span>
+                    </div>
+                    <div class="item">
+                      <p>Amount</p> <br> <span>8,000 USG</span>
+                    </div>
+                    <div class="item">
+                      <a href="" class="btn petro-remove-btn">Remove</a>
+                    </div>
+                    <div class="form-check">
+                      <a href="" class="petro-three-dot">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                          <path
+                            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="status-item-group">
+                    <div class="item">
+                      <h5>6</h5>
+                    </div>
+                    <div class="item">
+                      <p>Terminal</p> <br> <span>Bluewing One</span>
+                    </div>
+                    <div class="item">
+                      <p>Order Number</p> <br> <span>12345</span>
+                    </div>
+                    <div class="item">
+                      <p>Carrier</p> <br> <span>Trareysa</span>
+                    </div>
+                    <div class="item">
+                      <p>Trailer</p> <br> <span>746</span>
+                    </div>
+                    <div class="item">
+                      <p>Product</p> <br> <span>ULSD</span>
+                    </div>
+                    <div class="item">
+                      <p>Amount</p> <br> <span>8,000 USG</span>
+                    </div>
+                    <div class="item">
+                      <a href="" class="btn petro-remove-btn">Remove</a>
+                    </div>
+                    <div class="form-check">
+                      <a href="" class="petro-three-dot">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                          <path
+                            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
-  </main>
+  </div>
+
+
+
+  <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ======================+++++++++++++  Offcanvas  +++++++++++++++==========================   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+  <!-- Offcanvas 1 -->
+
+  <div class="offcanvas offcanvas-end offcanvasPetroNational" tabindex="-1" id="offcanvas-PetroNational"
+    aria-labelledby="offcanvasLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasLabel"></h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body pb-5">
+      <div class="container order-status Petro-detailed">
+
+        <div class="row">
+          <div class="detailed-input-items">
+            <div class="os-select">
+              <select class="form-select form-select-lg" aria-label=".form-select-lg example">
+                <option selected>Rack Loading</option>
+                <option value="1">Weigh-Scale Shipment</option>
+              </select>
+            </div>
+            <div class="os-select">
+              <select class="form-select form-select-lg " aria-label=".form-select-lg example">
+                <option selected>Bluewing One</option>
+                <option value="2">Bluewing Royal</option>
+              </select>
+            </div>
+            <div class="os-select">
+              <select class="form-select form-select-lg " aria-label=".form-select-lg example">
+                <option selected>ULSD</option>
+                <option value="2">Regular Gasoline</option>
+              </select>
+            </div>
+            <div class="os-select">
+              <input class="form-select-lg " type="text" placeholder="1905 BBLS">
+            </div>
+            <div class="os-select">
+              <input class="form-select-lg " type="text" placeholder="Tue, Jan 04" onfocus="(this.type='date')"
+                onblur="(this.type='text')">
+            </div>
+            <div class="os-select">
+              <input class="form-select-lg " type="text" placeholder="Tue, Jan 06" onfocus="(this.type='date')"
+                onblur="(this.type='text')">
+            </div>
+          </div>
+        </div>
+
+        <h2>Pending order PetroNational Tue, Jan 04, 2022 - Wed Jan 05, 2022</h2>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="filter-insights">
+              <div class="dropdown-container">
+                <div class="filter up-down-border">
+                  <div class="filter-header">
+                    <div class="header-item-group">
+                      <div class="item">
+                        <h5>Truck Shipment</h5>
+                        <p>10 Trailers</p>
+                      </div>
+                      <div class="item">
+                        <h5>Product</h5>
+                        <p>ULSD</p>
+                      </div>
+                      <div class="item">
+                        <h5>Amount</h5>
+                        <p>1,905 BBLS</p>
+                      </div>
+                      <div class="item">
+                        <h5>Order Value</h5>
+                        <p>$245,700</p>
+                      </div>
+                    </div>
+                    <div class="btn-group">
+                      <div class="cta">
+                        <a href="#om-mod-assign-tanks-mm" data-bs-toggle="offcanvas" data-bs-dismiss="offcanvas"
+                          class="btn btn-dc">Decline</a>
+                        <a href="#om-mod-assign-tanks-mm" data-bs-toggle="offcanvas" data-bs-dismiss="offcanvas"
+                          class="btn">Approved</a>
+                      </div>
+                      <a href="#" id="trailer-dropdown-icon">
+                        <i for="openDropdown" class="dropdown" id="dropdown-btn">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16"
+                            class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                          </svg>
+                        </i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown-menu" id="trailer-data">
+                  <div class="rack-lod">
+                    <svg preserveAspectRatio="xMidYMid meet" id="comp-l004jhnksvgcontent"
+                      data-bbox="42.858 19.999 114.285 160.001" viewBox="42.858 19.999 114.285 160.001" height="50"
+                      width="50" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img">
+                      <path
+                        d="M100 180c-10.052 0-19.959-2.738-28.653-7.913-8.668-5.164-15.885-12.604-20.874-21.522-4.978-8.888-7.612-19.007-7.615-29.26-.004-10.249 2.619-20.368 7.586-29.265.063-.117.134-.233.205-.346L93.56 23.558a7.618 7.618 0 0 1 12.894.002l42.898 68.136c.071.113.141.227.205.344 4.967 8.897 7.589 19.016 7.586 29.265s-2.638 20.365-7.612 29.26c-4.996 8.917-12.214 16.358-20.878 21.522C119.959 177.262 110.052 180 100 180zM63.705 99.541a44.866 44.866 0 0 0-5.61 21.758c.004 7.656 1.964 15.201 5.673 21.827 3.687 6.585 9.003 12.072 15.376 15.867 12.671 7.552 29.04 7.552 41.711 0 6.373-3.795 11.689-9.282 15.379-15.871 3.705-6.622 5.666-14.17 5.67-21.823.004-7.586-1.92-15.074-5.558-21.661l-36.339-57.721-36.302 57.624z"
+                        fill="#0D6ABF" data-color="1"></path>
+                    </svg>
+                    <div class="item">
+                      <h5>ULSD . 1,905 BBLS</h5>
+                      <p>Rack Loading for PetroNational</p>
+                    </div>
+                  </div>
+
+                  <div class="header-item-group">
+                    <div class="item">
+                      <h5>Allocated Volume</h5>
+                      <p>0 BBLS</p>
+                    </div>
+                    <div class="item">
+                      <h5>Order Value</h5>
+                      <p>$245,700</p>
+                    </div>
+                    <div class="item">
+                      <h5>Available Credit</h5>
+                      <p>$150,000</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="check-sec title-check mt-4 orderd-etails">
+
+          <div class="status">
+            <div class="status-item-group">
+              <div class="item">
+                <h5>1</h5>
+              </div>
+              <div class="item">
+                <p>Terminal</p> <br> <span>Bluewing One</span>
+              </div>
+              <div class="item">
+                <p>Order Number</p> <br> <span>12345</span>
+              </div>
+              <div class="item">
+                <p>Carrier</p> <br> <span>Trareysa</span>
+              </div>
+              <div class="item">
+                <p>Trailer</p> <br> <span>746</span>
+              </div>
+              <div class="item">
+                <p>Product</p> <br> <span>ULSD</span>
+              </div>
+              <div class="item">
+                <p>Amount</p> <br> <span>8,000 USG</span>
+              </div>
+              <div class="item">
+                <a href="" class="btn petro-remove-btn">Remove</a>
+              </div>
+            </div>
+            <div class="status-item-group">
+              <div class="item">
+                <h5>2</h5>
+              </div>
+              <div class="item">
+                <p>Terminal</p> <br> <span>Bluewing One</span>
+              </div>
+              <div class="item">
+                <p>Order Number</p> <br> <span>12345</span>
+              </div>
+              <div class="item">
+                <p>Carrier</p> <br> <span>Trareysa</span>
+              </div>
+              <div class="item">
+                <p>Trailer</p> <br> <span>746</span>
+              </div>
+              <div class="item">
+                <p>Product</p> <br> <span>ULSD</span>
+              </div>
+              <div class="item">
+                <p>Amount</p> <br> <span>8,000 USG</span>
+              </div>
+              <div class="item">
+                <a href="" class="btn petro-remove-btn">Remove</a>
+              </div>
+            </div>
+            <div class="status-item-group">
+              <div class="item">
+                <h5>3</h5>
+              </div>
+              <div class="item">
+                <p>Terminal</p> <br> <span>Bluewing One</span>
+              </div>
+              <div class="item">
+                <p>Order Number</p> <br> <span>12345</span>
+              </div>
+              <div class="item">
+                <p>Carrier</p> <br> <span>Trareysa</span>
+              </div>
+              <div class="item">
+                <p>Trailer</p> <br> <span>746</span>
+              </div>
+              <div class="item">
+                <p>Product</p> <br> <span>ULSD</span>
+              </div>
+              <div class="item">
+                <p>Amount</p> <br> <span>8,000 USG</span>
+              </div>
+              <div class="item">
+                <a href="" class="btn petro-remove-btn">Remove</a>
+              </div>
+            </div>
+            <div class="status-item-group">
+              <div class="item">
+                <h5>4</h5>
+              </div>
+              <div class="item">
+                <p>Terminal</p> <br> <span>Bluewing One</span>
+              </div>
+              <div class="item">
+                <p>Order Number</p> <br> <span>12345</span>
+              </div>
+              <div class="item">
+                <p>Carrier</p> <br> <span>Trareysa</span>
+              </div>
+              <div class="item">
+                <p>Trailer</p> <br> <span>746</span>
+              </div>
+              <div class="item">
+                <p>Product</p> <br> <span>ULSD</span>
+              </div>
+              <div class="item">
+                <p>Amount</p> <br> <span>8,000 USG</span>
+              </div>
+              <div class="item">
+                <a href="" class="btn petro-remove-btn">Remove</a>
+              </div>
+            </div>
+            <div class="status-item-group">
+              <div class="item">
+                <h5>5</h5>
+              </div>
+              <div class="item">
+                <p>Terminal</p> <br> <span>Bluewing One</span>
+              </div>
+              <div class="item">
+                <p>Order Number</p> <br> <span>12345</span>
+              </div>
+              <div class="item">
+                <p>Carrier</p> <br> <span>Trareysa</span>
+              </div>
+              <div class="item">
+                <p>Trailer</p> <br> <span>746</span>
+              </div>
+              <div class="item">
+                <p>Product</p> <br> <span>ULSD</span>
+              </div>
+              <div class="item">
+                <p>Amount</p> <br> <span>8,000 USG</span>
+              </div>
+              <div class="item">
+                <a href="" class="btn petro-remove-btn">Remove</a>
+              </div>
+            </div>
+            <div class="status-item-group">
+              <div class="item">
+                <h5>6</h5>
+              </div>
+              <div class="item">
+                <p>Terminal</p> <br> <span>Bluewing One</span>
+              </div>
+              <div class="item">
+                <p>Order Number</p> <br> <span>12345</span>
+              </div>
+              <div class="item">
+                <p>Carrier</p> <br> <span>Trareysa</span>
+              </div>
+              <div class="item">
+                <p>Trailer</p> <br> <span>746</span>
+              </div>
+              <div class="item">
+                <p>Product</p> <br> <span>ULSD</span>
+              </div>
+              <div class="item">
+                <p>Amount</p> <br> <span>8,000 USG</span>
+              </div>
+              <div class="item">
+                <a href="" class="btn petro-remove-btn">Remove</a>
+              </div>
+            </div>
+            <div class="status-item-group">
+              <div class="item">
+                <h5>7</h5>
+              </div>
+              <div class="item">
+                <p>Terminal</p> <br> <span>Bluewing One</span>
+              </div>
+              <div class="item">
+                <p>Order Number</p> <br> <span>12345</span>
+              </div>
+              <div class="item">
+                <p>Carrier</p> <br> <span>Trareysa</span>
+              </div>
+              <div class="item">
+                <p>Trailer</p> <br> <span>746</span>
+              </div>
+              <div class="item">
+                <p>Product</p> <br> <span>ULSD</span>
+              </div>
+              <div class="item">
+                <p>Amount</p> <br> <span>8,000 USG</span>
+              </div>
+              <div class="item">
+                <a href="" class="btn petro-remove-btn">Remove</a>
+              </div>
+            </div>
+            <div class="status-item-group">
+              <div class="item">
+                <h5>8</h5>
+              </div>
+              <div class="item">
+                <p>Terminal</p> <br> <span>Bluewing One</span>
+              </div>
+              <div class="item">
+                <p>Order Number</p> <br> <span>12345</span>
+              </div>
+              <div class="item">
+                <p>Carrier</p> <br> <span>Trareysa</span>
+              </div>
+              <div class="item">
+                <p>Trailer</p> <br> <span>746</span>
+              </div>
+              <div class="item">
+                <p>Product</p> <br> <span>ULSD</span>
+              </div>
+              <div class="item">
+                <p>Amount</p> <br> <span>8,000 USG</span>
+              </div>
+              <div class="item">
+                <a href="" class="btn petro-remove-btn">Remove</a>
+              </div>
+            </div>
+            <div class="status-item-group">
+              <div class="item">
+                <h5>9</h5>
+              </div>
+              <div class="item">
+                <p>Terminal</p> <br> <span>Bluewing One</span>
+              </div>
+              <div class="item">
+                <p>Order Number</p> <br> <span>12345</span>
+              </div>
+              <div class="item">
+                <p>Carrier</p> <br> <span>Trareysa</span>
+              </div>
+              <div class="item">
+                <p>Trailer</p> <br> <span>746</span>
+              </div>
+              <div class="item">
+                <p>Product</p> <br> <span>ULSD</span>
+              </div>
+              <div class="item">
+                <p>Amount</p> <br> <span>8,000 USG</span>
+              </div>
+              <div class="item">
+                <a href="" class="btn petro-remove-btn">Remove</a>
+              </div>
+            </div>
+            <div class="status-item-group">
+              <div class="item">
+                <h5>10</h5>
+              </div>
+              <div class="item">
+                <p>Terminal</p> <br> <span>Bluewing One</span>
+              </div>
+              <div class="item">
+                <p>Order Number</p> <br> <span>12345</span>
+              </div>
+              <div class="item">
+                <p>Carrier</p> <br> <span>Trareysa</span>
+              </div>
+              <div class="item">
+                <p>Trailer</p> <br> <span>746</span>
+              </div>
+              <div class="item">
+                <p>Product</p> <br> <span>ULSD</span>
+              </div>
+              <div class="item">
+                <p>Amount</p> <br> <span>8,000 USG</span>
+              </div>
+              <div class="item">
+                <a href="" class="btn petro-remove-btn">Remove</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Offcanvas 1 -->
+
+  <div class="offcanvas offcanvas-end offcanvasPetroNational" tabindex="-1" id="offcanvas-Assign-Task"
+    aria-labelledby="offcanvasLabel">
+    <div class="offcanvas-header">
+      <h2 class="offcanvas-title" id="offcanvasLabel">Pending order PetroNational Tue, Jan 04, 2022 - Wed Jan 05,
+        2022</h2>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body pb-5">
+      <div class="container order-status Petro-detailed">
+
+        <!-- <h2>Pending order PetroNational Tue, Jan 04, 2022 - Wed Jan 05, 2022</h2> -->
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="filter-insights">
+              <div class="dropdown-container">
+                <div class="filter up-down-border">
+                  <div class="filter-header">
+                    <div class="header-item-group">
+                      <div class="item">
+                        <h5>Truck Shipment</h5>
+                        <p>10 Trailers</p>
+                      </div>
+                      <div class="item">
+                        <h5>Product</h5>
+                        <p>ULSD</p>
+                      </div>
+                      <div class="item">
+                        <h5>Amount</h5>
+                        <p>1,905 BBLS</p>
+                      </div>
+                      <div class="item">
+                        <h5>Order Value</h5>
+                        <p>$245,700</p>
+                      </div>
+                    </div>
+                    <div class="cta">
+                      <a href="#om-mod-assign-tanks-mm" data-bs-toggle="offcanvas" data-bs-dismiss="offcanvas"
+                        class="btn assign-btn">Assign Tanks</a>
+                    </div>
+                    <a href="#" id="trailer-dropdown-icon" data-bs-toggle="offcanvas"
+                      data-bs-target="#offcanvas-PetroNational">
+                      <i for="openDropdown" class="dropdown dn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16"
+                          class="bi bi-chevron-down" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                      </i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="check-sec title-check mt-4 orderd-etails">
+
+          <div class="status">
+            <div class="status-item-group">
+              <div class="item">
+                <h5>1</h5>
+              </div>
+              <div class="item">
+                <p>Terminal</p> <br> <span>Bluewing One</span>
+              </div>
+              <div class="item">
+                <p>Order Number</p> <br> <span>12345</span>
+              </div>
+              <div class="item">
+                <p>Carrier</p> <br> <span>Trareysa</span>
+              </div>
+              <div class="item">
+                <p>Trailer</p> <br> <span>746</span>
+              </div>
+              <div class="item">
+                <p>Product</p> <br> <span>ULSD</span>
+              </div>
+              <div class="item">
+                <p>Amount</p> <br> <span>8,000 USG</span>
+              </div>
+            </div>
+            <div class="status-item-group">
+              <div class="item">
+                <h5>2</h5>
+              </div>
+              <div class="item">
+                <p>Terminal</p> <br> <span>Bluewing One</span>
+              </div>
+              <div class="item">
+                <p>Order Number</p> <br> <span>12345</span>
+              </div>
+              <div class="item">
+                <p>Carrier</p> <br> <span>Trareysa</span>
+              </div>
+              <div class="item">
+                <p>Trailer</p> <br> <span>746</span>
+              </div>
+              <div class="item">
+                <p>Product</p> <br> <span>ULSD</span>
+              </div>
+              <div class="item">
+                <p>Amount</p> <br> <span>8,000 USG</span>
+              </div>
+            </div>
+            <div class="status-item-group">
+              <div class="item">
+                <h5>3</h5>
+              </div>
+              <div class="item">
+                <p>Terminal</p> <br> <span>Bluewing One</span>
+              </div>
+              <div class="item">
+                <p>Order Number</p> <br> <span>12345</span>
+              </div>
+              <div class="item">
+                <p>Carrier</p> <br> <span>Trareysa</span>
+              </div>
+              <div class="item">
+                <p>Trailer</p> <br> <span>746</span>
+              </div>
+              <div class="item">
+                <p>Product</p> <br> <span>ULSD</span>
+              </div>
+              <div class="item">
+                <p>Amount</p> <br> <span>8,000 USG</span>
+              </div>
+            </div>
+            <div class="status-item-group">
+              <div class="item">
+                <h5>4</h5>
+              </div>
+              <div class="item">
+                <p>Terminal</p> <br> <span>Bluewing One</span>
+              </div>
+              <div class="item">
+                <p>Order Number</p> <br> <span>12345</span>
+              </div>
+              <div class="item">
+                <p>Carrier</p> <br> <span>Trareysa</span>
+              </div>
+              <div class="item">
+                <p>Trailer</p> <br> <span>746</span>
+              </div>
+              <div class="item">
+                <p>Product</p> <br> <span>ULSD</span>
+              </div>
+              <div class="item">
+                <p>Amount</p> <br> <span>8,000 USG</span>
+              </div>
+            </div>
+            <div class="status-item-group">
+              <div class="item">
+                <h5>5</h5>
+              </div>
+              <div class="item">
+                <p>Terminal</p> <br> <span>Bluewing One</span>
+              </div>
+              <div class="item">
+                <p>Order Number</p> <br> <span>12345</span>
+              </div>
+              <div class="item">
+                <p>Carrier</p> <br> <span>Trareysa</span>
+              </div>
+              <div class="item">
+                <p>Trailer</p> <br> <span>746</span>
+              </div>
+              <div class="item">
+                <p>Product</p> <br> <span>ULSD</span>
+              </div>
+              <div class="item">
+                <p>Amount</p> <br> <span>8,000 USG</span>
+              </div>
+            </div>
+            <div class="status-item-group">
+              <div class="item">
+                <h5>6</h5>
+              </div>
+              <div class="item">
+                <p>Terminal</p> <br> <span>Bluewing One</span>
+              </div>
+              <div class="item">
+                <p>Order Number</p> <br> <span>12345</span>
+              </div>
+              <div class="item">
+                <p>Carrier</p> <br> <span>Trareysa</span>
+              </div>
+              <div class="item">
+                <p>Trailer</p> <br> <span>746</span>
+              </div>
+              <div class="item">
+                <p>Product</p> <br> <span>ULSD</span>
+              </div>
+              <div class="item">
+                <p>Amount</p> <br> <span>8,000 USG</span>
+              </div>
+            </div>
+            <div class="status-item-group">
+              <div class="item">
+                <h5>7</h5>
+              </div>
+              <div class="item">
+                <p>Terminal</p> <br> <span>Bluewing One</span>
+              </div>
+              <div class="item">
+                <p>Order Number</p> <br> <span>12345</span>
+              </div>
+              <div class="item">
+                <p>Carrier</p> <br> <span>Trareysa</span>
+              </div>
+              <div class="item">
+                <p>Trailer</p> <br> <span>746</span>
+              </div>
+              <div class="item">
+                <p>Product</p> <br> <span>ULSD</span>
+              </div>
+              <div class="item">
+                <p>Amount</p> <br> <span>8,000 USG</span>
+              </div>
+            </div>
+            <div class="status-item-group">
+              <div class="item">
+                <h5>8</h5>
+              </div>
+              <div class="item">
+                <p>Terminal</p> <br> <span>Bluewing One</span>
+              </div>
+              <div class="item">
+                <p>Order Number</p> <br> <span>12345</span>
+              </div>
+              <div class="item">
+                <p>Carrier</p> <br> <span>Trareysa</span>
+              </div>
+              <div class="item">
+                <p>Trailer</p> <br> <span>746</span>
+              </div>
+              <div class="item">
+                <p>Product</p> <br> <span>ULSD</span>
+              </div>
+              <div class="item">
+                <p>Amount</p> <br> <span>8,000 USG</span>
+              </div>
+            </div>
+            <div class="status-item-group">
+              <div class="item">
+                <h5>9</h5>
+              </div>
+              <div class="item">
+                <p>Terminal</p> <br> <span>Bluewing One</span>
+              </div>
+              <div class="item">
+                <p>Order Number</p> <br> <span>12345</span>
+              </div>
+              <div class="item">
+                <p>Carrier</p> <br> <span>Trareysa</span>
+              </div>
+              <div class="item">
+                <p>Trailer</p> <br> <span>746</span>
+              </div>
+              <div class="item">
+                <p>Product</p> <br> <span>ULSD</span>
+              </div>
+              <div class="item">
+                <p>Amount</p> <br> <span>8,000 USG</span>
+              </div>
+            </div>
+            <div class="status-item-group">
+              <div class="item">
+                <h5>10</h5>
+              </div>
+              <div class="item">
+                <p>Terminal</p> <br> <span>Bluewing One</span>
+              </div>
+              <div class="item">
+                <p>Order Number</p> <br> <span>12345</span>
+              </div>
+              <div class="item">
+                <p>Carrier</p> <br> <span>Trareysa</span>
+              </div>
+              <div class="item">
+                <p>Trailer</p> <br> <span>746</span>
+              </div>
+              <div class="item">
+                <p>Product</p> <br> <span>ULSD</span>
+              </div>
+              <div class="item">
+                <p>Amount</p> <br> <span>8,000 USG</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <!------------------------------------------------------------------------------
      +++++++++++++++++++++++++++++++  Ofcanvas  1st Card +++++++++++++++++++++++++++
     -------------------------------------------------------------------------------->
@@ -616,6 +1661,7 @@
       </div>
     </div>
   </div>
+
   <!-- ?==================Order Value =======================-->
   <div class="offcanvas offcanvas-end om-order-value om-offcanvas-small-area" tabindex="-1" id="om-order-value"
     aria-labelledby="offcanvasRightLabel">
@@ -649,7 +1695,7 @@
       <!-- !Button -->
       <ul class="nav nav-pills mt-5">
         <li class="nav-item">
-          <a data-bs-toggle="offcanvas" href="#sa-offcanvas" class="secound-btn mt-5 me-2 bg-tra">
+          <a data-bs-toggle="offcanvas" href="#offcanvas-Optional-settings" class="secound-btn mt-5 me-2 bg-tra">
             Set Expiration
           </a>
         </li>
@@ -661,6 +1707,7 @@
       </ul>
     </div>
   </div>
+
 
   <!-- ?==================== Manage Allocations ====================-->
   <!-- !Basics -->
@@ -885,7 +1932,7 @@
         <div class="col user-roade-map">
           <div class="upload-order-tab-left">
             <ul class="timeline">
-              <li class="timeline-item   mb-6 ">
+              <li class="timeline-item  active mb-6 ">
                 <h6>Basics</h6>
               </li>
               <li class="timeline-item  active mb-6">
@@ -1017,10 +2064,10 @@
         <div class="col user-roade-map">
           <div class="upload-order-tab-left">
             <ul class="timeline">
-              <li class="timeline-item   mb-6 ">
+              <li class="timeline-item active  mb-6 ">
                 <h6>Basics</h6>
               </li>
-              <li class="timeline-item   mb-6">
+              <li class="timeline-item  active mb-6">
                 <h6>Rollover</h6>
                 </p>
               </li>
@@ -1128,6 +2175,8 @@
       </div>
     </div>
   </div>
+
+
   <!------------------------------------------------------------------------------
 +++++++++++++++++++++++++++++++  Ofcanvas  2nd Card +++++++++++++++++++++++++++
 -------------------------------------------------------------------------------->
@@ -1234,7 +2283,7 @@
         <div class="col user-roade-map">
           <div class="upload-order-tab-left">
             <ul class="timeline">
-              <li class="timeline-item   mb-6 ">
+              <li class="timeline-item  active mb-6 ">
                 <h6>Basics</h6>
               </li>
               <li class="timeline-item active mb-6">
@@ -1307,20 +2356,25 @@
       </div>
     </div>
   </div>
+
+
+
+
   <!------------------------------------------------------------------------------
      +++++++++++++++++++++++++++++++  Modal 1st Card  +++++++++++++++++++++++++++
     -------------------------------------------------------------------------------->
   <!-- ?Modal Decline-->
   <div class="modal fade" id="om-mod-dicline" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
+      <div class="modal-content" style="height: 100%">
         <div class="modal-body">
           <h5>Are you sure you want to decline this order?</h5>
           <p class="py-3">Once a set of pending orders is declined they cannot be recovered.
           </p>
           <ul class="nav nav-pills mt-5">
             <li class="nav-item">
-              <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#" class="secound-btn radious me-2">
+              <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#om-mod-approved"
+                class="secound-btn radious me-2">
                 Decline
               </a>
             </li>
@@ -1352,11 +2406,13 @@
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                   <div>
-                    <h4>ULSD</h4>
-                    <span>25,00 BBLS <span>10 Trailers</span></span>
+                    <p>ULSD</p>
+                    <span class="text-end">25,00 BBLS <span>10 Trailers</span></span>
                   </div>
-                  <span class="text-end flex-grow-1 me-3 color-blue">View all orders</span>
-
+                  <p class="text-end flex-grow-1 me-3 color-blue" id="text-change" style="margin-bottom: 0;">
+                    <span id="text">View all orders</span> <br>
+                    <span id="text-one">Hide all orders</span>
+                  </p>
                 </button>
               </h2>
               <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
@@ -1516,17 +2572,11 @@
                 </select>
               </div>
               <div class="col approved-btn-group">
-                <button class="secound-btn ">Asssign Tank</button>
+                <button class="secound-btn " data-bs-toggle="modal" data-bs-dismiss="modal" href="#om-mod-assignment"
+                  data-bs-dismiss="modal">Asssign Tank</button>
               </div>
             </div>
           </div>
-          <ul class="nav nav-pills mt-5 approved-btn-bottom">
-            <li class="nav-item">
-              <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#" class="secound-btn radious me-2 ">
-                Decline
-              </a>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
@@ -1552,8 +2602,7 @@
                 <p>Tue, Jan 4 <b>.</b> Bluewing One</p>
               </div>
               <div class="col">
-                <h5>Tank 10</h5>
-                <p>Tue, Jan 4 <b>.</b> Bluewing One</p>
+                <h5>ULSD</h5>
               </div>
               <div class="col">
                 <div class="custrom-text">
@@ -1575,8 +2624,10 @@
                 <h6>10 trailers <b>.</b> Tank 10</h6>
               </div>
               <div class="col text-end">
-                <button class="secound-btn me-2 bg-tra" data-bs-toggle="modal">Undo</button>
-                <button class="secound-btn " data-bs-toggle="modal">Confirm</button>
+                <button class="secound-btn me-2 bg-tra" data-bs-toggle="modal" data-bs-target="#om-mod-approved"
+                  data-bs-dismiss="modal">Undo</button>
+                <button class="secound-btn " data-bs-toggle="modal" data-bs-target="#om-mod-scheduled"
+                  data-bs-dismiss="modal">Confirm</button>
               </div>
             </div>
           </div>
@@ -1590,15 +2641,18 @@
                   <div class="row accordion-scheduled-row row-cols-1 row-cols-md-2">
                     <div class="col mb-2">
                       <h4>Tank 10</h4>
-                      <span class="fw-300">Tue, Jan 4 - Wed, Jan 5</span>
+                      <span class="fw-300 text-end">Tue, Jan 4 - Wed, Jan 5</span>
                     </div>
                     <div class="col">
                       <h4>2,500 BBLS <b>.</b> ULSD</h4>
-                      <span class="fw-300">PetroNational <b>.</b> Rack Loading (Truck Shipment)</span>
+                      <span class="fw-300 text-end">PetroNational <b>.</b> Rack Loading (Truck Shipment)</span>
                     </div>
 
                   </div>
-                  <span class="text-end flex-grow-1 me-3 color-blue accordion-scheduled-view-all">View all orders</span>
+                  <p class="text-end flex-grow-1 me-3 color-blue" id="text-change" style="margin-bottom: 0;">
+                    <span id="text">View all orders</span> <br>
+                    <span id="text-one">Hide all orders</span>
+                  </p>
 
                 </button>
               </h2>
@@ -1755,7 +2809,8 @@
 
           <div class="d-flex justify-content-between">
             <h5 class="mb-0">Order summary</h5>
-            <button class="secound-btn">Track Order</button>
+            <button class="secound-btn" data-bs-toggle="modal" data-bs-dismiss="modal" type="button"
+              href="#track-order-status-modal">Track Order</button>
           </div>
           <!--accordion  -->
           <div class="accordion accordion-flush mt-3" id="accordion-scheduled">
@@ -1766,11 +2821,11 @@
                   <div class="row accordion-scheduled-row row-cols-1 row-cols-md-2">
                     <div class="col mb-2">
                       <h4>Tank 10</h4>
-                      <span class="fw-300">Tue, Jan 4 - Wed, Jan 5</span>
+                      <span class="fw-300 text-end">Tue, Jan 4 - Wed, Jan 5</span>
                     </div>
                     <div class="col">
                       <h4>2,500 BBLS <b>.</b> ULSD</h4>
-                      <span class="fw-300">PetroNational <b>.</b> Rack Loading (Truck Shipment)</span>
+                      <span class="fw-300 text-end">PetroNational <b>.</b> Rack Loading (Truck Shipment)</span>
                     </div>
 
                   </div>
@@ -1908,6 +2963,9 @@
       </div>
     </div>
   </div>
+
+
+
   <!------------------------------------------------------------------------------
 +++++++++++++++++++++++++++++++  Modal  3nd Card +++++++++++++++++++++++++++
 -------------------------------------------------------------------------------->
@@ -1948,7 +3006,7 @@
               <div class="custrom-accordion" data-bs-toggle="pill" data-bs-target="#custrom_accordion_tow">
                 <div class="row">
                   <div class="col">
-                    <h5>Regular Gasoline</h5>
+                    <h5>UlSD</h5>
                     <p class="mb-0">2,727 BBLS <span class="ms-4">12 Trailers</span></p>
                   </div>
                   <div class="col text-end">
@@ -2000,7 +3058,8 @@
                       </select>
                     </div>
                     <div class="col approved-btn-group">
-                      <button class="secound-btn ">Asssign Tank</button>
+                      <button class="secound-btn " data-bs-toggle="modal" data-bs-dismiss="modal"
+                        href="#om-mod-assign-tanks-remove">Asssign Tank</button>
                     </div>
                   </div>
                 </div>
@@ -2034,7 +3093,8 @@
                       </select>
                     </div>
                     <div class="col approved-btn-group">
-                      <button class="secound-btn ">Asssign Tank</button>
+                      <button class="secound-btn " data-bs-toggle="modal" data-bs-dismiss="modal"
+                        href="#om-mod-assignment">Asssign Tank</button>
                     </div>
                   </div>
                 </div>
@@ -2073,24 +3133,2144 @@
                       </select>
                     </div>
                     <div class="col approved-btn-group">
-                      <button class="secound-btn ">Asssign Tank</button>
+                      <button class="secound-btn " data-bs-toggle="modal" data-bs-dismiss="modal"
+                        href="#om-mod-assign-tanks-remove">Asssign Tanks</button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <ul class="nav nav-pills mt-5 approved-btn-bottom">
-            <li class="nav-item">
-              <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#" class="secound-btn radious me-2 ">
-                Decline
-              </a>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
   </div>
+
+
+  <!-- remove part -->
+  <!-- ?Modal assign tanks-->
+  <div class="modal fade" id="om-mod-assign-tanks-remove" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="py-5 om-modapproved-text h4 fw-3">
+            <span>Assign Tanks</span>
+            <span> Luxemborg</span>
+            <span>Tue, Jan 04, 2022 - Wed Jan 05, 2022</span>
+          </div>
+          <!-- Nav pills -->
+          <ul class="nav nav-pills row row-cols-1 row-cols-xl-2  role=" tablist">
+            <li class="nav-item col mb-3">
+              <!-- Cusrom Accordion -->
+              <div class="custrom-accordion active" data-bs-toggle="pill" data-bs-target="#custrom_accordion_one-one">
+                <div class="row">
+                  <div class="col">
+                    <h5>Regular Gasoline</h5>
+                    <p class="mb-0">2,727 BBLS <span class="ms-4">12 Trailers</span></p>
+                  </div>
+                  <div class="col text-end">
+                    <button class="secound-btn bg-tra" data-bs-toggle="modal" data-bs-dismiss="modal"
+                      data-bs-target="#om-mod-assign-tanks-details">View all order <svg
+                        xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                        class="bi bi-chevron-down ms-1" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                      </svg></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item col">
+              <!-- Cusrom Accordion -->
+              <div class="custrom-accordion" data-bs-toggle="pill" data-bs-target="#custrom_accordion_tow-two">
+                <div class="row">
+                  <div class="col">
+                    <h5>UlSD</h5>
+                    <p class="mb-0">2,727 BBLS <span class="ms-4">12 Trailers</span></p>
+                  </div>
+                  <div class="col text-end">
+                    <button class="secound-btn bg-tra" data-bs-toggle="modal" data-bs-dismiss="modal"
+                      data-bs-target="#om-mod-assign-tanks-details">View all order <svg
+                        xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                        class="bi bi-chevron-down ms-1" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                      </svg></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div id="custrom_accordion_one-one" class="container tab-pane active"><br>
+              <!-- mod-dicline box -->
+              <div class="mod-dicline-boxs">
+                <div class="mod-dicline-box  p-3">
+                  <div class="row">
+                    <div class="col t-selected">
+                      <h6>Tank selected</h6>
+                      <p>Regular Gasoline</p>
+                    </div>
+                    <div class="col">
+                      <h6>Tank</h6>
+                      <p>11</p>
+                    </div>
+                    <div class="col">
+                      <h6>Current Inventory</h6>
+                      <p>4,399 BBLS</p>
+                    </div>
+                    <div class="col">
+                      <h6>Amount</h6>
+                      <p>1,298 BBLS</p>
+                    </div>
+                    <div class="col">
+                      <h6>Trailers</h6>
+                      <p>6</p>
+                    </div>
+                    <div class="col approved-btn-group">
+                      <button class="secound-btn " data-bs-toggle="modal" href="#om-mod-assign-tanks"
+                        data-bs-dismiss="modal">remove</button>
+                    </div>
+                    <div class="col col-down-btn">
+                      <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-chevron-down" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="py-5 om-modapproved-text h4 fw-3">
+                <span>Assign Tanks</span>
+                <span> Luxemborg</span>
+                <span>Tue, Jan 04, 2022 - Wed Jan 05, 2022</span>
+              </div>
+              <div class="mod-dicline-boxs">
+                <div class="mod-dicline-box  p-3">
+                  <div class="row">
+                    <div class="col">
+                      <h6>Tank</h6>
+                      <p>10
+                      </p>
+                    </div>
+                    <div class="col">
+                      <h6>Current Inventory</h6>
+                      <p>4,399 BBLS</p>
+                    </div>
+                    <div class="col">
+                      <h6>Amount</h6>
+                      <input type="text" value="25,00 BBLS">
+                    </div>
+                    <div class="col">
+                      <h6>Trailers</h6>
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>1</option>
+                        <option value="1">2</option>
+                        <option value="2">3</option>
+                        <option value="3">5</option>
+                        <option value="3">6</option>
+                        <option value="3">7</option>
+                        <option value="3">8</option>
+                        <option value="3">9</option>
+                        <option value="3">10</option>
+                      </select>
+                    </div>
+                    <div class="col approved-btn-group">
+                      <button class="secound-btn " data-bs-toggle="modal"
+                        data-bs-target="#om-mod-assign-tanks-remove-ag-again" data-bs-dismiss="modal">Asssign
+                        Tank</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="custrom_accordion_tow-two" class="container tab-pane fade"><br>
+              <!-- mod-dicline box -->
+              <div class="mod-dicline-boxs">
+                <div class="mod-dicline-box  p-3">
+                  <div class="row">
+                    <div class="col">
+                      <h6>Tank</h6>
+                      <p>10
+                      </p>
+                    </div>
+                    <div class="col">
+                      <h6>Current Inventory</h6>
+                      <p>4,399 BBLS</p>
+                    </div>
+                    <div class="col">
+                      <h6>Amount</h6>
+                      <input type="text" value="25,00 BBLS">
+                    </div>
+                    <div class="col">
+                      <h6>Trailers</h6>
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>1</option>
+                        <option value="1">2</option>
+                        <option value="2">3</option>
+                        <option value="3">5</option>
+                        <option value="3">6</option>
+                        <option value="3">7</option>
+                        <option value="3">8</option>
+                        <option value="3">9</option>
+                        <option value="3">10</option>
+                      </select>
+                    </div>
+                    <div class="col approved-btn-group">
+                      <button class="secound-btn " data-bs-toggle="modal" data-bs-dismiss="modal" href="#">Asssign
+                        Tanks</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- -->
+  <!-- ?Modal assign tanks ULSD-->
+  <div class="modal fade" id="om-mod-assign-tanks-remove-ag-again" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="py-5 om-modapproved-text h4 fw-3">
+            <span>Assign Tanks</span>
+            <span> Luxemborg</span>
+            <span>Tue, Jan 04, 2022 - Wed Jan 05, 2022</span>
+          </div>
+          <!-- Nav pills -->
+          <ul class="nav nav-pills row row-cols-1 row-cols-xl-2  role=" tablist">
+            <li class="nav-item col mb-3">
+              <!-- Cusrom Accordion -->
+              <div class="custrom-accordion" data-bs-toggle="modal" data-bs-dismiss="modal"
+                data-bs-target="#om-mod-assign-tanks">
+                <div class="row">
+                  <div class="col">
+                    <h5>Regular Gasoline</h5>
+                    <p class="mb-0">2,727 BBLS <span class="ms-4">12 Trailers</span></p>
+                  </div>
+                  <div class="col text-end">
+                    <button class="secound-btn bg-tra" data-bs-toggle="modal" data-bs-dismiss="modal"
+                      data-bs-target="#om-mod-assign-tanks-details">View all order <svg
+                        xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                        class="bi bi-chevron-down ms-1" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                      </svg></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item col">
+              <!-- Cusrom Accordion -->
+              <div class="custrom-accordion active" data-bs-toggle="pill" data-bs-target="#custrom_accordion_tow-three">
+                <div class="row">
+                  <div class="col">
+                    <h5>UlSD</h5>
+                    <p class="mb-0">2,727 BBLS <span class="ms-4">12 Trailers</span></p>
+                  </div>
+                  <div class="col text-end">
+                    <button class="secound-btn bg-tra" data-bs-toggle="modal" data-bs-dismiss="modal"
+                      data-bs-target="#om-mod-assign-tanks-details">View all order <svg
+                        xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                        class="bi bi-chevron-down ms-1" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                      </svg></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div id="custrom_accordion_one-one" class="container tab-pane fade"><br>
+              <!-- mod-dicline box -->
+              <div class="mod-dicline-boxs">
+                <div class="mod-dicline-box  p-3">
+                  <div class="row">
+                    <div class="col t-selected">
+                      <h6>Tank selected</h6>
+                      <p>Regular Gasoline</p>
+                    </div>
+                    <div class="col">
+                      <h6>Tank</h6>
+                      <p>11</p>
+                    </div>
+                    <div class="col">
+                      <h6>Current Inventory</h6>
+                      <p>4,399 BBLS</p>
+                    </div>
+                    <div class="col">
+                      <h6>Amount</h6>
+                      <p>1,298 BBLS</p>
+                    </div>
+                    <div class="col">
+                      <h6>Trailers</h6>
+                      <p>6</p>
+                    </div>
+                    <div class="col approved-btn-group">
+                      <button class="secound-btn " data-bs-toggle="modal" href="#om-mod-assign-tanks"
+                        data-bs-dismiss="modal">remove</button>
+                    </div>
+                    <div class="col col-down-btn">
+                      <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-chevron-down" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="py-5 om-modapproved-text h4 fw-3">
+                <span>Assign Tanks</span>
+                <span> Luxemborg</span>
+                <span>Tue, Jan 04, 2022 - Wed Jan 05, 2022</span>
+              </div>
+              <div class="mod-dicline-boxs">
+                <div class="mod-dicline-box  p-3">
+                  <div class="row">
+                    <div class="col">
+                      <h6>Tank</h6>
+                      <p>10
+                      </p>
+                    </div>
+                    <div class="col">
+                      <h6>Current Inventory</h6>
+                      <p>4,399 BBLS</p>
+                    </div>
+                    <div class="col">
+                      <h6>Amount</h6>
+                      <input type="text" value="25,00 BBLS">
+                    </div>
+                    <div class="col">
+                      <h6>Trailers</h6>
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>1</option>
+                        <option value="1">2</option>
+                        <option value="2">3</option>
+                        <option value="3">5</option>
+                        <option value="3">6</option>
+                        <option value="3">7</option>
+                        <option value="3">8</option>
+                        <option value="3">9</option>
+                        <option value="3">10</option>
+                      </select>
+                    </div>
+                    <div class="col approved-btn-group">
+                      <button class="secound-btn ">Asssign Tank</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="custrom_accordion_tow-two" class="container tab-pane active"><br>
+              <!-- mod-dicline box -->
+              <div class=" om-modapproved-text h4 fw-3">
+                <span>Assign Tanks</span>
+                <span> Luxemborg</span>
+                <span>Tue, Jan 04, 2022 - Wed Jan 05, 2022</span>
+              </div>
+              <div class="mod-dicline-boxs">
+                <div class="mod-dicline-box  p-3">
+                  <div class="row">
+                    <div class="col">
+                      <h6>Tank</h6>
+                      <p>10
+                      </p>
+                    </div>
+                    <div class="col">
+                      <h6>Current Inventory</h6>
+                      <p>4,399 BBLS</p>
+                    </div>
+                    <div class="col">
+                      <h6>Amount</h6>
+                      <input type="text" value="25,00 BBLS">
+                    </div>
+                    <div class="col">
+                      <h6>Trailers</h6>
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>1</option>
+                        <option value="1">2</option>
+                        <option value="2">3</option>
+                        <option value="3">5</option>
+                        <option value="3">6</option>
+                        <option value="3">7</option>
+                        <option value="3">8</option>
+                        <option value="3">9</option>
+                        <option value="3">10</option>
+                      </select>
+                    </div>
+                    <div class="col approved-btn-group">
+                      <button class="secound-btn " data-bs-toggle="modal" href="#om-mod-assignment-ov-two"
+                        data-bs-dismiss="modal">Asssign
+                        Tanks</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="secound-btn mt-5 me-2 bg-tra" data-bs-toggle="modal" data-bs-dismiss="modal"
+                data-bs-target="#om-mod-assign-tanks" style="margin-top: 50px">Go to Back</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================================ -->
+  <!-- ============================================================================ -->
+  <!-- ============================================================================ -->
+  <!-- ============================================================================ -->
+
+  <!-- Assignment overview -->
+
+  <div class="modal fade" id="om-mod-assignment-ov-two" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!-- body -->
+
+        <div class="modal-body">
+          <h4 class="fw-3">Assignment overview</h4>
+          <p>Review and confirm tank assignments for these orders.</p>
+          <!-- card one -->
+          <div class="mod-assignment-card Regular shadow">
+            <div class="row">
+              <div class="col">
+                <h5>Tank 10</h5>
+                <p>Tue, Jan 4 <b>.</b> Bluewing One</p>
+              </div>
+              <div class="col">
+                <h5>Tank 10</h5>
+                <p>Tue, Jan 4 <b>.</b> Bluewing One</p>
+              </div>
+              <div class="col">
+                <div class="custrom-text">
+                  <span>Inventory verified</span>
+                  <h5>2,500 BBLS</h5>
+                </div>
+                <p class="mb-0">Rack Loading <b>.</b> 10 trailers</p>
+              </div>
+            </div>
+          </div>
+          <!-- card tow -->
+          <h4 class="mt-5 fw-3">Confirm Assignment</h4>
+          <div class="mod-assignment-card Regular shadow ">
+            <div class="row ">
+              <div class="col align-items-center d-flex">
+                <h6>Confirm tank assignment</h6>
+              </div>
+              <div class="col align-items-center d-flex">
+                <h6>10 trailers <b>.</b> Tank 10</h6>
+              </div>
+              <div class="col text-end">
+                <button class="secound-btn me-2 bg-tra" data-bs-toggle="modal"
+                  data-bs-target="#om-mod-assign-tanks-remove-ag-again" data-bs-dismiss="modal">Undo</button>
+                <button class="secound-btn " data-bs-toggle="offcanvas" data-bs-target="#tanks-were-successfully"
+                  data-bs-dismiss="modal">Confirm</button>
+              </div>
+            </div>
+          </div>
+          <!--accordion  -->
+          <h4 class="mt-5 fw-3">Order details</h4>
+          <div class="accordion accordion-flush mt-3" id="accordion-assignment">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed ex-accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  <div class="row accordion-scheduled-row row-cols-1 row-cols-md-2">
+                    <div class="col mb-2">
+                      <h4>Tank 10</h4>
+                      <span class="fw-300 text-end">Tue, Jan 4 - Wed, Jan 5</span>
+                    </div>
+                    <div class="col">
+                      <h4>2,500 BBLS <b>.</b> ULSD</h4>
+                      <span class="fw-300 text-end">PetroNational <b>.</b> Rack Loading (Truck Shipment)</span>
+                    </div>
+
+                  </div>
+                  <p class="text-end flex-grow-1 me-3 color-blue" id="text-change" style="margin-bottom: 0;">
+                    <span id="text">View all orders</span> <br>
+                    <span id="text-one">Hide all orders</span>
+                  </p>
+
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordion-approved">
+                <div class="accordion-body p-0">
+                  <!--accordion  content-->
+                  <div class="approved-content-area">
+                    <!-- item -->
+                    <div class="approved-content-item">
+                      <table class="table table-borderless">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th>Terminal</th>
+                            <th>Order Number</th>
+                            <th>Trailer</th>
+                            <th>Product</th>
+                            <th>Amount</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Bluewing One</td>
+                            <td>87999</td>
+                            <td>Luxemborg</td>
+                            <td>ULSD</td>
+                            <td>8,000 USG</td>
+                            <td><select class="form-select" aria-label="Default select example">
+                                <option selected>Tank 10</option>
+                              </select></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- item -->
+                    <div class="approved-content-item">
+                      <table class="table table-borderless">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th>Terminal</th>
+                            <th>Order Number</th>
+                            <th>Trailer</th>
+                            <th>Product</th>
+                            <th>Amount</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Bluewing One</td>
+                            <td>87999</td>
+                            <td>Luxemborg</td>
+                            <td>ULSD</td>
+                            <td>8,000 USG</td>
+                            <td><select class="form-select" aria-label="Default select example">
+                                <option selected>Tank 10</option>
+                              </select></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- item -->
+                    <div class="approved-content-item">
+                      <table class="table table-borderless">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th>Terminal</th>
+                            <th>Order Number</th>
+                            <th>Trailer</th>
+                            <th>Product</th>
+                            <th>Amount</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Bluewing One</td>
+                            <td>87999</td>
+                            <td>Luxemborg</td>
+                            <td>ULSD</td>
+                            <td>8,000 USG</td>
+                            <td><select class="form-select" aria-label="Default select example">
+                                <option selected>Tank 10</option>
+                              </select></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- item -->
+                    <div class="approved-content-item">
+                      <table class="table table-borderless">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th>Terminal</th>
+                            <th>Order Number</th>
+                            <th>Trailer</th>
+                            <th>Product</th>
+                            <th>Amount</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Bluewing One</td>
+                            <td>87999</td>
+                            <td>Luxemborg</td>
+                            <td>ULSD</td>
+                            <td>8,000 USG</td>
+                            <td><select class="form-select" aria-label="Default select example">
+                                <option selected>Tank 10</option>
+                              </select></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed ex-accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-headingTwo-one" aria-expanded="false" aria-controls="flush-headingTwo-one">
+                  <div class="row accordion-scheduled-row row-cols-1 row-cols-md-2">
+                    <div class="col mb-2">
+                      <h4>Tank 10</h4>
+                      <span class="fw-300 text-end">Tue, Jan 4 - Wed, Jan 5</span>
+                    </div>
+                    <div class="col">
+                      <h4>2,500 BBLS <b>.</b> ULSD</h4>
+                      <span class="fw-300 text-end">PetroNational <b>.</b> Rack Loading (Truck Shipment)</span>
+                    </div>
+
+                  </div>
+                  <p class="text-end flex-grow-1 me-3 color-blue" id="text-change" style="margin-bottom: 0;">
+                    <span id="text">View all orders</span> <br>
+                    <span id="text-one">Hide all orders</span>
+                  </p>
+
+                </button>
+              </h2>
+              <div id="flush-headingTwo-one" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo-one"
+                data-bs-parent="#accordion-approved">
+                <div class="accordion-body p-0">
+                  <!--accordion  content-->
+                  <div class="approved-content-area">
+                    <!-- item -->
+                    <div class="approved-content-item">
+                      <table class="table table-borderless">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th>Terminal</th>
+                            <th>Order Number</th>
+                            <th>Trailer</th>
+                            <th>Product</th>
+                            <th>Amount</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Bluewing One</td>
+                            <td>87999</td>
+                            <td>Luxemborg</td>
+                            <td>ULSD</td>
+                            <td>8,000 USG</td>
+                            <td><select class="form-select" aria-label="Default select example">
+                                <option selected>Tank 10</option>
+                              </select></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- item -->
+                    <div class="approved-content-item">
+                      <table class="table table-borderless">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th>Terminal</th>
+                            <th>Order Number</th>
+                            <th>Trailer</th>
+                            <th>Product</th>
+                            <th>Amount</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Bluewing One</td>
+                            <td>87999</td>
+                            <td>Luxemborg</td>
+                            <td>ULSD</td>
+                            <td>8,000 USG</td>
+                            <td><select class="form-select" aria-label="Default select example">
+                                <option selected>Tank 10</option>
+                              </select></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- item -->
+                    <div class="approved-content-item">
+                      <table class="table table-borderless">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th>Terminal</th>
+                            <th>Order Number</th>
+                            <th>Trailer</th>
+                            <th>Product</th>
+                            <th>Amount</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Bluewing One</td>
+                            <td>87999</td>
+                            <td>Luxemborg</td>
+                            <td>ULSD</td>
+                            <td>8,000 USG</td>
+                            <td><select class="form-select" aria-label="Default select example">
+                                <option selected>Tank 10</option>
+                              </select></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- item -->
+                    <div class="approved-content-item">
+                      <table class="table table-borderless">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th>Terminal</th>
+                            <th>Order Number</th>
+                            <th>Trailer</th>
+                            <th>Product</th>
+                            <th>Amount</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Bluewing One</td>
+                            <td>87999</td>
+                            <td>Luxemborg</td>
+                            <td>ULSD</td>
+                            <td>8,000 USG</td>
+                            <td><select class="form-select" aria-label="Default select example">
+                                <option selected>Tank 10</option>
+                              </select></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed ex-accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-headingTwo-two" aria-expanded="false" aria-controls="flush-headingTwo-two">
+                  <div class="row accordion-scheduled-row row-cols-1 row-cols-md-2">
+                    <div class="col mb-2">
+                      <h4>Tank 10</h4>
+                      <span class="fw-300 text-end">Tue, Jan 4 - Wed, Jan 5</span>
+                    </div>
+                    <div class="col">
+                      <h4>2,500 BBLS <b>.</b> ULSD</h4>
+                      <span class="fw-300 text-end">PetroNational <b>.</b> Rack Loading (Truck Shipment)</span>
+                    </div>
+
+                  </div>
+                  <p class="text-end flex-grow-1 me-3 color-blue" id="text-change" style="margin-bottom: 0;">
+                    <span id="text">View all orders</span> <br>
+                    <span id="text-one">Hide all orders</span>
+                  </p>
+
+                </button>
+              </h2>
+              <div id="flush-headingTwo-two" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo-two"
+                data-bs-parent="#accordion-approved">
+                <div class="accordion-body p-0">
+                  <!--accordion  content-->
+                  <div class="approved-content-area">
+                    <!-- item -->
+                    <div class="approved-content-item">
+                      <table class="table table-borderless">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th>Terminal</th>
+                            <th>Order Number</th>
+                            <th>Trailer</th>
+                            <th>Product</th>
+                            <th>Amount</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Bluewing One</td>
+                            <td>87999</td>
+                            <td>Luxemborg</td>
+                            <td>ULSD</td>
+                            <td>8,000 USG</td>
+                            <td><select class="form-select" aria-label="Default select example">
+                                <option selected>Tank 10</option>
+                              </select></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- item -->
+                    <div class="approved-content-item">
+                      <table class="table table-borderless">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th>Terminal</th>
+                            <th>Order Number</th>
+                            <th>Trailer</th>
+                            <th>Product</th>
+                            <th>Amount</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Bluewing One</td>
+                            <td>87999</td>
+                            <td>Luxemborg</td>
+                            <td>ULSD</td>
+                            <td>8,000 USG</td>
+                            <td><select class="form-select" aria-label="Default select example">
+                                <option selected>Tank 10</option>
+                              </select></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- item -->
+                    <div class="approved-content-item">
+                      <table class="table table-borderless">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th>Terminal</th>
+                            <th>Order Number</th>
+                            <th>Trailer</th>
+                            <th>Product</th>
+                            <th>Amount</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Bluewing One</td>
+                            <td>87999</td>
+                            <td>Luxemborg</td>
+                            <td>ULSD</td>
+                            <td>8,000 USG</td>
+                            <td><select class="form-select" aria-label="Default select example">
+                                <option selected>Tank 10</option>
+                              </select></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- item -->
+                    <div class="approved-content-item">
+                      <table class="table table-borderless">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th>Terminal</th>
+                            <th>Order Number</th>
+                            <th>Trailer</th>
+                            <th>Product</th>
+                            <th>Amount</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Bluewing One</td>
+                            <td>87999</td>
+                            <td>Luxemborg</td>
+                            <td>ULSD</td>
+                            <td>8,000 USG</td>
+                            <td><select class="form-select" aria-label="Default select example">
+                                <option selected>Tank 10</option>
+                              </select></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- kgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgfgf -->
+
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="tanks-were-successfully" aria-labelledby=" offcanvasExample">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasSuccAccLabel">Order Summary</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body pb-5" style="padding: 40px">
+      <div class="subtitle-header">
+        <div class="text">
+          <h1>Tanks were successfully assigned for these orders.</h1>
+          <p>These orders have been created. You can these orders progress in the status listing.</p>
+        </div>
+        <div class="cta">
+          <a href="index.html" class="btn">Track Orders</a>
+        </div>
+      </div>
+
+      <div class="order-table">
+        <!-- header -->
+        <div class="check-sec title-check mt-4 header-table">
+          <div class="row">
+            <div class="col-12">
+              <div class="col-item">
+                <div class="item d-flex">
+                  <div class="col"><b>Terminal</b></div>
+                  <div class="col"><b>Order Number</b></div>
+                  <div class="col"><b>Carrier</b></div>
+                  <div class="col"><b>Trailer</b></div>
+                  <div class="col"><b>Product</b></div>
+                  <div class="col"><b>Amount</b></div>
+                  <div class="col"><b>Tank</b></div>
+                </div>
+              </div>
+            </div>
+            <hr>
+          </div>
+        </div>
+
+        <!-- +++++ order list ++++++-->
+        <div class="check-sec">
+          <div class="row">
+            <div class="col-12">
+              <div class="col-item">
+                <div class="item d-flex">
+                  <div class="col">Bluewing One</div>
+                  <div class="col">...</div>
+                  <div class="col">Luxemborg</div>
+                  <div class="col">564</div>
+                  <div class="col">Regular Gasoline</div>
+                  <div class="col">10000</div>
+                  <div class="col">...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- +++++ order list ++++++-->
+        <div class="check-sec">
+          <div class="row">
+            <div class="col-12">
+              <div class="col-item">
+                <div class="item d-flex">
+                  <div class="col">Bluewing One</div>
+                  <div class="col">...</div>
+                  <div class="col">Luxemborg</div>
+                  <div class="col">564</div>
+                  <div class="col">Regular Gasoline</div>
+                  <div class="col">10000</div>
+                  <div class="col">...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- +++++ order list ++++++-->
+        <div class="check-sec">
+          <div class="row">
+            <div class="col-12">
+              <div class="col-item">
+                <div class="item d-flex">
+                  <div class="col">Bluewing One</div>
+                  <div class="col">...</div>
+                  <div class="col">Luxemborg</div>
+                  <div class="col">564</div>
+                  <div class="col">Regular Gasoline</div>
+                  <div class="col">10000</div>
+                  <div class="col">...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- +++++ order list ++++++-->
+        <div class="check-sec">
+          <div class="row">
+            <div class="col-12">
+              <div class="col-item">
+                <div class="item d-flex">
+                  <div class="col">Bluewing One</div>
+                  <div class="col">...</div>
+                  <div class="col">Luxemborg</div>
+                  <div class="col">564</div>
+                  <div class="col">Regular Gasoline</div>
+                  <div class="col">10000</div>
+                  <div class="col">...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- +++++ order list ++++++-->
+        <div class="check-sec">
+          <div class="row">
+            <div class="col-12">
+              <div class="col-item">
+                <div class="item d-flex">
+                  <div class="col">Bluewing One</div>
+                  <div class="col">...</div>
+                  <div class="col">Luxemborg</div>
+                  <div class="col">564</div>
+                  <div class="col">Regular Gasoline</div>
+                  <div class="col">10000</div>
+                  <div class="col">...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- +++++ order list ++++++-->
+        <div class="check-sec">
+          <div class="row">
+            <div class="col-12">
+              <div class="col-item">
+                <div class="item d-flex">
+                  <div class="col">Bluewing One</div>
+                  <div class="col">...</div>
+                  <div class="col">Luxemborg</div>
+                  <div class="col">564</div>
+                  <div class="col">Regular Gasoline</div>
+                  <div class="col">10000</div>
+                  <div class="col">...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- +++++ order list ++++++-->
+        <div class="check-sec">
+          <div class="row">
+            <div class="col-12">
+              <div class="col-item">
+                <div class="item d-flex">
+                  <div class="col">Bluewing One</div>
+                  <div class="col">...</div>
+                  <div class="col">Luxemborg</div>
+                  <div class="col">564</div>
+                  <div class="col">Regular Gasoline</div>
+                  <div class="col">10000</div>
+                  <div class="col">...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- +++++ order list ++++++-->
+        <div class="check-sec">
+          <div class="row">
+            <div class="col-12">
+              <div class="col-item">
+                <div class="item d-flex">
+                  <div class="col">Bluewing One</div>
+                  <div class="col">...</div>
+                  <div class="col">Luxemborg</div>
+                  <div class="col">564</div>
+                  <div class="col">Regular Gasoline</div>
+                  <div class="col">10000</div>
+                  <div class="col">...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- +++++ order list ++++++-->
+        <div class="check-sec">
+          <div class="row">
+            <div class="col-12">
+              <div class="col-item">
+                <div class="item d-flex">
+                  <div class="col">Bluewing One</div>
+                  <div class="col">...</div>
+                  <div class="col">Luxemborg</div>
+                  <div class="col">564</div>
+                  <div class="col">Regular Gasoline</div>
+                  <div class="col">10000</div>
+                  <div class="col">...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <!-- ============================================================================ -->
+  <!-- ============================================================================ -->
+  <!-- ============================================================================ -->
+  <!-- ============================================================================ -->
+
+
+  <!-- ?Modal assign tanks-->
+
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="om-mod-assign-tanks-mm" aria-labelledby=" offcanvasExample">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasSuccAccLabel"></h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body pb-5" style="padding: 40px">
+      <div class="py-5 om-modapproved-text h4 fw-3">
+        <span>Assign Tanks</span>
+        <span> Luxemborg</span>
+        <span>Tue, Jan 04, 2022 - Wed Jan 05, 2022</span>
+      </div>
+      <!-- Nav pills -->
+      <div class="cta-tab-top-btn">
+        <a href="customers.html" class="btn tab-top-btn">Assigin Tanks</a>
+      </div>
+      <ul class="nav nav-pills row row-cols-1 row-cols-xl-2  role=" tablist">
+        <li class="nav-item col mb-3">
+          <!-- Cusrom Accordion -->
+          <div class="custrom-accordion active" data-bs-toggle="pill" data-bs-target="#custrom_accordion_onetwo_one">
+            <div class="row">
+              <div class="col">
+                <h5>Regular Gasoline</h5>
+                <p class="mb-0">2,727 BBLS <span class="ms-4">12 Trailers</span></p>
+              </div>
+              <div class="col text-end">
+                <button class="secound-btn bg-tra">Full Summary <svg xmlns="http://www.w3.org/2000/svg" width="13"
+                    height="13" fill="currentColor" class="bi bi-chevron-down ms-1" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                  </svg></button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item col">
+          <!-- Cusrom Accordion -->
+          <div class="custrom-accordion" data-bs-toggle="pill" data-bs-target="#custrom_accordion_tow_two_one">
+            <div class="row">
+              <div class="col">
+                <h5>UlSD</h5>
+                <p class="mb-0">2,727 BBLS <span class="ms-4">12 Trailers</span></p>
+              </div>
+              <div class="col text-end">
+                <button class="secound-btn bg-tra">Full Summary <svg xmlns="http://www.w3.org/2000/svg" width="13"
+                    height="13" fill="currentColor" class="bi bi-chevron-down ms-1" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                  </svg></button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div id="custrom_accordion_onetwo_one" class="container tab-pane active"><br>
+          <!-- mod-dicline box -->
+          <div class="mod-dicline-boxs">
+            <div class="mod-dicline-box  p-3">
+              <div class="row">
+                <div class="col">
+                  <h6>Tank</h6>
+                  <p>10
+                  </p>
+                </div>
+                <div class="col">
+                  <h6>Current Inventory</h6>
+                  <p>4,399 BBLS</p>
+                </div>
+                <div class="col">
+                  <h6>Amount</h6>
+                  <input type="text" value="25,00 BBLS">
+                </div>
+                <div class="col">
+                  <h6>Trailers</h6>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>1</option>
+                    <option value="1">2</option>
+                    <option value="2">3</option>
+                    <option value="3">5</option>
+                    <option value="3">6</option>
+                    <option value="3">7</option>
+                    <option value="3">8</option>
+                    <option value="3">9</option>
+                    <option value="3">10</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="mod-dicline-box p-3">
+              <div class="row">
+                <div class="col">
+                  <h6>Tank</h6>
+                  <p>10
+                  </p>
+                </div>
+                <div class="col">
+                  <h6>Current Inventory</h6>
+                  <p>4,399 BBLS</p>
+                </div>
+                <div class="col">
+                  <h6>Amount</h6>
+                  <input type="text" value="25,00 BBLS">
+                </div>
+                <div class="col">
+                  <h6>Trailers</h6>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>1</option>
+                    <option value="1">2</option>
+                    <option value="2">3</option>
+                    <option value="3">5</option>
+                    <option value="3">6</option>
+                    <option value="3">7</option>
+                    <option value="3">8</option>
+                    <option value="3">9</option>
+                    <option value="3">10</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="approved-content-area" style="margin-top: 50px;">
+            <!-- item -->
+            <div class="approved-content-item">
+              <table class="table table-borderless">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Terminal</th>
+                    <th>Order Number</th>
+                    <th>Trailer</th>
+                    <th>Product</th>
+                    <th>Amount</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Bluewing One</td>
+                    <td>87999</td>
+                    <td>Luxemborg</td>
+                    <td>ULSD</td>
+                    <td>8,000 USG</td>
+                    <td><select class="form-select" aria-label="Default select example">
+                        <option selected>Tank 10</option>
+                      </select></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- item -->
+            <div class="approved-content-item">
+              <table class="table table-borderless">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Terminal</th>
+                    <th>Order Number</th>
+                    <th>Trailer</th>
+                    <th>Product</th>
+                    <th>Amount</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Bluewing One</td>
+                    <td>87999</td>
+                    <td>Luxemborg</td>
+                    <td>ULSD</td>
+                    <td>8,000 USG</td>
+                    <td><select class="form-select" aria-label="Default select example">
+                        <option selected>Tank 10</option>
+                      </select></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- item -->
+            <div class="approved-content-item">
+              <table class="table table-borderless">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Terminal</th>
+                    <th>Order Number</th>
+                    <th>Trailer</th>
+                    <th>Product</th>
+                    <th>Amount</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Bluewing One</td>
+                    <td>87999</td>
+                    <td>Luxemborg</td>
+                    <td>ULSD</td>
+                    <td>8,000 USG</td>
+                    <td><select class="form-select" aria-label="Default select example">
+                        <option selected>Tank 10</option>
+                      </select></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- item -->
+            <div class="approved-content-item">
+              <table class="table table-borderless">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Terminal</th>
+                    <th>Order Number</th>
+                    <th>Trailer</th>
+                    <th>Product</th>
+                    <th>Amount</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Bluewing One</td>
+                    <td>87999</td>
+                    <td>Luxemborg</td>
+                    <td>ULSD</td>
+                    <td>8,000 USG</td>
+                    <td><select class="form-select" aria-label="Default select example">
+                        <option selected>Tank 10</option>
+                      </select></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div id="custrom_accordion_tow_two_one" class="container tab-pane fade"><br>
+          <!-- mod-dicline box -->
+          <div class="mod-dicline-boxs">
+            <div class="mod-dicline-box  p-3">
+              <div class="row">
+                <div class="col">
+                  <h6>Tank</h6>
+                  <p>10
+                  </p>
+                </div>
+                <div class="col">
+                  <h6>Current Inventory</h6>
+                  <p>4,399 BBLS</p>
+                </div>
+                <div class="col">
+                  <h6>Amount</h6>
+                  <input type="text" value="25,00 BBLS">
+                </div>
+                <div class="col">
+                  <h6>Trailers</h6>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>1</option>
+                    <option value="1">2</option>
+                    <option value="2">3</option>
+                    <option value="3">5</option>
+                    <option value="3">6</option>
+                    <option value="3">7</option>
+                    <option value="3">8</option>
+                    <option value="3">9</option>
+                    <option value="3">10</option>
+                  </select>
+                </div>
+                <div class="col approved-btn-group">
+                  <button class="secound-btn " data-bs-toggle="modal" data-bs-dismiss="modal"
+                    href="#om-mod-assign-tanks-remove">Asssign Tanks</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="approved-content-area" style="margin-top: 50px;">
+            <!-- item -->
+            <div class="approved-content-item">
+              <table class="table table-borderless">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Terminal</th>
+                    <th>Order Number</th>
+                    <th>Trailer</th>
+                    <th>Product</th>
+                    <th>Amount</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Bluewing One</td>
+                    <td>87999</td>
+                    <td>Luxemborg</td>
+                    <td>ULSD</td>
+                    <td>8,000 USG</td>
+                    <td><select class="form-select" aria-label="Default select example">
+                        <option selected>Tank 10</option>
+                      </select></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- item -->
+            <div class="approved-content-item">
+              <table class="table table-borderless">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Terminal</th>
+                    <th>Order Number</th>
+                    <th>Trailer</th>
+                    <th>Product</th>
+                    <th>Amount</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Bluewing One</td>
+                    <td>87999</td>
+                    <td>Luxemborg</td>
+                    <td>ULSD</td>
+                    <td>8,000 USG</td>
+                    <td><select class="form-select" aria-label="Default select example">
+                        <option selected>Tank 10</option>
+                      </select></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- item -->
+            <div class="approved-content-item">
+              <table class="table table-borderless">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Terminal</th>
+                    <th>Order Number</th>
+                    <th>Trailer</th>
+                    <th>Product</th>
+                    <th>Amount</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Bluewing One</td>
+                    <td>87999</td>
+                    <td>Luxemborg</td>
+                    <td>ULSD</td>
+                    <td>8,000 USG</td>
+                    <td><select class="form-select" aria-label="Default select example">
+                        <option selected>Tank 10</option>
+                      </select></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- item -->
+            <div class="approved-content-item">
+              <table class="table table-borderless">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Terminal</th>
+                    <th>Order Number</th>
+                    <th>Trailer</th>
+                    <th>Product</th>
+                    <th>Amount</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Bluewing One</td>
+                    <td>87999</td>
+                    <td>Luxemborg</td>
+                    <td>ULSD</td>
+                    <td>8,000 USG</td>
+                    <td><select class="form-select" aria-label="Default select example">
+                        <option selected>Tank 10</option>
+                      </select></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ======================+++++++++++++  Offcanvas  +++++++++++++++==========================   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+  <!-- !==================Name ===================-->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas-add-a-customers" aria-labelledby="offcanvasExample">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasSuccAccLabel"></h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body pb-5">
+      <!-- body -->
+      <div class="row row-cols-1 row-cols-xl-3">
+        <div class="col user-roade-map">
+          <div class="upload-order-tab-left">
+            <ul class="timeline">
+              <li class="timeline-item active  mb-6 ">
+                <h6>Name</h6>
+              </li>
+              <li class="timeline-item mb-6">
+                <h6>Address</h6>
+                </p>
+              </li>
+              <li class="timeline-item mb-6">
+                <h6>Optional Settings</h6>
+              </li>
+              <li class="timeline-item mb-6">
+                <h6>Finish</h6>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Right Colum -->
+        <div class="col user-form">
+          <!--  !Area -->
+          <div class="user-form-area">
+            <h2>Select entity</h2>
+            <p class="py-4">Select the entity you plan to do business with.</p>
+            <h5 class="py-4">Customers</h5>
+            <!-- content -->
+            <div class="customar-info">
+              <div class="item">
+                <div class="card">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                    style="margin-top: 10px;">
+                  <div class="card-body">
+                    <div class="info">
+                      <p>Name</p>
+                      <span>Oil Company, Inc.</span>
+                    </div>
+                    <div class="info">
+                      <p>Address</p>
+                      <span>1700 Oil Company Drive Suite 2000 <br>Houston, tx 77098</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option2">
+                  <div class="card-body">
+                    <div class="info">
+                      <p>Name</p>
+                      <span>Oil Company, Inc.</span>
+                    </div>
+                    <div class="info">
+                      <p>Address</p>
+                      <span>1700 Oil Company Drive Suite 2000 <br>Houston, tx 77098</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="address-btn">
+                <a data-bs-toggle="offcanvas" href="#offcanvas-Address-Info">The entity I need is not listed</a>
+              </div>
+            </div>
+            <div action="#">
+              <!-- !Button -->
+              <ul class="nav nav-pills mt-5">
+                <li class="nav-item">
+                  <a data-bs-toggle="offcanvas" href="#sa-offcanvas" class="secound-btn mt-5 me-2 bg-tra">
+                    Back
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a data-bs-toggle="offcanvas" href="#offcanvas-Optional-settings" class="secound-btn">
+                    Next
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- !================== Address ===================-->
+
+
+
+
+
+
+
+
+
+  <!-- !================== Optional Settings ===================-->
+
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas-Optional-settings"
+    aria-labelledby="offcanvasExample">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasSuccAccLabel"></h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body pb-5">
+      <!-- body -->
+      <div class="row row-cols-1 row-cols-xl-3">
+        <div class="col user-roade-map">
+          <div class="upload-order-tab-left">
+            <ul class="timeline">
+              <li class="timeline-item active mb-6 ">
+                <h6>Name</h6>
+              </li>
+              <li class="timeline-item active mb-6">
+                <h6>Address</h6>
+                </p>
+              </li>
+              <li class="timeline-item active mb-6">
+                <h6>Optional Settings</h6>
+              </li>
+              <li class="timeline-item mb-6">
+                <h6>Finish</h6>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Right Colum -->
+        <div class="col user-form">
+          <!--  !Area -->
+          <div class="user-form-area">
+            <h2>Optional Settings</h2>
+            <p class="py-4">Entering more information may enable automations.</p>
+            <h5 class="py-4">Customers</h5>
+            <!-- content -->
+            <form action="#">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Customer *</label>
+                <select class="form-select h4" aria-label="Default select example">
+                  <option selected></option>
+                  <option value="1">item 1</option>
+                </select>
+              </div>
+              <div class="uesr-item">
+                <div class="mb-3 side-by-side">
+                  <label for="exampleFormControlInput1" class="form-label">Short name</label>
+                  <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="">
+                </div>
+                <div class="mb-3 side-by-side">
+                  <label for="exampleFormControlInput1" class="form-label">Consignee</label>
+                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                </div>
+              </div>
+              <div class="uesr-item">
+                <div class="mb-3 side-by-side">
+                  <label for="exampleFormControlInput1" class="form-label">External acct. num.</label>
+                  <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="">
+                </div>
+                <div class="mb-3 side-by-side">
+                  <label for="exampleFormControlInput1" class="form-label">EIN</label>
+                  <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="">
+                </div>
+              </div>
+              <div class="uesr-item">
+                <div class="mb-3 side-by-side">
+                  <label for="exampleFormControlInput1" class="form-label">IRS control code</label>
+                  <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="">
+                </div>
+                <div class="mb-3 side-by-side">
+                  <label for="exampleFormControlInput1" class="form-label">IRS 637 number </label>
+                  <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="">
+                </div>
+              </div>
+
+              <div action="#">
+                <!-- !Button -->
+                <ul class="nav nav-pills mt-5">
+                  <li class="nav-item">
+                    <a data-bs-toggle="offcanvas" href="#offcanvas-add-a-customers"
+                      class="secound-btn mt-5 me-2 bg-tra">
+                      Back
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a data-bs-toggle="offcanvas" href="#offcanvas-review-finish" class="secound-btn">
+                      Next
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- !================== Review and finish ===================-->
+
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas-review-finish" aria-labelledby="offcanvasExample">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasSuccAccLabel"></h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body pb-5">
+      <!-- body -->
+      <div class="row row-cols-1 row-cols-xl-3">
+        <div class="col user-roade-map">
+          <div class="upload-order-tab-left">
+            <ul class="timeline">
+              <li class="timeline-item active mb-6 ">
+                <h6>Name</h6>
+              </li>
+              <li class="timeline-item active mb-6">
+                <h6>Address</h6>
+                </p>
+              </li>
+              <li class="timeline-item active mb-6">
+                <h6>Optional Settings</h6>
+              </li>
+              <li class="timeline-item active mb-6">
+                <h6>Finish</h6>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Right Colum -->
+        <div class="col user-form">
+          <!--  !Area -->
+          <div class="user-form-area">
+            <h1 class="mb-5">Review and finish</h2>
+              <p>Review all of the info before you finish creating the customer.</p>
+              <div class="row row-cols-1 row-cols-sm-2 mt-5 mb-3">
+                <!-- sub- colum -->
+                <div class="col mb-3">
+                  <h6><b>Customer name</b></h6>
+                  <p>PetroNational</p>
+                  <a class="nav-link h-underline" href="customers.html">Edit</a>
+                </div>
+                <div class="col mb-3">
+                  <h6><b>Reference</b></h6>
+                  <p>PN</p>
+                  <a class="nav-link h-underline" href="customers.html">Edit </a>
+                </div>
+                <div class="col mb-3">
+                  <h6><b>Address</b></h6>
+                  <p>2651 Kipling St. <br>
+                    Suite 5200 <br>
+                    Houston, TX 77098</p>
+                  <a class="nav-link h-underline" href="customers.html">Edit </a>
+                </div>
+                <div class="col mb-3">
+                  <h6><b>Optional settings</b></h6>
+                  <p>Class of business:</p>
+                  <p>Short name:</p>
+                  <p>Consignee:</p>
+                  <p>External acct num:</p>
+                  <p>EIN:</p>
+                  <p>IRS control code:</p>
+                  <p>IRS 637 number:</p>
+                  <a class="nav-link h-underline" href="customers.html">Edit </a>
+                </div>
+              </div>
+              <!-- !Button -->
+              <div class="mb-5"></div>
+              <a data-bs-toggle="offcanvas" href="#offcanvas-Optional-settings" class="secound-btn mt-5 me-2 bg-tra">
+                back
+              </a>
+              <a data-bs-toggle="offcanvas" href="#sa2-offcanvas" class="secound-btn mt-5  ">
+                Finish
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- !============Success! Supplier added. ============-->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="sa2-offcanvas" aria-labelledby="offcanvasSuccAccLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasSuccAccLabel"></h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body pb-5">
+      <!-- body -->
+      <div class="success-supplier-added-introo">
+        <h2>Success! Supplier added.</h2>
+        <p class="py-4">You successfully added a supplier!</p>
+        <!-- !Button -->
+        <ul class="nav nav-pills mt-5">
+          <li class="nav-item">
+            <a data-bs-toggle="offcanvas" href="#offcanvas-modal-add-a-customers" role="button"
+              aria-controls="offcanvasSuccAcc" class="secound-btn mt-5 me-2 bg-tra">
+              Add another Supplier
+            </a>
+          </li>
+          <li class="nav-item">
+            <a data-bs-toggle="offcanvas" href="customers.html" class="secound-btn">
+              Close
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- !============ Again Add customer Info============-->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas-modal-add-a-customers"
+    aria-labelledby="offcanvasSuccAccLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasSuccAccLabel"></h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body pb-5">
+      <!-- body -->
+      <div class="row row-cols-1 row-cols-xl-3">
+        <div class="col user-roade-map">
+          <div class="upload-order-tab-left">
+            <ul class="timeline">
+              <li class="timeline-item active  mb-6 ">
+                <h6>Name</h6>
+              </li>
+              <li class="timeline-item mb-6">
+                <h6>Address</h6>
+                </p>
+              </li>
+              <li class="timeline-item mb-6">
+                <h6>Optional Settings</h6>
+              </li>
+              <li class="timeline-item mb-6">
+                <h6>Finish</h6>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Right Colum -->
+        <div class="col user-form">
+          <!--  !Area -->
+          <div class="user-form-area">
+            <h2>Add Customer Name</h2>
+            <p class="py-4">To get started, enter the customer's name and assign a reference code.</p>
+            <!-- content -->
+            <form action="#">
+              <div class="uesr-item">
+                <div class="mb-3 side-by-side">
+                  <label for="exampleFormControlInput1" class="form-label">Customer Name <span
+                      class="color-red">*</span></label>
+                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+                </div>
+                <div class="mb-3 side-by-side">
+                  <label for="exampleFormControlInput1" class="form-label">Customer Email <span
+                      class="color-red">*</span></label>
+                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Customer Reference <span
+                    class="color-red">*</span></label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+
+              <!-- !Button -->
+              <ul class="nav nav-pills mt-5">
+                <li class="nav-item">
+                  <a data-bs-toggle="offcanvas" href="#offcanvas-add-a-customers" class="secound-btn"
+                    data-bs-dismiss="modal">
+                    Next
+                  </a>
+                </li>
+              </ul>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- !============ Again Address Info============-->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas-Address-Info"
+    aria-labelledby="offcanvasSuccAccLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasSuccAccLabel"></h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body pb-5">
+      <!-- body -->
+      <div class="row row-cols-1 row-cols-xl-3">
+        <div class="col user-roade-map">
+          <div class="upload-order-tab-left">
+            <ul class="timeline">
+              <li class="timeline-item active  mb-6 ">
+                <h6>Name</h6>
+              </li>
+              <li class="timeline-item active mb-6">
+                <h6>Address</h6>
+                </p>
+              </li>
+              <li class="timeline-item mb-6">
+                <h6>Optional Settings</h6>
+              </li>
+              <li class="timeline-item mb-6">
+                <h6>Finish</h6>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Right Colum -->
+        <div class="col user-form">
+          <div class="user-form-area">
+            <h2>Enter address information</h2>
+            <p class="py-4">This address will appear on Bills of Lading.</p>
+            <!-- content -->
+            <form action="#">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Address line 1 <span
+                    class="color-red">*</span></label>
+                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Address line 2<span
+                    class="color-red">*</span></label>
+                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">City<span class="color-red">*</span></label>
+                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+              <div class="uesr-item">
+                <div class="uesr-item">
+                  <div class="mb-3 side-by-side">
+                    <label for="exampleFormControlInput1" class="form-label">State <span
+                        class="color-red">*</span></label>
+                    <select class="form-select h4" aria-label="Default select example">
+                      <option selected></option>
+                      <option value="1">item 1</option>
+                    </select>
+                  </div>
+                  <div class="mb-3 side-by-side">
+                    <label for="exampleFormControlInput1" class="form-label">Postal code<span
+                        class="color-red">*</span></label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- !Button -->
+              <ul class="nav nav-pills mt-5">
+                <li class="nav-item">
+                  <a data-bs-toggle="offcanvas" href="#offcanvas-modal-add-a-customers"
+                    class="secound-btn mt-5 me-2 bg-tra">
+                    Back
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a data-bs-toggle="offcanvas" href="#offcanvas-Optional-settings" class="secound-btn"
+                    data-bs-dismiss="modal">
+                    Next
+                  </a>
+                </li>
+              </ul>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- modal -->
+
+  <div class="modal fade track-order-status-modal" id="track-order-status-modal" tabindex="-1"
+    aria-labelledby="track-order-status-modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg  modal-dialog-centered">
+      <div class="modal-content" style="height: 100%">
+        <div class="modal-header">
+          <h2 class="modal-title fw-7" id="exampleModalLabel">Track Order Status</h2>
+          <button type="button" class="btn-close me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body pt-1 ps-4 ">
+          <p class="mb-5">The days of emailing for status updates on orders is over. Track your orders in
+            real-time with Lynx Order Status</p>
+          <div class="row">
+            <div class="col-lg-6">
+              <h6 class="fw-7">Select billing frequency</h6>
+              <!-- tab -->
+              <ul class="nav nav-pills track-order-status-tab mb-4" role="tablist">
+                <li class="nav-item mb-3">
+                  <a class="nav-link active" data-bs-toggle="pill" href="#frequency-one">$200 license/month</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="pill" href="#frequency-two">$2,000 license/annually</a>
+                </li>
+              </ul>
+
+            </div>
+            <div class="col-lg-6">
+              <div class="tab-content">
+                <div id="frequency-one" class="container frequency-content tab-pane active">
+                  <h6 class="fw-7">Select billing frequency</h6>
+                  <h5 class="py-1">$200</h5>
+                  <div class="track-order-tk-con">
+                    <div class="track-order-status-btns mb-4">
+                      <a href="order_status.html"><button class="btn">Pay now</button></a>
+                      <button class="btn btn_inviice_func" onclick="hideBtnFunction()">Invoice me instead</button>
+                    </div>
+                    <a class="nav-link" href="order_status.html">30-day free trial</a>
+                  </div>
+                  <div class="track-order-tk-con-ontab">
+                    <div class="mb-4">
+                      <label for="exampleFormControlInput1" class="form-label">Supplier Reference <span
+                          class="color-red">*</span></label>
+                      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                    </div>
+                    <a class="secound-btn" href="order_status.html"><b>Pay by invoice</b></a>
+                  </div>
+
+                </div>
+                <div id="frequency-two" class="container tab-pane frequency-content fade">
+                  <h6 class="fw-7">Select billing frequency</h6>
+                  <h5 class="py-1">$2000</h5>
+                  <div class="track-order-tk-con2">
+                    <div class="track-order-status-btns mb-4">
+                      <a href="order_status.html"><button class="btn">Pay now</button></a>
+                      <button class="btn btn_inviice_func" onclick="hideBtnFunction2()">Invoice me
+                        instead</button>
+                    </div>
+                    <a class="nav-link" href="order_status.html">30-day free trial</a>
+                  </div>
+                  <div class="track-order-tk-con-ontab2">
+                    <div class="mb-4">
+                      <label for="exampleFormControlInput1" class="form-label">Supplier Reference <span
+                          class="color-red">*</span></label>
+                      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                    </div>
+                    <a class="secound-btn" href="order_status.html"><b>Pay by invoice</b></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
   <!-- ?Modal assign tanks details-->
   <div class="modal fade" id="om-mod-assign-tanks-details" tabindex="-1" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
@@ -2114,7 +5294,7 @@
                 <p class="mb-0">2,727 BBLS <span class="ms-4">12 Trailers</span></p>
               </div>
               <div class="col text-end">
-                <button class="secound-btn bg-tra">View all order <svg xmlns="http://www.w3.org/2000/svg" width="13"
+                <button class="secound-btn bg-tra">Hide all order <svg xmlns="http://www.w3.org/2000/svg" width="13"
                     height="13" fill="currentColor" class="bi bi-chevron-down ms-1" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                       d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
@@ -2243,7 +5423,8 @@
           </div>
           <ul class="nav nav-pills mt-5 approved-btn-bottom">
             <li class="nav-item">
-              <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#" class="secound-btn radious me-2 ">
+              <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#om-mod-assign-tanks-remove-ag-again"
+                class="secound-btn radious me-2 ">
                 Assign Tanks
               </a>
             </li>
@@ -2252,10 +5433,18 @@
       </div>
     </div>
   </div>
+
+
+
+  </main>
+
   <!-- script -->
+
+  <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/custom_jquery.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 
-<!-- </html> -->
+</html>

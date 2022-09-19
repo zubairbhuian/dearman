@@ -6,83 +6,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <title>trailers</title>
+    <title>Submit Orders</title>
 </head>
 
 <body>
     <main>
-        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ======================+++++++++++++ Top Navigation +++++++++++++++=============================
-   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-light">
-            <div class="container-fluid">
-                <a class="side-appbar-icon " type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                        class="bi bi-text-paragraph" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z" />
-                    </svg>
-                </a>
-                <a class="navbar-brand" href="index.html">
-                    <img src="/assets/images/logo.png" alt=""><span>LYNX Console</span></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav  me-auto ms-auto ">
-                        <li class="nav-item pe-5">
-                            <a class="nav-link active" aria-current="page" href="index.html">Insights</a>
-                        </li>
-                        <li class="nav-item pe-5">
-                            <a class="nav-link" href="#">Submit Orders</a>
-                        </li>
-                        <li class="nav-item position-relative ">
-                            <a class="nav-link " href="#">Order Management</a>
-                            <div class="custrom-badge">2 <span>New</span> </div>
-                            </span>
-                        </li>
-                    </ul>
+        <!--======================Top Navigation============================-->
+  <!--======================Top Navigation============================-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-light header">
+    <div class="container-fluid">
+      <a class="side-appbar-icon " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+        aria-controls="offcanvasScrolling">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+          class="bi bi-text-paragraph" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z" />
+        </svg>
+      </a>
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/logo.png" alt=""><span>LYNX Console</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav  me-auto ms-auto ">
+          <li class="nav-item pe-5">
+            <a class="nav-link" aria-current="page" href="index.html">Insights</a>
+          </li>
+          <li class="nav-item pe-5">
+            <a class="nav-link active" href="submit_order.html">Submit Orders</a>
+          </li>
+          <li class="nav-item pe-5">
+            <a class="nav-link" href="order_status.html">Order Status</a>
+          </li>
+          <li class="nav-item position-relative ">
+            <a class="nav-link " href="order-management.html">Order Management</a>
+            <div class="custrom-badge">2 <span>New</span> </div>
+            </span>
+          </li>
+        </ul>
 
-                    <ul class="navbar-nav me-6">
-                        <li class="nav-item hide-lg">
-                            <div class="circuler-avater">
-                                <span>FH</span>
-                            </div>
-                        </li>
+        <ul class="navbar-nav me-6">
+          <li class="nav-item hide-lg">
+            <div class="circuler-avater">
+              <span>FH</span>
+            </div>
+          </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <!--  -->
-                                <!-- <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li class="nav-item dropdown navbarDropdown-btn position-relative" style="cursor: pointer;">
+            <a class="nav-link dropdown-toggle" onclick="showNavRight()">
+              Flint Hill
+            </a>
+            <!-- ?cus-nav-right-side -->
+            <div class="cus-nav-right-side">
+              <div class="side-appbar d-block">
+                <div class="navbar">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="profile_setting.html">Profile Settings</a>
+                    </li>
+                    <!--!+++++++++++++++ Sub Menu +++++++++++++++++++++-->
+                    <li class="nav-item dropdown side-dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Billing
+                      </a>
+                      <ul class="dropdown-menu  cus-nav-right-dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="purchase-services.html">Purchase services</a></li>
+                        <li><a class="dropdown-item" href="products-licenses.html">Your products and licenses</a></li>
+                        <li><a class="dropdown-item" href="payment-history.html">Payment history</a></li>
+                        <li><a class="dropdown-item" href="payment-methods.html">Payment methods</a></li>
+                        <li><a class="dropdown-item" href="billing-notifications.html">Billing notificatin</a></li>
+                        
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="login-pass.html">Log out</a>
+                    </li>
                   </ul>
-                </li> -->
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                </div>
+              </div>
+            </div>
+          </li>
 
-        </nav>
-        <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ======================+++++++++++++  Mobail Side Menu  +++++++++++++++==========================   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        </ul>
+
+  </nav>
+        <!--==========================Mobail Side Menu==========================-->
         <div class="offcanvas offcanvas-side-appbar offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
             tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
             <div class="offcanvas-header">
@@ -105,14 +116,20 @@
                             </li>
                             <!-- Sub Menu -->
                             <li class="nav-item dropdown side-dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link" href="#" id="popup-bar-icon">
                                     Carriers
+                                    <i for="openDropdown" class="dropdown side-nav-dropdown-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                            fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                        </svg>
+                                    </i>
                                 </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <ul class="dropdown-menu" id="popup-bar-data">
                                     <li><a class="dropdown-item" href="drivers.html">Drivers</a></li>
                                     <li><a class="dropdown-item" href="entities.html">Entities </a></li>
-                                    <li><a class="dropdown-item" href="trailers.html">Trailers</a></li>
+                                    <li><a class="dropdown-item" href="trailers.html">Trailers </a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -129,23 +146,22 @@
                 </div>
             </div>
         </div>
-        <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ======================+++++++++++++  Main Body  +++++++++++++++==========================   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+
+        <!--==========================Main Body Side Menu==========================-->
         <div class="main-body">
             <!-- side appbar -->
             <div class="side-appbar">
                 <div class="navbar">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link " aria-current="page" href="terminals.html">Terminals</a>
+                            <a class="nav-link" aria-current="page" href="terminals.html">Terminals</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="suppliers.html">Suppliers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contacts.html">Customers</a>
+                            <a class="nav-link" href="customers.html">Customers</a>
                         </li>
                         <!--!+++++++++++++++ Sub Menu +++++++++++++++++++++-->
                         <li class="nav-item dropdown side-dropdown">
@@ -171,6 +187,9 @@
                     </ul>
                 </div>
             </div>
+
+
+
             <!-- !++++++++++++++  body contant ++++++++++++++++++++++++-->
             <div class="body-content">
                 <!-- submit order start here -->
@@ -199,7 +218,7 @@
                             <div class="header-text">
                                 <h1>Position Holder:</h1>
                             </div>
-                            <select class="form-select form-select-lg mb-3  without-border-icon"
+                            <select class="form-select form-select-lg without-border-icon"
                                 aria-label=".form-select-lg example">
                                 <option selected>Dearman Systems</option>
                                 <option value="1">Dearman Systems</option>
@@ -210,7 +229,7 @@
                             <div class="me-5">
                                 <div class="d-flex">
                                     <p class="ms-fontsize-p">Terminal -</p>
-                                    <select class="form-select form-select-ms mb-3  without-border-icon ms-fontsize "
+                                    <select class="form-select form-select-ms  without-border-icon ms-fontsize "
                                         aria-label=".form-select-lg example">
                                         <option selected>Bluewing One </option>
                                         <option value="1">Bluewing Royal</option>
@@ -239,12 +258,41 @@
                             <!-- btn -->
                             <div class="submit-order-group-btn me-xl-3">
                                 <div class="btn-group">
-                                    <a href="#" class="btn  active" aria-current="page"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="26" height="26"
-                                            fill="currentColor" class="bi bi-truck me-2" viewBox="0 0 16 16">
+                                    <a href="#" class="btn  active" aria-current="page">
+                                        <svg width="32" height="20" viewBox="0 0 32 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
                                             <path
-                                                d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
-                                        </svg>Rack Loading</a>
+                                                d="M9.13853 15.3965C9.10074 15.5523 9.08183 15.7082 9.08183 15.864C9.08183 15.9614 9.08184 16.0588 9.10074 16.1562H4.86719V15.3965H9.13853Z"
+                                                fill="white" stroke="white" />
+                                            <path
+                                                d="M21.6503 1.03955V16.137H13.6746C13.6935 16.0396 13.6935 15.9422 13.6935 15.8448C13.6935 15.6889 13.6746 15.5331 13.6368 15.3772H20.9132V1.77981H11.6523V1.03955H21.6503Z"
+                                                fill="white" stroke="white" />
+                                            <path d="M4.93195 4.50684H4.00586V5.2471H4.93195V4.50684Z" fill="white"
+                                                stroke="white" />
+                                            <path d="M16.7362 4.50684H7.38086V5.2471H16.7362V4.50684Z" fill="white"
+                                                stroke="white" />
+                                            <path d="M2.02059 8.13013H1V8.87039H2.02059V8.13013Z" fill="white"
+                                                stroke="white" />
+                                            <path d="M13.715 8.13013H4.4541V8.87039H13.715V8.13013Z" fill="white"
+                                                stroke="white" />
+                                            <path
+                                                d="M23.5052 15.3965C23.4674 15.5523 23.4485 15.7082 23.4485 15.864C23.4485 15.9614 23.4485 16.0588 23.4674 16.1562H21.2939V15.3965H23.5052Z"
+                                                fill="white" stroke="white" />
+                                            <path
+                                                d="M30.9706 9.90185V16.1551H28.0412C28.0601 16.0577 28.0601 15.9603 28.0601 15.8629C28.0601 15.7071 28.0412 15.5512 28.0034 15.3954H30.2524V10.2135L26.2079 6.0447H21.2939V5.30444H26.5103L30.9706 9.90185Z"
+                                                fill="white" stroke="white" />
+                                            <path d="M26.8681 10.4684H21.3115V9.72809H26.131V7.87744H26.8681V10.4684Z"
+                                                fill="white" stroke="white" />
+                                            <path
+                                                d="M28.738 15.3959C28.5301 13.8959 27.2638 12.7466 25.7518 12.7466C24.2399 12.7466 22.9736 13.8959 22.7468 15.3959C22.7279 15.5518 22.709 15.7076 22.709 15.8635C22.709 15.9609 22.709 16.0583 22.7279 16.1557C22.8602 17.7531 24.1643 18.9998 25.7518 18.9998C27.3205 18.9998 28.6246 17.7531 28.7569 16.1557C28.7569 16.0583 28.7758 15.9609 28.7758 15.8635C28.7758 15.7076 28.7758 15.5518 28.738 15.3959ZM25.7518 18.2401C24.5801 18.2401 23.5973 17.3245 23.465 16.1557C23.4461 16.0583 23.4461 15.9609 23.4461 15.8635C23.4461 15.7076 23.465 15.5518 23.5028 15.3959C23.7107 14.305 24.6368 13.4868 25.7518 13.4868C26.8669 13.4868 27.793 14.305 28.0009 15.3959C28.0387 15.5518 28.0576 15.7076 28.0576 15.8635C28.0576 15.9609 28.0576 16.0583 28.0387 16.1557C27.9064 17.3245 26.9236 18.2401 25.7518 18.2401Z"
+                                                fill="white" stroke="white" />
+                                            <path
+                                                d="M14.3943 15.3959C14.1675 13.8959 12.9201 12.7466 11.4081 12.7466C9.89612 12.7466 8.62983 13.8959 8.40303 15.3959C8.38413 15.5518 8.36523 15.7076 8.36523 15.8635C8.36523 15.9609 8.36523 16.0583 8.38413 16.1557C8.51643 17.7531 9.82052 18.9998 11.4081 18.9998C12.9768 18.9998 14.2809 17.7531 14.4132 16.1557C14.4132 16.0583 14.4321 15.9609 14.4321 15.8635C14.4321 15.7076 14.4132 15.5518 14.3943 15.3959ZM11.4081 18.2401C10.2363 18.2401 9.25352 17.3245 9.12123 16.1557C9.10233 16.0583 9.10233 15.9609 9.10233 15.8635C9.10233 15.7076 9.12123 15.5518 9.15902 15.3959C9.34802 14.305 10.2741 13.4868 11.4081 13.4868C12.5232 13.4868 13.4493 14.305 13.6572 15.3959C13.695 15.5518 13.7139 15.7076 13.7139 15.8635C13.7139 15.9609 13.7139 16.0583 13.695 16.1557C13.5438 17.3245 12.5799 18.2401 11.4081 18.2401Z"
+                                                fill="white" stroke="white" />
+                                            <path d="M9.23859 1H8.3125V1.74026H9.23859V1Z" fill="white"
+                                                stroke="white" />
+                                        </svg>
+                                        Rack Loading</a>
                                     <a href="scheduling-guide.html" class="btn ">Weigh-Scale Shipment</a>
                                     <a href="scheduling-guide.html" class="btn ">Truck Receipt</a>
                                 </div>
@@ -260,8 +308,9 @@
                         </div>
                         <!-- checkBox -->
                         <div class="form-check pt-3 ">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label ps-2" for="flexCheckDefault">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                style="margin-right: 0">
+                            <label class="form-check-label" for="flexCheckDefault">
                                 Above-the-rack transaction
                             </label>
                         </div>
@@ -271,14 +320,14 @@
                                 <h6 class="pro-info-level ms-3">START TIME</h6>
                                 <select class="form-select form-select-lg   without-border-icon "
                                     aria-label=".form-select-lg example">
-                                    <option selected>04.15 AM</option>
-                                    <option value="1">04.15 AM</option>
-                                    <option value="2">04.15 AM</option>
-                                    <option value="3">04.15 AM</option>
-                                    <option value="4">04.15 AM</option>
-                                    <option value="5">04.15 AM</option>
-                                    <option value="6">04.15 AM</option>
-                                    <option value="7">04.15 AM</option>
+                                    <option selected>04:15 AM</option>
+                                    <option value="1">04:15 AM</option>
+                                    <option value="2">04:15 AM</option>
+                                    <option value="3">04:15 AM</option>
+                                    <option value="4">04:15 AM</option>
+                                    <option value="5">04:15 AM</option>
+                                    <option value="6">04:15 AM</option>
+                                    <option value="7">04:15 AM</option>
 
                                 </select>
                             </div>
@@ -287,44 +336,40 @@
                                 <h6 class="pro-info-level ms-3">EXPIRES</h6>
                                 <select class="form-select form-select-lg without-border-icon "
                                     aria-label=".form-select-lg example">
-                                    <option selected>04.15 AM</option>
-                                    <option value="1">04.15 AM</option>
-                                    <option value="2">04.15 AM</option>
-                                    <option value="3">04.15 AM</option>
-                                    <option value="4">04.15 AM</option>
-                                    <option value="5">04.15 AM</option>
-                                    <option value="6">04.15 AM</option>
-                                    <option value="7">04.15 AM</option>
+                                    <option selected>04:15 AM</option>
+                                    <option value="1">04:15 AM</option>
+                                    <option value="2">04:15 AM</option>
+                                    <option value="3">04:15 AM</option>
+                                    <option value="4">04:15 AM</option>
+                                    <option value="5">04:15 AM</option>
+                                    <option value="6">04:15 AM</option>
+                                    <option value="7">04:15 AM</option>
                                 </select>
                             </div>
                             <!-- 3 -->
                             <div class="col-xl-4 col-xxl-2 col-lg-6 col-sm-12 ">
                                 <h6 class="pro-info-level"><b>Product*</b></h6>
                                 <select class="form-select form-select-lg " aria-label=".form-select-lg example">
-                                    <option selected>Open this select menu</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <option selected></option>
+                                    <option value="1">ULSD</option>
+                                    <option value="2">Regular Gasoline</option>
                                 </select>
                             </div>
                             <!-- 4 -->
                             <div class="col-xl-4 col-xxl-2 col-lg-6 col-sm-12 ">
                                 <h6 class="pro-info-level"><b>Carrier*</b></h6>
                                 <select class="form-select form-select-lg " aria-label=".form-select-lg example">
-                                    <option selected>Open this select menu</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <option selected></option>
+                                    <option value="1">Dearman Systems</option>
                                 </select>
                             </div>
                             <!-- 5 -->
                             <div class="col-xl-4 col-xxl-2 col-lg-6 col-sm-12 ">
                                 <h6 class="pro-info-level"><b>Destination*</b></h6>
                                 <select class="form-select form-select-lg " aria-label=".form-select-lg example">
-                                    <option selected>Open this select menu</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <option selected></option>
+                                    <option value="1">Houston, TX</option>
+                                    <option value="2">San Antonio, TX</option>
                                 </select>
                             </div>
                             <!-- 6 -->
@@ -399,10 +444,8 @@
                                 </div>
                             </div>
                             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-6">
-
-
                                 <div class="col  mb-3">
-                                    <h6>Company Code</h6>
+                                    <h6>Position Holder</h6>
                                     <p class="mb-1">Dearman Systems</p>
                                     <a class="nav-link" href="#">Edit</a>
                                 </div>
@@ -435,33 +478,37 @@
                             </div>
                         </div>
 
-
                         <hr class="my-5">
                         <div
                             class="row add-advannce-detail-modal-form row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
                             <div class="col mb-3">
-                                <h6 class="pro-info-level">Company Code</h6><input class="form-con" type="text">
+                                <h6 class="pro-info-level">Company Code</h6><input class="form-con" type="text"
+                                    placeholder="asf">
                             </div>
                             <div class="col mb-3">
-                                <h6 class="pro-info-level">Carrier Code</h6><input class="form-con" type="text">
+                                <h6 class="pro-info-level">Carrier Code</h6><input class="form-con" type="text"
+                                    placeholder="sfasf">
                             </div>
                             <div class="col mb-3">
-                                <h6 class="pro-info-level">SPLC</h6><input class="form-con" type="text">
+                                <h6 class="pro-info-level">SPLC</h6><input class="form-con" type="text"
+                                    placeholder="saf">
                             </div>
                             <div class="col mb-3">
-                                <h6 class="pro-info-level">Product Code</h6><input class="form-con" type="text">
+                                <h6 class="pro-info-level">Product Code</h6><input class="form-con" type="text"
+                                    placeholder="asfasf">
                             </div>
                             <div class="col mb-3">
-                                <h6 class="pro-info-level">Lot #</h6><input class="form-con" type="text">
+                                <h6 class="pro-info-level">Lot #</h6><input class="form-con" type="text"
+                                    placeholder="saf">
                             </div>
                             <div class="col mb-3">
-                                <h6 class="pro-info-level">3rd Party BOL</h6><input class="form-con" type="text">
+                                <h6 class="pro-info-level">3rd Party BOL</h6><input class="form-con" type="text"
+                                    placeholder="safa">
                             </div>
                             <div class="col mb-3">
-                                <h6 class="pro-info-level">In Care Of</h6><input class="form-con" type="text">
+                                <h6 class="pro-info-level">In Care Of</h6><input class="form-con" type="text"
+                                    placeholder="sfas">
                             </div>
-
-
                         </div>
                         <div class="add-advannce-detail-btns mt-2">
                             <a href="#" class="btn" data-bs-dismiss="modal" aria-label="Close">Back</a>
@@ -572,7 +619,37 @@
                                 <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne"
                                     data-bs-parent="#accordionsubmit-order">
                                     <div class="accordion-body">
-                                        <h1>Here is demo text</h1>
+                                        <div
+                                            class="row add-advannce-detail-modal-form row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
+                                            <div class="col mb-3">
+                                                <h6 class="pro-info-level">Company Code</h6><input class="form-con"
+                                                    type="text" placeholder="asf">
+                                            </div>
+                                            <div class="col mb-3">
+                                                <h6 class="pro-info-level">Carrier Code</h6><input class="form-con"
+                                                    type="text" placeholder="sfasf">
+                                            </div>
+                                            <div class="col mb-3">
+                                                <h6 class="pro-info-level">SPLC</h6><input class="form-con" type="text"
+                                                    placeholder="saf">
+                                            </div>
+                                            <div class="col mb-3">
+                                                <h6 class="pro-info-level">Product Code</h6><input class="form-con"
+                                                    type="text" placeholder="asfasf">
+                                            </div>
+                                            <div class="col mb-3">
+                                                <h6 class="pro-info-level">Lot #</h6><input class="form-con" type="text"
+                                                    placeholder="saf">
+                                            </div>
+                                            <div class="col mb-3">
+                                                <h6 class="pro-info-level">3rd Party BOL</h6><input class="form-con"
+                                                    type="text" placeholder="safa">
+                                            </div>
+                                            <div class="col mb-3">
+                                                <h6 class="pro-info-level">In Care Of</h6><input class="form-con"
+                                                    type="text" placeholder="sfas">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -652,161 +729,80 @@
                         <!-- table -->
                         <div class="table-responsive">
                             <table class="table">
-                                <thead>
+                                <thead class="table-head">
                                     <tr>
-                                        <th>Firstname</th>
-                                        <th>Lastname</th>
-                                        <th>Email</th>
-                                        <th>Firstname</th>
-                                        <th>Lastname</th>
-                                        <th>Email</th>
-                                        <th>Email</th>
+                                        <th>Terminal</th>
+                                        <th>Position Holder</th>
+                                        <th>Customer</th>
+                                        <th>Carrier</th>
+                                        <th>Trailer</th>
+                                        <th>Product</th>
+                                        <th>Amount</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>John</td>
-                                        <td>Doe</td>
-                                        <td>john@example.com</td>
-                                        <td>John</td>
-                                        <td>Doe</td>
-                                        <td>john@example.com</td>
-                                        <td>john@example.com</td>
+                                        <td>Bluewing One</td>
+                                        <td>Flint Hills</td>
+                                        <td>Dearman Systems</td>
+                                        <td>Luxemborg</td>
+                                        <td>7892</td>
+                                        <td>ULSD</td>
+                                        <td>1000</td>
                                     </tr>
                                     <tr>
-                                        <td>Mary</td>
-                                        <td>Moe</td>
-                                        <td>mary@example.com</td>
-                                        <td>mary@example.com</td>
-                                        <td>mary@example.com</td>
-                                        <td>mary@example.com</td>
-                                        <td>mary@example.com</td>
+                                        <td>Bluewing One</td>
+                                        <td>Flint Hills</td>
+                                        <td>Dearman Systems</td>
+                                        <td>Luxemborg</td>
+                                        <td>7892</td>
+                                        <td>ULSD</td>
+                                        <td>1000</td>
                                     </tr>
                                     <tr>
-                                        <td>July</td>
-                                        <td>Dooley</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
+                                        <td>Bluewing One</td>
+                                        <td>Flint Hills</td>
+                                        <td>Dearman Systems</td>
+                                        <td>Luxemborg</td>
+                                        <td>7892</td>
+                                        <td>ULSD</td>
+                                        <td>1000</td>
                                     </tr>
                                     <tr>
-                                        <td>July</td>
-                                        <td>Dooley</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
+                                        <td>Bluewing One</td>
+                                        <td>Flint Hills</td>
+                                        <td>Dearman Systems</td>
+                                        <td>Luxemborg</td>
+                                        <td>7892</td>
+                                        <td>ULSD</td>
+                                        <td>1000</td>
                                     </tr>
                                     <tr>
-                                        <td>July</td>
-                                        <td>Dooley</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
+                                        <td>Bluewing One</td>
+                                        <td>Flint Hills</td>
+                                        <td>Dearman Systems</td>
+                                        <td>Luxemborg</td>
+                                        <td>7892</td>
+                                        <td>ULSD</td>
+                                        <td>1000</td>
                                     </tr>
                                     <tr>
-                                        <td>July</td>
-                                        <td>Dooley</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
+                                        <td>Bluewing One</td>
+                                        <td>Flint Hills</td>
+                                        <td>Dearman Systems</td>
+                                        <td>Luxemborg</td>
+                                        <td>7892</td>
+                                        <td>ULSD</td>
+                                        <td>1000</td>
                                     </tr>
                                     <tr>
-                                        <td>July</td>
-                                        <td>Dooley</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                    </tr>
-                                    <tr>
-                                        <td>July</td>
-                                        <td>Dooley</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                    </tr>
-                                    <tr>
-                                        <td>July</td>
-                                        <td>Dooley</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                    </tr>
-                                    <tr>
-                                        <td>July</td>
-                                        <td>Dooley</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                    </tr>
-                                    <tr>
-                                        <td>July</td>
-                                        <td>Dooley</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                    </tr>
-                                    <tr>
-                                        <td>July</td>
-                                        <td>Dooley</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                    </tr>
-                                    <tr>
-                                        <td>July</td>
-                                        <td>Dooley</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                    </tr>
-                                    <tr>
-                                        <td>July</td>
-                                        <td>Dooley</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                    </tr>
-                                    <tr>
-                                        <td>July</td>
-                                        <td>Dooley</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                    </tr>
-                                    <tr>
-                                        <td>July</td>
-                                        <td>Dooley</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
-                                        <td>july@example.com</td>
+                                        <td>Bluewing One</td>
+                                        <td>Flint Hills</td>
+                                        <td>Dearman Systems</td>
+                                        <td>Luxemborg</td>
+                                        <td>7892</td>
+                                        <td>ULSD</td>
+                                        <td>1000</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -852,7 +848,7 @@
                                         <h5 class="py-1">$200</h5>
                                         <div class="track-order-tk-con">
                                             <div class="track-order-status-btns mb-4">
-                                                <button class="btn">Pay now</button>
+                                                <a href="order_status.html"><button class="btn">Pay now</button></a>
                                                 <button class="btn btn_inviice_func" onclick="hideBtnFunction()">Invoice
                                                     me instead</button>
                                             </div>
@@ -865,7 +861,7 @@
                                                 <input type="text" class="form-control" id="exampleFormControlInput1"
                                                     placeholder="">
                                             </div>
-                                            <a class="secound-btn" href="#"><b>Pay by invoice</b></a>
+                                            <a class="secound-btn" href="order_status.html"><b>Pay by invoice</b></a>
                                         </div>
 
                                     </div>
@@ -874,7 +870,7 @@
                                         <h5 class="py-1">$2000</h5>
                                         <div class="track-order-tk-con2">
                                             <div class="track-order-status-btns mb-4">
-                                                <button class="btn">Pay now</button>
+                                                <a href="order_status.html"><button class="btn">Pay now</button></a>
                                                 <button class="btn btn_inviice_func"
                                                     onclick="hideBtnFunction2()">Invoice me instead</button>
                                             </div>
@@ -887,7 +883,7 @@
                                                 <input type="text" class="form-control" id="exampleFormControlInput1"
                                                     placeholder="">
                                             </div>
-                                            <a class="secound-btn" href="#"><b>Pay by invoice</b></a>
+                                            <a class="secound-btn" href="order_status.html"><b>Pay by invoice</b></a>
                                         </div>
                                     </div>
 
@@ -903,8 +899,18 @@
     </main>
 
     <!-- script -->
+    <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/apexcharts.min.js"></script>
+    <script src="assets/js/lightpick.js"></script>
+    <script src="assets/js/chart.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/custom_jquery.js"></script>
 </body>
 
 </html>

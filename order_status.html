@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="assets/css/lightpick.css" />
+  <link rel="stylesheet" href="assets/css/apexcharts.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Order Status</title>
+
+
+
+</head>
+
+<body>
+  <!--======================Top Navigation============================-->
+    <!--======================Top Navigation============================-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light header">
+      <div class="container-fluid">
+        <a class="side-appbar-icon " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+            class="bi bi-text-paragraph" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z" />
+          </svg>
+        </a>
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/images/logo.png" alt=""><span>LYNX Console</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav  me-auto ms-auto ">
+            <li class="nav-item pe-5">
+              <a class="nav-link " aria-current="page" href="index.html">Insights</a>
+            </li>
+            <li class="nav-item pe-5">
+              <a class="nav-link" href="submit_order.html">Submit Orders</a>
+            </li>
+            <li class="nav-item pe-5">
+              <a class="nav-link active" href="order_status.html">Order Status</a>
+            </li>
+            <li class="nav-item position-relative ">
+              <a class="nav-link " href="order-management.html">Order Management</a>
+              <div class="custrom-badge">2 <span>New</span> </div>
+              </span>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav me-6">
+            <li class="nav-item hide-lg">
+              <div class="circuler-avater">
+                <span>FH</span>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown navbarDropdown-btn position-relative" style="cursor: pointer;">
+              <a class="nav-link dropdown-toggle" onclick="showNavRight()">
+                Flint Hill
+              </a>
+              <!-- ?cus-nav-right-side -->
+              <div class="cus-nav-right-side">
+                <div class="side-appbar d-block">
+                  <div class="navbar">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="profile_setting.html">Profile Settings</a>
+                      </li>
+                      <!--!+++++++++++++++ Sub Menu +++++++++++++++++++++-->
+                      <li class="nav-item dropdown side-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Billing
+                        </a>
+                        <ul class="dropdown-menu  cus-nav-right-dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="purchase-services.html">Purchase services</a></li>
+                          <li><a class="dropdown-item" href="products-licenses.html">Your products and licenses</a></li>
+                          <li><a class="dropdown-item" href="payment-history.html">Payment history</a></li>
+                          <li><a class="dropdown-item" href="payment-methods.html">Payment methods</a></li>
+                          <li><a class="dropdown-item" href="billing-notifications.html">Billing notificatin</a></li>
+                          
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="login-pass.html">Log out</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+    </nav>
+  <!--==========================Mobail Side Menu==========================-->
+  <div class="offcanvas offcanvas-side-appbar offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
+    tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="side-appbar">
+        <div class="navbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="terminals.html">Terminals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="suppliers.html">Suppliers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="customers.html">Customers</a>
+            </li>
+            <!-- Sub Menu -->
+            <li class="nav-item dropdown side-dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Carriers
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="drivers.html">Drivers</a></li>
+                <li><a class="dropdown-item" href="entities.html">Entities </a></li>
+                <li><a class="dropdown-item" href="trailers.html">Trailers</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="destinations.html">Destinations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="contacts.html">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--==========================Main Body Side Menu==========================-->
+  <div class="main-body">
+    <!-- side appbar -->
+    <div class="side-appbar">
+      <div class="navbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="terminals.html">Terminals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="suppliers.html">Suppliers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="customers.html">Customers</a>
+          </li>
+          <!--!+++++++++++++++ Sub Menu +++++++++++++++++++++-->
+          <li class="nav-item dropdown side-dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Carriers
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="drivers.html">Drivers</a></li>
+              <li><a class="dropdown-item" href="entities.html">Entities </a></li>
+              <li><a class="dropdown-item" href="trailers.html">Trailers </a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="destinations.html">Destinations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="contacts.html">Contacts</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- !++++++++++++++  body contant ++++++++++++++++++++++++-->
+    <div class="body-content">
+      <div class="container order-status">
+        <h1 class="header">Order Status</h1>
+        <div class="os-select osd-top">
+          <select class="form-select form-select-lg " aria-label=".form-select-lg example">
+            <option selected>Status</option>
+          </select>
+        </div>
+        <div class="row order-selector">
+          <div class="col-lg-6 col-xl-3 col-md-6">
+            <div class="wrapperarr">
+              <div class="select_wrap">
+                <ul class="default_option" id="default_option_one">
+                  <li>
+                    <div class="option terminals">
+                      <div class="icon"></div>
+                      <p>All Terminals</p>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="select_ul" id="one">
+                  <li>
+                    <div class="option search">
+                      <div class="icon"></div>
+                      <p>Search terminal</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="option bluewing">
+                      <div class="icon"></div>
+                      <p>Bluewing One</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="option royal">
+                      <div class="icon"></div>
+                      <p>Bluewing Royal</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xl-4 col-md-6">
+            <div class="row order-selector-group">
+              <div class="col-6">
+                <div class="wrapperarr">
+                  <div class="select_wrap">
+                    <ul class="default_option" id="default_option_two">
+                      <li>
+                        <div class="option car">
+                          <div class="icon"></div>
+                          <p>All Terminals</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="wrapperarr">
+                  <div class="select_wrap">
+                    <ul class="default_option" id="default_option_three">
+                      <li>
+                        <div class="option account">
+                          <div class="icon"></div>
+                          <p>All Terminals</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xl-3 col-md-6">
+            <div class="wrapperarr">
+              <div class="select_wrap">
+                <ul class="default_option" id="default_option_four">
+                  <li>
+                    <div class="option order-num">
+                      <div class="icon"></div>
+                      <p>Order Number</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xl-2 col-md-6">
+            <div class="left-inner-addon input-container">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.5 0C3.63261 0 3.75979 0.0526784 3.85355 0.146447C3.94732 0.240215 4 0.367392 4 0.5V1H12V0.5C12 0.367392 12.0527 0.240215 12.1464 0.146447C12.2402 0.0526784 12.3674 0 12.5 0C12.6326 0 12.7598 0.0526784 12.8536 0.146447C12.9473 0.240215 13 0.367392 13 0.5V1H14C14.5304 1 15.0391 1.21071 15.4142 1.58579C15.7893 1.96086 16 2.46957 16 3V14C16 14.5304 15.7893 15.0391 15.4142 15.4142C15.0391 15.7893 14.5304 16 14 16H2C1.46957 16 0.960859 15.7893 0.585786 15.4142C0.210714 15.0391 0 14.5304 0 14V3C0 2.46957 0.210714 1.96086 0.585786 1.58579C0.960859 1.21071 1.46957 1 2 1H3V0.5C3 0.367392 3.05268 0.240215 3.14645 0.146447C3.24021 0.0526784 3.36739 0 3.5 0V0ZM1 4V14C1 14.2652 1.10536 14.5196 1.29289 14.7071C1.48043 14.8946 1.73478 15 2 15H14C14.2652 15 14.5196 14.8946 14.7071 14.7071C14.8946 14.5196 15 14.2652 15 14V4H1Z"
+                  fill="#76787A" />
+              </svg>
+              <input class="input-group" type="text" placeholder="Wed,Jul 21 - Thu, Jul 22" id="datepicker" />
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-center os-dropdown-group">
+          <div class="col-lg-2">
+            <a href="#" class="btn">
+              <svg data-bbox="23 36 154 128" viewBox="0 0 200 200" height="20" width="20"
+                xmlns="http://www.w3.org/2000/svg" data-type="shape">
+                <path
+                  d="M42.909 86.667V40a4 4 0 0 1 8 0v46.667a4 4 0 0 1-8 0zM100 96a4 4 0 0 0-4 4v60a4 4 0 0 0 8 0v-60a4 4 0 0 0-4-4zm53.091 8a4 4 0 0 0 4-4V40a4 4 0 0 0-8 0v60a4 4 0 0 0 4 4zm-86.273 5.333H27a4 4 0 0 0 0 8h15.909V160a4 4 0 0 0 8 0v-42.667h15.909a4 4 0 0 0 0-8zm53.091-40H104V40a4 4 0 0 0-8 0v29.333H80.091a4 4 0 0 0 0 8h39.818a4 4 0 0 0 0-8zM173 122.667h-39.818a4 4 0 0 0 0 8h15.909V160a4 4 0 0 0 8 0v-29.333H173a4 4 0 0 0 0-8z"
+                  fill="#1b5deb"></path>
+              </svg>
+              Filters
+            </a>
+          </div>
+          <div class="col-lg-10 col-md-12">
+            <div class="os-dropdown-group-item">
+              <div class="os-select">
+                <select class="form-select form-select-lg " aria-label=".form-select-lg example">
+                  <option selected>Customers</option>
+                  <!-- <option value="1">ULSD</option> -->
+                </select>
+              </div>
+              <div class="os-select">
+                <select class="form-select form-select-lg " aria-label=".form-select-lg example">
+                  <option selected>Carriers</option>
+                </select>
+              </div>
+              <div class="os-select">
+                <select class="form-select form-select-lg " aria-label=".form-select-lg example">
+                  <option selected>Products</option>
+                </select>
+              </div>
+              <div class="os-select">
+                <select class="form-select form-select-lg " aria-label=".form-select-lg example">
+                  <option selected>Tanks</option>
+                </select>
+              </div>
+              <div class="os-select">
+                <select class="form-select form-select-lg " aria-label=".form-select-lg example">
+                  <option selected>Destinations</option>
+                </select>
+              </div>
+              <div class="os-select">
+                <select class="form-select form-select-lg " aria-label=".form-select-lg example">
+                  <option selected>Order Types</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="filter-insights">
+              <div class="dropdown-container">
+                <div class="filter click" id="trailer-dropdown-icon">
+                  <div class="filter-header">
+                    <div class="header-item-group">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#128DFE"
+                        class="bi bi-reception-4" viewBox="0 0 16 16">
+                        <path
+                          d="M0 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-5zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-8zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-11z" />
+                      </svg>
+                      <div class="item">
+                        <h5>Scheduled</h5>
+                        <p>60,000 BBLS</p>
+                      </div>
+                      <div class="item">
+                        <h5>Closed</h5>
+                        <p>2,000 BBLS</p>
+                      </div>
+                      <div class="item">
+                        <h5>Remaining Balance</h5>
+                        <p>58,000 BBLS</p>
+                      </div>
+                    </div>
+                    <a href="#">
+                      <i for="openDropdown" class="dropdown icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" class="bi bi-chevron-up"
+                          viewBox="0 0 16 16">
+                          <path fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                      </i>
+                    </a>
+                  </div>
+                </div>
+                <!-- <input type="checkbox" id="openDropdown" hidden> -->
+                <div class="dropdown-menu" id="trailer-data" style="display: none;">
+                  <div class="menu-group">
+                    <ul class="status-overview nav nav-pills">
+                      <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="pill" href="#Status">Order By Status</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="pill" href="#Monitoring">Error Monitoring</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-content" id="order-by-status">
+                    <div class="tab-pane active" id="Status">
+                      <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="box">
+                          <div id="st-bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="Monitoring">
+                      <div class="row">
+                        <div class="col-lg-7 col-md-12 col-sm-12">
+                          <div class="box">
+                            <div id="monitoring-bar" style="height: 350px; width: auto;"></div>
+                          </div>
+                        </div>
+                        <div class="col-lg-2 col-md-12 col-sm-12">
+                          <div class="box box-content">
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="title-color">
+                                  <p>Ok Orders</p>
+                                  <div class="green-box"></div>
+                                </div>
+                                <h5>100%</h5><span>17 Orders</span>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="title-color">
+                                  <p>Orders with errors</p>
+                                  <div class="red-box"></div>
+                                </div>
+                                <h5>0%</h5><span>0 Orders</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-12 col-sm-12">
+                          <div class="box box-content">
+                            <h5>Error Log</h5>
+                            <table class="table table-hover">
+                              <thead>
+                                <tr>
+                                  <th>EVENT</th>
+                                  <th>ORDER</th>
+                                  <th>TIME</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Rejected</td>
+                                  <td>87999</td>
+                                  <td>3:35PM UTC 2022-AUG-18</td>
+                                </tr>
+                                <tr>
+                                  <td>Rejected</td>
+                                  <td>87999</td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>Rejected</td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- !++++++++++++++Check Section +++++++++++++++++++++++++++-->
+        <div class="check-sec title-check mt-4 orderd-etails">
+          <div class="status-customize">
+            <div class="del-sec">
+              <div class="del-sec-left"> <input class="form-check-input dele" type="checkbox" value=""
+                  style="width: 16px;height: 16px;">
+                <button class="btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                  </svg>
+                  Delete An Order
+                </button>
+                <button class="btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-pencil" viewBox="0 0 16 16">
+                    <path
+                      d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                  </svg>
+                  Edit Order
+                </button>
+                <button class="btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-download" viewBox="0 0 16 16">
+                    <path
+                      d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                    <path
+                      d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                  </svg>
+                  Export Data
+                </button>
+              </div>
+              <div class="del-sec-right">
+                <button class="btn">
+                  <p>Sort by:</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-down-up" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="status">
+
+            <div class="status-item-group">
+              <div class="check-input-icon">
+                <input class="form-check-input" type="checkbox" value="" style="width: 16px;height: 16px;">
+              </div>
+              <div class="status-items-content" data-bs-toggle="modal" data-bs-target="#status-mod-order">
+                <div class="item">
+                  <p>Order Number</p> <br> <span>87999</span>
+                </div>
+                <div class="item">
+                  <p>Carrier</p> <br> <span>Luxemborg</span>
+                </div>
+                <div class="item">
+                  <p>Trailor</p> <br> <span>564</span>
+                </div>
+                <div class="item">
+                  <p>Product</p> <br> <span>Regular Gasoline</span>
+                </div>
+                <div class="item">
+                  <p>Tank</p> <br> <span>12</span>
+                </div>
+                <div class="item"><a href="" data-bs-toggle="modal" data-bs-target="#status-mod-order"
+                    class="btn">Scheduled</a>
+                </div>
+              </div>
+            </div>
+            <div class="status-item-group">
+              <div class="check-input-icon">
+                <input class="form-check-input" type="checkbox" value="" style="width: 16px;height: 16px;">
+              </div>
+              <div class="status-items-content" data-bs-toggle="modal" data-bs-target="#status-mod-order">
+                <div class="item">
+                  <p>Order Number</p> <br> <span>87999</span>
+                </div>
+                <div class="item">
+                  <p>Carrier</p> <br> <span>Luxemborg</span>
+                </div>
+                <div class="item">
+                  <p>Trailor</p> <br> <span>564</span>
+                </div>
+                <div class="item">
+                  <p>Product</p> <br> <span>Regular Gasoline</span>
+                </div>
+                <div class="item">
+                  <p>Tank</p> <br> <span>12</span>
+                </div>
+                <div class="item"><a href="" data-bs-toggle="modal" data-bs-target="#status-mod-order"
+                    class="btn">Scheduled</a>
+                </div>
+              </div>
+            </div>
+            <div class="status-item-group">
+              <div class="check-input-icon">
+                <input class="form-check-input" type="checkbox" value="" style="width: 16px;height: 16px;">
+              </div>
+              <div class="status-items-content" data-bs-toggle="modal" data-bs-target="#status-mod-order">
+                <div class="item">
+                  <p>Order Number</p> <br> <span>87999</span>
+                </div>
+                <div class="item">
+                  <p>Carrier</p> <br> <span>Luxemborg</span>
+                </div>
+                <div class="item">
+                  <p>Trailor</p> <br> <span>564</span>
+                </div>
+                <div class="item">
+                  <p>Product</p> <br> <span>Regular Gasoline</span>
+                </div>
+                <div class="item">
+                  <p>Tank</p> <br> <span>12</span>
+                </div>
+                <div class="item"><a href="" data-bs-toggle="modal" data-bs-target="#status-mod-order"
+                    class="btn">Scheduled</a>
+                </div>
+              </div>
+            </div>
+            <div class="status-item-group">
+              <div class="check-input-icon">
+                <input class="form-check-input" type="checkbox" value="" style="width: 16px;height: 16px;">
+              </div>
+              <div class="status-items-content" data-bs-toggle="modal" data-bs-target="#status-mod-order">
+                <div class="item">
+                  <p>Order Number</p> <br> <span>87999</span>
+                </div>
+                <div class="item">
+                  <p>Carrier</p> <br> <span>Luxemborg</span>
+                </div>
+                <div class="item">
+                  <p>Trailor</p> <br> <span>564</span>
+                </div>
+                <div class="item">
+                  <p>Product</p> <br> <span>Regular Gasoline</span>
+                </div>
+                <div class="item">
+                  <p>Tank</p> <br> <span>12</span>
+                </div>
+                <div class="item"><a href="" data-bs-toggle="modal" data-bs-target="#status-mod-order"
+                    class="btn">Gate-in</a>
+                </div>
+              </div>
+            </div>
+            <div class="status-item-group">
+              <div class="check-input-icon">
+                <input class="form-check-input" type="checkbox" value="" style="width: 16px;height: 16px;">
+              </div>
+              <div class="status-items-content" data-bs-toggle="modal" data-bs-target="#status-mod-order">
+                <div class="item">
+                  <p>Order Number</p> <br> <span>87999</span>
+                </div>
+                <div class="item">
+                  <p>Carrier</p> <br> <span>Luxemborg</span>
+                </div>
+                <div class="item">
+                  <p>Trailor</p> <br> <span>564</span>
+                </div>
+                <div class="item">
+                  <p>Product</p> <br> <span>Regular Gasoline</span>
+                </div>
+                <div class="item">
+                  <p>Tank</p> <br> <span>12</span>
+                </div>
+                <div class="item"><a href="" data-bs-toggle="modal" data-bs-target="#status-mod-order"
+                    class="btn">Gate-in</a>
+                </div>
+              </div>
+            </div>
+            <div class="status-item-group">
+              <div class="check-input-icon">
+                <input class="form-check-input" type="checkbox" value="" style="width: 16px;height: 16px;">
+              </div>
+              <div class="status-items-content" data-bs-toggle="modal" data-bs-target="#status-mod-order">
+                <div class="item">
+                  <p>Order Number</p> <br> <span>87999</span>
+                </div>
+                <div class="item">
+                  <p>Carrier</p> <br> <span>Luxemborg</span>
+                </div>
+                <div class="item">
+                  <p>Trailor</p> <br> <span>564</span>
+                </div>
+                <div class="item">
+                  <p>Product</p> <br> <span>Regular Gasoline</span>
+                </div>
+                <div class="item">
+                  <p>Tank</p> <br> <span>12</span>
+                </div>
+                <div class="item"><a href="" data-bs-toggle="modal" data-bs-target="#status-mod-order"
+                    class="btn">Gate-in</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="status-item-group" id="show-more">
+              <a href="javascript:void(1)" class="more-order">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-chevron-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                </svg>
+                <p>6 More Order</p>
+              </a>
+            </div>
+            <div id="show-more-content">
+
+              <div class="status-item-group">
+                <div class="check-input-icon">
+                  <input class="form-check-input" type="checkbox" value="" style="width: 16px;height: 16px;">
+                </div>
+                <div class="status-items-content" data-bs-toggle="modal" data-bs-target="#status-mod-order">
+                  <div class="item">
+                    <p>Order Number</p> <br> <span>87999</span>
+                  </div>
+                  <div class="item">
+                    <p>Carrier</p> <br> <span>Luxemborg</span>
+                  </div>
+                  <div class="item">
+                    <p>Trailor</p> <br> <span>564</span>
+                  </div>
+                  <div class="item">
+                    <p>Product</p> <br> <span>Regular Gasoline</span>
+                  </div>
+                  <div class="item">
+                    <p>Tank</p> <br> <span>12</span>
+                  </div>
+                  <div class="item"><a href="" data-bs-toggle="modal" data-bs-target="#status-mod-order"
+                      class="btn closed-btn">Loading</a>
+                  </div>
+                </div>
+              </div>
+              <div class="status-item-group">
+                <div class="check-input-icon">
+                  <input class="form-check-input" type="checkbox" value="" style="width: 16px;height: 16px;">
+                </div>
+                <div class="status-items-content" data-bs-toggle="modal" data-bs-target="#status-mod-order">
+                  <div class="item">
+                    <p>Order Number</p> <br> <span>87999</span>
+                  </div>
+                  <div class="item">
+                    <p>Carrier</p> <br> <span>Luxemborg</span>
+                  </div>
+                  <div class="item">
+                    <p>Trailor</p> <br> <span>564</span>
+                  </div>
+                  <div class="item">
+                    <p>Product</p> <br> <span>Regular Gasoline</span>
+                  </div>
+                  <div class="item">
+                    <p>Tank</p> <br> <span>12</span>
+                  </div>
+                  <div class="item"><a href="" data-bs-toggle="modal" data-bs-target="#status-mod-order"
+                      class="btn closed-btn">Loading</a>
+                  </div>
+                </div>
+              </div>
+              <div class="status-item-group">
+                <div class="check-input-icon">
+                  <input class="form-check-input" type="checkbox" value="" style="width: 16px;height: 16px;">
+                </div>
+                <div class="status-items-content" data-bs-toggle="modal" data-bs-target="#status-mod-order">
+                  <div class="item">
+                    <p>Order Number</p> <br> <span>87999</span>
+                  </div>
+                  <div class="item">
+                    <p>Carrier</p> <br> <span>Luxemborg</span>
+                  </div>
+                  <div class="item">
+                    <p>Trailor</p> <br> <span>564</span>
+                  </div>
+                  <div class="item">
+                    <p>Product</p> <br> <span>Regular Gasoline</span>
+                  </div>
+                  <div class="item">
+                    <p>Tank</p> <br> <span>12</span>
+                  </div>
+                  <div class="item"><a href="" data-bs-toggle="modal" data-bs-target="#status-mod-order"
+                      class="btn closed-btn">Loading</a>
+                  </div>
+                </div>
+              </div>
+              <div class="status-item-group">
+                <div class="check-input-icon">
+                  <input class="form-check-input" type="checkbox" value="" style="width: 16px;height: 16px;">
+                </div>
+                <div class="status-items-content" data-bs-toggle="modal" data-bs-target="#status-mod-order">
+                  <div class="item">
+                    <p>Order Number</p> <br> <span>87999</span>
+                  </div>
+                  <div class="item">
+                    <p>Carrier</p> <br> <span>Luxemborg</span>
+                  </div>
+                  <div class="item">
+                    <p>Trailor</p> <br> <span>564</span>
+                  </div>
+                  <div class="item">
+                    <p>Product</p> <br> <span>Regular Gasoline</span>
+                  </div>
+                  <div class="item">
+                    <p>Tank</p> <br> <span>12</span>
+                  </div>
+                  <div class="item"><a href="" data-bs-toggle="modal" data-bs-target="#status-mod-order"
+                      class="btn closed-btn">Loading</a>
+                  </div>
+                </div>
+              </div>
+              <div class="status-item-group">
+                <div class="check-input-icon">
+                  <input class="form-check-input" type="checkbox" value="" style="width: 16px;height: 16px;">
+                </div>
+                <div class="status-items-content" data-bs-toggle="modal" data-bs-target="#status-mod-order">
+                  <div class="item">
+                    <p>Order Number</p> <br> <span>87999</span>
+                  </div>
+                  <div class="item">
+                    <p>Carrier</p> <br> <span>Luxemborg</span>
+                  </div>
+                  <div class="item">
+                    <p>Trailor</p> <br> <span>564</span>
+                  </div>
+                  <div class="item">
+                    <p>Product</p> <br> <span>Regular Gasoline</span>
+                  </div>
+                  <div class="item">
+                    <p>Tank</p> <br> <span>12</span>
+                  </div>
+                  <div class="item"><a href="" data-bs-toggle="modal" data-bs-target="#status-mod-order"
+                      class="btn closed-btn">Closed</a>
+                  </div>
+                </div>
+              </div>
+              <div class="status-item-group">
+                <div class="check-input-icon">
+                  <input class="form-check-input" type="checkbox" value="" style="width: 16px;height: 16px;">
+                </div>
+                <div class="status-items-content" data-bs-toggle="modal" data-bs-target="#status-mod-order">
+                  <div class="item">
+                    <p>Order Number</p> <br> <span>87999</span>
+                  </div>
+                  <div class="item">
+                    <p>Carrier</p> <br> <span>Luxemborg</span>
+                  </div>
+                  <div class="item">
+                    <p>Trailor</p> <br> <span>564</span>
+                  </div>
+                  <div class="item">
+                    <p>Product</p> <br> <span>Regular Gasoline</span>
+                  </div>
+                  <div class="item">
+                    <p>Tank</p> <br> <span>12</span>
+                  </div>
+                  <div class="item"><a href="" data-bs-toggle="modal" data-bs-target="#status-mod-order"
+                      class="btn closed-btn">Closed</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="status-item-group" id="show-less">
+                <a href="javascript:void(1)" class="more-order">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-up" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+                  </svg>
+                  <p>Hide 6 Orders</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!------------------------------------------------------------
+    ========================= Modal  Order status==================
+    -------------------------------------------------------------->
+    <!-- Modal demo-->
+    <div class="modal fade os_model" id="status-mod-order" data-bs-backdrop="static" data-bs-keyboard="false"
+      tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-none">
+          <div class="modal-body status-mod-header-area mb-5">
+            <div class="status-mod-header">
+              <div class="text-align-end">
+                <button type="button" class="" data-bs-dismiss="modal" aria-label="Close">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                  </svg>
+                </button>
+              </div>
+              <div class="row ps-3">
+                <div class="col-lg-9">
+                  <h3 class="color-white title">Luxemborg 564</h3>
+                </div>
+                <div class="col-lg-3">
+                  <h3 class="color-white">CLOSED</h3>
+                </div>
+                <div class="col-lg-9">
+                  <p class="color-white title">Order 87999</p>
+                </div>
+                <div class="col-lg-3" style="margin-bottom: 20px;"><a data-bs-toggle="modal" data-bs-toggle="modal" data-bs-dismiss="modal"
+                    href="#status-mod-closed-obl" class="color-white h-underline">BOL 1078962</a></div>
+              </div>
+              <div class="row status-mod-main-tab">
+                <div class=" col-lg-6 colum-left">
+                  <!-- !TAB button -->
+                  <ul class="nav nav-pills" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="mod-link-id" data-bs-toggle="pill"
+                        href="#status-mod-order-tab">Order
+                        Status</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="mod-link-id2" data-bs-toggle="pill" href="#tatus-mod-upload-tab">Update
+                        Order</a>
+                    </li>
+                  </ul>
+                </div>
+                <!--  -->
+                <div class="col-lg-6 colum-right pe-5 status-mod-right">
+                  <input class="status-mod-input me-3" type="date" value="2020-06-01">
+                  <button class="status-mod-btn">Update Order</button>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <!-- !Tab panes -->
+            <div class="tab-content">
+              <!-- ?tab 1 -->
+              <div id="status-mod-order-tab" class="tab-pane status-mod-order-tab active">
+                <div class="tab-pane container">
+                  <div class="row">
+                    <div class="col-12">
+                      <h4>Closed</h4>
+                      <div class="bar"></div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="option-status">
+                        <span>Closed on</span>
+                        <h5>Monday</h5>
+                        <span class="date">12/12/2021</span>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="option-status">
+                        <span>Time</span>
+                        <h5>at 9:59 AM</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="timeline-container">
+                        <div class="aaaaa">
+                          <ul class="timeline-header-list">
+                            <li>Update</li>
+                            <li>Date</li>
+                            <li>Local Time</li>
+                            <li>Description</li>
+                          </ul>
+                          <ul class="timeline">
+                            <li>
+                              <div class="trailer-data">
+                                <ul class="list header-list">
+                                  <li>Closed</li>
+                                  <li>12/12/21</li>
+                                  <li>9:59 AM</li>
+                                  <li>Order completed</li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                          <ul class="timeline">
+                            <li>
+                              <div class="trailer-data">
+                                <ul class="list">
+                                  <li>Gate-in</li>
+                                  <li>12/12/21</li>
+                                  <li>9:12 AM</li>
+                                  <li>Trailer entered terminal</li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                          <ul class="timeline">
+                            <li>
+                              <div class="trailer-data">
+                                <ul class="list">
+                                  <li>Driver Dispatched</li>
+                                  <li>12/12/21</li>
+                                  <li>9:5 AM</li>
+                                  <li>[Driver name} confirmed dispatch for loading</li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                          <ul class="timeline">
+                            <li>
+                              <div class="trailer-data">
+                                <ul class="list">
+                                  <li>Driver Notified for Dispatch</li>
+                                  <li>12/12/21</li>
+                                  <li>9:5 AM</li>
+                                  <li>[Driver name] notified to confirm dispatch for loading</li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                          <ul class="timeline">
+                            <li>
+                              <div class="trailer-data">
+                                <ul class="list">
+                                  <li>Checked-in</li>
+                                  <li>12/12/21</li>
+                                  <li>9:5 AM</li>
+                                  <li>[Driver name] checked-in at terminal</li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                          <ul class="timeline">
+                            <li>
+                              <div class="trailer-data">
+                                <ul class="list">
+                                  <li>Scheduled</li>
+                                  <li>12/12/21</li>
+                                  <li>9:5 AM</li>
+                                  <li>Customer submitted order approved by [user]</li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                          <ul class="timeline">
+                            <li>
+                              <div class="trailer-data">
+                                <ul class="list">
+                                  <li>Order Submitted</li>
+                                  <li>12/12/21</li>
+                                  <li>9:5 AM</li>
+                                  <li>[Customer user name] submitted order for approval</li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ?tab 2 -->
+              <div id="tatus-mod-upload-tab" class="container tab-pane fade tatus-mod-upload-tab">
+                <!--  ! 2nd Nav pills Button-->
+                <ul class="nav nav-pills mt-5 ms-5" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="pill" href="#osm-general">General</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="pill" href="#osm-carrier">Carrier</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="pill" href="#osm-more">more</a>
+                  </li>
+                </ul>
+
+                <!-- !Tab panes -->
+                <div class="tab-content">
+                  <!--tab 1 -->
+                  <div id="osm-general" class="container tab-pane active p-5"><br>
+                    <div class="upload-tab-form-controller">
+                      <form action="#">
+                        <div class="row">
+                          <div class="col-md-6 mb-4 px-sm-5">
+                            <label for="exampleFormControlInput1" class="form-label">Terminal *</label>
+                            <select class="form-select h4" aria-label="Default select example">
+                              <option selected>Bluewing one</option>
+                              <option value="1">One</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6 mb-4 px-sm-5">
+                            <label for="exampleFormControlInput1" class="form-label">Destination *</label>
+                            <select class="form-select h4" aria-label="Default select example">
+                              <option selected>Bluewing one</option>
+                              <option value="1">One</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6 mb-4 px-sm-5">
+                            <label for="exampleFormControlInput1" class="form-label">Supplier *</label>
+                            <select class="form-select h4" aria-label="Default select example">
+                              <option selected>Dreaman Systems</option>
+                              <option value="1">One</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6 mb-4 px-sm-5">
+                            <label for="exampleFormControlInput1" class="form-label">Customer *</label>
+                            <select class="form-select h4" aria-label="Default select example">
+                              <option selected>Dreaman Systems</option>
+                              <option value="1">One</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6 mb-4 px-sm-5">
+                            <label for="exampleFormControlInput1" class="form-label">Order Type *</label>
+                            <select class="form-select h4" aria-label="Default select example">
+                              <option selected>Ranck Loading</option>
+                              <option value="1">One</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6 mb-4 px-sm-5 pt-custrom">
+
+                            <select class="form-select h4" aria-label="Default select example">
+                              <option selected>tank 12</option>
+                              <option value="1">One</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6 mb-4 px-sm-5 pt-custrom">
+                            <select class="form-select h4" aria-label="Default select example">
+                              <option selected>Tank 12</option>
+                              <option value="1">Tank 10</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6 mb-4 px-sm-5">
+                            <label for="exampleFormControlInput1" class="form-label">Amount (USG)</label>
+                            <input type="text" class="form-control " value="10,000" placeholder="10,000">
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <!--tab 2 -->
+                  <div id="osm-carrier" class="container tab-pane fade"><br>
+                    <div class="upload-tab-form-controller font-m">
+                      <form action="#">
+                        <div class="row">
+                          <div class="col-md-6 mb-4 px-sm-5">
+                            <label for="exampleFormControlInput1" class="form-label">Carrier *</label>
+                            <select class="form-select h4" aria-label="Default select example">
+                              <option selected>Dreaman Systems</option>
+                              <option value="1">One</option>
+                            </select>
+                          </div>
+                          <div class="col-md-6 mb-4 px-sm-5">
+                            <label for="exampleFormControlInput1" class="form-label">Carrier Code *</label>
+                            <input type="text" class="form-control ">
+                          </div>
+                          <div class="col-md-6 mb-4 px-sm-5">
+                            <label for="exampleFormControlInput1" class="form-label">Truck</label>
+                            <input type="text" class="form-control ">
+                          </div>
+
+                          <div class="col-md-6 mb-4 px-sm-5">
+                            <label for="exampleFormControlInput1" class="form-label">Truck License Plate</label>
+                            <input type="text" class="form-control ">
+                          </div>
+                          <div class="col-md-6 mb-4 px-sm-5">
+                            <label for="exampleFormControlInput1" class="form-label">Trailer *</label>
+                            <input type="number" class="form-control " value="564">
+                          </div>
+                          <div class="col-md-6 mb-4 px-sm-5">
+                            <label for="exampleFormControlInput1" class="form-label">Trailer License Plate</label>
+                            <input type="text" class="form-control ">
+                          </div>
+                          <div class="col-md-6 mb-4 px-sm-5">
+                            <label for="exampleFormControlInput1" class="form-label">Seals</label>
+                            <input type="text" class="form-select lock-icon">
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <!-- tab 3 -->
+                  <div id="osm-more" class="container tab-pane fade"><br>
+                    <div class="upload-tab-form-controller font-m">
+                      <form action="#">
+                        <div class="row">
+                          <div class="col-md-6 mb-4 px-sm-5">
+                            <label for="exampleFormControlInput1" class="form-label">Company Code</label>
+                            <input type="text" class="form-control ">
+                          </div>
+                          <div class="col-md-6 mb-4 px-sm-5">
+                            <label for="exampleFormControlInput1" class="form-label">SPLC</label>
+                            <input type="text" class="form-control ">
+                          </div>
+
+                          <div class="col-md-6 mb-4 px-sm-5">
+                            <label for="exampleFormControlInput1" class="form-label">Product Code</label>
+                            <input type="text" class="form-control ">
+                          </div>
+                          <div class="col-md-6 mb-4 px-sm-5">
+                            <label for="exampleFormControlInput1" class="form-label">Lot #</label>
+                            <input type="text" class="form-control ">
+                          </div>
+                          <div class="col-md-6 mb-4 px-sm-5">
+                            <label for="exampleFormControlInput1" class="form-label">3rd Party BOL</label>
+                            <input type="text" class="form-control " value="10,000" placeholder="">
+                          </div>
+                          <div class="col-md-6 mb-4 px-sm-5">
+                            <label for="exampleFormControlInput1" class="form-label">In Care Of</label>
+                            <input type="text" class="form-control " value="10,000" placeholder="">
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <!-- Modal closed obl-->
+    <div class="modal fade" id="status-mod-closed-obl" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-none">
+          <div class="modal-body status-mod-header-area">
+            <div class="status-mod-header">
+              <div class="text-align-end">
+                <button type="button" class="" data-bs-dismiss="modal" aria-label="Close">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                  </svg>
+                </button>
+              </div>
+              <div class="row ps-3">
+                <div class="col-lg-9">
+                  <h3 class="color-white">Luxemborg 564</h3>
+                </div>
+                <div class="col-lg-3">
+                  <h3 class="color-white">CLOSED</h3>
+                </div>
+                <div class="col-lg-9">
+                  <p class="color-white">Order 87999</p>
+                </div>
+                <div class="col-lg-3"><a href="#" class="color-white h-underline">BOL 1078962</a></div>
+              </div>
+              <div class="row status-mod-main-tab">
+                <div class=" col-lg-6 colum-left">
+                  <!-- !TAB button -->
+                  <ul class="nav nav-pills" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link " id="mod-link-id" data-bs-toggle="modal" data-bs-dismiss="modal"
+                        href="#status-mod-order">Order
+                        Status</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" id="mod-link-id2" href="#">Update
+                        Order</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- !================Body================ -->
+            <div class="status-mod-closed-obl-body">
+              <div class="row">
+                <div class="col-md-8">
+                  <h4>BOL summary</h4>
+                  <p>Customer: Customer name goes here</p>
+                  <p>Destination: Destination name goes here</p>
+                  <p>BOL date: BOL date timestamp from TAS goes here</p>
+                  <p>Order type: Order type goes here</p>
+                </div>
+                <div class="col-md-4 text-align-end">
+                  <p class="h6">BOL: 1078962</p>
+                  <a class="h-underline color-blue" href="#">Download PDF</a>
+                </div>
+              </div>
+              <!-- table -->
+              <h4 class="mt-4">Product details</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td><b>Product</b></td>
+                      <td><b>Temperature (F)</b></td>
+                      <td><b>Gravity API</b></td>
+                      <td><b>VCF</b></td>
+                      <td><b>Gross (USG)</b></td>
+                      <td><b>Net (USG)</b></td>
+                      <td><b>Tank</b></td>
+                    </tr>
+                    <tr>
+                      <td>Product BOL name here</td>
+                      <td>Truck from BOL here</td>
+                      <td>Gravity from BOL here</td>
+                      <td>VCF from BOL here</td>
+                      <td>Gross USG from BOL here</td>
+                      <td>Net USG from BOL here</td>
+                      <td>Tank from BOL here</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- table 2-->
+              <h4 class="mt-4">Product details</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td><b>Carrier</b></td>
+                      <td><b>Truck</b></td>
+                      <td><b>License</b></td>
+                      <td><b>Trailer</b></td>
+                      <td><b>License</b></td>
+                      <td><b>Driver</b></td>
+                      <td><b>Seals</b></td>
+                    </tr>
+                    <tr>
+                      <td>Carrier from BOL here</td>
+                      <td>Truck from BOL here</td>
+                      <td>Trailer license plate from BOL here</td>
+                      <td>Trailer from BOL here</td>
+                      <td>Trailer license plate from BOL here</td>
+                      <td>Driver from BOL here</td>
+                      <td>Seals from BOL here</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+
+              <!-- Link -->
+              <h4 class="mt-4 mb-3">BOL support</h4>
+              <p class="mb-0"><a class="h-underline color-blue " data-bs-toggle="modal" data-bs-dismiss="modal"
+                  href="#status-mod-entity">Update entity related information</a></p>
+              <p class="mb-0"><a class="h-underline color-blue" data-bs-toggle="modal" data-bs-dismiss="modal"
+                  href="#status-mod-truck">Update truck or trailer number</a></p>
+              <p class="mb-0"><a class="h-underline color-blue" data-bs-toggle="modal" data-bs-dismiss="modal"
+                  href="#status-mod-specifications">Update product name or specifications</a></p>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+    <!-- !Modal Update entity related information-->
+    <div class="modal fade" id="status-mod-entity" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true" style="margin-top: 40px">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body mx-sm-5 p-ms-1">
+            <h2>Update BOL entity info</h2>
+            <p class="py-3"> <span class="h6">NOTE: All BOL</span> updates are subject to terminal operator review and
+              approval. Update suggestions submitted here will be forwarded to the terminal operator for review.</p>
+            <h5 class="sm-low-opasity">BOL number</h5>
+            <p class="sm-low-opasity">1078962</p>
+            <!-- row -->
+            <div class="row mb-5 pb-5 mt-5">
+              <div class="col-md-6">
+                <div class="mb-4">
+                  <label for="exampleFormControlInput1" class="form-label h4 fw-4">Terminal *</label>
+                  <select class="form-select h3" aria-label="Default select example">
+                    <option selected>Bluewing One</option>
+                    <option value="1">Bluewing Royal</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-4">
+                  <label for="exampleFormControlInput1" class="form-label h4 fw-4">Position Holder *</label>
+                  <select class="form-select h3" aria-label="Default select example">
+                    <option selected>Flint Hills Resources</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-4">
+                  <label for="exampleFormControlInput1" class="form-label h4 fw-4">Supplier *</label>
+                  <select class="form-select h3" aria-label="Default select example">
+                    <option selected>Flint Hills Resources</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-4">
+                  <label for="exampleFormControlInput1" class="form-label h4 fw-4">Customer *</label>
+                  <select class="form-select h3" aria-label="Default select example">
+                    <option selected>Dearman Systems</option>
+                    <option value="1">IFC Fuels</option>
+                    <option value="1">Luxemborg</option>
+                    <option value="1">PetroNational</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-4">
+                  <label for="exampleFormControlInput1" class="form-label h4 fw-4">Carrier *</label>
+                  <select class="form-select h3" aria-label="Default select example">
+                    <option selected>Luxemborg</option>
+                    <option value="1">Trareysa</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-4">
+                  <label for="exampleFormControlInput1" class="form-label h4 fw-4">Destination *</label>
+                  <select class="form-select h3" aria-label="Default select example">
+                    <option selected>Mexico</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- !Button -->
+            <ul class="nav nav-pills mt-5">
+
+              <li class="nav-item">
+                <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#status-mod-request-sent"
+                  class="secound-btn radious me-2">
+                  Request update
+                </a>
+              </li>
+              <li class="nav-item">
+                <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#status-mod-closed-obl"
+                  class="secound-btn radious mt-5  low-opasity">
+                  Cancel
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- !Modal Update truck or trailer number-->
+    <div class="modal fade" id="status-mod-truck" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body mx-sm-5 p-ms-3">
+            <h2>Update BOL entity info</h2>
+            <p class="py-3"> <span class="h6">NOTE: All BOL</span> updates are subject to terminal operator review and
+              approval. Update suggestions submitted here will be forwarded to the terminal operator for review.</p>
+            <h5 class="sm-low-opasity">BOL number</h5>
+            <p class="sm-low-opasity">1078962</p>
+            <!-- row -->
+            <div class="row mb-5 pb-5 mt-5">
+              <div class="col-md-12">
+                <div class="mb-4">
+                  <label for="exampleFormControlInput1" class="form-label h4 fw-4">Truck number *</label>
+                  <input type="number" class="form-control big-font h3" placeholder="">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="mb-4">
+                  <label for="exampleFormControlInput1" class="form-label h4 fw-4">Trailer number *</label>
+                  <input type="number" class="form-control big-font h3" value="526" placeholder="">
+                </div>
+              </div>
+            </div>
+            <!-- !Button -->
+            <ul class="nav nav-pills mt-5">
+
+              <li class="nav-item">
+                <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#status-mod-request-sent"
+                  class="secound-btn radious me-2">
+                  Request update
+                </a>
+              </li>
+              <li class="nav-item">
+                <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#status-mod-closed-obl"
+                  class="secound-btn radious mt-5  low-opasity">
+                  Cancel
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- !Modal Update product name or specifications-->
+    <div class="modal fade" id="status-mod-specifications" data-bs-backdrop="static" data-bs-keyboard="false"
+      tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body mx-sm-5 p-ms-3">
+            <h2>Update BOL entity info</h2>
+            <p class="py-3"> <span class="h6">NOTE: All BOL</span> updates are subject to terminal operator review and
+              approval. Update suggestions submitted here will be forwarded to the terminal operator for review.</p>
+            <h5 class="sm-low-opasity">BOL number</h5>
+            <p class="sm-low-opasity">1078962</p>
+            <!-- row -->
+            <div class="row mb-5 pb-5 mt-5">
+              <div class="col-md-12">
+                <div class="mb-4">
+                  <label for="exampleFormControlInput1" class="form-label h4 fw-4">Product name *</label>
+                  <select class="form-select h3" aria-label="Default select example">
+                    <option selected>Regular Gasoline</option>
+                    <option value="1">ULSD</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="mb-4">
+                  <label for="exampleFormControlInput1" class="form-label h4 fw-4">Gravity API *</label>
+                  <input type="number" class="form-control big-font h3" value="64.39" placeholder="">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="mb-4">
+                  <label for="exampleFormControlInput1" class="form-label h4 fw-4">Pounds per gallon (PPG) *</label>
+                  <input type="number" class="form-control big-font h3" value="6.042358" placeholder="">
+                </div>
+              </div>
+            </div>
+            <!-- !Button -->
+            <ul class="nav nav-pills mt-5">
+
+              <li class="nav-item">
+                <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#status-mod-request-sent"
+                  class="secound-btn radious me-2">
+                  Request update
+                </a>
+              </li>
+              <li class="nav-item">
+                <a data-bs-toggle="modal" data-bs-dismiss="modal" href="#status-mod-closed-obl"
+                  class="secound-btn radious mt-5  low-opasity">
+                  Cancel
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ! **Modal** Update BOL request sent!-->
+    <div class="modal fade" id="status-mod-request-sent" data-bs-backdrop="static" data-bs-keyboard="false"
+      tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body m-sm-3 p-sm-5 status-mod-request-body">
+            <h2>Update BOL request sent!</h2>
+            <div class="status-mod-request-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor"
+                class="bi bi-check2-circle" viewBox="0 0 16 16">
+                <path
+                  d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z" />
+                <path
+                  d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
+              </svg>
+            </div>
+            <p class="mb-5">Your request to update <b>BOL 1078962</b> has been submitted to the terminal operator for
+              approval. You will be notified of the terminal's approval decision.</p>
+
+            <!-- !Button -->
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a data-bs-toggle="offcanvas" data-bs-dismiss="modal" href="#"
+                  class="secound-btn radious mt-5 me-2 low-opasity">
+                  Back
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/apexcharts.min.js"></script>
+    <script src="assets/js/lightpick.js"></script>
+    <script src="assets/js/chart.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/custom_jquery.js"></script>
+
+
+  
+      <script>
+      document.addEventListener('DOMContentLoaded', function () {
+
+
+        Highcharts.chart("monitoring-bar", {
+          chart: {
+            type: "spline",
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            scrollablePlotArea: {
+              minWidth: 600,
+              scrollPositionX: 1,
+            },
+          },
+          title: {
+            text: null,
+            align: "left",
+          },
+          xAxis: {
+            type: "datetime",
+            title: {
+              text: null,
+            },
+          },
+          yAxis: {
+            minorGridLineWidth: 1,
+            gridLineWidth: 1,
+            alternateGridColor: null,
+          },
+          colors: ["#128DFE", "#FF0000"],
+          plotOptions: {
+            spline: {
+              lineWidth: 4,
+              states: {
+                hover: {
+                  lineWidth: 5,
+                },
+              },
+              marker: {
+                enabled: false,
+              },
+              pointInterval: 3600000, // one hour
+              pointStart: Date.UTC(2018, 1, 13, 0, 0, 0),
+            },
+          },
+          series: [{
+              name: "",
+              data: [3.7, 3.3, 3.9, 5.1, 3.5, 3.8, 4.0, 5.0],
+            },
+            {
+              name: "",
+              data: [0, 0, 0, 0, 0, 0, 0, 0],
+            },
+          ],
+          navigation: {
+            menuItemStyle: {
+              fontSize: "10px",
+            },
+          },
+          credits: {
+            enabled: false,
+          },
+          exporting: {
+            buttons: {
+              contextButton: {
+                enabled: false,
+              },
+            },
+          },
+        });
+
+
+      });
+    </script>
+  
+  
+</body>
+
+</html>

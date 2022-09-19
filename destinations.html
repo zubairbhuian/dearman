@@ -6,147 +6,113 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="assets/css/style.css" />
-  <title>destinations</title>
+  <title>Destinations</title>
 </head>
 
 <body>
-  <main>
-    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ======================+++++++++++++ Top Navigation +++++++++++++++=============================
-   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
-      <div class="container-fluid">
-        <a class="side-appbar-icon " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
-          aria-controls="offcanvasScrolling">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-            class="bi bi-text-paragraph" viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-              d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z" />
-          </svg>
-        </a>
-        <a class="navbar-brand" href="index.html">
-          <img src="/assets/images/logo.png" alt=""><span>LYNX Console</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav  me-auto ms-auto ">
-            <li class="nav-item pe-5">
-              <a class="nav-link active" aria-current="page" href="index.html">Insights</a>
-            </li>
-            <li class="nav-item pe-5">
-              <a class="nav-link" href="#">Submit Orders</a>
-            </li>
-            <li class="nav-item position-relative ">
-              <a class="nav-link " href="#">Order Management</a>
-              <div class="custrom-badge">2 <span>New</span> </div>
-              </span>
-            </li>
-          </ul>
+  <!--======================Top Navigation============================-->
+  <!--======================Top Navigation============================-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-light header">
+    <div class="container-fluid">
+      <a class="side-appbar-icon " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+        aria-controls="offcanvasScrolling">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+          class="bi bi-text-paragraph" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z" />
+        </svg>
+      </a>
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/logo.png" alt=""><span>LYNX Console</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav  me-auto ms-auto ">
+          <li class="nav-item pe-5">
+            <a class="nav-link active" aria-current="page" href="index.html">Insights</a>
+          </li>
+          <li class="nav-item pe-5">
+            <a class="nav-link" href="submit_order.html">Submit Orders</a>
+          </li>
+          <li class="nav-item pe-5">
+            <a class="nav-link" href="order_status.html">Order Status</a>
+          </li>
+          <li class="nav-item position-relative ">
+            <a class="nav-link " href="order-management.html">Order Management</a>
+            <div class="custrom-badge">2 <span>New</span> </div>
+            </span>
+          </li>
+        </ul>
 
-          <ul class="navbar-nav me-6">
-            <li class="nav-item hide-lg">
-              <div class="circuler-avater">
-                <span>FH</span>
-              </div>
-            </li>
+        <ul class="navbar-nav me-6">
+          <li class="nav-item hide-lg">
+            <div class="circuler-avater">
+              <span>FH</span>
+            </div>
+          </li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <!--  -->
-                <!-- <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li class="nav-item dropdown navbarDropdown-btn position-relative" style="cursor: pointer;">
+            <a class="nav-link dropdown-toggle" onclick="showNavRight()">
+              Flint Hill
+            </a>
+            <!-- ?cus-nav-right-side -->
+            <div class="cus-nav-right-side">
+              <div class="side-appbar d-block">
+                <div class="navbar">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="profile_setting.html">Profile Settings</a>
+                    </li>
+                    <!--!+++++++++++++++ Sub Menu +++++++++++++++++++++-->
+                    <li class="nav-item dropdown side-dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Billing
+                      </a>
+                      <ul class="dropdown-menu  cus-nav-right-dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="purchase-services.html">Purchase services</a></li>
+                        <li><a class="dropdown-item" href="products-licenses.html">Your products and licenses</a></li>
+                        <li><a class="dropdown-item" href="payment-history.html">Payment history</a></li>
+                        <li><a class="dropdown-item" href="payment-methods.html">Payment methods</a></li>
+                        <li><a class="dropdown-item" href="billing-notifications.html">Billing notificatin</a></li>
+                        
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="login-pass.html">Log out</a>
+                    </li>
                   </ul>
-                </li> -->
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-          </ul>
+                </div>
+              </div>
+            </div>
+          </li>
 
-    </nav>
-    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ======================+++++++++++++  Mobail Side Menu  +++++++++++++++==========================   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <div class="offcanvas offcanvas-side-appbar offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
-      tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-      <div class="offcanvas-header">
+        </ul>
 
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <div class="side-appbar">
-          <div class="navbar">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="terminals.html">Terminals</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="suppliers.html">Suppliers</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="customers.html">Customers</a>
-              </li>
-              <!-- Sub Menu -->
-              <li class="nav-item dropdown side-dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-                  Carriers
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="drivers.html">Drivers</a></li>
-                  <li><a class="dropdown-item" href="entities.html">Entities </a></li>
-                  <li><a class="dropdown-item" href="trailers.html">Trailers</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="products.html">Products</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link " href="destinations.html">Destinations</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="contacts.html">Contacts</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+  </nav>
+  <!--==========================Mobail Side Menu==========================-->
+  <div class="offcanvas offcanvas-side-appbar offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
+    tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
-    <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ======================+++++++++++++  Main Body  +++++++++++++++==========================   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <div class="main-body">
-      <!-- side appbar -->
+    <div class="offcanvas-body">
       <div class="side-appbar">
         <div class="navbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="terminals.html">Destinations</a>
+              <a class="nav-link " aria-current="page" href="terminals.html">Terminals</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="suppliers.html">Suppliers</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contacts.html">Customers</a>
+              <a class="nav-link" href="customers.html">Customers</a>
             </li>
-            <!--!+++++++++++++++ Sub Menu +++++++++++++++++++++-->
+            <!-- Sub Menu -->
             <li class="nav-item dropdown side-dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -155,13 +121,13 @@
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item" href="drivers.html">Drivers</a></li>
                 <li><a class="dropdown-item" href="entities.html">Entities </a></li>
-                <li><a class="dropdown-item" href="trailers.html">Trailers </a></li>
+                <li><a class="dropdown-item" href="trailers.html">Trailers</a></li>
               </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link " href="products.html">Products</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link " href="destinations.html">Destinations</a>
             </li>
             <li class="nav-item">
@@ -170,171 +136,205 @@
           </ul>
         </div>
       </div>
-      <!-- !++++++++++++++  body contant ++++++++++++++++++++++++-->
-      <div class="body-content">
-        <h1 class="header">Destinations</h1>
-        <hr>
-        <div class="del-sec">
-          <div class="del-sec-left">
-            <button class="btn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                class="bi bi-droplet-fill" viewBox="0 0 16 16">
-                <path
-                  d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6ZM6.646 4.646l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448c.82-1.641 1.717-2.753 2.093-3.13Z" />
-              </svg>
-              Add a Destinations</button>
-            <button class="btn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x"
+    </div>
+  </div>
+
+
+  <!--==========================Main Body Side Menu==========================-->
+  <div class="main-body">
+    <!-- side appbar -->
+    <div class="side-appbar">
+      <div class="navbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="terminals.html">Terminals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="suppliers.html">Suppliers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="customers.html">Customers</a>
+          </li>
+          <!--!+++++++++++++++ Sub Menu +++++++++++++++++++++-->
+          <li class="nav-item dropdown side-dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Carriers
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="drivers.html">Drivers</a></li>
+              <li><a class="dropdown-item" href="entities.html">Entities </a></li>
+              <li><a class="dropdown-item" href="trailers.html">Trailers </a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="products.html">Products</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link " href="destinations.html">Destinations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="contacts.html">Contacts</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- !++++++++++++++  body contant ++++++++++++++++++++++++-->
+    <div class="body-content">
+      <h1 class="header">Destinations</h1>
+      <hr>
+      <div class="del-sec">
+        <div class="del-sec-left">
+          <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-set-up-basics">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+              class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+            </svg>
+            Add a Destinations</button>
+          <button class="btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x"
+              viewBox="0 0 16 16">
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+            Delete a Destinations</button>
+        </div>
+        <div class="del-sec-right">
+          <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
+          <div class="input-group">
+            <div class="input-group-text">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
                 viewBox="0 0 16 16">
                 <path
-                  d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
               </svg>
-              Delete a Destinations</button>
-          </div>
-          <div class="del-sec-right">
-            <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
-            <div class="input-group">
-              <div class="input-group-text">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
-                  viewBox="0 0 16 16">
-                  <path
-                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                </svg>
-              </div>
-              <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Username">
             </div>
+            <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Username">
+          </div>
 
-          </div>
         </div>
-        <!-- !++++++++++++++Check Section +++++++++++++++++++++++++++-->
-        <div class="check-sec title-check mt-4">
-          <div class="row">
-            <div class="col">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" >
-                <label class="form-check-label" >
-                  name
-                </label>
-              </div>
-            </div>
-            <div class="col ">Reference</div>
-            <div class="col hide-mob">AddressAddress</div>
-          </div>
-          <hr>
-        </div>
-        <!-- +++++ 1 ++++++-->
-        <div class="check-sec">
-          <div class="row">
-            <div class="col">
-              <div class="form-check ">
+      </div>
+      <!-- !++++++++++++++Check Section +++++++++++++++++++++++++++-->
+      <div class="check-sec title-check mt-4">
+        <div class="row">
+          <div class="col-12">
+            <div class="col-item">
+              <div class="co">
                 <input class="form-check-input" type="checkbox" value="">
-                <label class="form-check-label fw-bold" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                data-bs-target="#flint-modal">
-                  Default checkbox
-                </label>
+              </div>
+              <div class="item d-flex">
+                <div class="col">Name</div>
+                <div class="col ">Reference</div>
+                <div class="col hide-mob">Address</div>
               </div>
             </div>
-            <div class="col ">Bluewing One</div>
-            <div class="col hide-mob">11700 Old Hwy 48, Brownsville, TX 78521</div>
-          </div>
-          <hr>
-        </div>
-        <!--+++++++++ 2 ++++++++++-->
-        <div class="check-sec">
-          <div class="row">
-            <div class="col">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" >
-                <label class="form-check-label fw-bold" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                data-bs-target="#flint-modal">
-                  Default checkbox
-                </label>
-              </div>
-            </div>
-            <div class="col ">Bluewing One</div>
-            <div class="col hide-mob">11700 Old Hwy 48, Brownsville, TX 78521</div>
           </div>
           <hr>
         </div>
       </div>
 
+      <!-- +++++ 1 ++++++-->
+      <div class="check-sec">
+        <div class="row">
+          <div class="col-12">
+            <div class="col-item">
+              <div class="co">
+                <input class="form-check-input" type="checkbox" value="">
+              </div>
+              <div class="item d-flex" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#flint-modal">
+                <div class="col fw-bold">Bluewing One</div>
+                <div class="col ">Bluewing One</div>
+                <div class="col hide-mob">11700 Old Hwy 48, Brownsville, TX 78521</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- +++++ 2 ++++++-->
+      <div class="check-sec">
+        <div class="row">
+          <div class="col-12">
+            <div class="col-item">
+              <div class="co">
+                <input class="form-check-input" type="checkbox" value="">
+              </div>
+              <div class="item d-flex" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#flint-modal">
+                <div class="col fw-bold">Bluewing One</div>
+                <div class="col ">Bluewing One</div>
+                <div class="col hide-mob">11700 Old Hwy 48, Brownsville, TX 78521</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </div>
-    <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  </div>
+  <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     ======================+++++++++++++  Modal  +++++++++++++++==========================   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <!-- Modal -->
-    <div class="modal fade" id="flint-modal" tabindex="-1" aria-labelledby="flint-modalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg  modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
+  <!-- Modal -->
+  <div class="modal fade" id="flint-modal" tabindex="-1" aria-labelledby="flint-modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg  modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
 
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <!--card  -->
-            <div class="profile-card">
-              <div class="pp-content">
-                <h3>HF</h3>
-              </div>
-              <div class="text-content">
-                <h3>Flint Hills Resources</h3>
-                <div class="del-sec-left">
-                  <button class="btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x"
-                      viewBox="0 0 16 16">
-                      <path
-                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                    </svg>
-                    Delete a Terminal</button>
-                </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!--card  -->
+          <div class="profile-card">
+            <div class="pp-content">
+              <h3>HF</h3>
+            </div>
+            <div class="text-content">
+              <h3>Flint Hills Resources</h3>
+              <div class="del-sec-left">
+                <button class="btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                  </svg>
+                  Delete a Terminal</button>
               </div>
             </div>
-            <!--+++++++++++++++++ tab  button+++++++++++++++-->
-            <ul class="nav flint-modal-tab-btn">
-              <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="pill" href="#name-tab">Name & address</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="pill" href="#business-tab">Business info</a>
-              </li>
-            </ul>
-            <!--++++++++++++ Tab panes ++++++++++++++++++++-->
-            <div class="tab-content flint-modal-tab-content">
-              <!-- tab one -->
-              <div class="tab-pane container active" id="name-tab">
-                <!-- frist row -->
-                <div class="row mt-5">
-                  <div class="col-md-6">
-                    <h6 class="h6">Supplier name</h6>
-                    <p>Flint Hills Resources</p>
-                    <a class="nav-link" href="#">Manage customer name</a>
-                  </div>
-                  <div class="col-md-6">
-                    <h6 class="h6">Supplier name</h6>
-                    <p>Flint Hills Resources</p>
-                    <a class="nav-link" href="#">Manage customer name</a>
-                  </div>
+          </div>
+          <!--+++++++++++++++++ tab  button+++++++++++++++-->
+          <ul class="nav flint-modal-tab-btn">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="pill" href="#name-tab">Name & address</a>
+            </li>
+          </ul>
+          <!--++++++++++++ Tab panes ++++++++++++++++++++-->
+          <div class="tab-content flint-modal-tab-content">
+            <!-- tab one -->
+            <div class="tab-pane container active" id="name-tab">
+              <!-- frist row -->
+              <div class="row mt-5">
+                <div class="col-md-6">
+                  <h6 class="h6">Supplier name</h6>
+                  <p>Flint Hills Resources</p>
+                  <a class="nav-link" href="#">Manage customer name</a>
                 </div>
-                <!-- secound row -->
-                <div class="row mt-5">
-                  <div class="col-md-6">
-                    <h6 class="h6">Supplier name</h6>
-                    <p>Flint Hills Resources</p>
-                    <a class="nav-link" href="#">Manage customer name</a>
-                  </div>
+                <div class="col-md-6">
+                  <h6 class="h6">Supplier name</h6>
+                  <p>Flint Hills Resources</p>
+                  <a class="nav-link" href="#">Manage customer name</a>
                 </div>
               </div>
-              <!-- tab tow -->
-              <div class="tab-pane container fade mt-5" id="business-tab">
-                <h6 class="fw-6">Class of Business</h6>
-                <div class="business-tab-aria">
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
+              <!-- secound row -->
+              <div class="row mt-5">
+                <div class="col-md-6">
+                  <h6 class="h6">Supplier name</h6>
+                  <p>Flint Hills Resources</p>
+                  <a class="nav-link" href="#">Manage customer name</a>
                 </div>
               </div>
             </div>
@@ -342,11 +342,319 @@
         </div>
       </div>
     </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ======================+++++++++++++  Offcanvas  +++++++++++++++==========================   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+
+
+  <!-- !==================Name ===================-->
+  <div class="offcanvas offcanvas-end add-a-destinations" tabindex="-1" id="offcanvas-set-up-basics"
+    aria-labelledby="offcanvasExample">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasSuccAccLabel"></h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body pb-5">
+      <h5>Add a destination</h5>
+      <!-- body -->
+      <div class="row row-cols-1 row-cols-xl-3">
+        <div class="col user-roade-map">
+          <div class="upload-order-tab-left">
+            <ul class="timeline">
+              <li class="timeline-item active  mb-6 ">
+                <h6>Name</h6>
+              </li>
+              <li class="timeline-item mb-6">
+                <h6>Terminal Settings</h6>
+                </p>
+              </li>
+              <li class="timeline-item mb-6">
+                <h6>Finish</h6>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Right Colum -->
+        <div class="col user-form">
+          <!--  !Area -->
+          <div class="user-form-area">
+            <h2>Set up the basics</h2>
+            <p class="py-4">To get started, give the destination a name and define it's address.</p>
+            <!-- content -->
+            <form action="#">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Name<span class="color-red">*</span></label>
+                <input type="name" id="name" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Address line 1<span
+                    class="color-red">*</span></label>
+                <input type="address" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Address line 1(Optional)<span
+                    class="color-red">*</span></label>
+                <input type="address" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">City <span class="color-red">*</span></label>
+                <input type="address" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Customer *</label>
+                <select class="form-select h4" aria-label="Default select example">
+                  <option selected></option>
+                  <option value="1">item 1</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Zip<span class="color-red">*</span></label>
+                <input type="zip" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+
+
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+      <!-- !Button -->
+      <div class="offcanvas-destinations-cta">
+        <ul class="nav nav-pills mt-5">
+          <li class="nav-item">
+            <a data-bs-toggle="offcanvas" href="#offcanvas-terminal-settings" class="secound-btn"
+              data-bs-dismiss="modal">
+              Next
+            </a>
+          </li>
+        </ul>
+        <a href="destinations.html" class="secound-btn mt-5 me-2 bg-tra">Cancel</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- !==================Terminal settings ===================-->
+  <div class="offcanvas offcanvas-end add-a-destinations" tabindex="-1" id="offcanvas-terminal-settings"
+    aria-labelledby="offcanvasExample">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasSuccAccLabel"></h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body pb-5">
+      <h5>Add a destination</h5>
+      <!-- body -->
+      <div class="row row-cols-1 row-cols-xl-3">
+        <div class="col user-roade-map">
+          <div class="upload-order-tab-left">
+            <ul class="timeline">
+              <li class="timeline-item active  mb-6 ">
+                <h6>Name</h6>
+              </li>
+              <li class="timeline-item active mb-6">
+                <h6>Terminal Settings</h6>
+                </p>
+              </li>
+              <li class="timeline-item mb-6">
+                <h6>Finish</h6>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Right Colum -->
+        <div class="col user-form">
+          <!--  !Area -->
+          <div class="user-form-area">
+            <h2>Terminal settings</h2>
+            <p class="py-4">Create a reference for the destination and assign terminals.</p>
+            <!-- content -->
+            <form action="#">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Destination Reference<span
+                    class="color-red">*</span></label>
+                <input type="name" id="name" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+              <div class="offcan-t-assignment">
+                <p class="form-label">Terminal assignment<span class="color-red">*</span></p>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                  <label class="form-check-label" for="exampleRadios1">
+                    Destination can be used at any terminal
+                  </label>
+                </div>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                  <label class="form-check-label" for="exampleRadios1">
+                    Destination can be used at selected terminals
+                  </label>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Select Terminal(s)</label>
+                  <select class="form-select h4" aria-label="Default select example">
+                    <option selected></option>
+                    <option value="1">item 1</option>
+                  </select>
+                </div>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+      <!-- !Button -->
+      <div class="offcanvas-destinations-cta">
+        <ul class="nav nav-pills mt-5">
+          <li class="nav-item">
+            <a data-bs-toggle="offcanvas" href="#offcanvas-set-up-basics" class="secound-btn mt-5 me-2 bg-tra">
+              Back
+            </a>
+          </li>
+          <li class="nav-item">
+            <a data-bs-toggle="offcanvas" href="#offcanvas-review-finish" class="secound-btn">
+              Next
+            </a>
+          </li>
+        </ul>
+        <a href="destinations.html" class="secound-btn mt-5 me-2 bg-tra">Cancel</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- !================== Review and finish ===================-->
+
+
+  <div class="offcanvas offcanvas-end add-a-destinations" tabindex="-1" id="offcanvas-review-finish"
+    aria-labelledby="offcanvasExample">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasSuccAccLabel"></h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body pb-5">
+      <!-- body -->
+      <div class="row row-cols-1 row-cols-xl-3">
+        <div class="col user-roade-map">
+          <div class="upload-order-tab-left">
+            <ul class="timeline">
+              <li class="timeline-item active  mb-6 ">
+                <h6>Name</h6>
+              </li>
+              <li class="timeline-item active mb-6">
+                <h6>Terminal Settings</h6>
+                </p>
+              </li>
+              <li class="timeline-item active mb-6">
+                <h6>Finish</h6>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Right Colum -->
+        <div class="col user-form">
+          <!--  !Area -->
+          <div class="user-form-area">
+            <h1 class="mb-5">Review and finish</h2>
+              <p>Create a reference for the destination and assign terminals.</p>
+              <div class="row row-cols-1 row-cols-sm-2 mt-5 mb-3">
+                <!-- sub- colum -->
+                <div class="col mb-3">
+                  <h6><b>Name</b></h6>
+                  <p>Houston, TX</p>
+                  <a class="nav-link h-underline" href="customers.html">Edit</a>
+                </div>
+                <div class="col mb-3">
+                  <h6><b>Reference</b></h6>
+                  <p>Houston</p>
+                  <a class="nav-link h-underline" href="customers.html">Edit </a>
+                </div>
+                <div class="col mb-3">
+                  <h6><b>Address</b></h6>
+                  <p>2651 Kipling St. <br>
+                    Suite 5200 <br>
+                    Houston, TX 77098</p>
+                  <a class="nav-link h-underline" href="customers.html">Edit </a>
+                </div>
+                <div class="col mb-3">
+                  <h6><b>Terminal Settings</b></h6>
+                  <p>Destination can be used at any terminal</p>
+                  <a class="nav-link h-underline" href="customers.html">Edit </a>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="offcanvas-destinations-cta">
+        <ul class="nav nav-pills mt-5">
+          <li class="nav-item">
+            <a data-bs-toggle="offcanvas" href="#offcanvas-terminal-settings" class="secound-btn mt-5 me-2 bg-tra">
+              Back
+            </a>
+          </li>
+          <li class="nav-item">
+            <a data-bs-toggle="offcanvas" href="destinations.html" class="secound-btn">
+              Finish Adding
+            </a>
+          </li>
+        </ul>
+        <a href="destinations.html" class="secound-btn mt-5 me-2 bg-tra">Cancel</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </main>
 
   <!-- script -->
+
+  <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script src="assets/js/moment.min.js"></script>
+  <script src="assets/js/apexcharts.min.js"></script>
+  <script src="assets/js/lightpick.js"></script>
+  <script src="assets/js/chart.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/custom_jquery.js"></script>
 </body>
 
 </html>

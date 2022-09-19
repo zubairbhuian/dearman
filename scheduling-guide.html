@@ -11,78 +11,89 @@
 
 <body>
   <main>
-    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ======================+++++++++++++ Top Navigation +++++++++++++++=============================
-   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
-      <div class="container-fluid">
-        <a class="side-appbar-icon " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
-          aria-controls="offcanvasScrolling">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-            class="bi bi-text-paragraph" viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-              d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z" />
-          </svg>
-        </a>
-        <a class="navbar-brand" href="index.html">
-          <img src="/assets/images/logo.png" alt=""><span>LYNX Console</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav  me-auto ms-auto ">
-            <li class="nav-item pe-5">
-              <a class="nav-link active" aria-current="page" href="index.html">Insights</a>
-            </li>
-            <li class="nav-item pe-5">
-              <a class="nav-link" href="#">Submit Orders</a>
-            </li>
-            <li class="nav-item position-relative ">
-              <a class="nav-link " href="#">Order Management</a>
-              <div class="custrom-badge">2 <span>New</span> </div>
-              </span>
-            </li>
-          </ul>
+    <!--======================Top Navigation============================-->
+  <!--======================Top Navigation============================-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-light header">
+    <div class="container-fluid">
+      <a class="side-appbar-icon " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+        aria-controls="offcanvasScrolling">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+          class="bi bi-text-paragraph" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z" />
+        </svg>
+      </a>
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/logo.png" alt=""><span>LYNX Console</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav  me-auto ms-auto ">
+          <li class="nav-item pe-5">
+            <a class="nav-link active" aria-current="page" href="index.html">Insights</a>
+          </li>
+          <li class="nav-item pe-5">
+            <a class="nav-link" href="submit_order.html">Submit Orders</a>
+          </li>
+          <li class="nav-item pe-5">
+            <a class="nav-link" href="order_status.html">Order Status</a>
+          </li>
+          <li class="nav-item position-relative ">
+            <a class="nav-link " href="order-management.html">Order Management</a>
+            <div class="custrom-badge">2 <span>New</span> </div>
+            </span>
+          </li>
+        </ul>
 
-          <ul class="navbar-nav me-6">
-            <li class="nav-item hide-lg">
-              <div class="circuler-avater">
-                <span>FH</span>
-              </div>
-            </li>
+        <ul class="navbar-nav me-6">
+          <li class="nav-item hide-lg">
+            <div class="circuler-avater">
+              <span>FH</span>
+            </div>
+          </li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <!--  -->
-                <!-- <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li class="nav-item dropdown navbarDropdown-btn position-relative" style="cursor: pointer;">
+            <a class="nav-link dropdown-toggle" onclick="showNavRight()">
+              Flint Hill
+            </a>
+            <!-- ?cus-nav-right-side -->
+            <div class="cus-nav-right-side">
+              <div class="side-appbar d-block">
+                <div class="navbar">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="profile_setting.html">Profile Settings</a>
+                    </li>
+                    <!--!+++++++++++++++ Sub Menu +++++++++++++++++++++-->
+                    <li class="nav-item dropdown side-dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Billing
+                      </a>
+                      <ul class="dropdown-menu  cus-nav-right-dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="purchase-services.html">Purchase services</a></li>
+                        <li><a class="dropdown-item" href="products-licenses.html">Your products and licenses</a></li>
+                        <li><a class="dropdown-item" href="payment-history.html">Payment history</a></li>
+                        <li><a class="dropdown-item" href="payment-methods.html">Payment methods</a></li>
+                        <li><a class="dropdown-item" href="billing-notifications.html">Billing notificatin</a></li>
+                        
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="login-pass.html">Log out</a>
+                    </li>
                   </ul>
-                </li> -->
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-          </ul>
+                </div>
+              </div>
+            </div>
+          </li>
 
-    </nav>
-    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ======================+++++++++++++  Mobail Side Menu  +++++++++++++++==========================   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        </ul>
+
+  </nav>
+    <!--==========================Mobail Side Menu==========================-->
     <div class="offcanvas offcanvas-side-appbar offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
       tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
       <div class="offcanvas-header">
@@ -128,10 +139,9 @@
         </div>
       </div>
     </div>
-    <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ======================+++++++++++++  Main Body  +++++++++++++++==========================   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+
+    <!--==========================Main Body Side Menu==========================-->
     <div class="main-body">
       <!-- side appbar -->
       <div class="side-appbar">
@@ -144,7 +154,7 @@
               <a class="nav-link" href="suppliers.html">Suppliers</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contacts.html">Customers</a>
+              <a class="nav-link" href="customers.html">Customers</a>
             </li>
             <!--!+++++++++++++++ Sub Menu +++++++++++++++++++++-->
             <li class="nav-item dropdown side-dropdown">
@@ -170,9 +180,10 @@
           </ul>
         </div>
       </div>
+
+
       <!-- !++++++++++++++  body contant ++++++++++++++++++++++++-->
       <div class="body-content">
-
         <!--+++++++++++++++++ tab  button+++++++++++++++-->
         <ul class="nav flint-modal-tab-btn header-scheduling">
           <li class="nav-item">
@@ -223,59 +234,68 @@
               <div class="col-lg-6">
                 <div class="sg-btn mb-4">
                   <div class="position-relative">
-                    <div  class="circle-btn count-one">1</div>
+                    <div class="circle-btn count-one">1</div>
 
-                  <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasdownload" aria-controls="offcanvasRight"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                      fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                      <path
-                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
-                      <path
-                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
-                    </svg>Download Scheduling Template</button>
+                    <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasdownload"
+                      aria-controls="offcanvasRight"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                        <path
+                          d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                        <path
+                          d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                      </svg>Download Scheduling Template</button>
                   </div>
 
                 </div>
                 <div class="scheduling-guide-iamge mt-5 me-3">
-                  <div  class="circle-btn count-two">2</div>
-                  <img class="scheduling-guide-iamge-first" src="/assets/images/sg/sg1.png" alt="img">
-                  <img class="scheduling-guide-iamge-secound" src="/assets/images/sg/sg2.png" alt="img">
-                  
+                  <div class="circle-btn count-two">2</div>
+                  <img class="scheduling-guide-iamge-first" src="assets/images/sg/sg1.png" alt="img">
+                  <img class="scheduling-guide-iamge-secound" src="assets/images/sg/sg2.png" alt="img">
+
+                  <div>
+
+                  </div>
                 </div>
                 <div class="scheduling-guide-iamge">
-                  <div  class="circle-btn count-three">3</div>
-                  <img class="sg-img" src="/assets/images/sg/sg3.png" alt="img">
+                  <div class="circle-btn count-three">3</div>
+                  <img class="sg-img" src="assets/images/sg/sg3.png" alt="img">
                 </div>
                 <div class="scheduling-guide-iamge">
-                  <div  class="circle-btn count-four">4</div>
-                  <img class="sg-img" src="/assets/images/sg/sg4.png" alt="img">
+                  <div class="circle-btn count-four">4</div>
+                  <img class="sg-img" src="assets/images/sg/sg4.png" alt="img">
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-----------------------------------------------------------------------------------------------------
-        ========================================== Offcanvas ==================================================
-        ------------------------------------------------------------------------------------------------------>
-        <div class="offcanvas offcanvasdownload offcanvas-end show" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasdownload" aria-labelledby="offcanvasScrollingLabel">
-          <div class="offcanvas-header">
+
+
+        <div class="offcanvas offcanvasdownload offcanvas-end show" data-bs-scroll="true" data-bs-backdrop="false"
+          tabindex="-1" id="offcanvasdownload" aria-labelledby="offcanvasScrollingLabel">
+          <div class="offcanvas-header ">
             <h2 class="offcanvas-title" id="offcanvasScrollingLabel"></h2>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body offcanvasdownload-body">
             <h2 class="offcanvas-title py-4" id="offcanvasScrollingLabel">Download the Scheduling Template</h2>
             <p>Submit your orders in bulk using the Dearman Scheduling Template.</p>
-            <button class="btn offcanvasdownload-btn-one" data-bs-toggle="offcanvas" data-bs-target="#offcanvasdownload" aria-controls="offcanvasRight"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-              fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-              <path
-                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
-              <path
-                d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
-            </svg>Download Scheduling Template</button>
-            <button class="btn d-block mt-5 offcanvasdownload-btn-two"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasdownload-populer" >Next</button>
+            <button class="btn offcanvasdownload-btn-one" data-bs-toggle="offcanvas" data-bs-target="#offcanvasdownload"
+              aria-controls="offcanvasRight"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                <path
+                  d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                <path
+                  d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+              </svg>Download Scheduling Template</button>
+            <button class="btn d-block mt-5 offcanvasdownload-btn-two" data-bs-toggle="offcanvas" data-bs-target="#offcanvasdownload-populer">Next</button>
           </div>
         </div>
+
+
+
         <!-- !Populate the template -->
-        <div class="offcanvas offcanvasdownload offcanvas-end " data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasdownload-populer" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas offcanvasdownload offcanvas-end " data-bs-scroll="true" data-bs-backdrop="false"
+          tabindex="-1" id="offcanvasdownload-populer" aria-labelledby="offcanvasScrollingLabel">
           <div class="offcanvas-header">
             <h2 class="offcanvas-title" id="offcanvasScrollingLabel"></h2>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -284,17 +304,21 @@
 
             <h2 class="offcanvas-title py-4" id="offcanvasScrollingLabel">Populate the template.</h2>
             <p class="my-4">Submit your orders in bulk using the Dearman Scheduling Template.</p>
-            <p class="mb-3">TerminalRef, OrderTypeRef, PositionHolderRef, SupplierRef, CarrierRef, CustomerRef, DestinationRef, StartDate, EndDate, TrailerNumber, ProductRef and ProductAmount are all required fields that must be populated to submit an order. It is important that the reference fields match the reference for the subject exactly as it appears in the system.</p>
+            <p class="mb-3">TerminalRef, OrderTypeRef, PositionHolderRef, SupplierRef, CarrierRef, CustomerRef,
+              DestinationRef, StartDate, EndDate, TrailerNumber, ProductRef and ProductAmount are all required fields
+              that must be populated to submit an order. It is important that the reference fields match the reference
+              for the subject exactly as it appears in the system.</p>
             <!-- row -->
             <div class="row">
               <div class="col">
-                A record for every field that requires a reference in the scheduling template can be found by clicking on the field in the sidebar.
+                A record for every field that requires a reference in the scheduling template can be found by clicking
+                on the field in the sidebar.
               </div>
               <div class="col">
                 <div class="scheduling-guide-iamge mt-5 me-3">
-                  <div  class="circle-btn count-two">2</div>
-                  <img class="scheduling-guide-iamge-first" src="/assets/images/sg/sg1.png" alt="img">
-                  <img class="scheduling-guide-iamge-secound" src="/assets/images/sg/sg2.png" alt="img">               
+                  <!-- <div class="circle-btn count-two">2</div> -->
+                  <img class="scheduling-guide-iamge-first" src="assets/images/sg/sg1.png" alt="img">
+                  <img class="scheduling-guide-iamge-secound" src="assets/images/sg/sg2.png" alt="img">
                 </div>
               </div>
             </div>
@@ -305,7 +329,8 @@
             <h6><b>Product Amount</b></h6>
             <p class="mb-4">Product amount is a number only field and uses Gallons as a unit of measurement. </p>
             <h6><b>Start and End Dates</b></h6>
-            <p class="mb-4">For simplicity, we recommend the start and end date be 24 hours apart. Orders will be valid from the start date and will expire on at the end date.</p>
+            <p class="mb-4">For simplicity, we recommend the start and end date be 24 hours apart. Orders will be valid
+              from the start date and will expire on at the end date.</p>
             <!-- image -->
             <div class="offcanvasdownload-populer-image3">
               <img src="assets/images/sg/dateTable.png" alt="">
@@ -316,7 +341,7 @@
             <!-- !Button -->
             <ul class="nav nav-pills mt-5">
               <li class="nav-item">
-                <a data-bs-toggle="offcanvas" href="#offcanvasdownload" role="button" 
+                <a data-bs-toggle="offcanvas" href="#offcanvasdownload" role="button"
                   class="secound-btn mt-5 me-2 bg-tra">
                   Back
                 </a>
@@ -330,13 +355,15 @@
           </div>
         </div>
         <!-- !Uploading Orders -->
-        <div class="offcanvas offcanvasdownload offcanvas-end " data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasdownload-uploading" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas offcanvasdownload offcanvas-end " data-bs-scroll="true" data-bs-backdrop="false"
+          tabindex="-1" id="offcanvasdownload-uploading" aria-labelledby="offcanvasScrollingLabel">
           <div class="offcanvas-header">
             <h2 class="offcanvas-title" id="offcanvasScrollingLabel"></h2>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body offcanvasdownload-body">
-            <h2 class="offcanvas-title py-4" id="offcanvasScrollingLabel">Uploading Orders and Submitting for Approval</h2>
+            <h2 class="offcanvas-title py-4" id="offcanvasScrollingLabel">Uploading Orders and Submitting for Approval
+            </h2>
             <p class="my-4">Submitting orders is easy! Follow these simple steps. </p>
             <div class="row mb-5">
               <div class="col-md-4">
@@ -376,36 +403,17 @@
 
               </div>
             </div>
-             <!-- !Button -->
+            <!-- !Button -->
             <ul class="nav nav-pills mt-5">
               <li class="nav-item">
-                <a data-bs-toggle="offcanvas" href="#offcanvasdownload-populer" role="button" aria-controls="offcanvasSuccAcc"
-                  class="secound-btn mt-5 me-2 bg-tra">
+                <a data-bs-toggle="offcanvas" href="#offcanvasdownload-populer" role="button"
+                  aria-controls="offcanvasSuccAcc" class="secound-btn mt-5 me-2 bg-tra">
                   Back
                 </a>
               </li>
             </ul>
           </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
       </div>
@@ -415,7 +423,16 @@
 
 
   <!-- script -->
+  <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script src="assets/js/moment.min.js"></script>
+  <script src="assets/js/apexcharts.min.js"></script>
+  <script src="assets/js/lightpick.js"></script>
+  <script src="assets/js/chart.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 

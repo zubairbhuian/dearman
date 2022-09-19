@@ -5,92 +5,100 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-  integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
-<link rel="stylesheet" href="assets/css/apexcharts.css" />
-<link rel="stylesheet" href="assets/css/responcive.css" />
-<link rel="stylesheet" href="assets/css/main.css" />
-<link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/apexcharts.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
   <title>terminals</title>
 </head>
 
 <body>
   <main>
-    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ======================+++++++++++++ Top Navigation +++++++++++++++=============================
-   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
-      <div class="container-fluid">
-        <a class="side-appbar-icon " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
-          aria-controls="offcanvasScrolling">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-            class="bi bi-text-paragraph" viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-              d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z" />
-          </svg>
-        </a>
-        <a class="navbar-brand" href="index.html">
-          <img src="/assets/images/logo.png" alt=""><span>LYNX Console</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav  me-auto ms-auto ">
-            <li class="nav-item pe-5">
-              <a class="nav-link active" aria-current="page" href="index.html">Insights</a>
-            </li>
-            <li class="nav-item pe-5">
-              <a class="nav-link" href="#">Submit Orders</a>
-            </li>
-            <li class="nav-item position-relative ">
-              <a class="nav-link " href="#">Order Management</a>
-              <div class="custrom-badge">2 <span>New</span> </div>
-              </span>
-            </li>
-          </ul>
+  
+    <!--======================Top Navigation============================-->
+  <!--======================Top Navigation============================-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-light header">
+    <div class="container-fluid">
+      <a class="side-appbar-icon " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+        aria-controls="offcanvasScrolling">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+          class="bi bi-text-paragraph" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z" />
+        </svg>
+      </a>
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/logo.png" alt=""><span>LYNX Console</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav  me-auto ms-auto ">
+          <li class="nav-item pe-5">
+            <a class="nav-link active" aria-current="page" href="index.html">Insights</a>
+          </li>
+          <li class="nav-item pe-5">
+            <a class="nav-link" href="submit_order.html">Submit Orders</a>
+          </li>
+          <li class="nav-item pe-5">
+            <a class="nav-link" href="order_status.html">Order Status</a>
+          </li>
+          <li class="nav-item position-relative ">
+            <a class="nav-link " href="order-management.html">Order Management</a>
+            <div class="custrom-badge">2 <span>New</span> </div>
+            </span>
+          </li>
+        </ul>
 
-          <ul class="navbar-nav me-6">
-            <li class="nav-item hide-lg">
-              <div class="circuler-avater">
-                <span>FH</span>
-              </div>
-            </li>
+        <ul class="navbar-nav me-6">
+          <li class="nav-item hide-lg">
+            <div class="circuler-avater">
+              <span>FH</span>
+            </div>
+          </li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <!--  -->
-                <!-- <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <li class="nav-item dropdown navbarDropdown-btn position-relative" style="cursor: pointer;">
+            <a class="nav-link dropdown-toggle" onclick="showNavRight()">
+              Flint Hill
+            </a>
+            <!-- ?cus-nav-right-side -->
+            <div class="cus-nav-right-side">
+              <div class="side-appbar d-block">
+                <div class="navbar">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="profile_setting.html">Profile Settings</a>
+                    </li>
+                    <!--!+++++++++++++++ Sub Menu +++++++++++++++++++++-->
+                    <li class="nav-item dropdown side-dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Billing
+                      </a>
+                      <ul class="dropdown-menu  cus-nav-right-dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="purchase-services.html">Purchase services</a></li>
+                        <li><a class="dropdown-item" href="products-licenses.html">Your products and licenses</a></li>
+                        <li><a class="dropdown-item" href="payment-history.html">Payment history</a></li>
+                        <li><a class="dropdown-item" href="payment-methods.html">Payment methods</a></li>
+                        <li><a class="dropdown-item" href="billing-notifications.html">Billing notificatin</a></li>
+                        
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="login-pass.html">Log out</a>
+                    </li>
                   </ul>
-                </li> -->
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-          </ul>
+                </div>
+              </div>
+            </div>
+          </li>
 
-    </nav>
-    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ======================+++++++++++++  Mobail Side Menu  +++++++++++++++==========================   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+        </ul>
+
+  </nav>
+    <!--==========================Mobail Side Menu==========================-->
     <div class="offcanvas offcanvas-side-appbar offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
       tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
       <div class="offcanvas-header">
@@ -101,7 +109,7 @@
         <div class="side-appbar">
           <div class="navbar">
             <ul class="navbar-nav">
-              <li class="nav-item active">
+              <li class="nav-item">
                 <a class="nav-link " aria-current="page" href="terminals.html">Terminals</a>
               </li>
               <li class="nav-item">
@@ -119,7 +127,7 @@
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li><a class="dropdown-item" href="drivers.html">Drivers</a></li>
                   <li><a class="dropdown-item" href="entities.html">Entities </a></li>
-                  <li><a class="dropdown-item" href="trailers.html">Trailers</a></li>
+                  <li><a class="dropdown-item" href="trailers.html">Trailers </a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -136,16 +144,15 @@
         </div>
       </div>
     </div>
-    <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    ======================+++++++++++++  Main Body  +++++++++++++++==========================   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+
+     <!--==========================Main Body Side Menu==========================-->
     <div class="main-body">
       <!-- side appbar -->
       <div class="side-appbar">
         <div class="navbar">
           <ul class="navbar-nav">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link " aria-current="page" href="terminals.html">Terminals</a>
             </li>
             <li class="nav-item">
@@ -172,311 +179,608 @@
             <li class="nav-item">
               <a class="nav-link " href="destinations.html">Destinations</a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item">
               <a class="nav-link " href="contacts.html">Contacts</a>
             </li>
           </ul>
         </div>
       </div>
+
+      
       <!-- !++++++++++++++  body contant ++++++++++++++++++++++++-->
       <div class="body-content">
         <div class="wrapper-body">
-
-            <section class="LYNX">
-                <div class="container">
-                    <div class="section-title">
-                        <h2>Carrier Insights</h2>
-                        <p style="display: none">Use LYNX Insights to explore key points of information and make
-                            better business
-                            decisions.</p>
-                    </div>
-                    <div class="filter-insights">
-                        <div class="col-lg-12 col-md-12 col-sm-12">
-                            <div class="dropdown-container">
-                                <div class="filter">
-                                    <h4>Filter Insights</h4>
-                                    <p>Inventory values reflect estimated current liftable inventories. Closed
-                                        orders
-                                        reflect net
-                                        values.
-                                    </p>
-                                    <label for="openDropdown" class="dropdown">
-                                        <i class="fas fa-angle-down"></i>
-                                    </label>
-                                </div>
-                                <input type="checkbox" id="openDropdown" hidden>
-                                <div class="dropdown-menu">
-                                    <div class="menu-group">
-                                        <div class="row">
-                                            <div class="col-lg-3 col-md-6">
-                                                <div class="item">
-                                                    <p>FIELD</p>
-                                                    <select class="form-select" aria-label="Default select example">
-                                                        <option selected>Open this select menu</option>
-                                                        <option value="1">One</option>
-                                                        <option value="2">Two</option>
-                                                        <option value="3">Three</option>
-                                                      </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3 col-md-6">
-                                                <div class="item">
-                                                    <p>OPERATOR</p>
-                                                    <select class="form-select" aria-label="Default select example">
-                                                        <option selected>Open this select menu</option>
-                                                        <option value="1">One</option>
-                                                        <option value="2">Two</option>
-                                                        <option value="3">Three</option>
-                                                      </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-12">
-                                                <div class="VALUE">
-                                                    <div class="item">
-                                                        <p>VALUE <span>(Multiple values can be added)</span></p>
-                                                        <select class="form-select" aria-label="Default select example">
-                                                            <option selected>Open this select menu</option>
-                                                            <option value="1">One</option>
-                                                            <option value="2">Two</option>
-                                                            <option value="3">Three</option>
-                                                          </select>
-                                                    </div>
-                                                    <i class="fa-solid fa-trash-can"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="add-filter-btn">
-                                    <a href="" class="add-btn">+ Add Filter</a> <span>(Examples: Product = Regular
-                                        Gasoline, Tank =
-                                        12)</span>
-                                </div>
+          <section class="LYNX">
+            <div class="container">
+              <div class="section-title">
+                <h2>Carrier Insights</h2>
+                <p style="display: none">Use LYNX Insights to explore key points of information and make
+                  better business
+                  decisions.</p>
+              </div>
+              <div class="filter-insights">
+                <div class="dropdown-container" id="trailer-dropdown-icon">
+                  <div class="filter">
+                    <h4>Filter Insights</h4>
+                    <a href="#">
+                      <i for="openDropdown" class="dropdown icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" class="bi bi-chevron-up"
+                          viewBox="0 0 16 16">
+                          <path fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                      </i>
+                    </a>
+                  </div>
+                  <div class="dropdown-menu" id="trailer-data">
+                    <div class="menu-group">
+                      <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                          <div class="item">
+                            <p>FIELD</p>
+                            <select name="potencial" id="potencial" class="custom-select sources"
+                              placeholder="Slect Field">
+                              <option value="1">Terminal</option>
+                              <option value="2">Tank</option>
+                              <option value="3">Product</option>
+                              <option value="3">Customer</option>
+                              <option value="3">Carrier</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                          <div class="item">
+                            <p>OPERATOR</p>
+                            <select name="potencial" id="potencial" class="custom-select sources" placeholder="Equals">
+                              <!-- <option selected>Equals</option> -->
+                              <option value="1">Does not Equal</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                          <div class="VALUE">
+                            <div class="item">
+                              <p>VALUE <span>(Multiple values can be added)</span></p>
+                              <div class="trash">
+                                <select name="potencial" id="potencial" class="custom-select sources select-trash"
+                                  placeholder="Select values">
+                                  <option value="1">All Terminals</option>
+                                  <option value="2">Bluewing One</option>
+                                  <option value="3">Bluewing Royal</option>
+                                </select>
+                                <a href="">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                    class="bi bi-trash3" viewBox="0 0 16 16">
+                                    <path
+                                      d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
+                                  </svg>
+                                </a>
+                              </div>
                             </div>
+                          </div>
                         </div>
+                      </div>
                     </div>
-                    <!-- LYNX card tab menu -->
-                    <div class="LYNX-overview">
-                        <div class="overview-menu">
-                            <ul class="nav">
-                                <li><a href="index.html">Overview</a></li>
-                                <li><a class="active"  href="carriers.html">Carriers</a></li>
-                            </ul>
-                        </div>
-                        <div class="tab-content">
-                            <div id="carriers"">
-                                <div class=" row">
-                                <!-- item -->
-                                <div class="col-lg-12 col-md-12 col-sm-12">
-                                    <ul class="carriers-menu">
-                                        <li>Explore</li>
-                                        <li>
-                                            <ul class="nav nav-pills menu">
-                                                <li><a data-bs-toggle="pill" class="active" href="#one">KPIS</a>
-                                                </li>
-                                                <li><a class="" data-bs-toggle="pill" href="#two">Trailers</a>
-                                                </li>
-                                                <li><a data-bs-toggle="pill" href="#three">Error Logs</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-
-
-                                <div class="tab-content">
-                                    <div class="tab-pane active" id="one">
-                                        <div class="row">
-                                            <div class="col-lg-2">
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <p>Scheduled</p>
-                                                        <h4>58</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2">
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <p>Closed</p>
-                                                        <h4>48</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2">
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <p>No Check-in Attempt</p>
-                                                        <h4>14</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2">
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <p>Errors and Rejections</p>
-                                                        <h4>1</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2">
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <p>Close Rate</p>
-                                                        <h4>71%</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2">
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <p>Rejection Rate</p>
-                                                        <h4>4%</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row KPIS-chart">
-                                            <div class="col-lg-12 col-md-12 col-sm-12">
-                                                <div class="box">
-                                                    <div id="distributed"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-sm-12">
-                                                <div class="box">
-                                                    <div id="line-two"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-sm-12">
-                                                <div class="box">
-                                                    <div id="load-bar"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-sm-12">
-                                                <div class="box">
-                                                    <div id="rejections-bar"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-sm-12">
-                                                <div class="box">
-                                                    <div id="rejection-rate-bar"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="two">
-                                        <div class="row">
-                                            <div class="col-lg-12 col-md-12 col-sm-12">
-                                                <div class="trailer-dropdown">
-                                                    <div class="section-title">
-                                                        <h4>Trailer Database</h4>
-                                                        <a href="#" id="trailer-dropdown-icon"><i
-                                                                class="fas fa-angle-down"></i></a>
-                                                    </div>
-                                                    <div class="trailer-data" id="trailer-data">
-                                                        <p>Total Trailers: <span>2436</span></p>
-                                                        <ul class="list header-list">
-                                                            <li>CARRIER</li>
-                                                            <li>TRAILER</li>
-                                                            <li>CAPACITY</li>
-                                                            <li>HEALTH STATUS</li>
-                                                        </ul>
-                                                        <ul class="list">
-                                                            <li>Luxemborg</li>
-                                                            <li><a href="">432</a></li>
-                                                            <li><a href="">11,465 USG</a></li>
-                                                            <li>OK</li>
-                                                        </ul>
-                                                        <ul class="list">
-                                                            <li>Coastal Transport</li>
-                                                            <li><a href="">CT-981</a></li>
-                                                            <li><a href="">7,562 USG</a></li>
-                                                            <li>OK</li>
-                                                        </ul>
-                                                        <ul class="list">
-                                                            <li>Coastal Transport</li>
-                                                            <li><a href="">CT-978</a></li>
-                                                            <li><a href="">7,961 USG</a></li>
-                                                            <li>OK</li>
-                                                        </ul>
-                                                        <ul class="list">
-                                                            <li>Trareysa</li>
-                                                            <li><a href="">TR-146</a></li>
-                                                            <li><a href="">9,465 USG</a></li>
-                                                            <li>OK</li>
-
-                                                        </ul>
-                                                        <ul class="list">
-                                                            <li>STN</li>
-                                                            <li><a href="">879</a></li>
-                                                            <li><a href="">8,263 USG</a></li>
-                                                            <li><span>REJECTED LAST VISIT: DIRTY/CONTAMINATED</span>
-                                                            </li>
-                                                        </ul>
-                                                        <ul class="list">
-                                                            <li>Luxemborg</li>
-                                                            <li><a href="">OK</a></li>
-                                                            <li><a href="">OK</a></li>
-                                                            <li>OK</li>
-                                                        </ul>
-                                                        <ul class="list">
-                                                            <li>Luxemborg</li>
-                                                            <li><a href="">OK</a></li>
-                                                            <li><a href="">OK</a></li>
-                                                            <li>OK</li>
-                                                        </ul>
-
-                                                        <div class="trailer-page">
-                                                            <ul class="page-menu">
-                                                                <li class="page-list"><a href=""><i
-                                                                            class="fa-solid fa-angle-left"></i></a>
-                                                                </li>
-
-                                                                <li class="page-list"><a href="">1</a></li>
-                                                                <li class="page-list"><a href="">2</a></li>
-                                                                <li class="page-list"><a href="">3</a></li>
-                                                                <li class="page-list"><a href="">4</a></li>
-
-                                                                <li class="page-list"><a href=""><i
-                                                                            class="fa-solid fa-chevron-right"></i></a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-12 col-md-12 col-sm-12">
-                                                <div class="box">
-                                                    <div id="trailer-bar-four"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="three">
-                                        <div class="box1"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                  </div>
+                  <div class="add-filter-btn">
+                    <a href="" class="add-btn">+ Add Filter</a> <span>(Examples: Product = Regular
+                      Gasoline, Tank =
+                      12)</span>
+                  </div>
                 </div>
-        </div>
-    </div>
-      </div>
+              </div>
+            </div>
+            <!-- LYNX card tab menu -->
+            <div class="LYNX-overview container">
+              <div class="overview-menu">
+                <ul class="nav">
+                  <li><a href="index.html">Overview</a></li>
+                  <li><a href="forecast.html">Forecast</a></li>
+                  <li><a class="active"  href="carriers.html">Carriers</a></li>
+                  <li><a href="inventory_values.html">Inventory Values</a></li>
+                </ul>
+              </div>
+              <div class="tab-content">
+                <div id="carriers"">
+                                <div class=" row">
+                  <!-- item -->
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <ul class="carriers-menu">
+                      <li>Explore</li>
+                      <li>
+                        <ul class="nav nav-pills menu">
+                          <li><a data-bs-toggle="pill" class="active" href="#one">KPIS</a>
+                          </li>
+                          <li><a data-bs-toggle="pill" href="#two">Trailers</a>
+                          </li>
+                          <li><a data-bs-toggle="pill" href="#three">Error Logs</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
 
+
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="one">
+                      <div class="row">
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                          <div class="card">
+                            <div class="card-body">
+                              <p>Scheduled</p>
+                              <h4>58</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                          <div class="card">
+                            <div class="card-body">
+                              <p>Closed</p>
+                              <h4>48</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                          <div class="card">
+                            <div class="card-body">
+                              <p>No Check-in Attempt</p>
+                              <h4>14</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                          <div class="card">
+                            <div class="card-body">
+                              <p>Errors and Rejections</p>
+                              <h4>1</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                          <div class="card">
+                            <div class="card-body">
+                              <p>Close Rate</p>
+                              <h4>71%</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                          <div class="card">
+                            <div class="card-body">
+                              <p>Rejection Rate</p>
+                              <h4>4%</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row KPIS-chart">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                          <div class="box">
+                            <div id="distributed"></div>
+                          </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                          <div class="box">
+                            <div id="line-two"></div>
+                          </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                          <div class="box">
+                            <div id="load-bar"></div>
+                          </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                          <div class="box">
+                            <div id="rejections-bar"></div>
+                          </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                          <div class="box">
+                            <div id="rejection-rate-bar"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="two">
+                      <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                          <div class="trailer-dropdown">
+                            <div class="section-title" id="trailer-database-icon">
+                              <h4>Trailer Database</h4>
+                              <a href="#">
+                                <i for="openDropdown" class="dropdown icon">
+                                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" class="bi bi-chevron-up"
+                                    viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                      d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                  </svg>
+                                </i>
+                              </a>
+                            </div>
+                            <div class="bbb">
+                              <div class="trailer-data" id="database-data">
+                                <p>Total Trailers: <span>2436</span></p>
+                                <ul class="list header-list">
+                                  <li>CARRIER</li>
+                                  <li>TRAILER</li>
+                                  <li>CAPACITY</li>
+                                  <li>HEALTH STATUS</li>
+                                </ul>
+                                <ul class="list">
+                                  <li>Luxemborg</li>
+                                  <li><a href="" data-bs-toggle="modal" data-bs-target="#flint-modal">432</a></li>
+                                  <li><a href="" data-bs-toggle="modal" data-bs-target="#flint-modal">11,465 USG</a>
+                                  </li>
+                                  <li><a href="" data-bs-toggle="modal" data-bs-target="#flint-modal">OK</a></li>
+                                </ul>
+                                <ul class="list">
+                                  <li>Coastal Transport</li>
+                                  <li><a href="" data-bs-toggle="modal" data-bs-target="#flint-modal">CT-981</a></li>
+                                  <li><a href="" data-bs-toggle="modal" data-bs-target="#flint-modal">7,562 USG</a></li>
+                                  <li><a href="" data-bs-toggle="modal" data-bs-target="#flint-modal">OK</a></li>
+                                </ul>
+                                <ul class="list">
+                                  <li>Coastal Transport</li>
+                                  <li><a href="" data-bs-toggle="modal" data-bs-target="#flint-modal">CT-978</a></li>
+                                  <li><a href="" data-bs-toggle="modal" data-bs-target="#flint-modal">7,961 USG</a></li>
+                                  <li><a href="" data-bs-toggle="modal" data-bs-target="#flint-modal">OK</a></li>
+                                </ul>
+                                <ul class="list">
+                                  <li>Trareysa</li>
+                                  <li><a href="" data-bs-toggle="modal" data-bs-target="#flint-modal">TR-146</a></li>
+                                  <li><a href="" data-bs-toggle="modal" data-bs-target="#flint-modal">9,465 USG</a></li>
+                                  <li><a href="" data-bs-toggle="modal" data-bs-target="#flint-modal">OK</a></li>
+  
+                                </ul>
+                                <ul class="list">
+                                  <li>STN</li>
+                                  <li><a href="" data-bs-toggle="modal" data-bs-target="#flint-modal">879</a></li>
+                                  <li><a href="" data-bs-toggle="modal" data-bs-target="#flint-modal">8,263 USG</a></li>
+                                  <li><a href="" data-bs-toggle="modal" data-bs-target="#flint-modal"><span>REJECTED
+                                        LAST VISIT: DIRTY/CONTAMINATED</span></a>
+                                  </li>
+                                </ul>
+                                <ul class="list">
+                                  <li>Luxemborg</li>
+                                  <li><a href="" data-bs-toggle="modal" data-bs-target="#flint-modal">831</a></li>
+                                  <li><a href="" data-bs-toggle="modal" data-bs-target="#flint-modal">11,231 USG</a>
+                                  </li>
+                                  <li><a href="" data-bs-toggle="modal" data-bs-target="#flint-modal">OK</a></li>
+                                </ul>
+                                <ul class="list">
+                                  <li>Luxemborg</li>
+                                  <li><a href="" data-bs-toggle="modal" data-bs-target="#flint-modal">145</a></li>
+                                  <li><a href="" data-bs-toggle="modal" data-bs-target="#flint-modal">10,763 USG</a>
+                                  </li>
+                                  <li><a href="" data-bs-toggle="modal" data-bs-target="#flint-modal">OK</a></li>
+                                </ul>
+  
+                                <div class="trailer-page">
+                                  <ul class="page-menu">
+                                    <li class="page-list"><a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                          class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                          <path fill-rule="evenodd"
+                                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                                        </svg>
+                                      </a>
+                                    </li>
+                                    <li class="page-list"><a href="">1</a></li>
+                                    <li class="page-list"><a href="">2</a></li>
+                                    <li class="page-list"><a href="">3</a></li>
+                                    <li class="page-list"><a href="">4</a></li>
+                                    <li class="page-list"><a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                          class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                          <path fill-rule="evenodd"
+                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                                        </svg>
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                          <div class="box">
+                            <div id="trailer-bar-four"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="three">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="box">
+                            <h3>Error Logs</h3>
+                            <p>Error logs allows you to explore a history of orders that did not close and why.</p>
+                            <div id="error-bar"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="errorlogs-content">
+                        <div class="errorlogs-item-group">
+                          <div class="selector-item">
+                            <div class="item">
+                              <select name="potencial" id="potencial" class="custom-select sources"
+                                placeholder="View All Error Types">
+                                <option selected>Rejected</option>
+                                <option value="1">No check-in attempt</option>
+                                <option value="2">Cancelled by driver</option>
+                              </select>
+                            </div>
+                            <div class="item">
+                              <select name="potencial" id="potencial" class="custom-select sources"
+                                placeholder="This month">
+                                <option selected>Custom</option>
+                                <option value="1">Last hour</option>
+                                <option value="2">Last 24 hours</option>
+                                <option value="3">Last 72 hours</option>
+                                <option value="3">Last 30 days</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="search-bar">
+                            <input type="text" placeholder="Search Order..">
+                          </div>
+                          <div class="clear-btn">
+                            <a href="" type="submit" class="btn">Clear</a>
+                          </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                          <div class="box">
+                            <div class="tabile-list">
+                              <ul class="list header-list">
+                                <li class="big-tank">EVENT</li>
+                                <li>ORDER</li>
+                                <li>CUSTOMER</li>
+                                <li>CARRIER</li>
+                                <li>TRAILER</li>
+                                <li>DATE</li>
+                              </ul>
+                              <ul class="list">
+                                <li class="big-tank"><a href="" <a href="" data-bs-toggle="modal"
+                                    data-bs-target="#flint-modal"><span>
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-x-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                                          fill="#CD0606" />
+                                        <path
+                                          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                                          fill="#CD0606" />
+                                      </svg>
+                                    </span> Rejected: Dirty/Contaminated</a></li>
+                                <li>ULSD</li>
+                                <li>4399</li>
+                                <li>25,079</li>
+                                <li>41.00</li>
+                                <li>7.00</li>
+                              </ul>
+                              <ul class="list">
+                                <li class="big-tank"><a href="" <a href="" data-bs-toggle="modal"
+                                    data-bs-target="#flint-modal"><span>
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-x-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                                          fill="#CD0606" />
+                                        <path
+                                          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                                          fill="#CD0606" />
+                                      </svg>
+                                    </span> Rejected: Overfill Protection</a></li>
+                                <li>ULSD</li>
+                                <li>4399</li>
+                                <li>25,079</li>
+                                <li>41.00</li>
+                                <li>7.00</li>
+                              </ul>
+                              <ul class="list">
+                                <li class="big-tank"><a href="" data-bs-toggle="modal"
+                                    data-bs-target="#flint-modal"><span>
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-x-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                                          fill="#CD0606" />
+                                        <path
+                                          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                                          fill="#CD0606" />
+                                      </svg>
+                                    </span>Rejected: Overfill Protection</a></li>
+                                <li>ULSD</li>
+                                <li>4399</li>
+                                <li>25,079</li>
+                                <li>41.00</li>
+                                <li>7.00</li>
+                              </ul>
+                              <ul class="list">
+                                <li class="big-tank"><a href="" data-bs-toggle="modal"
+                                    data-bs-target="#flint-modal"><span>
+                                      <svg width="16" height="16" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.5" y="0.5" width="17" height="17" rx="8.5" stroke="#F07309" />
+                                        <path
+                                          d="M7.75568 11.392V11.3409C7.76136 10.7983 7.81818 10.3665 7.92614 10.0455C8.03409 9.72443 8.1875 9.46449 8.38636 9.26563C8.58523 9.06676 8.82386 8.88352 9.10227 8.71591C9.26989 8.61364 9.42045 8.4929 9.55398 8.35369C9.6875 8.21165 9.79261 8.0483 9.86932 7.86364C9.94886 7.67898 9.98864 7.47443 9.98864 7.25C9.98864 6.97159 9.9233 6.73011 9.79261 6.52557C9.66193 6.32102 9.48722 6.16335 9.26847 6.05256C9.04972 5.94176 8.80682 5.88636 8.53977 5.88636C8.30682 5.88636 8.08239 5.93466 7.86648 6.03125C7.65057 6.12784 7.47017 6.27983 7.32528 6.48722C7.1804 6.6946 7.09659 6.96591 7.07386 7.30114H6C6.02273 6.81818 6.14773 6.40483 6.375 6.06108C6.60511 5.71733 6.90767 5.45455 7.28267 5.27273C7.66051 5.09091 8.07955 5 8.53977 5C9.03977 5 9.47443 5.09943 9.84375 5.2983C10.2159 5.49716 10.5028 5.76989 10.7045 6.11648C10.9091 6.46307 11.0114 6.85795 11.0114 7.30114C11.0114 7.61364 10.9631 7.89631 10.8665 8.14915C10.7727 8.40199 10.6364 8.62784 10.4574 8.8267C10.2813 9.02557 10.0682 9.2017 9.81818 9.35511C9.56818 9.51136 9.3679 9.67614 9.21733 9.84943C9.06676 10.0199 8.95739 10.223 8.8892 10.4588C8.82102 10.6946 8.78409 10.9886 8.77841 11.3409V11.392H7.75568ZM8.30114 13.9148C8.09091 13.9148 7.91051 13.8395 7.75994 13.6889C7.60938 13.5384 7.53409 13.358 7.53409 13.1477C7.53409 12.9375 7.60938 12.7571 7.75994 12.6065C7.91051 12.456 8.09091 12.3807 8.30114 12.3807C8.51136 12.3807 8.69176 12.456 8.84233 12.6065C8.9929 12.7571 9.06818 12.9375 9.06818 13.1477C9.06818 13.2869 9.03267 13.4148 8.96165 13.5312C8.89347 13.6477 8.80114 13.7415 8.68466 13.8125C8.57102 13.8807 8.44318 13.9148 8.30114 13.9148Z"
+                                          fill="#F07309" />
+                                      </svg>
+                                    </span>No Check-in Attempt by Driver </a></li>
+                                <li>ULSD</li>
+                                <li>4399</li>
+                                <li>25,079</li>
+                                <li>41.00</li>
+                                <li>7.00</li>
+                              </ul>
+                              <ul class="list">
+                                <li class="big-tank"><a href="" data-bs-toggle="modal"
+                                    data-bs-target="#flint-modal"><span>
+                                      <svg width="16" height="16" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M9 1C7.41775 1 5.87103 1.46919 4.55544 2.34824C3.23985 3.22729 2.21447 4.47672 1.60897 5.93853C1.00347 7.40034 0.84504 9.00887 1.15372 10.5607C1.4624 12.1126 2.22433 13.538 3.34315 14.6569C4.46197 15.7757 5.88743 16.5376 7.43928 16.8463C8.99113 17.155 10.5997 16.9965 12.0615 16.391C13.5233 15.7855 14.7727 14.7602 15.6518 13.4446C16.5308 12.129 17 10.5823 17 9C17 6.87827 16.1571 4.84344 14.6569 3.34315C13.1566 1.84285 11.1217 1 9 1V1ZM2 9C2.00048 7.31794 2.60966 5.69288 3.715 4.425L13.575 14.285C12.561 15.1607 11.3169 15.7269 9.99058 15.9165C8.66425 16.1061 7.31138 15.9111 6.0926 15.3546C4.87382 14.7981 3.84035 13.9036 3.1149 12.7772C2.38945 11.6508 2.0025 10.3398 2 9V9ZM14.285 13.575L4.425 3.715C5.76668 2.59397 7.47931 2.0156 9.22594 2.09369C10.9726 2.17177 12.6268 2.90066 13.8631 4.13695C15.0993 5.37324 15.8282 7.02743 15.9063 8.77406C15.9844 10.5207 15.406 12.2333 14.285 13.575Z"
+                                          fill="#CD0606" />
+                                      </svg>
+                                    </span>Canceled by Driver</a></li>
+                                <li>ULSD</li>
+                                <li>4399</li>
+                                <li>25,079</li>
+                                <li>41.00</li>
+                                <li>7.00</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
     </div>
-   
+    </div>
+    </div>
+
+    <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ======================+++++++++++++  Modal  +++++++++++++++==========================   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+    <div class="modal fade trailers-popups" id="flint-modal" tabindex="-1" aria-labelledby="flint-modalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog  modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="container">
+              <div class="modal-header" style="padding: 0;margin-bottom: 30px;">
+                <h2 class="modal-title" id="staticBackdropLabel">Luxemborg 432</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <div class="trailer-dropdown">
+                    
+                    <div class="section-title" id="popup-data-icon">
+                      <h4>Trailer Database</h4>
+                      <a href="#" >
+                        <i for="openDropdown" class="dropdown">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16"
+                            class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                          </svg>
+                        </i>
+                      </a>
+                    </div>
+
+                    <div class="trailer-data" id="popup-data">
+                      <ul class="list header-list">
+                        <li>CAPACITY</li>
+                        <li>LICENSE PLATE</li>
+                        <li>VIN</li>
+                        <li>INSPECTION EXPIRATION</li>
+                      </ul>
+                      <ul class="list">
+                        <li>11,465 USG</li>
+                        <li>JLK4565</li>
+                        <li>78962891</li>
+                        <li>January 04, 2023 (VALID)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row popup-row">
+                <div class="trailer-dropdown">
+                  <div class="section-title" id="popup-bar-icon">
+                    <h4>Rejection History</h4>
+                    <div class="item">
+                      <p class="status click">Current health status: OK</p>
+                      <a href="#">
+                        <i for="openDropdown" class="dropdown icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" class="bi bi-chevron-up"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                          </svg>
+                        </i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="trailer-data" id="popup-bar-data">
+                    <div class="box">
+                      <div id="popup-bar"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <div class="trailer-dropdown">
+                    <div class="section-title" id="order-bar-icon"">
+                      <h4>Order History</h4>
+                      <div class="item">
+                        <p class="status click">Current health status: OK</p>
+                        <a href="#">
+                          <i for="openDropdown" class="dropdown icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" class="bi bi-chevron-up"
+                              viewBox="0 0 16 16">
+                              <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                          </i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="trailer-data" id="order-data">
+                      <ul class="list header-list">
+                        <li>DATE</li>
+                        <li>BOL</li>
+                        <li>SCHEDULED</li>
+                        <li>LOADED</li>
+                        <li>HEALTH STATUS</li>
+                      </ul>
+                      <ul class="list">
+                        <li>January 24, 2022</li>
+                        <li>90002653</li>
+                        <li>11,465 USG</li>
+                        <li>11,221 USG</li>
+                        <li>Ok</li>
+                      </ul>
+                      <ul class="list">
+                        <li>January 16, 2022</li>
+                        <li>90002653</li>
+                        <li>11,465 USG</li>
+                        <li>11,221 USG</li>
+                        <li>Ok</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
   </main>
 
-    <!-- script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- script -->
 
-    <script src="assets/js/apexcharts.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/chart.js"></script>
-    <script src="assets/js/main.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script src="assets/js/moment.min.js"></script>
+  <script src="assets/js/apexcharts.min.js"></script>
+  <script src="assets/js/lightpick.js"></script>
+  <script src="assets/js/chart.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/custom_jquery.js"></script>
 </body>
 
 </html>
