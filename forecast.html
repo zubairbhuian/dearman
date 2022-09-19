@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Welcome to LYNX!</title>
+</head>
+<link rel="stylesheet" href="assets/css/apexcharts.css" />
+<link rel="stylesheet" href="assets/css/lightpick.css" />
+<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+
+<body>
+  <main>
+
+    <!--======================Top Navigation============================-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light header">
+      <div class="container-fluid">
+        <a class="side-appbar-icon " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+            class="bi bi-text-paragraph" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z" />
+          </svg>
+        </a>
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/images/logo.png" alt=""><span>LYNX Console</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav  me-auto ms-auto ">
+            <li class="nav-item pe-5">
+              <a class="nav-link active" aria-current="page" href="index.html">Insights</a>
+            </li>
+            <li class="nav-item pe-5">
+              <a class="nav-link" href="submit_order.html">Submit Orders</a>
+            </li>
+            <li class="nav-item pe-5">
+              <a class="nav-link" href="order_status.html">Order Status</a>
+            </li>
+            <li class="nav-item position-relative ">
+              <a class="nav-link " href="order-management.html">Order Management</a>
+              <div class="custrom-badge">2 <span>New</span> </div>
+              </span>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav me-6">
+            <li class="nav-item hide-lg">
+              <div class="circuler-avater">
+                <span>FH</span>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown navbarDropdown-btn position-relative" style="cursor: pointer;">
+              <a class="nav-link dropdown-toggle" onclick="showNavRight()">
+                Flint Hill
+              </a>
+              <!-- ?cus-nav-right-side -->
+              <div class="cus-nav-right-side">
+                <div class="side-appbar d-block">
+                  <div class="navbar">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="profile_setting.html">Profile Settings</a>
+                      </li>
+                      <!--!+++++++++++++++ Sub Menu +++++++++++++++++++++-->
+                      <li class="nav-item dropdown side-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Billing
+                        </a>
+                        <ul class="dropdown-menu  cus-nav-right-dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="purchase-services.html">Purchase services</a></li>
+                          <li><a class="dropdown-item" href="products-licenses.html">Your products and licenses</a></li>
+                          <li><a class="dropdown-item" href="payment-history.html">Payment history</a></li>
+                          <li><a class="dropdown-item" href="payment-methods.html">Payment methods</a></li>
+                          <li><a class="dropdown-item" href="billing-notifications.html">Billing notificatin</a></li>
+
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="login-pass.html">Log out</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+    </nav>
+    <!--==========================Mobail Side Menu==========================-->
+    <div class="offcanvas offcanvas-side-appbar offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
+      tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+      <div class="offcanvas-header">
+
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="side-appbar">
+          <div class="navbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="terminals.html">Terminals</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="suppliers.html">Suppliers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="customers.html">Customers</a>
+              </li>
+              <!-- Sub Menu -->
+              <li class="nav-item dropdown side-dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Carriers
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="drivers.html">Drivers</a></li>
+                  <li><a class="dropdown-item" href="entities.html">Entities </a></li>
+                  <li><a class="dropdown-item" href="trailers.html">Trailers </a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="products.html">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="destinations.html">Destinations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="contacts.html">Contacts</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--==========================Main Body Side Menu==========================-->
+    <div class="main-body">
+      <!-- side appbar -->
+      <div class="side-appbar">
+        <div class="navbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="terminals.html">Terminals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="suppliers.html">Suppliers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="customers.html">Customers</a>
+            </li>
+            <!--!+++++++++++++++ Sub Menu +++++++++++++++++++++-->
+            <li class="nav-item dropdown side-dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Carriers
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="drivers.html">Drivers</a></li>
+                <li><a class="dropdown-item" href="entities.html">Entities </a></li>
+                <li><a class="dropdown-item" href="trailers.html">Trailers </a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="destinations.html">Destinations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="contacts.html">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <!-- !++++++++++++++  body contant ++++++++++++++++++++++++-->
+
+      <div class="body-content">
+        <div class="wrapper-body">
+          <section class="LYNX">
+            <div class="container">
+              <div class="section-title">
+                <h1>Good Morning, Will</h1>
+                <p>Use LYNX ingishts to explore key points of information and make better business decisions.</p>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-4 col-md-6">
+                  <div class="item">
+                    <p>Product Filter</p>
+                    <select name="potencial" id="potencial" class="custom-select sources" placeholder="Premium Gasoline">
+                      <option selected>Premium Gasoline</option>
+                      <option value="1">Regular Gasoline</option>
+                      <option value="1">ULSD</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="item">
+                    <p>Terminal Filter</p>
+                    <select name="potencial" id="potencial" class="custom-select sources" placeholder="Charlotte">
+                      <option selected>Charlotte</option>
+                      <option value="1">Chartt</option>
+                      <option value="1">Fred</option>
+                      <option value="1">Charlotte</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                  <div class="VALUE">
+                    <div class="item">
+                      <p>Position Holder</p>
+                      <div class="trash">
+                        <select name="potencial" id="potencial" class="custom-select" placeholder="David Oshodi">
+                          <option selected>David Oshodi</option>
+                          <option value="1">Hellen Jummy</option>
+                          <option value="2">James Friday</option>
+                          <option value="3">Mbah Jacob</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="LYNX-overview">
+                <div class="container">
+                  <div class="overview-menu">
+                    <ul class="nav">
+                      <li><a href="index.html">Overview</a></li>
+                      <li><a class="active" href="forecast.html">Forecast</a></li>
+                      <li><a href="carriers.html">Carriers</a></li>
+                      <li><a href="inventory_values.html">Inventory Values</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="LYNX-content">
+                    <div id="overview">
+
+                      <div class="wrapper">
+                        <div class="row big-chart">
+                          <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="box">
+                              <div class="big-chart-header-area">
+                                <h3>Inventory Forecast</h3>
+                                <div class="filter-box">
+                                  <div class="left-inner-addon input-container">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                      xmlns="http://www.w3.org/2000/svg">
+                                      <path
+                                        d="M3.5 0C3.63261 0 3.75979 0.0526784 3.85355 0.146447C3.94732 0.240215 4 0.367392 4 0.5V1H12V0.5C12 0.367392 12.0527 0.240215 12.1464 0.146447C12.2402 0.0526784 12.3674 0 12.5 0C12.6326 0 12.7598 0.0526784 12.8536 0.146447C12.9473 0.240215 13 0.367392 13 0.5V1H14C14.5304 1 15.0391 1.21071 15.4142 1.58579C15.7893 1.96086 16 2.46957 16 3V14C16 14.5304 15.7893 15.0391 15.4142 15.4142C15.0391 15.7893 14.5304 16 14 16H2C1.46957 16 0.960859 15.7893 0.585786 15.4142C0.210714 15.0391 0 14.5304 0 14V3C0 2.46957 0.210714 1.96086 0.585786 1.58579C0.960859 1.21071 1.46957 1 2 1H3V0.5C3 0.367392 3.05268 0.240215 3.14645 0.146447C3.24021 0.0526784 3.36739 0 3.5 0V0ZM1 4V14C1 14.2652 1.10536 14.5196 1.29289 14.7071C1.48043 14.8946 1.73478 15 2 15H14C14.2652 15 14.5196 14.8946 14.7071 14.7071C14.8946 14.5196 15 14.2652 15 14V4H1Z"
+                                        fill="#76787A" />
+                                    </svg>
+                                    <input class="input-group" type="text" placeholder="Wed,Jul 21 - Thu, Jul 22"
+                                      id="datepicker" />
+                                  </div>
+                                  <div class="VALUE">
+                                    <div class="item">
+                                      <div class="trash">
+                                        <select name="potencial" id="potencial" class="custom-select"
+                                          placeholder="Custom Dates">
+                                          <option value="1">Monthly</option>
+                                          <option value="2">Yearly</option>
+                                          <option value="3">Custom Dates</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="chart" id="Forecast"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div id="carriers" style="margin-top: 80px;">
+                          <div class="tab-content">
+                            <div class="tab-pane active">
+                              <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                  <div class="trailer-dropdown" id="detailed-view ">
+                                    <div class="section-title" id="trailer-database-icon">
+                                      <h4>Detailed View</h4>
+                                      <a href="#">
+                                        <i for="openDropdown" class="dropdown icon">
+                                          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16"
+                                            class="bi bi-chevron-up" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                          </svg>
+                                        </i>
+                                      </a>
+                                    </div>
+                                    <div class="bbb detailed-view">
+                                      <div class="trailer-data" id="database-data">
+                                        <ul class="list header-list">
+                                          <li>Date</li>
+                                          <li>Incoming</li>
+                                          <li>Adjust Incoming Inventory</li>
+                                          <li>Projected Sales</li>
+                                          <li>Adjusted Sales</li>
+                                          <li>Projected Inventory</li>
+                                        </ul>
+
+                                        <ul class="list">
+                                          <li>07-13-2022</a></li>
+                                          <li>10,015 BBLS</li>
+                                          <li><input type="text" class="form-select icon-none" placeholder="25,079">
+                                            <a href="#restor-popup" data-bs-toggle="modal" ><i class="restor-icon"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path d="M3.12966 13.3329H8.61121C9.24108 13.3329 9.86478 13.2089 10.4467 12.9678C11.0286 12.7268 11.5574 12.3735 12.0027 11.9281C12.4481 11.4827 12.8014 10.954 13.0425 10.3721C13.2835 9.79015 13.4076 9.16645 13.4076 8.53659C13.4076 7.90672 13.2835 7.28302 13.0425 6.7011C12.8014 6.11918 12.4481 5.59044 12.0027 5.14505C11.5574 4.69967 11.0286 4.34637 10.4467 4.10534C9.86478 3.8643 9.24108 3.74023 8.61121 3.74023H1.75928" stroke="#C7C4C4" stroke-width="1.64446" stroke-linecap="round" stroke-linejoin="round"/>
+                                              <path d="M4.50005 1L1.75928 3.74077L4.50005 6.48155" stroke="#C7C4C4" stroke-width="1.64446" stroke-linecap="round" stroke-linejoin="round"/>
+                                              </svg>
+                                              </i></a>
+                                          </li>
+                                          <li>5,098 BBLS</li>
+                                          <li><input type="text" class="form-select icon-none" placeholder="25,079"></a>
+                                          </li>
+                                          <li>22,079 <a href="#Forecast-Detailed-View" data-bs-toggle="modal"><img class="last-icon"
+                                                src="assets/images/exclamation-circle.svg" alt=""></a></li>
+                                        </ul>
+
+                                        <ul class="list">
+                                          <li>07-13-2022</a></li>
+                                          <li>10,015 BBLS</li>
+                                          <li><input type="text" class="form-select icon-none" placeholder="25,079">
+                                            <a href=""><i class="restor-icon"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path d="M3.12966 13.3329H8.61121C9.24108 13.3329 9.86478 13.2089 10.4467 12.9678C11.0286 12.7268 11.5574 12.3735 12.0027 11.9281C12.4481 11.4827 12.8014 10.954 13.0425 10.3721C13.2835 9.79015 13.4076 9.16645 13.4076 8.53659C13.4076 7.90672 13.2835 7.28302 13.0425 6.7011C12.8014 6.11918 12.4481 5.59044 12.0027 5.14505C11.5574 4.69967 11.0286 4.34637 10.4467 4.10534C9.86478 3.8643 9.24108 3.74023 8.61121 3.74023H1.75928" stroke="#C7C4C4" stroke-width="1.64446" stroke-linecap="round" stroke-linejoin="round"/>
+                                              <path d="M4.50005 1L1.75928 3.74077L4.50005 6.48155" stroke="#C7C4C4" stroke-width="1.64446" stroke-linecap="round" stroke-linejoin="round"/>
+                                              </svg>
+                                              </i></a>
+                                          </li>
+                                          <li>5,098 BBLS</li>
+                                          <li><input type="text" class="form-select icon-none" placeholder="25,079"></a>
+                                          </li>
+                                          <li>22,079 <a href="#Forecast-Detailed-View" data-bs-toggle="modal"><img class="last-icon"
+                                            src="assets/images/exclamation-circle.svg" alt=""></a></li>
+                                        </ul>
+
+                                        <ul class="list">
+                                          <li>07-13-2022</a></li>
+                                          <li>10,015 BBLS</li>
+                                          <li><input type="text" class="form-select icon-none" placeholder="25,079">
+                                            <a href=""><i class="restor-icon"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path d="M3.12966 13.3329H8.61121C9.24108 13.3329 9.86478 13.2089 10.4467 12.9678C11.0286 12.7268 11.5574 12.3735 12.0027 11.9281C12.4481 11.4827 12.8014 10.954 13.0425 10.3721C13.2835 9.79015 13.4076 9.16645 13.4076 8.53659C13.4076 7.90672 13.2835 7.28302 13.0425 6.7011C12.8014 6.11918 12.4481 5.59044 12.0027 5.14505C11.5574 4.69967 11.0286 4.34637 10.4467 4.10534C9.86478 3.8643 9.24108 3.74023 8.61121 3.74023H1.75928" stroke="#C7C4C4" stroke-width="1.64446" stroke-linecap="round" stroke-linejoin="round"/>
+                                              <path d="M4.50005 1L1.75928 3.74077L4.50005 6.48155" stroke="#C7C4C4" stroke-width="1.64446" stroke-linecap="round" stroke-linejoin="round"/>
+                                              </svg>
+                                              </i></a>
+                                          </li>
+                                          <li>5,098 BBLS</li>
+                                          <li><input type="text" class="form-select icon-none" placeholder="25,079"></a>
+                                          </li>
+                                          <li>22,079 <a href="#Forecast-Detailed-View" data-bs-toggle="modal"><img class="last-icon"
+                                            src="assets/images/exclamation-circle.svg" alt=""></a></li>
+                                        </ul>
+
+                                        <ul class="list">
+                                          <li>07-13-2022</a></li>
+                                          <li>10,015 BBLS</li>
+                                          <li><input type="text" class="form-select icon-none" placeholder="25,079">
+                                            <a href=""><i class="restor-icon"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path d="M3.12966 13.3329H8.61121C9.24108 13.3329 9.86478 13.2089 10.4467 12.9678C11.0286 12.7268 11.5574 12.3735 12.0027 11.9281C12.4481 11.4827 12.8014 10.954 13.0425 10.3721C13.2835 9.79015 13.4076 9.16645 13.4076 8.53659C13.4076 7.90672 13.2835 7.28302 13.0425 6.7011C12.8014 6.11918 12.4481 5.59044 12.0027 5.14505C11.5574 4.69967 11.0286 4.34637 10.4467 4.10534C9.86478 3.8643 9.24108 3.74023 8.61121 3.74023H1.75928" stroke="#C7C4C4" stroke-width="1.64446" stroke-linecap="round" stroke-linejoin="round"/>
+                                              <path d="M4.50005 1L1.75928 3.74077L4.50005 6.48155" stroke="#C7C4C4" stroke-width="1.64446" stroke-linecap="round" stroke-linejoin="round"/>
+                                              </svg>
+                                              </i></a>
+                                          </li>
+                                          <li>5,098 BBLS</li>
+                                          <li><input type="text" class="form-select icon-none" placeholder="25,079"></a>
+                                          </li>
+                                          <li>22,079 <a href="#Forecast-Detailed-View" data-bs-toggle="modal"><img class="last-icon"
+                                            src="assets/images/exclamation-circle.svg" alt=""></a></li>
+                                        </ul>
+
+                                        <ul class="list">
+                                          <li>07-13-2022</a></li>
+                                          <li>10,015 BBLS</li>
+                                          <li><input type="text" class="form-select icon-none" placeholder="25,079">
+                                            <a href=""><i class="restor-icon"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path d="M3.12966 13.3329H8.61121C9.24108 13.3329 9.86478 13.2089 10.4467 12.9678C11.0286 12.7268 11.5574 12.3735 12.0027 11.9281C12.4481 11.4827 12.8014 10.954 13.0425 10.3721C13.2835 9.79015 13.4076 9.16645 13.4076 8.53659C13.4076 7.90672 13.2835 7.28302 13.0425 6.7011C12.8014 6.11918 12.4481 5.59044 12.0027 5.14505C11.5574 4.69967 11.0286 4.34637 10.4467 4.10534C9.86478 3.8643 9.24108 3.74023 8.61121 3.74023H1.75928" stroke="#C7C4C4" stroke-width="1.64446" stroke-linecap="round" stroke-linejoin="round"/>
+                                              <path d="M4.50005 1L1.75928 3.74077L4.50005 6.48155" stroke="#C7C4C4" stroke-width="1.64446" stroke-linecap="round" stroke-linejoin="round"/>
+                                              </svg>
+                                              </i></a>
+                                          </li>
+                                          <li>5,098 BBLS</li>
+                                          <li><input type="text" class="form-select icon-none" placeholder="25,079"></a>
+                                          </li>
+                                          <li>22,079 <a href="#Forecast-Detailed-View" data-bs-toggle="modal"><img class="last-icon"
+                                            src="assets/images/exclamation-circle.svg" alt=""></a></li>
+                                        </ul>
+
+                                        <ul class="list">
+                                          <li>07-13-2022</a></li>
+                                          <li>10,015 BBLS</li>
+                                          <li><input type="text" class="form-select icon-none" placeholder="25,079">
+                                            <a href=""><i class="restor-icon"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path d="M3.12966 13.3329H8.61121C9.24108 13.3329 9.86478 13.2089 10.4467 12.9678C11.0286 12.7268 11.5574 12.3735 12.0027 11.9281C12.4481 11.4827 12.8014 10.954 13.0425 10.3721C13.2835 9.79015 13.4076 9.16645 13.4076 8.53659C13.4076 7.90672 13.2835 7.28302 13.0425 6.7011C12.8014 6.11918 12.4481 5.59044 12.0027 5.14505C11.5574 4.69967 11.0286 4.34637 10.4467 4.10534C9.86478 3.8643 9.24108 3.74023 8.61121 3.74023H1.75928" stroke="#C7C4C4" stroke-width="1.64446" stroke-linecap="round" stroke-linejoin="round"/>
+                                              <path d="M4.50005 1L1.75928 3.74077L4.50005 6.48155" stroke="#C7C4C4" stroke-width="1.64446" stroke-linecap="round" stroke-linejoin="round"/>
+                                              </svg>
+                                              </i></a>
+                                          </li>
+                                          <li>5,098 BBLS</li>
+                                          <li><input type="text" class="form-select icon-none" placeholder="25,079"></a>
+                                          </li>
+                                          <li>22,079 <a href="#Forecast-Detailed-View" data-bs-toggle="modal"><img class="last-icon"
+                                            src="assets/images/exclamation-circle.svg" alt=""></a></li>
+                                        </ul>
+
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="forecast-btn-group">
+                            <div class="cta">
+                              <a href="" class="btn back-btn" >Save Changes</a>
+                              <a href="" class="btn" >Export To CSV</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+
+
+
+
+
+      <!-- ===================Popups================== -->
+
+      <div class="modal fade track-order-status-modal" id="restor-popup" tabindex="-1"
+        aria-labelledby="track-order-status-modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content" style="height: 100%">
+            <div class="modal-body">
+              <div class="card">
+                <div class="card-body">
+                  <i>
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3.12966 13.3329H8.61121C9.24108 13.3329 9.86478 13.2089 10.4467 12.9678C11.0286 12.7268 11.5574 12.3735 12.0027 11.9281C12.4481 11.4827 12.8014 10.954 13.0425 10.3721C13.2835 9.79015 13.4076 9.16645 13.4076 8.53659C13.4076 7.90672 13.2835 7.28302 13.0425 6.7011C12.8014 6.11918 12.4481 5.59044 12.0027 5.14505C11.5574 4.69967 11.0286 4.34637 10.4467 4.10534C9.86478 3.8643 9.24108 3.74023 8.61121 3.74023H1.75928" stroke="#FEFBFB" stroke-width="1.64446" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M4.50005 1L1.75928 3.74077L4.50005 6.48155" stroke="#FEFBFB" stroke-width="1.64446" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                  </i>
+
+                  <div class="card-content">
+                    <h4>Restore Adjustment</h4>
+                    <p>Are you sure, you want to restore to  previous adjustements?</p>
+                    <div class="cta">
+                      <a href="" class="btn back-btn" >Cancel</a>
+                      <a href="" class="btn" >Restore</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+        <!-- Popup 2 -->
+        <div class="modal fade" id="Forecast-Detailed-View" tabindex="-1" aria-labelledby="flint-modalLabel" aria-hidden="true">
+          <div class="modal-dialog  modal-dialog-centered">
+              <div class="modal-content" style="height: 450px">
+                  <div class="modal-body">
+                      <div class="container">
+                          <div class="modal-header" style="padding: 0;margin-bottom: 30px;">
+                              <h2 class="modal-title" id="staticBackdropLabel">Position Holder</h2>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                  aria-label="Close"></button>
+                          </div>
+
+                          
+                          <div class="table-responsive">
+                            <table class="table mt-3">
+                                <thead>
+                                    <tr>
+                                        <th>Position Holders</th>
+                                        <th>Projected Sales</th>
+                                        <th>Inbound Schedule</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>john@example.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>john@example.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>john@example.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>john@example.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>john@example.com</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h5 class="mb-3">Products</h5>
+                            <table class="table mt-3">
+                                <!-- <thead>
+                                    <tr>
+                                        <th>Position Holders</th>
+                                        <th>Projected Sales</th>
+                                    </tr>
+                                </thead> -->
+                                <tbody>
+                                    <tr>
+                                        <td>InstaPress</td>
+                                        <td>Vortex</td>
+                                    </tr>
+                                    <tr>
+                                        <td>InstaPress</td>
+                                        <td>Vortex</td>
+                                    </tr>
+                                    <tr>
+                                        <td>InstaPress</td>
+                                        <td>Vortex</td>
+                                    </tr>
+                                    <tr>
+                                        <td>InstaPress</td>
+                                        <td>Vortex</td>
+                                    </tr>
+                                    <tr>
+                                        <td>InstaPress</td>
+                                        <td>Vortex</td>
+                                    </tr>
+                                    <tr>
+                                        <td>InstaPress</td>
+                                        <td>Vortex</td>
+                                    </tr>
+                                    <tr>
+                                        <td>InstaPress</td>
+                                        <td>Vortex</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+
+
+
+
+  </main>
+
+  <!-- script -->
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script src="assets/js/moment.min.js"></script>
+  <script src="assets/js/apexcharts.min.js"></script>
+  <script src="assets/js/lightpick.js"></script>
+  <script src="assets/js/chart.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/custom_jquery.js"></script>
+
+</body>
+
+</html>

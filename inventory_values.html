@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Welcome to LYNX!</title>
+</head>
+<link rel="stylesheet" href="assets/css/apexcharts.css" />
+<link rel="stylesheet" href="assets/css/lightpick.css" />
+<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+
+<body>
+  <main>
+
+    <!--======================Top Navigation============================-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light header">
+      <div class="container-fluid">
+        <a class="side-appbar-icon " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+            class="bi bi-text-paragraph" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z" />
+          </svg>
+        </a>
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/images/logo.png" alt=""><span>LYNX Console</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav  me-auto ms-auto ">
+            <li class="nav-item pe-5">
+              <a class="nav-link active" aria-current="page" href="index.html">Insights</a>
+            </li>
+            <li class="nav-item pe-5">
+              <a class="nav-link" href="submit_order.html">Submit Orders</a>
+            </li>
+            <li class="nav-item pe-5">
+              <a class="nav-link" href="order_status.html">Order Status</a>
+            </li>
+            <li class="nav-item position-relative ">
+              <a class="nav-link " href="order-management.html">Order Management</a>
+              <div class="custrom-badge">2 <span>New</span> </div>
+              </span>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav me-6">
+            <li class="nav-item hide-lg">
+              <div class="circuler-avater">
+                <span>FH</span>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown navbarDropdown-btn position-relative" style="cursor: pointer;">
+              <a class="nav-link dropdown-toggle" onclick="showNavRight()">
+                Flint Hill
+              </a>
+              <!-- ?cus-nav-right-side -->
+              <div class="cus-nav-right-side">
+                <div class="side-appbar d-block">
+                  <div class="navbar">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="profile_setting.html">Profile Settings</a>
+                      </li>
+                      <!--!+++++++++++++++ Sub Menu +++++++++++++++++++++-->
+                      <li class="nav-item dropdown side-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Billing
+                        </a>
+                        <ul class="dropdown-menu  cus-nav-right-dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="purchase-services.html">Purchase services</a></li>
+                          <li><a class="dropdown-item" href="products-licenses.html">Your products and licenses</a></li>
+                          <li><a class="dropdown-item" href="payment-history.html">Payment history</a></li>
+                          <li><a class="dropdown-item" href="payment-methods.html">Payment methods</a></li>
+                          <li><a class="dropdown-item" href="billing-notifications.html">Billing notificatin</a></li>
+
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="login-pass.html">Log out</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+    </nav>
+    <!--==========================Mobail Side Menu==========================-->
+    <div class="offcanvas offcanvas-side-appbar offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
+      tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+      <div class="offcanvas-header">
+
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="side-appbar">
+          <div class="navbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="terminals.html">Terminals</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="suppliers.html">Suppliers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="customers.html">Customers</a>
+              </li>
+              <!-- Sub Menu -->
+              <li class="nav-item dropdown side-dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Carriers
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="drivers.html">Drivers</a></li>
+                  <li><a class="dropdown-item" href="entities.html">Entities </a></li>
+                  <li><a class="dropdown-item" href="trailers.html">Trailers </a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="products.html">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="destinations.html">Destinations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="contacts.html">Contacts</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--==========================Main Body Side Menu==========================-->
+    <div class="main-body">
+      <!-- side appbar -->
+      <div class="side-appbar">
+        <div class="navbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="terminals.html">Terminals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="suppliers.html">Suppliers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="customers.html">Customers</a>
+            </li>
+            <!--!+++++++++++++++ Sub Menu +++++++++++++++++++++-->
+            <li class="nav-item dropdown side-dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Carriers
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="drivers.html">Drivers</a></li>
+                <li><a class="dropdown-item" href="entities.html">Entities </a></li>
+                <li><a class="dropdown-item" href="trailers.html">Trailers </a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="destinations.html">Destinations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="contacts.html">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <!-- !++++++++++++++  body contant ++++++++++++++++++++++++-->
+
+      <div class="body-content">
+        <div class="wrapper-body">
+          <section class="LYNX">
+            <div class="container">
+              <div class="section-title">
+                <h1>Good Morning, Will</h1>
+                <p>Use LYNX ingishts to explore key points of information and make better business decisions.</p>
+              </div>
+
+              <div class="LYNX-overview">
+                <div class="container">
+                  <div class="overview-menu">
+                    <ul class="nav">
+                      <li><a href="index.html">Overview</a></li>
+                      <li><a href="forecast.html">Forecast</a></li>
+                      <li><a href="carriers.html">Carriers</a></li>
+                      <li><a class="active" href="inventory_values.html">Inventory Values</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="LYNX-content">
+                    <div id="overview" class="inventory-values">
+
+                      <div class="wrapper">
+                        <!--  -->
+                        <div class="bbb">
+                          <div class="table-responsive">
+                            <table class="table table-bordered">
+                              <thead class="table-top">
+                                <tr>
+                                  <th>Product Name</th>
+                                  <th>Minimum Value</th>
+                                  <th>Maximum Value</th>
+                                  <th>Terminal</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+
+                                <tr>
+                                  <td><input type="text" class="input-group" placeholder="ULSD"></td>
+                                  <td><input type="text" class="input-group" placeholder="500 BBLS"></td>
+                                  <td><input type="text" class="input-group" placeholder="400,000 BBLS"></td>
+                                  <td><input type="text" class="input-group" placeholder="Add Terminal"></td>
+                                </tr>
+
+
+                                <tr>
+                                  <td><input type="text" class="input-group" placeholder="Oil"></td>
+                                  <td><input type="text" class="input-group" placeholder="200 BBLS"></td>
+                                  <td><input type="text" class="input-group" placeholder="770,000 BBLS"></td>
+                                  <td><input type="text" class="input-group" placeholder="Charlotte"></td>
+                                </tr>
+
+
+                                <tr>
+                                  <td><input type="text" class="input-group" placeholder="Gasoline"></td>
+                                  <td><input type="text" class="input-group" placeholder="600 BBLS"></td>
+                                  <td><input type="text" class="input-group" placeholder="25,00,000 BBLS"></td>
+                                  <td><input type="text" class="input-group" placeholder="Chartt"></td>
+                                </tr>
+
+                                <tr>
+                                  <td><input type="text" class="input-group" placeholder="ULSD"></td>
+                                  <td><input type="text" class="input-group" placeholder="350 BBLS"></td>
+                                  <td><input type="text" class="input-group" placeholder="450,000 BBLS"></td>
+                                  <td><input type="text" class="input-group" placeholder="Fred"></td>
+                                </tr>
+
+                                <tr>
+                                  <td><input type="text" class="input-group" placeholder="ULSD"></td>
+                                  <td><input type="text" class="input-group" placeholder="350 BBLS"></td>
+                                  <td><input type="text" class="input-group" placeholder="450,000 BBLS"></td>
+                                  <td><input type="text" class="input-group" placeholder="Fred"></td>
+                                </tr>
+
+                                <tr>
+                                  <td><input type="text" class="input-group" placeholder="ULSD"></td>
+                                  <td><input type="text" class="input-group" placeholder="350 BBLS"></td>
+                                  <td><input type="text" class="input-group" placeholder="450,000 BBLS"></td>
+                                  <td><input type="text" class="input-group" placeholder="Fred"></td>
+                                </tr>
+
+                                <tr>
+                                  <td><input type="text" class="input-group" placeholder="ULSD"></td>
+                                  <td><input type="text" class="input-group" placeholder="350 BBLS"></td>
+                                  <td><input type="text" class="input-group" placeholder="450,000 BBLS"></td>
+                                  <td><input type="text" class="input-group" placeholder="Fred"></td>
+                                </tr>
+
+                                <tr>
+                                  <td><input type="text" class="input-group" placeholder="ULSD"></td>
+                                  <td><input type="text" class="input-group" placeholder="350 BBLS"></td>
+                                  <td><input type="text" class="input-group" placeholder="450,000 BBLS"></td>
+                                  <td><input type="text" class="input-group" placeholder="Fred"></td>
+                                </tr>
+
+                                <tr>
+                                  <td><input type="text" class="input-group" placeholder="ULSD"></td>
+                                  <td><input type="text" class="input-group" placeholder="350 BBLS"></td>
+                                  <td><input type="text" class="input-group" placeholder="450,000 BBLS"></td>
+                                  <td><input type="text" class="input-group" placeholder="Fred"></td>
+                                </tr>
+
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="cta">
+                            <a href="" class="btn change-btn">Save Changes</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+
+
+
+
+  </main>
+
+  <!-- script -->
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script src="assets/js/moment.min.js"></script>
+  <script src="assets/js/apexcharts.min.js"></script>
+  <script src="assets/js/lightpick.js"></script>
+  <script src="assets/js/chart.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/custom_jquery.js"></script>
+
+</body>
+
+</html>
